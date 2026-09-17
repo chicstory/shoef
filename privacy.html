@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- Google Analytics 4 (Rule Compliance) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3PFHN6VW7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K3PFHN6VW7');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개인정보처리방침 | ShoeF 러닝화 연구소 위키</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="ShoeF(슈에프)의 개인정보 보호 정책: 비회원제, 서버 미저장, 브라우저 로컬 데이터 안전 연산 및 안심 이용 원칙.">
+  <meta name="keywords" content="ShoeF 개인정보처리방침, 개인정보보호, Zero-Server, 프라이버시, RunAnalyz, ThePathLab">
+  <meta name="author" content="ShoeF Lab">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#090d16">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://shoef.runanalyz.com/privacy.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ShoeF 러닝화 연구소 위키">
+  <meta property="og:title" content="개인정보처리방침 | ShoeF 러닝화 연구소">
+  <meta property="og:description" content="서버 미저장 및 브라우저 로컬 연산 기반의 러너 프라이버시 보호 원칙.">
+  <meta property="og:image" content="https://runanalyz.com/runanalyz_app_icon.jpg">
+  <meta property="og:url" content="https://shoef.runanalyz.com/privacy.html">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="개인정보처리방침 | ShoeF">
+  <meta name="twitter:description" content="ShoeF 개인정보 보호 정책.">
+  <meta name="twitter:image" content="https://runanalyz.com/runanalyz_app_icon.jpg">
+
+  <!-- Google Fonts: Inter, Outfit, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    :root {
+      --bg-dark: #090d16;
+      --card-bg: rgba(18, 24, 38, 0.7);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --accent-orange: #ff5722;
+      --accent-cyan: #00f2fe;
+      --accent-emerald: #10b981;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(255, 87, 34, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 35%, rgba(0, 242, 254, 0.06) 0%, transparent 40%);
+      background-attachment: fixed;
+    }
+    .wrapper { max-width: 960px; margin: 0 auto; padding: 1.5rem 1.25rem 4rem 1.25rem; }
+
+    /* Nav */
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 0.85rem 1.25rem;
+      background: rgba(13, 18, 30, 0.75);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      margin-bottom: 2rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      color: #fff;
+    }
+    .brand-badge {
+      background: linear-gradient(135deg, #ff5722, #e04400);
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      font-size: 0.95rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 8px;
+      letter-spacing: 0.5px;
+    }
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+    }
+    .menu-links {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.42rem 0.85rem;
+      border-radius: 10px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--card-border);
+      transition: all 0.2s ease;
+    }
+    .nav-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .nav-btn.active {
+      color: var(--accent-orange);
+      background: rgba(255, 87, 34, 0.12);
+      border-color: rgba(255, 87, 34, 0.35);
+    }
+    .nav-btn.runanalyz-btn {
+      color: var(--accent-cyan);
+      background: rgba(0, 242, 254, 0.1);
+      border-color: rgba(0, 242, 254, 0.3);
+    }
+    .nav-btn.runanalyz-btn:hover {
+      background: rgba(0, 242, 254, 0.2);
+      border-color: rgba(0, 242, 254, 0.6);
+      color: #fff;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 2.25rem 1rem 2.75rem 1rem;
+      border-bottom: 1px solid var(--card-border);
+      margin-bottom: 2.25rem;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent-emerald);
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    .hero-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 900;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-desc {
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 1.85rem;
+      margin-bottom: 1.75rem;
+      backdrop-filter: blur(12px);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin-bottom: 1.15rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .card-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--accent-emerald);
+    }
+    .card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    p { margin-bottom: 0.95rem; font-size: 0.92rem; color: #cbd5e1; }
+    ul { margin-left: 1.4rem; margin-bottom: 1rem; font-size: 0.9rem; color: #94a3b8; }
+    li { margin-bottom: 0.4rem; }
+    li strong { color: #f1f5f9; }
+
+    .callout {
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 4px solid var(--accent-emerald);
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 2.5rem 1rem 1rem 1rem;
+      border-top: 1px solid var(--card-border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: center;
+    }
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-links a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--accent-orange); }
+
+    @media (max-width: 640px) {
+      .hero-title { font-size: 1.8rem; }
+      .card { padding: 1.25rem 1rem; }
+      .top-nav { flex-direction: column; align-items: stretch; }
+      .menu-links { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+      <a href="index.html" class="brand">
+        <span class="brand-badge">ShoeF</span>
+        <span class="brand-title">러닝화 연구소 위키</span>
+      </a>
+      <div class="menu-links">
+        <a href="index.html" class="nav-btn"><i class="bi bi-grid-fill"></i> 백과 대시보드</a>
+        <a href="guide.html" class="nav-btn"><i class="bi bi-book-half"></i> 이용 가이드</a>
+        <a href="about.html" class="nav-btn"><i class="bi bi-info-circle-fill"></i> 소개 &amp; 문의</a>
+        <a href="privacy.html" class="nav-btn active"><i class="bi bi-shield-check"></i> 개인정보처리방침</a>
+        <a href="https://runanalyz.com" class="nav-btn runanalyz-btn" target="_blank" title="가민·스트라바 GPS &amp; 유산소 효율 대시보드">
+          <i class="bi bi-speedometer2"></i> RunAnalyz 연동
+        </a>
+      </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="hero">
+      <div class="hero-badge"><i class="bi bi-shield-check"></i> ZERO-SERVER PRIVACY</div>
+      <h1 class="hero-title">개인정보처리방침</h1>
+      <p class="hero-desc">
+        ShoeF는 이용자의 어떠한 개인정보나 추적 데이터도 중앙 서버에 보관하지 않으며, 안심하고 이용할 수 있는 투명한 프라이버시 정책을 준수합니다.
+      </p>
+    </header>
+
+    <!-- Article 1 -->
+    <article class="card">
+      <div class="card-header">
+        <span class="card-badge">제 1 조</span>
+        <h2 class="card-title">비회원제 및 서버 미저장 원칙</h2>
+      </div>
+      <p>
+        ShoeF(슈에프)는 모든 러닝화 스펙 검색, 브랜드 필터링, 1:1 비교 매트릭스 열람 시 
+        <strong>별도의 회원가입이나 로그인을 일체 요구하지 않습니다.</strong>
+      </p>
+      <div class="callout">
+        <p>
+          <strong>🔒 완전한 클라이언트 로컬 연산:</strong><br>
+          사용자가 선택한 10대 브랜드 필터, 5대 카테고리, 세대 선택(최신/이월), 1:1 비교함 담기 내역은 
+          중앙 서버로 전송되지 않으며, 전적으로 이용자의 브라우저 메모리 및 로컬 스토리지(localStorage) 안에서만 안전하게 연산됩니다.
+        </p>
+      </div>
+    </article>
+
+    <!-- Article 2 -->
+    <article class="card">
+      <div class="card-header">
+        <span class="card-badge">제 2 조</span>
+        <h2 class="card-title">익명 러너 한줄 팁 (Shoutbox) 처리</h2>
+      </div>
+      <p>
+        특정 러닝화에 대한 실전 사이즈 팁(발볼러 반업 필수 등)을 공유하는 Shoutbox 기능은 
+        <strong>비회원 익명 닉네임과 간단한 캡차 연산</strong>으로 구동됩니다.
+      </p>
+      <ul>
+        <li>이메일, 연락처, 주민등록번호, 비밀번호 등 어떠한 개인식별정보도 수집하지 않습니다.</li>
+        <li>작성된 팁은 다른 러너들의 사이즈 선택 참고용 공개 메모로만 활용되며, 마케팅이나 타겟팅에 일체 활용되지 않습니다.</li>
+      </ul>
+    </article>
+
+    <!-- Article 3 -->
+    <article class="card">
+      <div class="card-header">
+        <span class="card-badge">제 3 조</span>
+        <h2 class="card-title">쿠키 및 구글 애널리틱스 통계 안내</h2>
+      </div>
+      <p>
+        본 웹사이트는 사이트 성능 모니터링 및 러너들의 검색 편의성 개선을 위해 
+        Google LLC에서 제공하는 웹 분석 도구인 <strong>Google Analytics 4 (추적 ID: G-K3PFHN6VW7)</strong>를 사용하고 있습니다.
+      </p>
+      <ul>
+        <li>구글 애널리틱스는 개인을 식별할 수 없는 통계성 로그(접속 브라우저 환경, 화면 해상도, 인기 조회 브랜드 등)만을 수집합니다.</li>
+        <li>이용자는 웹 브라우저 쿠키 차단 기능이나 Google 애널리틱스 차단 브라우저 부가기능을 설치하여 데이터 수집을 상시 거부할 수 있습니다.</li>
+      </ul>
+    </article>
+
+    <!-- Article 4 -->
+    <article class="card">
+      <div class="card-header">
+        <span class="card-badge">제 4 조</span>
+        <h2 class="card-title">문의 및 개인정보 보호 책임</h2>
+      </div>
+      <p>
+        개인정보 처리 및 서비스 이용에 관한 문의 사항은 아래 공식 이메일로 접수해 주시면 신속하고 성실하게 답변드리겠습니다:
+      </p>
+      <p style="font-family:'JetBrains Mono',monospace; color:var(--accent-orange); font-weight:700;">
+        <i class="bi bi-envelope-fill"></i> chicstory@gmail.com
+      </p>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="index.html"><i class="bi bi-grid-fill text-orange"></i> 백과 대시보드</a>
+        <span>&middot;</span>
+        <a href="guide.html"><i class="bi bi-book-half"></i> 이용 가이드</a>
+        <span>&middot;</span>
+        <a href="about.html"><i class="bi bi-info-circle-fill"></i> 소개 &amp; 문의</a>
+        <span>&middot;</span>
+        <a href="privacy.html"><i class="bi bi-shield-check"></i> 개인정보처리방침</a>
+        <span>&middot;</span>
+        <a href="https://runanalyz.com" target="_blank" style="color:var(--accent-cyan);"><i class="bi bi-speedometer2"></i> RunAnalyz</a>
+      </div>
+      <p>ShoeF Engine &copy; 2026. 10 Global Brands Running Shoes Wiki &amp; RunRepeat Lab Matrix.</p>
+    </footer>
+
+  </div>
+</body>
+</html>

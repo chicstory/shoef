@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- Google Analytics 4 (Rule Compliance) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3PFHN6VW7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K3PFHN6VW7');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About ShoeF | 10대 브랜드 러닝화 연구소 위키 소개 &amp; 문의</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="광고나 협찬 없이 런리핏(RunRepeat) 독립 연구소의 정밀 기계 실측 스펙만을 기반으로 구축된 ShoeF(슈에프) 프로젝트 소개, 개발 철학 및 공식 문의 채널.">
+  <meta name="keywords" content="ShoeF 소개, 러닝화 백과, 런리핏 연구소, 스포츠 사이언스, 러닝화 비교, RunAnalyz, ThePathLab">
+  <meta name="author" content="ShoeF Lab">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#090d16">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://shoef.runanalyz.com/about.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ShoeF 러닝화 연구소 위키">
+  <meta property="og:title" content="About ShoeF | 러닝화 연구소 위키 소개 &amp; 문의">
+  <meta property="og:description" content="제조사 마케팅 문구가 아닌, 100% 공인 랩 실측 데이터 기반의 러닝화 백과사전.">
+  <meta property="og:image" content="https://runanalyz.com/runanalyz_app_icon.jpg">
+  <meta property="og:url" content="https://shoef.runanalyz.com/about.html">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About ShoeF | 러닝화 연구소 위키">
+  <meta name="twitter:description" content="독립적 실측 랩 스펙 기반 러닝화 백과 소개.">
+  <meta name="twitter:image" content="https://runanalyz.com/runanalyz_app_icon.jpg">
+
+  <!-- Google Fonts: Inter, Outfit, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    :root {
+      --bg-dark: #090d16;
+      --card-bg: rgba(18, 24, 38, 0.7);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --accent-orange: #ff5722;
+      --accent-cyan: #00f2fe;
+      --accent-emerald: #10b981;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(255, 87, 34, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 35%, rgba(0, 242, 254, 0.06) 0%, transparent 40%);
+      background-attachment: fixed;
+    }
+    .wrapper { max-width: 960px; margin: 0 auto; padding: 1.5rem 1.25rem 4rem 1.25rem; }
+
+    /* Nav */
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 0.85rem 1.25rem;
+      background: rgba(13, 18, 30, 0.75);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      margin-bottom: 2rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      color: #fff;
+    }
+    .brand-badge {
+      background: linear-gradient(135deg, #ff5722, #e04400);
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      font-size: 0.95rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 8px;
+      letter-spacing: 0.5px;
+    }
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+    }
+    .menu-links {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.42rem 0.85rem;
+      border-radius: 10px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--card-border);
+      transition: all 0.2s ease;
+    }
+    .nav-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .nav-btn.active {
+      color: var(--accent-orange);
+      background: rgba(255, 87, 34, 0.12);
+      border-color: rgba(255, 87, 34, 0.35);
+    }
+    .nav-btn.runanalyz-btn {
+      color: var(--accent-cyan);
+      background: rgba(0, 242, 254, 0.1);
+      border-color: rgba(0, 242, 254, 0.3);
+    }
+    .nav-btn.runanalyz-btn:hover {
+      background: rgba(0, 242, 254, 0.2);
+      border-color: rgba(0, 242, 254, 0.6);
+      color: #fff;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 2.25rem 1rem 2.75rem 1rem;
+      border-bottom: 1px solid var(--card-border);
+      margin-bottom: 2.25rem;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent-orange);
+      background: rgba(255, 87, 34, 0.12);
+      border: 1px solid rgba(255, 87, 34, 0.3);
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    .hero-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 900;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-desc {
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 1.85rem;
+      margin-bottom: 1.75rem;
+      backdrop-filter: blur(12px);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin-bottom: 1.15rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .card-icon { font-size: 1.3rem; color: var(--accent-orange); }
+    .card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    p { margin-bottom: 0.95rem; font-size: 0.92rem; color: #cbd5e1; }
+    ul { margin-left: 1.4rem; margin-bottom: 1rem; font-size: 0.9rem; color: #94a3b8; }
+    li { margin-bottom: 0.4rem; }
+    li strong { color: #f1f5f9; }
+
+    .callout {
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 4px solid var(--accent-orange);
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+    }
+    .callout-cyan { border-left-color: var(--accent-cyan); background: rgba(0, 242, 254, 0.05); }
+
+    /* Contact Box */
+    .contact-box {
+      background: linear-gradient(135deg, rgba(255, 87, 34, 0.08) 0%, rgba(13, 18, 30, 0.8) 100%);
+      border: 1px solid rgba(255, 87, 34, 0.3);
+      border-radius: 16px;
+      padding: 1.75rem;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    .contact-email {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1.25rem;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+      margin: 1rem 0;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      text-decoration: none;
+    }
+    .contact-email:hover {
+      background: rgba(255, 87, 34, 0.2);
+      border-color: rgba(255, 87, 34, 0.5);
+      color: #ff7849;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 2.5rem 1rem 1rem 1rem;
+      border-top: 1px solid var(--card-border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: center;
+    }
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-links a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--accent-orange); }
+
+    @media (max-width: 640px) {
+      .hero-title { font-size: 1.8rem; }
+      .card { padding: 1.25rem 1rem; }
+      .top-nav { flex-direction: column; align-items: stretch; }
+      .menu-links { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+      <a href="index.html" class="brand">
+        <span class="brand-badge">ShoeF</span>
+        <span class="brand-title">러닝화 연구소 위키</span>
+      </a>
+      <div class="menu-links">
+        <a href="index.html" class="nav-btn"><i class="bi bi-grid-fill"></i> 백과 대시보드</a>
+        <a href="guide.html" class="nav-btn"><i class="bi bi-book-half"></i> 이용 가이드</a>
+        <a href="about.html" class="nav-btn active"><i class="bi bi-info-circle-fill"></i> 소개 &amp; 문의</a>
+        <a href="privacy.html" class="nav-btn"><i class="bi bi-shield-check"></i> 개인정보처리방침</a>
+        <a href="https://runanalyz.com" class="nav-btn runanalyz-btn" target="_blank" title="가민·스트라바 GPS &amp; 유산소 효율 대시보드">
+          <i class="bi bi-speedometer2"></i> RunAnalyz 연동
+        </a>
+      </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="hero">
+      <div class="hero-badge"><i class="bi bi-info-circle-fill"></i> ABOUT SHOEF PROJECT</div>
+      <h1 class="hero-title">ShoeF: 데이터 중심 러닝화 연구소 위키</h1>
+      <p class="hero-desc">
+        제조사의 화려한 수식어 대신, 런리핏(RunRepeat)의 객관적 기계 절단 실측 스펙과 직전 3개년 이월할인 명작을 체계화하여 러너의 합리적인 선택을 돕습니다.
+      </p>
+    </header>
+
+    <!-- Philosophy -->
+    <article class="card">
+      <div class="card-header">
+        <i class="bi bi-bullseye card-icon"></i>
+        <h2 class="card-title">ShoeF의 개발 철학과 3대 원칙</h2>
+      </div>
+      <p>
+        "이 신발이 정말 내 발에 맞을까?", "광고에 나오는 폼 반발력이 과연 사실일까?", "신제품 대신 전작 이월 상품을 사도 괜찮을까?"
+      </p>
+      <p>
+        ShoeF(슈에프)는 이러한 러너들의 현실적인 고민에서 출발했습니다. 수많은 신발 리뷰가 브랜드 협찬이나 주관적인 감상에 치우쳐 있는 현실에서, 
+        오직 **검증 가능한 기계적 데이터**만을 전달하고자 합니다.
+      </p>
+
+      <div class="callout">
+        <ul style="margin: 0; padding-left: 1.2rem;">
+          <li><strong>1. 협찬 없는 독립적 랩 데이터:</strong> 런리핏(RunRepeat) 연구소에서 실제로 신발을 절단하고 캘리퍼와 듀로미터로 측정한 실측 무게, 실측 힐드롭, 폼 소재, 카본 플레이트 유무만을 엄격히 수록합니다.</li>
+          <li><strong>2. 최근 3개년 이월할인 명작 가치 조명:</strong> 최신 플래그십(2025-2026)뿐 아니라, 아울렛과 스마트스토어에서 30~60% 할인된 가격에 팔리는 전작(2023-2024) 명작 24종을 함께 수록하여 가성비 쇼핑을 완벽 지원합니다.</li>
+          <li><strong>3. 1:1 맞춤 비교 매트릭스:</strong> 두 신발 사이에서 고민하는 러너를 위해 최대 3켤레까지 무게, 드롭, 쿠션 성향, 발볼 규격을 한 화면에서 1초 만에 대조할 수 있도록 제공합니다.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Ecosystem -->
+    <article class="card">
+      <div class="card-header">
+        <i class="bi bi-diagram-3-fill card-icon" style="color:var(--accent-cyan);"></i>
+        <h2 class="card-title">RunAnalyz 생태계 연계 (Ecosystem Synergy)</h2>
+      </div>
+      <p>
+        ShoeF는 스포츠 사이언스 러닝 분석 플랫폼 <strong><a href="https://runanalyz.com" target="_blank" style="color:var(--accent-cyan); font-weight:700;">RunAnalyz (런애널라이즈)</a></strong>의 패밀리 프로젝트입니다.
+      </p>
+      <p>
+        RunAnalyz가 가민/스트라바 GPS 로그를 기반으로 러너의 <strong>심폐 엔진(유산소 효율 EF, 젖산 역치 VDOT, 주간 80/20 훈련 플랜)</strong>을 분석한다면, 
+        ShoeF는 그 엔진에 걸맞은 <strong>최적의 타이어(러닝화)</strong>를 매칭하는 역할을 수행합니다.
+      </p>
+      <div class="callout callout-cyan">
+        <p>
+          <strong>🔒 100% Zero-Server &amp; Zero-Cookie 프라이버시:</strong><br>
+          RunAnalyz와 ShoeF 모두 회원가입을 요구하지 않으며, 어떠한 개인정보도 원격 중앙 서버에 저장하지 않습니다. 모든 검색 필터와 비교함 데이터는 이용자의 브라우저 로컬 안에서만 안전하게 동작합니다.
+        </p>
+      </div>
+    </article>
+
+    <!-- Contact Box -->
+    <article class="card" id="contact-section">
+      <div class="card-header">
+        <i class="bi bi-envelope-at-fill card-icon"></i>
+        <h2 class="card-title">공식 문의 &amp; 데이터 제보 (Contact)</h2>
+      </div>
+      <p>
+        ShoeF에 등재된 94종 러닝화의 스펙 수정 제보, 신규 라인업 추가 요청, 또는 버그 리포트는 언제나 환영합니다.
+      </p>
+
+      <div class="contact-box">
+        <div style="font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">
+          <i class="bi bi-chat-dots-fill text-orange"></i> ShoeF &amp; RunAnalyz 개발팀 이메일 문의
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+          검토 후 정기 데이터베이스 빌드 시 신속하게 반영하겠습니다.
+        </p>
+        <a href="mailto:chicstory@gmail.com" class="contact-email">
+          <i class="bi bi-envelope-fill text-orange"></i> chicstory@gmail.com
+        </a>
+      </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="index.html"><i class="bi bi-grid-fill text-orange"></i> 백과 대시보드</a>
+        <span>&middot;</span>
+        <a href="guide.html"><i class="bi bi-book-half"></i> 이용 가이드</a>
+        <span>&middot;</span>
+        <a href="about.html"><i class="bi bi-info-circle-fill"></i> 소개 &amp; 문의</a>
+        <span>&middot;</span>
+        <a href="privacy.html"><i class="bi bi-shield-check"></i> 개인정보처리방침</a>
+        <span>&middot;</span>
+        <a href="https://runanalyz.com" target="_blank" style="color:var(--accent-cyan);"><i class="bi bi-speedometer2"></i> RunAnalyz</a>
+      </div>
+      <p>ShoeF Engine &copy; 2026. 10 Global Brands Running Shoes Wiki &amp; RunRepeat Lab Matrix.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
