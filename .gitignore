@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.vscode/
+.idea/
+*.log
+thehyundai_all_searches.json
+thehyundai_running_shoes_*.json
+audit_summary.txt
