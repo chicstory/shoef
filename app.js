@@ -1045,12 +1045,6 @@ function initShoeFApp() {
     if (window.SHOEF_DATA || window.SHOEF_MASTER) shoesData = window.SHOEF_DATA || window.SHOEF_MASTER;
   }
 
-  // 2. Init Controls
-  initBrandCheckboxes();
-  initSizeSelect();
-  attachEvents();
-  renderShoes();
-
   // 2-1. Brand SVG Logos Map
   const BRAND_LOGOS = {
     nike: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.707 5.293c-.27-.27-.75-.15-1.28.27-2.14 1.7-6.07 5.09-10.42 9.07-2.06 1.89-3.88 3.63-5.26 5.03-1.61 1.63-2.6 2.37-3.32 2.34-.65-.03-1.12-.6-1.37-1.57-.42-1.66.1-4.04 1.54-6.97 1.48-3.02 3.86-6.42 6.89-9.84.45-.51.15-1.32-.51-1.42-.58-.09-1.2.2-1.63.7-3.08 3.55-5.52 7.1-7.05 10.27-1.62 3.35-2.22 6.16-1.66 8.35.61 2.41 2.15 3.68 4.3 3.68 1.48 0 3.25-.85 5.16-2.5 1.52-1.31 3.42-3.06 5.56-4.99 4.39-3.95 8.31-7.25 10.36-8.86.8-.63 1.34-1.17 1.62-1.61.43-.68.27-1.41-.47-1.92z"/></svg>`,
@@ -1378,6 +1372,12 @@ function initShoeFApp() {
 
     modalEl.style.display = 'flex';
   };
+
+  // 6. Execute Initialization after all definitions are ready
+  initBrandCheckboxes();
+  initSizeSelect();
+  attachEvents();
+  renderShoes();
 }
 
 // Ensure execution even if DOMContentLoaded already fired
