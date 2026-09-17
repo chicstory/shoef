@@ -68,19 +68,34 @@
   <!-- 1. 최상단 초슬림 헤더 -->
   <header class="slim-header">
     <div class="header-inner">
-      <div class="brand-title">
+      <!-- 1-1. 브랜드 로고 & 타이틀 -->
+      <a href="index.html" class="brand-title-link" title="ShoeF 러닝화 연구소 메인">
         <span class="logo-badge">ShoeF</span>
-        <span class="sub-txt">러닝화 연구소 위키 &amp; 1:1 스펙 비교</span>
-      </div>
-      <nav class="header-nav">
-        <a href="guide.html" class="header-nav-btn"><i class="bi bi-book-half"></i> 가이드</a>
-        <a href="about.html" class="header-nav-btn"><i class="bi bi-info-circle-fill"></i> 소개</a>
-        <a href="privacy.html" class="header-nav-btn"><i class="bi bi-shield-check"></i> 개인정보</a>
-        <a href="https://runanalyz.com" target="_blank" class="header-nav-btn runanalyz-link" title="가민·스트라바 GPS &amp; 유산소 효율 대시보드"><i class="bi bi-speedometer2"></i> RunAnalyz</a>
+        <span class="sub-txt">러닝화 연구소 위키</span>
+      </a>
+
+      <!-- 1-2. 센터: 다크 글래스모피즘 네비게이션 캡슐 (Pill Capsule) -->
+      <nav class="header-nav-capsule" aria-label="메인 메뉴">
+        <a href="guide.html" class="capsule-item" title="10대 브랜드 94종 실측 스펙 &amp; 1:1 비교 가이드">
+          <i class="bi bi-book-half"></i> <span>이용 가이드</span>
+        </a>
+        <a href="about.html" class="capsule-item" title="ShoeF 개발 철학 &amp; 공식 문의">
+          <i class="bi bi-info-circle-fill"></i> <span>소개 &amp; 문의</span>
+        </a>
+        <a href="privacy.html" class="capsule-item" title="개인정보처리방침">
+          <i class="bi bi-shield-check"></i> <span>개인정보</span>
+        </a>
+        <span class="capsule-sep"></span>
+        <a href="https://runanalyz.com" target="_blank" class="capsule-item capsule-partner-btn" title="가민·스트라바 GPS &amp; 유산소 효율(EF) 러닝 대시보드">
+          <i class="bi bi-speedometer2"></i> <span>RunAnalyz 연동</span>
+          <i class="bi bi-arrow-up-right" style="font-size: 10px; opacity: 0.85;"></i>
+        </a>
       </nav>
+
+      <!-- 1-3. 우측: 라이브 인디케이터 & 스탯 뱃지 -->
       <div class="header-meta">
-        <span class="live-indicator"><span class="pulse-dot"></span>RunRepeat 실측 연구소 데이터 기반</span>
-        <span class="last-sync" id="lastSyncTime">10대 브랜드 94종 전수 조사</span>
+        <span class="live-indicator"><span class="pulse-dot"></span>RunRepeat 실측 데이터</span>
+        <span class="meta-stat-pill">10대 브랜드 94종</span>
       </div>
     </div>
   </header>
