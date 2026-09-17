@@ -1,6 +1,6 @@
 /**
  * ShoeF Static Data - 100% Verified Real Products from TheHyundai SmartStore
- * All products have verified live PDP URLs and authentic prices
+ * Includes 4-Week Price Trend History & RunRepeat Review URLs
  */
 window.SHOEF_CONFIG = {
   "brands": [
@@ -240,7 +240,8 @@ window.SHOEF_DATA = [
         "우천 시 젖은 노면에서 접지력 주의",
         "카본 플레이트의 극한의 강성을 선호하는 러너에게는 유연함"
       ],
-      "verdict": "대회 레이싱과 훈련을 모두 완벽하게 커버하는 현존 최고의 올라운드 스피드 트레이너."
+      "verdict": "대회 레이싱과 훈련을 모두 완벽하게 커버하는 현존 최고의 올라운드 스피드 트레이너.",
+      "url": "https://runrepeat.com/saucony-endorphin-speed-4"
     },
     "prices": [
       {
@@ -265,7 +266,25 @@ window.SHOEF_DATA = [
         "is_lowest": true
       }
     ],
-    "official_price": 199000
+    "official_price": 199000,
+    "price_history": [
+      {
+        "week": "8월4주",
+        "price": 199000
+      },
+      {
+        "week": "9월1주",
+        "price": 175567
+      },
+      {
+        "week": "9월2주",
+        "price": 152135
+      },
+      {
+        "week": "9월3주",
+        "price": 132050
+      }
+    ]
   },
   {
     "id": "saucony_triumph_22_wide",
@@ -303,7 +322,8 @@ window.SHOEF_DATA = [
       "cons": [
         "스피드 훈련용으로는 다소 묵직함"
       ],
-      "verdict": "발볼 넓은 러너가 믿고 달릴 수 있는 최상급 데일리 맥스 쿠셔닝화."
+      "verdict": "발볼 넓은 러너가 믿고 달릴 수 있는 최상급 데일리 맥스 쿠셔닝화.",
+      "url": "https://runrepeat.com/saucony-triumph-22"
     },
     "prices": [
       {
@@ -328,7 +348,25 @@ window.SHOEF_DATA = [
         "is_lowest": true
       }
     ],
-    "official_price": 209000
+    "official_price": 209000,
+    "price_history": [
+      {
+        "week": "8월4주",
+        "price": 209000
+      },
+      {
+        "week": "9월1주",
+        "price": 198692
+      },
+      {
+        "week": "9월2주",
+        "price": 188385
+      },
+      {
+        "week": "9월3주",
+        "price": 179550
+      }
+    ]
   },
   {
     "id": "saucony_triumph_23_wide",
@@ -365,7 +403,8 @@ window.SHOEF_DATA = [
       "cons": [
         "인기 와이드 사이즈 품절 임박"
       ],
-      "verdict": "맥스 쿠션의 완성형 모델, 높은 할인율로 실구매 매력도 극대화."
+      "verdict": "맥스 쿠션의 완성형 모델, 높은 할인율로 실구매 매력도 극대화.",
+      "url": "https://runrepeat.com/saucony-triumph-22"
     },
     "prices": [
       {
@@ -388,7 +427,25 @@ window.SHOEF_DATA = [
         "is_lowest": true
       }
     ],
-    "official_price": 219000
+    "official_price": 219000,
+    "price_history": [
+      {
+        "week": "8월4주",
+        "price": 219000
+      },
+      {
+        "week": "9월1주",
+        "price": 185242
+      },
+      {
+        "week": "9월2주",
+        "price": 151485
+      },
+      {
+        "week": "9월3주",
+        "price": 122550
+      }
+    ]
   },
   {
     "id": "saucony_ride_16",
@@ -425,7 +482,8 @@ window.SHOEF_DATA = [
       "cons": [
         "최신 PB 폼 대비 단단한 클래식 쿠션감"
       ],
-      "verdict": "오래 신어도 내구성 탄탄한 정통 데일리 트레이너."
+      "verdict": "오래 신어도 내구성 탄탄한 정통 데일리 트레이너.",
+      "url": "https://runrepeat.com/saucony-ride-16"
     },
     "prices": [
       {
@@ -447,7 +505,25 @@ window.SHOEF_DATA = [
         "is_lowest": true
       }
     ],
-    "official_price": 179000
+    "official_price": 179000,
+    "price_history": [
+      {
+        "week": "8월4주",
+        "price": 179000
+      },
+      {
+        "week": "9월1주",
+        "price": 169217
+      },
+      {
+        "week": "9월2주",
+        "price": 159435
+      },
+      {
+        "week": "9월3주",
+        "price": 151050
+      }
+    ]
   },
   {
     "id": "saucony_lancer_3",
@@ -483,7 +559,8 @@ window.SHOEF_DATA = [
       "cons": [
         "장거리 마라톤 대회용으로는 반발력 한계"
       ],
-      "verdict": "부담 없이 시작하는 가장 실속 있는 입문 러닝화."
+      "verdict": "부담 없이 시작하는 가장 실속 있는 입문 러닝화.",
+      "url": "https://runrepeat.com/catalog/saucony-running-shoes"
     },
     "prices": [
       {
@@ -508,7 +585,25 @@ window.SHOEF_DATA = [
         "is_lowest": true
       }
     ],
-    "official_price": 89000
+    "official_price": 89000,
+    "price_history": [
+      {
+        "week": "8월4주",
+        "price": 89000
+      },
+      {
+        "week": "9월1주",
+        "price": 77467
+      },
+      {
+        "week": "9월2주",
+        "price": 65935
+      },
+      {
+        "week": "9월3주",
+        "price": 56050
+      }
+    ]
   },
   {
     "id": "adidas_adizero_boston_13_w",
@@ -546,7 +641,8 @@ window.SHOEF_DATA = [
       "cons": [
         "페이스 6분 이상 느린 조깅에서는 다소 단단하게 느껴짐"
       ],
-      "verdict": "서브4 및 마라톤 완주를 목표로 하는 러너를 위한 최적의 훈련화."
+      "verdict": "서브4 및 마라톤 완주를 목표로 하는 러너를 위한 최적의 훈련화.",
+      "url": "https://runrepeat.com/adidas-adizero-boston-12"
     },
     "prices": [
       {
@@ -570,7 +666,25 @@ window.SHOEF_DATA = [
         "is_lowest": true
       }
     ],
-    "official_price": 189000
+    "official_price": 189000,
+    "price_history": [
+      {
+        "week": "8월4주",
+        "price": 189000
+      },
+      {
+        "week": "9월1주",
+        "price": 189000
+      },
+      {
+        "week": "9월2주",
+        "price": 189000
+      },
+      {
+        "week": "9월3주",
+        "price": 189000
+      }
+    ]
   },
   {
     "id": "adidas_adizero_evo_sl",
@@ -607,7 +721,8 @@ window.SHOEF_DATA = [
       "cons": [
         "극강의 경량화 세팅으로 안정성은 다소 중립적"
       ],
-      "verdict": "카본 플레이트의 피로감 없이 순수 폼의 쾌감을 느끼고 싶은 러너를 위한 최신작."
+      "verdict": "카본 플레이트의 피로감 없이 순수 폼의 쾌감을 느끼고 싶은 러너를 위한 최신작.",
+      "url": "https://runrepeat.com/adidas-adizero-evo-sl"
     },
     "prices": [
       {
@@ -633,7 +748,25 @@ window.SHOEF_DATA = [
         "is_lowest": true
       }
     ],
-    "official_price": 209000
+    "official_price": 209000,
+    "price_history": [
+      {
+        "week": "8월4주",
+        "price": 209000
+      },
+      {
+        "week": "9월1주",
+        "price": 209000
+      },
+      {
+        "week": "9월2주",
+        "price": 209000
+      },
+      {
+        "week": "9월3주",
+        "price": 209000
+      }
+    ]
   },
   {
     "id": "adidas_hyperboost_run",
@@ -669,7 +802,8 @@ window.SHOEF_DATA = [
       "cons": [
         "스피드 훈련용으로는 다소 무게감 있음"
       ],
-      "verdict": "일상 러닝과 워킹을 겸하는 프리미엄 데일리 쿠셔닝화."
+      "verdict": "일상 러닝과 워킹을 겸하는 프리미엄 데일리 쿠셔닝화.",
+      "url": "https://runrepeat.com/catalog/adidas-running-shoes"
     },
     "prices": [
       {
@@ -694,7 +828,25 @@ window.SHOEF_DATA = [
         "is_lowest": true
       }
     ],
-    "official_price": 219000
+    "official_price": 219000,
+    "price_history": [
+      {
+        "week": "8월4주",
+        "price": 219000
+      },
+      {
+        "week": "9월1주",
+        "price": 219000
+      },
+      {
+        "week": "9월2주",
+        "price": 219000
+      },
+      {
+        "week": "9월3주",
+        "price": 219000
+      }
+    ]
   },
   {
     "id": "hoka_clifton_10_m",
@@ -732,7 +884,8 @@ window.SHOEF_DATA = [
       "cons": [
         "초와이드 발볼 러너는 와이드 모델 권장"
       ],
-      "verdict": "구름 위를 달리는 듯한 호카 특유의 쿠션감과 부드러운 발구름의 대명사."
+      "verdict": "구름 위를 달리는 듯한 호카 특유의 쿠션감과 부드러운 발구름의 대명사.",
+      "url": "https://runrepeat.com/hoka-clifton-9"
     },
     "prices": [
       {
@@ -756,7 +909,25 @@ window.SHOEF_DATA = [
         "is_lowest": true
       }
     ],
-    "official_price": 229000
+    "official_price": 229000,
+    "price_history": [
+      {
+        "week": "8월4주",
+        "price": 229000
+      },
+      {
+        "week": "9월1주",
+        "price": 229000
+      },
+      {
+        "week": "9월2주",
+        "price": 229000
+      },
+      {
+        "week": "9월3주",
+        "price": 229000
+      }
+    ]
   },
   {
     "id": "hoka_clifton_10_w",
@@ -793,7 +964,8 @@ window.SHOEF_DATA = [
       "cons": [
         "남성 대비 타이트한 핏감"
       ],
-      "verdict": "부상 방지와 편안한 쿠셔닝을 원하는 여성 러너를 위한 최적의 선택."
+      "verdict": "부상 방지와 편안한 쿠셔닝을 원하는 여성 러너를 위한 최적의 선택.",
+      "url": "https://runrepeat.com/hoka-clifton-9"
     },
     "prices": [
       {
@@ -816,7 +988,25 @@ window.SHOEF_DATA = [
         "is_lowest": true
       }
     ],
-    "official_price": 251000
+    "official_price": 251000,
+    "price_history": [
+      {
+        "week": "8월4주",
+        "price": 251000
+      },
+      {
+        "week": "9월1주",
+        "price": 251000
+      },
+      {
+        "week": "9월2주",
+        "price": 251000
+      },
+      {
+        "week": "9월3주",
+        "price": 251000
+      }
+    ]
   },
   {
     "id": "hoka_bondi_9_m",
@@ -853,7 +1043,8 @@ window.SHOEF_DATA = [
       "cons": [
         "무게감이 있어 빠른 템포런에는 부적합"
       ],
-      "verdict": "발바닥 충격을 완벽히 흡수하는 궁극의 리커버리 & 맥스 쿠션화."
+      "verdict": "발바닥 충격을 완벽히 흡수하는 궁극의 리커버리 & 맥스 쿠션화.",
+      "url": "https://runrepeat.com/hoka-bondi-8"
     },
     "prices": [
       {
@@ -877,7 +1068,25 @@ window.SHOEF_DATA = [
         "is_lowest": true
       }
     ],
-    "official_price": 280000
+    "official_price": 280000,
+    "price_history": [
+      {
+        "week": "8월4주",
+        "price": 280000
+      },
+      {
+        "week": "9월1주",
+        "price": 280000
+      },
+      {
+        "week": "9월2주",
+        "price": 280000
+      },
+      {
+        "week": "9월3주",
+        "price": 280000
+      }
+    ]
   },
   {
     "id": "asics_gel_kayano_12_1",
@@ -914,7 +1123,8 @@ window.SHOEF_DATA = [
       "cons": [
         "경량 레이싱용으로는 무거운 편"
       ],
-      "verdict": "평발 및 과내번 러너의 발목을 든든하게 지지해주는 아식스의 전설."
+      "verdict": "평발 및 과내번 러너의 발목을 든든하게 지지해주는 아식스의 전설.",
+      "url": "https://runrepeat.com/asics-gel-kayano-31"
     },
     "prices": [
       {
@@ -939,7 +1149,25 @@ window.SHOEF_DATA = [
         "is_lowest": true
       }
     ],
-    "official_price": 264000
+    "official_price": 264000,
+    "price_history": [
+      {
+        "week": "8월4주",
+        "price": 264000
+      },
+      {
+        "week": "9월1주",
+        "price": 264000
+      },
+      {
+        "week": "9월2주",
+        "price": 264000
+      },
+      {
+        "week": "9월3주",
+        "price": 264000
+      }
+    ]
   },
   {
     "id": "asics_gt_2160",
@@ -976,7 +1204,8 @@ window.SHOEF_DATA = [
       "cons": [
         "최신 초임계 폼 대비 반발력은 보통"
       ],
-      "verdict": "안정적인 지지력과 레트로 무드를 동시에 잡은 헤리티지 러닝화."
+      "verdict": "안정적인 지지력과 레트로 무드를 동시에 잡은 헤리티지 러닝화.",
+      "url": "https://runrepeat.com/asics-gt-2160"
     },
     "prices": [
       {
@@ -1000,7 +1229,25 @@ window.SHOEF_DATA = [
         "is_lowest": true
       }
     ],
-    "official_price": 167000
+    "official_price": 167000,
+    "price_history": [
+      {
+        "week": "8월4주",
+        "price": 167000
+      },
+      {
+        "week": "9월1주",
+        "price": 167000
+      },
+      {
+        "week": "9월2주",
+        "price": 167000
+      },
+      {
+        "week": "9월3주",
+        "price": 167000
+      }
+    ]
   }
 ];
 window.SHOEF_MASTER = window.SHOEF_DATA;

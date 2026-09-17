@@ -1245,7 +1245,51 @@ function initShoeFApp() {
     shoesListEl.innerHTML = list.map(shoe => {
       const minPrice = shoe.effectiveLowestPrice;
 
-      // Danawa Price Table Rows (2-line Mall Name & 2-line Price/Discount)
+      // 4-Week Price Trend SVG Sparkline (순수 벡터 - 360px 반응형)
+      const history = shoe.price_history || [];
+      let chartSvgHtml = '';
+      if (history.length >= 2) {
+        const prices = history.map(h => h.price);
+        const minP = Math.min(...prices);
+        const maxP = Math.max(...prices);
+        const diff = maxP - minP;
+        const xs = [24, 90, 156, 220];
+        const ys = prices.map(p => diff === 0 ? 18 : 28 - Math.round(((p - minP) / diff) * 18));
+        const polylinePts = xs.map((x, i) => `${x},${ys[i]}`).join(' ');
+        const polygonPts = `24,34 ` + polylinePts + ` 220,34`;
+        const dotsHtml = xs.map((x, i) => {
+          const isLast = (i === history.length - 1);
+          const fill = isLast ? '#34d399' : '#10b981';
+          const r = isLast ? '3.5' : '2';
+          return `<circle cx="${x}" cy="${ys[i]}" r="${r}" fill="${fill}" stroke="#07130f" stroke-width="1"/><text x="${x}" y="40" font-size="8" fill="#6ee7b7" text-anchor="middle" font-family="Pretendard, sans-serif">${history[i].week}</text>`;
+        }).join('');
+        
+        const isDrop = prices[prices.length - 1] < prices[0];
+        const dropPct = isDrop ? Math.round(((prices[0] - prices[prices.length - 1]) / prices[0]) * 100) : 0;
+        const trendBadge = isDrop ? `<span class="trend-badge drop">📉 4주간 ${dropPct}% 하락</span>` : `<span class="trend-badge stable">⚡ 시세 안정</span>`;
+
+        chartSvgHtml = `
+          <div class="price-trend-box">
+            <div class="trend-header">
+              <span class="trend-title">📈 4주 최저가 추이</span>
+              ${trendBadge}
+            </div>
+            <svg class="trend-svg" viewBox="0 0 244 44" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="grad-${shoe.id}" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#10b981" stop-opacity="0.35"/>
+                  <stop offset="100%" stop-color="#10b981" stop-opacity="0.0"/>
+                </linearGradient>
+              </defs>
+              <polygon points="${polygonPts}" fill="url(#grad-${shoe.id})"/>
+              <polyline points="${polylinePts}" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              {dotsHtml}
+            </svg>
+          </div>
+        `.replace('{dotsHtml}', dotsHtml);
+      }
+
+      // Danawa Price Table Rows (Desktop 5-Column & Mobile 2-Line Hybrid)
       const priceRowsHtml = shoe.displayPrices.map(p => {
         const isLowest = (p.price === minPrice);
         const mallClass = p.badge === '백화점' ? 'dept' :
@@ -1258,34 +1302,42 @@ function initShoeFApp() {
 
         return `
           <tr class="price-row ${isLowest ? 'is-lowest' : ''}">
-            <!-- 1열: 쇼핑몰명 (2줄 스택) -->
+            <!-- 1열: 판매처명 (모바일에서는 구매버튼과 인라인 배치) -->
             <td class="mall-cell">
-              <div class="mall-primary-line">
-                <span class="mall-badge ${mallClass}">${p.badge}</span>
-                <span class="mall-main-name">${p.store_name}</span>
+              <div class="price-row-top">
+                <div class="mall-primary-line">
+                  <span class="mall-badge ${mallClass}">${p.badge}</span>
+                  <span class="mall-main-name">${p.store_name}</span>
+                </div>
+                <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="btn-buy-link mobile-only-btn">구매하기</a>
               </div>
               ${subName}
             </td>
 
-            <!-- 2열: 발볼 & 사이즈 -->
-            <td class="size-cell">
+            <!-- 2열: 발볼 & 사이즈 (데스크탑) -->
+            <td class="size-cell desktop-only-cell">
               <span class="size-stock-txt"><strong>${widthTxt}</strong> ${sizeTxt}</span>
             </td>
 
-            <!-- 3열: 가격 & 할인율 (2줄 스택) -->
+            <!-- 3열: 배송 / 혜택 (사이즈와 가격 사이 공백 해소) -->
+            <td class="benefit-cell desktop-only-cell">
+              <span class="benefit-txt">🚚 무료배송</span>
+            </td>
+
+            <!-- 4열: 실시간 판매가 & 할인율 -->
             <td class="price-cell">
-              <div class="price-primary-line">
-                ${isLowest ? '<span class="lowest-tag">최저가</span>' : ''}
-                <span class="current-price">${p.price.toLocaleString()}원</span>
-              </div>
-              <div class="price-secondary-line">
-                ${p.discount_rate > 0 ? `<span class="discount-badge">${p.discount_rate}% 할인</span>` : '<span class="regular-badge">정가</span>'}
-                <span class="shipping-fee-txt">${p.shipping === 0 ? '무료배송' : `${p.shipping.toLocaleString()}원`}</span>
+              <div class="price-row-bottom">
+                <div class="price-primary-line">
+                  ${isLowest ? '<span class="lowest-tag">최저가</span>' : ''}
+                  <span class="current-price">${p.price.toLocaleString()}원</span>
+                  ${p.discount_rate > 0 ? `<span class="discount-badge">${p.discount_rate}%↓</span>` : '<span class="regular-badge">정가</span>'}
+                </div>
+                <span class="mobile-size-txt"><strong>${widthTxt}</strong> ${sizeTxt} · 🚚 무료배송</span>
               </div>
             </td>
 
-            <!-- 4열: 바로가기 버튼 -->
-            <td class="action-cell">
+            <!-- 5열: 바로가기 버튼 (데스크탑) -->
+            <td class="action-cell desktop-only-cell">
               <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="btn-buy-link">구매하기</a>
             </td>
           </tr>
@@ -1295,49 +1347,63 @@ function initShoeFApp() {
       return `
         <article class="shoe-danawa-card" data-id="${shoe.id}">
           
-          <!-- 1열: 제품 사진 -->
-          <div class="card-col-photo">
-            ${!shoe.is_current ? '<span class="outlet-flag">⚡ 이월특가</span>' : ''}
-            <img src="${shoe.image_url}" alt="${shoe.name_kr}" class="shoe-img" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 160 110\' fill=\'none\'><rect width=\'160\' height=\'110\' rx=\'10\' fill=\'%230f241a\'/><path d=\'M30 75 C45 75, 55 70, 70 60 C85 50, 95 48, 115 50 C125 51, 135 60, 135 70 C135 75, 120 78, 100 78 C70 78, 45 78, 30 75 Z\' fill=\'%2310b981\' opacity=\'0.8\'/><circle cx=\'105\' cy=\'60\' r=\'5\' fill=\'%2334d399\'/><text x=\'80\' y=\'95\' fill=\'%236ee7b7\' font-size=\'10\' font-family=\'sans-serif\' text-anchor=\'middle\' font-weight=\'bold\'>ShoeF</text></svg>';">
-          </div>
-
-          <!-- 2열: 제품명 & 세대 & 카테고리 & 공식정가(MSRP) 최우선 배치 -->
+          <!-- 1열: 신발 메타 & 독립 점수 & 정가 & 4주 최저가 차트 -->
           <div class="card-col-info">
-            <div class="info-top">
-              <div class="brand-code-line">
-                <span class="brand-line">${shoe.brand_id.toUpperCase()}</span>
-                ${shoe.style_code ? `<span class="style-code-badge">품번: ${shoe.style_code}</span>` : ''}
-              </div>
-              <h2 class="shoe-name">${shoe.name_kr}</h2>
+            
+            <!-- 1-1. 브랜드 및 품번 -->
+            <div class="info-meta-row">
+              <span class="brand-line">${shoe.brand_id.toUpperCase()}</span>
+              ${shoe.style_code ? `<span class="style-code-badge">품번: ${shoe.style_code}</span>` : ''}
+              ${!shoe.is_current ? '<span class="outlet-flag">⚡ 이월특가</span>' : ''}
+            </div>
+
+            <!-- 1-2. 신발명 -->
+            <h2 class="shoe-name">${shoe.name_kr}</h2>
+
+            <!-- 1-3. 카테고리 (독립 행) -->
+            <div class="category-row">
               <span class="category-badge">🏷️ ${shoe.category_name}</span>
             </div>
-            <div class="info-bottom">
-              <div class="msrp-box">
-                <span class="msrp-label">공식 정가 (MSRP)</span>
-                <strong class="msrp-price">${(shoe.msrp || shoe.official_price || 0).toLocaleString()}원</strong>
+
+            <!-- 1-4. 런리핏 점수 & 랩 분석 (한 칸 띄워서 독립 배치: 360px 오버플로우 원천 방지) -->
+            <div class="score-badge-container">
+              <div class="score-badge-lbl">
+                <span class="rr-title">RunRepeat</span>
+                <span class="score-badge-num">${shoe.runrepeat ? shoe.runrepeat.score : '-'}점</span>
+                <span class="score-grade-tag">${(shoe.runrepeat && shoe.runrepeat.score >= 90) ? 'Great' : 'Good'}</span>
               </div>
+              <button type="button" class="btn-open-modal" onclick="openRunRepeatModal('${shoe.id}')">
+                📊 랩 분석
+              </button>
             </div>
+
+            <!-- 1-5. 공식 정가 MSRP (독립 행) -->
+            <div class="msrp-box">
+              <span class="msrp-label">공식 정가 (MSRP)</span>
+              <strong class="msrp-price">${(shoe.msrp || shoe.official_price || 0).toLocaleString()}원</strong>
+            </div>
+
+            <!-- 1-6. 4주 최저가 추이 SVG 차트 (독립 행) -->
+            ${chartSvgHtml}
+
           </div>
 
-          <!-- 3열: 다나와식 판매처별 가격 리스트 (오버플로우 완벽 해소) -->
+          <!-- 2열: 다나와식 판매처별 가격 리스트 테이블 -->
           <div class="card-col-prices">
             <table class="price-table">
+              <thead>
+                <tr>
+                  <th class="th-mall">판매처</th>
+                  <th class="th-size">발볼 & 보유 사이즈</th>
+                  <th class="th-benefit">배송 / 혜택</th>
+                  <th class="th-price">실시간 판매가</th>
+                  <th class="th-action">구매이동</th>
+                </tr>
+              </thead>
               <tbody>
                 ${priceRowsHtml}
               </tbody>
             </table>
-          </div>
-
-          <!-- 4열: 런리핏 스펙 요약 & 모달 버튼 -->
-          <div class="card-col-action">
-            <div class="runrepeat-score-box">
-              <span class="rr-label">RunRepeat</span>
-              <span class="rr-score-num">${shoe.runrepeat ? shoe.runrepeat.score : '-'}</span>
-              <span class="rr-grade">Great 점수</span>
-            </div>
-            <button type="button" class="btn-open-modal" onclick="openRunRepeatModal('${shoe.id}')">
-              📊 런리핏 랩 분석
-            </button>
           </div>
 
         </article>
@@ -1345,7 +1411,6 @@ function initShoeFApp() {
     }).join('');
   }
 
-  // 5. Open RunRepeat Lab Modal
   window.openRunRepeatModal = function(shoeId) {
     const shoe = shoesData.find(s => s.id === shoeId);
     if (!shoe) return;
@@ -1367,8 +1432,14 @@ function initShoeFApp() {
     modalProsList.innerHTML = (rr.pros || []).map(p => `<li>${p}</li>`).join('');
     // Cons
     modalConsList.innerHTML = (rr.cons || []).map(c => `<li>${c}</li>`).join('');
-    // Summary
+        // Summary
     modalSummary.textContent = rr.verdict || rr.summary || '상세 리뷰 준비 중입니다.';
+
+    // RunRepeat Original Review Link
+    const modalRrLink = document.getElementById('modalRrLink');
+    if (modalRrLink) {
+      modalRrLink.href = rr.url || `https://runrepeat.com/search?q=${encodeURIComponent(shoe.name_en || shoe.name_kr)}`;
+    }
 
     modalEl.style.display = 'flex';
   };

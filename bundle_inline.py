@@ -14,15 +14,11 @@ html = re.sub(r'<script src="app.js[^"]*"></script>\s*', '', html)
 # Remove the visual error logger from head
 html = re.sub(r'<!-- Visual Error Logger \(디버그용\) -->.*?window\.onerror.*?</script>\s*', '', html, flags=re.DOTALL)
 
-# Insert inline script right before </body>
-inline_script = f"""
-  <script>
-{app_js}
-  </script>
-</body>
-"""
-
-html = html.replace("</body>", inline_script)
+# Replace existing inline script before </body>, or insert if not present
+if "ShoeF Wiki & Price" in html:
+    html = re.sub(r'<script>\s*/\*\*[\s\S]*?ShoeF Wiki & Price[\s\S]*?</script>\s*</body>', f'<script>\n{app_js}\n  </script>\n</body>', html)
+else:
+    html = html.replace("</body>", f"<script>\n{app_js}\n  </script>\n</body>")
 
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html)

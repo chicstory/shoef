@@ -728,6 +728,14 @@ body.dark-theme {
   color: var(--text-dim);
 }
 
+.mobile-only-btn {
+  display: none;
+}
+
+.mobile-size-txt {
+  display: none;
+}
+
 /* 구매 바로가기 셀 */
 .action-cell {
   width: 15%;
@@ -1203,72 +1211,88 @@ body.dark-theme {
   }
 
   /* 신발 카드 모바일 세로 스택 & 오버플로우 제로화 */
+    /* 360px 모바일 완벽 최적화 (가로 오버플로우 0건 보장) */
   .shoe-danawa-card {
     grid-template-columns: 1fr;
-    padding: 10px 12px;
+    padding: 14px 12px;
+    gap: 12px;
+  }
+  
+  .card-col-info {
     gap: 8px;
   }
-  .card-col-photo {
-    min-height: 100px;
-    padding: 4px;
-  }
-  .shoe-img {
-    max-height: 90px;
-  }
+  
   .shoe-name {
-    font-size: 14px;
-  }
-  .category-badge {
-    font-size: 10px;
-    padding: 2px 5px;
+    font-size: 15px;
   }
   
   .card-col-prices {
     border-left: none;
     border-top: 1px solid var(--border-subtle);
     padding-left: 0;
-    padding-top: 8px;
+    padding-top: 10px;
   }
+  
+  .price-table thead {
+    display: none;
+  }
+  
+  .price-table, .price-table tbody, .price-row {
+    display: block;
+    width: 100%;
+  }
+  
+  .price-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 4px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  
   .price-row td {
-    padding: 5px 2px;
+    padding: 0;
+    width: 100% !important;
+    text-align: left !important;
   }
   
-  .mall-cell {
-    width: 38%;
+  .price-row-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
-  .mall-main-name {
+  
+  .price-row-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    margin-top: 2px;
+  }
+  
+  .mobile-only-btn {
+    display: inline-flex;
+  }
+  
+  .desktop-only-cell {
+    display: none !important;
+  }
+  
+  .mobile-size-txt {
+    display: block;
     font-size: 11px;
-  }
-  .mall-sub-name {
-    font-size: 10px;
+    color: var(--text-muted);
+    margin-top: 3px;
   }
   
-  .size-cell {
-    width: 22%;
+  .mobile-size-txt strong {
+    color: var(--accent-forest-bright);
   }
-  .size-stock-txt {
-    font-size: 10px;
-  }
-
-  .price-cell {
-    width: 28%;
-  }
-  .current-price {
-    font-size: 13px;
-  }
-  .price-row.is-lowest .current-price {
-    font-size: 14px;
-  }
-  .discount-badge, .shipping-fee-txt {
-    font-size: 10px;
-  }
-
-  .action-cell {
-    width: 12%;
-  }
+  
   .btn-buy-link {
-    font-size: 10px;
-    padding: 2px 6px;
+    font-size: 11px;
+    padding: 4px 10px;
   }
 
   .pros-cons-grid {
