@@ -129,7 +129,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (입문/워킹)"
     },
     "runrepeat": {
-      "score": 84,
+      "score": 74,
       "midsole_foam": "Cloudfoam+",
       "pros": [
         "60달러대 극강 가성비의 2025 신작",
@@ -166,7 +166,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (중립)"
     },
     "runrepeat": {
-      "score": 85,
+      "score": 74,
       "midsole_foam": "Response Foam",
       "pros": [
         "균형 잡힌 충격 완화력",
@@ -202,7 +202,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (중립)"
     },
     "runrepeat": {
-      "score": 88,
+      "score": 72,
       "midsole_foam": "Lightstrike",
       "pros": [
         "100달러 미만에서 아디제로급 Lightstrike 폼 탑재",
@@ -238,7 +238,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (가성비 조깅)"
     },
     "runrepeat": {
-      "score": 84,
+      "score": 73,
       "midsole_foam": "Lightmotion",
       "pros": [
         "6만원대 가성비",
@@ -274,7 +274,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (중립)"
     },
     "runrepeat": {
-      "score": 84,
+      "score": 75,
       "midsole_foam": "Bounce",
       "pros": [
         "바운스 폼의 쫀득한 충격 흡수",
@@ -310,7 +310,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (엔트리 데일리)"
     },
     "runrepeat": {
-      "score": 87,
+      "score": 80,
       "midsole_foam": "Dreamstrike+",
       "pros": [
         "110달러에 맛보는 Dreamstrike+ 폼 반발력",
@@ -346,7 +346,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (2025 국민 데일리)"
     },
     "runrepeat": {
-      "score": 92,
+      "score": 84,
       "midsole_foam": "Dreamstrike+ 2.0",
       "pros": [
         "전작 대비 가벼워진 무게와 부드러워진 어퍼 핏",
@@ -382,7 +382,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (맥스 쿠션)"
     },
     "runrepeat": {
-      "score": 91,
+      "score": 86,
       "midsole_foam": "Dreamstrike+",
       "pros": [
         "압도적으로 두터운 맥스 쿠셔닝",
@@ -418,7 +418,7 @@ window.SHOEF_MASTER = [
       "support_type": "Stability (과회내 방지)"
     },
     "runrepeat": {
-      "score": 89,
+      "score": 83,
       "midsole_foam": "Dreamstrike+",
       "pros": [
         "이질감 없는 현대적 과회내 제어(스테빌리티 로드)",
@@ -454,7 +454,7 @@ window.SHOEF_MASTER = [
       "support_type": "Supportive Cushion (탱크 쿠션)"
     },
     "runrepeat": {
-      "score": 88,
+      "score": 82,
       "midsole_foam": "REPETITOR 2.0",
       "pros": [
         "2025 신형 리피티터 2.0 폼으로 훨씬 부드러워진 착지감",
@@ -490,7 +490,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (2025-2026 최고 화제작)"
     },
     "runrepeat": {
-      "score": 96,
+      "score": 91,
       "midsole_foam": "Lightstrike Pro",
       "pros": [
         "카본 플레이트 없이도 폭발적인 에너지 리턴",
@@ -526,7 +526,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (스피드 레이싱 플랫)"
     },
     "runrepeat": {
-      "score": 91,
+      "score": 87,
       "midsole_foam": "Lightstrike Pro",
       "pros": [
         "188g의 비현실적인 가벼움과 아디오스 프로 4 디자인 언어 계승",
@@ -562,7 +562,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (2025 최신 카본 플래그십)"
     },
     "runrepeat": {
-      "score": 96,
+      "score": 92,
       "midsole_foam": "Lightstrike Pro 3.0",
       "pros": [
         "전작(프로3) 대비 18g 감량에 성공한 200g 플래그십",
@@ -599,7 +599,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (중립)"
     },
     "runrepeat": {
-      "score": 82,
+      "score": 73,
       "midsole_foam": "EVA Foam",
       "pros": [
         "나이키 전 제품 중 가장 착한 7만원대 가격",
@@ -636,7 +636,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (안정 쿠션)"
     },
     "runrepeat": {
-      "score": 87,
+      "score": 78,
       "midsole_foam": "Cushlon 3.0",
       "pros": [
         "페가수스 버금가는 풀렝스 에어 쿠셔닝",
@@ -674,7 +674,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (국민 데일리)"
     },
     "runrepeat": {
-      "score": 90,
+      "score": 85,
       "midsole_foam": "ReactX",
       "pros": [
         "ReactX 폼 도입으로 에너지 리턴 13% 대폭 향상",
@@ -711,7 +711,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (2025 맥스쿠션 괴물)"
     },
     "runrepeat": {
-      "score": 93,
+      "score": 87,
       "midsole_foam": "Full ZoomX & ReactX",
       "pros": [
         "나이키 역사상 가장 높은 46mm 스택 높이",
@@ -748,7 +748,7 @@ window.SHOEF_MASTER = [
       "support_type": "Stability (정통 내전 제어)"
     },
     "runrepeat": {
-      "score": 88,
+      "score": 84,
       "midsole_foam": "Cushlon 3.0",
       "pros": [
         "발목 내측 무너짐을 든든하게 받쳐주는 지지대",
@@ -784,7 +784,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (카본 슈퍼트레이너)"
     },
     "runrepeat": {
-      "score": 93,
+      "score": 88,
       "midsole_foam": "ZoomX",
       "pros": [
         "전작 대비 30g 이상 획기적 감량(252g)",
@@ -820,7 +820,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (논플레이트 템포)"
     },
     "runrepeat": {
-      "score": 90,
+      "score": 85,
       "midsole_foam": "Full ZoomX",
       "pros": [
         "전설의 페가수스 터보의 완벽한 귀환",
@@ -856,7 +856,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (마라톤 레이스 종결자)"
     },
     "runrepeat": {
-      "score": 95,
+      "score": 91,
       "midsole_foam": "ZoomX",
       "pros": [
         "182g이라는 충격적인 초경량화",
@@ -892,7 +892,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (세계 신기록 레이서)"
     },
     "runrepeat": {
-      "score": 96,
+      "score": 93,
       "midsole_foam": "ZoomX",
       "pros": [
         "마라톤 2시간 벽을 깬 인류 최고의 레이싱 병기",
@@ -930,18 +930,96 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (입문/워킹)"
     },
     "runrepeat": {
-      "score": 84,
+      "score": 69,
       "midsole_foam": "AmpliFoam",
       "pros": [
-        "압도적인 가성비와 4E 슈퍼와이드 발볼 지원",
+        "60달러대 압도적인 가성비와 4E 슈퍼와이드 발볼 지원",
         "동양인 족형에 가장 잘 맞는 편안한 피팅",
-        "질긴 내구성"
+        "아웃솔 고무의 질긴 수명"
       ],
       "cons": [
-        "고속 반발력 부족"
+        "단단한 EVA 폼으로 탄성과 반발력 부족"
       ],
-      "verdict": "발볼 넓은 한국인 입문 러너에게 축복과도 같은 최고의 가성비 슈즈.",
+      "verdict": "발볼 넓은 한국인 입문 러너에게 부담 없는 최강의 가성비 조깅화.",
       "url": "https://runrepeat.com/asics-jolt-4"
+    }
+  },
+  {
+    "id": "asics_gel_contend_9",
+    "brand_id": "asics",
+    "name_kr": "아식스 젤 컨텐드 9",
+    "name_en": "Asics Gel Contend 9",
+    "series": "젤 컨텐드",
+    "category": "budget",
+    "category_name": "가성비 입문화 (≤$100)",
+    "msrp_usd": 70,
+    "msrp_krw": 79000,
+    "widths": [
+      "D",
+      "2E",
+      "4E"
+    ],
+    "specs": {
+      "weight_g": 288,
+      "heel_drop_mm": 10,
+      "midsole": "AmpliFoam+ & 후족부 GEL 테크놀로지",
+      "plate": "없음",
+      "stack_height": "31.2mm / 21.2mm",
+      "support_type": "Neutral (입문/조깅/헬스)"
+    },
+    "runrepeat": {
+      "score": 74,
+      "midsole_foam": "AmpliFoam+ & GEL",
+      "pros": [
+        "70달러대 극강 가성비의 국민 입문 러닝화",
+        "푹신하고 포근한 패딩 칼라와 뛰어난 착화감",
+        "D, 2E, 4E 폭넓은 발볼 옵션"
+      ],
+      "cons": [
+        "기본 EVA 미드솔로 고속 반발 탄성 부족",
+        "장거리 마일리지용으로는 아쉬운 내구성"
+      ],
+      "verdict": "달리기 입문과 일상 워킹, 헬스장 트레이닝을 한 번에 해결하는 70달러 국민 입문화.",
+      "url": "https://runrepeat.com/asics-gel-contend-9"
+    }
+  },
+  {
+    "id": "asics_gel_venture_9",
+    "brand_id": "asics",
+    "name_kr": "아식스 젤 벤처 9",
+    "name_en": "Asics Gel Venture 9",
+    "series": "젤 벤처",
+    "category": "budget",
+    "category_name": "가성비 입문화 (≤$100)",
+    "msrp_usd": 75,
+    "msrp_krw": 89000,
+    "widths": [
+      "D",
+      "2E",
+      "4E"
+    ],
+    "specs": {
+      "weight_g": 310,
+      "heel_drop_mm": 10,
+      "midsole": "AmpliFoam & 후족부 GEL 테크놀로지",
+      "plate": "없음",
+      "stack_height": "33mm / 23mm",
+      "support_type": "Neutral (로드 투 트레일)"
+    },
+    "runrepeat": {
+      "score": 67,
+      "midsole_foam": "AmpliFoam & GEL",
+      "pros": [
+        "아스팔트와 비포장 자갈길, 흙길을 모두 소화하는 전천후 트레일 러그",
+        "놀라운 어퍼 통기성과 든든한 힐락다운",
+        "75달러대의 뛰어난 가격 경쟁력"
+      ],
+      "cons": [
+        "토박스 메쉬의 낮은 내마모성(Dremel 1/5)",
+        "310g대의 묵직한 중량과 단단한 주행감"
+      ],
+      "verdict": "포장도로와 가벼운 오프로드 트레일을 넘나드는 올라운드 가성비 아웃도어 러닝화.",
+      "url": "https://runrepeat.com/asics-gel-venture-9"
     }
   },
   {
@@ -967,7 +1045,7 @@ window.SHOEF_MASTER = [
       "support_type": "Stability (입문 안정화 1위)"
     },
     "runrepeat": {
-      "score": 88,
+      "score": 80,
       "midsole_foam": "FLYTEFOAM",
       "pros": [
         "100달러 가격에 퓨어젤과 3D 가이던스 시스템 탑재",
@@ -1004,7 +1082,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (2025 전세계 1위 데일리)"
     },
     "runrepeat": {
-      "score": 94,
+      "score": 86,
       "midsole_foam": "FF BLAST+ MAX",
       "pros": [
         "FF BLAST+ MAX 도입으로 더욱 부드럽고 가벼워진 255g 무게",
@@ -1042,7 +1120,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (2025 최신 구름 쿠션의 정점)"
     },
     "runrepeat": {
-      "score": 93,
+      "score": 81,
       "midsole_foam": "FF BLAST+ ECO 2.0",
       "pros": [
         "충격 흡수력 랩 테스트 역대 최고점 경신",
@@ -1079,7 +1157,7 @@ window.SHOEF_MASTER = [
       "support_type": "Stability (경량 안정화)"
     },
     "runrepeat": {
-      "score": 91,
+      "score": 84,
       "midsole_foam": "FF BLAST+",
       "pros": [
         "카야노보다 가볍고 경쾌한 275g 무게",
@@ -1117,7 +1195,7 @@ window.SHOEF_MASTER = [
       "support_type": "Stability (안정화 끝판왕)"
     },
     "runrepeat": {
-      "score": 92,
+      "score": 86,
       "midsole_foam": "FF BLAST+ ECO",
       "pros": [
         "피로도가 쌓일수록 내측 아치를 부드럽게 복원하는 4D 가이던스",
@@ -1153,7 +1231,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (치트키 슈퍼트레이너)"
     },
     "runrepeat": {
-      "score": 96,
+      "score": 91,
       "midsole_foam": "FF TURBO+",
       "pros": [
         "메타스피드 레이서용 슈퍼폼(FF TURBO+) 전격 탑재",
@@ -1189,7 +1267,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (스트라이드형 마라톤 레이서)"
     },
     "runrepeat": {
-      "score": 95,
+      "score": 92,
       "midsole_foam": "FF TURBO+",
       "pros": [
         "183g 깃털 같은 무게와 넓은 밑창 안정감",
@@ -1226,7 +1304,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (가성비 입문)"
     },
     "runrepeat": {
-      "score": 83,
+      "score": 73,
       "midsole_foam": "VERSARUN",
       "pros": [
         "60달러대 놀라운 가성비",
@@ -1263,7 +1341,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (2025 만능 데일리)"
     },
     "runrepeat": {
-      "score": 92,
+      "score": 86,
       "midsole_foam": "PWRRUN+ 2.0",
       "pros": [
         "더욱 가벼워진 275g 무게와 향상된 에너지 리턴",
@@ -1300,7 +1378,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (최상급 바운스 쿠션)"
     },
     "runrepeat": {
-      "score": 92,
+      "score": 85,
       "midsole_foam": "PWRRUN PB",
       "pros": [
         "엔돌핀 레이싱화의 슈퍼폼(PWRRUN PB)을 맥스쿠션 데일리에 통째로 탑재",
@@ -1337,7 +1415,7 @@ window.SHOEF_MASTER = [
       "support_type": "Stability (신개념 센터패스)"
     },
     "runrepeat": {
-      "score": 91,
+      "score": 84,
       "midsole_foam": "PWRRUN",
       "pros": [
         "넓은 베이스 지오메트리로 자연스러운 과회내 서포트",
@@ -1374,7 +1452,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (올라운드 슈퍼트레이너)"
     },
     "runrepeat": {
-      "score": 93,
+      "score": 89,
       "midsole_foam": "PWRRUN PB",
       "pros": [
         "나일론 플레이트와 PEBA 슈퍼폼의 마법 같은 조화",
@@ -1410,7 +1488,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (엘리트 마라톤 카본 레이서)"
     },
     "runrepeat": {
-      "score": 94,
+      "score": 91,
       "midsole_foam": "PWRRUN PB & HG",
       "pros": [
         "카본 레이싱화 중 가장 안정적이고 발목 꺾임이 적음",
@@ -1447,7 +1525,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (국민 쿠션화)"
     },
     "runrepeat": {
-      "score": 91,
+      "score": 87,
       "midsole_foam": "CMEVA",
       "pros": [
         "248g이라는 믿을 수 없는 경량성과 풍부한 쿠션",
@@ -1485,7 +1563,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (울트라 맥스쿠션)"
     },
     "runrepeat": {
-      "score": 90,
+      "score": 82,
       "midsole_foam": "Ultra-light EVA",
       "pros": [
         "호카 라인업 중 가장 두껍고 푹신한 충격 흡수",
@@ -1522,7 +1600,7 @@ window.SHOEF_MASTER = [
       "support_type": "Stability (J-프레임 안정화)"
     },
     "runrepeat": {
-      "score": 89,
+      "score": 82,
       "midsole_foam": "J-Frame EVA",
       "pros": [
         "호카 특유의 가벼움에 J-프레임 과회내 제어 결합",
@@ -1559,7 +1637,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (경량 템포 트레이너)"
     },
     "runrepeat": {
-      "score": 92,
+      "score": 88,
       "midsole_foam": "Supercritical EVA",
       "pros": [
         "초임계 폼 전격 도입으로 전작 대비 반발력 대폭 상승",
@@ -1595,7 +1673,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (플레이트 슈퍼트레이너)"
     },
     "runrepeat": {
-      "score": 93,
+      "score": 89,
       "midsole_foam": "PEBA & EVA",
       "pros": [
         "44mm 거대 맥스 스택과 Pebax 플레이트의 사기적인 롤링",
@@ -1631,7 +1709,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (극강의 추진력 카본 레이서)"
     },
     "runrepeat": {
-      "score": 93,
+      "score": 90,
       "midsole_foam": "PEBA Foam",
       "pros": [
         "현존 러닝화 중 가장 다이나믹한 로커 지오메트리",
@@ -1669,7 +1747,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (입문 워킹/러닝)"
     },
     "runrepeat": {
-      "score": 83,
+      "score": 73,
       "midsole_foam": "Fresh Foam",
       "pros": [
         "뉴발란스 고유의 프레쉬폼 쿠션을 8만원대에 경험",
@@ -1707,7 +1785,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (정통 데일리)"
     },
     "runrepeat": {
-      "score": 90,
+      "score": 84,
       "midsole_foam": "Fresh Foam X",
       "pros": [
         "1080보다 탄탄하여 밸런스 좋은 주행감",
@@ -1745,7 +1823,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (2025 최신 맥스 쿠션)"
     },
     "runrepeat": {
-      "score": 93,
+      "score": 82,
       "midsole_foam": "Fresh Foam X 2.0",
       "pros": [
         "전작(v13)의 과도한 물렁함을 개선하여 주행 안정감 대폭 상승",
@@ -1783,7 +1861,7 @@ window.SHOEF_MASTER = [
       "support_type": "Stability (안정화)"
     },
     "runrepeat": {
-      "score": 91,
+      "score": 83,
       "midsole_foam": "Fresh Foam X",
       "pros": [
         "딱딱한 포스트 대신 가벼운 안정성 평면 플레이트 도입",
@@ -1820,7 +1898,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (초경량 만능 템포)"
     },
     "runrepeat": {
-      "score": 93,
+      "score": 89,
       "midsole_foam": "FuelCell PEBA Blend",
       "pros": [
         "208g이라는 깃털 같은 무게",
@@ -1857,7 +1935,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (편안한 마라톤 카본 레이서)"
     },
     "runrepeat": {
-      "score": 92,
+      "score": 90,
       "midsole_foam": "100% PEBA FuelCell",
       "pros": [
         "드디어 100% 순수 PEBA 폼 탑재로 폭발적인 에너지 리턴",
@@ -1893,7 +1971,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (입문 가성비)"
     },
     "runrepeat": {
-      "score": 84,
+      "score": 75,
       "midsole_foam": "PROFOAM LITE",
       "pros": [
         "PROTREAD 고무 아웃솔의 우수한 접지력",
@@ -1929,7 +2007,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (가성비 1위 데일리)"
     },
     "runrepeat": {
-      "score": 92,
+      "score": 87,
       "midsole_foam": "NITROFOAM",
       "pros": [
         "PUMAGRIP 아웃솔의 전 세계 1위 젖은 노면 접지력",
@@ -1965,7 +2043,7 @@ window.SHOEF_MASTER = [
       "support_type": "Stability (스마트 가이던스)"
     },
     "runrepeat": {
-      "score": 90,
+      "score": 84,
       "midsole_foam": "Dual Density NITROFOAM",
       "pros": [
         "질소 주입 폼의 부드러움과 안정 림의 지지력",
@@ -2001,7 +2079,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (카본 슈퍼트레이너)"
     },
     "runrepeat": {
-      "score": 93,
+      "score": 88,
       "midsole_foam": "NITRO Elite",
       "pros": [
         "엘리트 니트로 폼과 카본 플레이트의 공격적인 추진력",
@@ -2037,7 +2115,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (194g 초경량 카본 레이서)"
     },
     "runrepeat": {
-      "score": 94,
+      "score": 91,
       "midsole_foam": "NITROFOAM ELITE",
       "pros": [
         "194g 초경량 레이서의 날렵한 스피드",
@@ -2074,7 +2152,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (100달러 입문)"
     },
     "runrepeat": {
-      "score": 86,
+      "score": 76,
       "midsole_foam": "DNA LOFT",
       "pros": [
         "브룩스 특유의 검증된 내구성과 발 편함",
@@ -2112,7 +2190,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (2025 미국 판매 1위 국민 데일리)"
     },
     "runrepeat": {
-      "score": 92,
+      "score": 85,
       "midsole_foam": "DNA LOFT v3",
       "pros": [
         "10mm로 낮아진 드롭으로 한층 더 부드러워진 발구름 전환",
@@ -2149,7 +2227,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (프리미엄 럭셔리 쿠션)"
     },
     "runrepeat": {
-      "score": 91,
+      "score": 85,
       "midsole_foam": "DNA LOFT v3",
       "pros": [
         "부드러움과 탄력의 완벽한 조화",
@@ -2187,7 +2265,7 @@ window.SHOEF_MASTER = [
       "support_type": "Stability (2025 최신 안정화 1위)"
     },
     "runrepeat": {
-      "score": 92,
+      "score": 81,
       "midsole_foam": "DNA LOFT v3",
       "pros": [
         "드디어 아드레날린 시리즈 최초로 질소 주입 DNA LOFT v3 폼 탑재",
@@ -2223,7 +2301,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (스피드 락커 트레이너)"
     },
     "runrepeat": {
-      "score": 93,
+      "score": 88,
       "midsole_foam": "DNA FLASH v2",
       "pros": [
         "신형 페박스 플레이트 탑재로 전작 대비 10% 향상된 추진력",
@@ -2261,7 +2339,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (28년 헤리티지 데일리)"
     },
     "runrepeat": {
-      "score": 90,
+      "score": 85,
       "midsole_foam": "MIZUNO ENERZY NXT",
       "pros": [
         "힐에 ENERZY NXT 슈퍼폼 탑재로 착지 충격 완벽 분산",
@@ -2298,7 +2376,7 @@ window.SHOEF_MASTER = [
       "support_type": "Stability (과회내 안정화)"
     },
     "runrepeat": {
-      "score": 89,
+      "score": 83,
       "midsole_foam": "MIZUNO ENERZY",
       "pros": [
         "부채꼴 웨이브 플레이트의 완벽한 안쪽 발목 꺾임 방지",
@@ -2334,7 +2412,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (극단적 미드풋/포어풋 레이서)"
     },
     "runrepeat": {
-      "score": 92,
+      "score": 89,
       "midsole_foam": "ENERZY LITE+",
       "pros": [
         "뒤꿈치가 잘려나간 혁신적인 힐리스 지오메트리",
@@ -2371,7 +2449,7 @@ window.SHOEF_MASTER = [
       "support_type": "Stability (지지형 엔트리)"
     },
     "runrepeat": {
-      "score": 88,
+      "score": 80,
       "midsole_foam": "Helion Superfoam",
       "pros": [
         "헬리온 슈퍼폼 도입으로 전작 대비 훨씬 부드러워진 착지감",
@@ -2407,7 +2485,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (거대한 락커 쿠션)"
     },
     "runrepeat": {
-      "score": 91,
+      "score": 83,
       "midsole_foam": "Helion Dual Density",
       "pros": [
         "거대한 클라우드 구멍이 주는 독보적인 쿠션과 충격 분산",
@@ -2443,7 +2521,7 @@ window.SHOEF_MASTER = [
       "support_type": "Neutral (올림픽 카본 레이서)"
     },
     "runrepeat": {
-      "score": 93,
+      "score": 88,
       "midsole_foam": "Helion HF (PEBA)",
       "pros": [
         "온 최초의 100% Pebax(Helion HF) 슈퍼폼 탑재",
