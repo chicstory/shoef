@@ -1298,7 +1298,7 @@ function initShoeFApp() {
           <!-- 1열: 제품 사진 -->
           <div class="card-col-photo">
             ${!shoe.is_current ? '<span class="outlet-flag">⚡ 이월특가</span>' : ''}
-            <img src="${shoe.image_url}" alt="${shoe.name_kr}" class="shoe-img" loading="lazy">
+            <img src="${shoe.image_url}" alt="${shoe.name_kr}" class="shoe-img" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 160 110\' fill=\'none\'><rect width=\'160\' height=\'110\' rx=\'10\' fill=\'%230f241a\'/><path d=\'M30 75 C45 75, 55 70, 70 60 C85 50, 95 48, 115 50 C125 51, 135 60, 135 70 C135 75, 120 78, 100 78 C70 78, 45 78, 30 75 Z\' fill=\'%2310b981\' opacity=\'0.8\'/><circle cx=\'105\' cy=\'60\' r=\'5\' fill=\'%2334d399\'/><text x=\'80\' y=\'95\' fill=\'%236ee7b7\' font-size=\'10\' font-family=\'sans-serif\' text-anchor=\'middle\' font-weight=\'bold\'>ShoeF</text></svg>';">
           </div>
 
           <!-- 2열: 제품명 & 세대 & 카테고리 & 공식정가(MSRP) 최우선 배치 -->
