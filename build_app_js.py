@@ -138,6 +138,34 @@ const EMBEDDED_SHOES = {shoes_json};
     }});
   }}
 
+  // Dynamic Category Option Counts Sync (Never hardcode counts)
+  function updateCategoryOptionCounts() {{
+    if (!categoryFilter) return;
+    const counts = {{
+      all: shoesData.length,
+      budget: shoesData.filter(s => s.category === 'budget').length,
+      daily: shoesData.filter(s => s.category === 'daily').length,
+      stability: shoesData.filter(s => s.category === 'stability').length,
+      super_trainer: shoesData.filter(s => s.category === 'super_trainer').length,
+      racing: shoesData.filter(s => s.category === 'racing').length,
+    }};
+
+    const labels = {{
+      all: `전체 카테고리 (${{counts.all}}종)`,
+      budget: `🌱 가성비 입문화 (${{counts.budget}}종)`,
+      daily: `☁️ 데일리 / 쿠션화 (${{counts.daily}}종)`,
+      stability: `🛡️ 안정화 (${{counts.stability}}종)`,
+      super_trainer: `⚡ 슈퍼 트레이너 (${{counts.super_trainer}}종)`,
+      racing: `🏆 레이싱화 (${{counts.racing}}종)`,
+    }};
+
+    Array.from(categoryFilter.options).forEach(opt => {{
+      if (labels[opt.value]) {{
+        opt.textContent = labels[opt.value];
+      }}
+    }});
+  }}
+
   // 3. Filter & Sort Logic
   function getFilteredShoes() {{
     const catVal = categoryFilter.value;
@@ -574,6 +602,7 @@ const EMBEDDED_SHOES = {shoes_json};
 
   // Start Application
   initBrandButtons();
+  updateCategoryOptionCounts();
   attachEvents();
   renderShoes();
 }})();
