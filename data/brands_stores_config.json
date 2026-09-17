@@ -1,18 +1,18 @@
 {
   "brands": [
     {
-      "id": "nike",
-      "name": "Nike",
-      "name_kr": "나이키",
-      "active": false,
-      "logo_text": "NIKE"
-    },
-    {
       "id": "adidas",
       "name": "Adidas",
       "name_kr": "아디다스",
       "active": true,
       "logo_text": "ADIDAS"
+    },
+    {
+      "id": "nike",
+      "name": "Nike",
+      "name_kr": "나이키",
+      "active": true,
+      "logo_text": "NIKE"
     },
     {
       "id": "asics",
@@ -36,129 +36,48 @@
       "logo_text": "HOKA"
     },
     {
+      "id": "newbalance",
+      "name": "New Balance",
+      "name_kr": "뉴발란스",
+      "active": true,
+      "logo_text": "NEW BALANCE"
+    },
+    {
       "id": "puma",
       "name": "Puma",
       "name_kr": "푸마",
-      "active": false,
+      "active": true,
       "logo_text": "PUMA"
+    },
+    {
+      "id": "mizuno",
+      "name": "Mizuno",
+      "name_kr": "미즈노",
+      "active": true,
+      "logo_text": "MIZUNO"
     },
     {
       "id": "brooks",
       "name": "Brooks",
       "name_kr": "브룩스",
-      "active": false,
+      "active": true,
       "logo_text": "BROOKS"
     },
     {
-      "id": "mizuno",
-      "name": "Mizuno",
-      "name_kr": "미ズノ",
-      "active": false,
-      "logo_text": "MIZUNO"
-    },
-    {
       "id": "on",
-      "name": "On Running",
-      "name_kr": "온",
-      "active": false,
-      "logo_text": "ON"
-    },
-    {
-      "id": "newbalance",
-      "name": "New Balance",
-      "name_kr": "뉴발란스",
-      "active": false,
-      "logo_text": "NEW BALANCE"
+      "name": "On",
+      "name_kr": "온 (On)",
+      "active": true,
+      "logo_text": "ON RUNNING"
     }
   ],
-  "whitelist_stores": [
-    {
-      "id": "official",
-      "name": "공식 온라인스토어",
-      "badge": "공식몰",
-      "type": "official",
-      "trusted": true
-    },
-    {
-      "id": "ssg_shinsegae",
-      "name": "신세계백화점 (SSG/네이버)",
-      "badge": "백화점",
-      "type": "dept",
-      "trusted": true
-    },
-    {
-      "id": "lotte_on",
-      "name": "롯데백화점 (롯데온/네이버)",
-      "badge": "백화점",
-      "type": "dept",
-      "trusted": true
-    },
-    {
-      "id": "hyundai_h",
-      "name": "현대백화점 (더현대닷컴/네이버)",
-      "badge": "백화점",
-      "type": "dept",
-      "trusted": true
-    },
-    {
-      "id": "abcmart",
-      "name": "ABC-MART (그랜드스테이지)",
-      "badge": "슈즈몰",
-      "type": "multi",
-      "trusted": true
-    },
-    {
-      "id": "goodrunner",
-      "name": "굿러너 컴퍼니",
-      "badge": "러닝전문",
-      "type": "select",
-      "trusted": true
-    },
-    {
-      "id": "fleetrunner",
-      "name": "플릿러너",
-      "badge": "러닝전문",
-      "type": "select",
-      "trusted": true
-    },
-    {
-      "id": "runnersclub",
-      "name": "러너스클럽",
-      "badge": "러닝전문",
-      "type": "select",
-      "trusted": true
-    }
-  ],
-  "categories": [
-    {
-      "id": "all",
-      "name": "전체 카테고리"
-    },
-    {
-      "id": "entry",
-      "name": "입문화"
-    },
-    {
-      "id": "cushion",
-      "name": "맥스 쿠션화"
-    },
-    {
-      "id": "stability",
-      "name": "안정화"
-    },
-    {
-      "id": "allrounder",
-      "name": "올라운더"
-    },
-    {
-      "id": "super_trainer",
-      "name": "슈퍼 트레이너"
-    },
-    {
-      "id": "carbon_racing",
-      "name": "카본 레이싱"
-    }
-  ],
+  "categories": {
+    "budget": "가성비 입문화 (≤$100)",
+    "daily": "데일리 / 쿠션화",
+    "stability": "안정화 (과회내 서포트)",
+    "super_trainer": "슈퍼 트레이너",
+    "racing": "레이싱화 (카본 슈퍼슈즈)"
+  },
   "sizes": [
     230,
     235,
@@ -179,21 +98,8 @@
     310
   ],
   "widths": [
-    {
-      "id": "all",
-      "name": "전체 발볼"
-    },
-    {
-      "id": "D",
-      "name": "Standard (D 보통)"
-    },
-    {
-      "id": "2E",
-      "name": "Wide (2E 넓음)"
-    },
-    {
-      "id": "4E",
-      "name": "Extra Wide (4E 매우넓음)"
-    }
+    "D",
+    "2E",
+    "4E"
   ]
 }

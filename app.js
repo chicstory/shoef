@@ -1,24 +1,24 @@
 /**
- * ShoeF Wiki & Price - Main Application Controller (Fully Self-Contained)
- * 100% Verified Real Products from TheHyundai SmartStore
+ * ShoeF - Global Running Shoe Lab Wiki & Comparison Platform
+ * RunRepeat Verified Lab Specs & 1:1 Comparison & Runner Shoutbox
  */
 
-// Embedded Fallback Data (Guarantees 0-latency instant render in file:// protocol)
+// 1. Embedded Master Data
 const EMBEDDED_CONFIG = {
   "brands": [
-    {
-      "id": "nike",
-      "name": "Nike",
-      "name_kr": "나이키",
-      "active": false,
-      "logo_text": "NIKE"
-    },
     {
       "id": "adidas",
       "name": "Adidas",
       "name_kr": "아디다스",
       "active": true,
       "logo_text": "ADIDAS"
+    },
+    {
+      "id": "nike",
+      "name": "Nike",
+      "name_kr": "나이키",
+      "active": true,
+      "logo_text": "NIKE"
     },
     {
       "id": "asics",
@@ -42,129 +42,48 @@ const EMBEDDED_CONFIG = {
       "logo_text": "HOKA"
     },
     {
+      "id": "newbalance",
+      "name": "New Balance",
+      "name_kr": "뉴발란스",
+      "active": true,
+      "logo_text": "NEW BALANCE"
+    },
+    {
       "id": "puma",
       "name": "Puma",
       "name_kr": "푸마",
-      "active": false,
+      "active": true,
       "logo_text": "PUMA"
+    },
+    {
+      "id": "mizuno",
+      "name": "Mizuno",
+      "name_kr": "미즈노",
+      "active": true,
+      "logo_text": "MIZUNO"
     },
     {
       "id": "brooks",
       "name": "Brooks",
       "name_kr": "브룩스",
-      "active": false,
+      "active": true,
       "logo_text": "BROOKS"
     },
     {
-      "id": "mizuno",
-      "name": "Mizuno",
-      "name_kr": "미ズノ",
-      "active": false,
-      "logo_text": "MIZUNO"
-    },
-    {
       "id": "on",
-      "name": "On Running",
-      "name_kr": "온",
-      "active": false,
-      "logo_text": "ON"
-    },
-    {
-      "id": "newbalance",
-      "name": "New Balance",
-      "name_kr": "뉴발란스",
-      "active": false,
-      "logo_text": "NEW BALANCE"
+      "name": "On",
+      "name_kr": "온 (On)",
+      "active": true,
+      "logo_text": "ON RUNNING"
     }
   ],
-  "whitelist_stores": [
-    {
-      "id": "official",
-      "name": "공식 온라인스토어",
-      "badge": "공식몰",
-      "type": "official",
-      "trusted": true
-    },
-    {
-      "id": "ssg_shinsegae",
-      "name": "신세계백화점 (SSG/네이버)",
-      "badge": "백화점",
-      "type": "dept",
-      "trusted": true
-    },
-    {
-      "id": "lotte_on",
-      "name": "롯데백화점 (롯데온/네이버)",
-      "badge": "백화점",
-      "type": "dept",
-      "trusted": true
-    },
-    {
-      "id": "hyundai_h",
-      "name": "현대백화점 (더현대닷컴/네이버)",
-      "badge": "백화점",
-      "type": "dept",
-      "trusted": true
-    },
-    {
-      "id": "abcmart",
-      "name": "ABC-MART (그랜드스테이지)",
-      "badge": "슈즈몰",
-      "type": "multi",
-      "trusted": true
-    },
-    {
-      "id": "goodrunner",
-      "name": "굿러너 컴퍼니",
-      "badge": "러닝전문",
-      "type": "select",
-      "trusted": true
-    },
-    {
-      "id": "fleetrunner",
-      "name": "플릿러너",
-      "badge": "러닝전문",
-      "type": "select",
-      "trusted": true
-    },
-    {
-      "id": "runnersclub",
-      "name": "러너스클럽",
-      "badge": "러닝전문",
-      "type": "select",
-      "trusted": true
-    }
-  ],
-  "categories": [
-    {
-      "id": "all",
-      "name": "전체 카테고리"
-    },
-    {
-      "id": "entry",
-      "name": "입문화"
-    },
-    {
-      "id": "cushion",
-      "name": "맥스 쿠션화"
-    },
-    {
-      "id": "stability",
-      "name": "안정화"
-    },
-    {
-      "id": "allrounder",
-      "name": "올라운더"
-    },
-    {
-      "id": "super_trainer",
-      "name": "슈퍼 트레이너"
-    },
-    {
-      "id": "carbon_racing",
-      "name": "카본 레이싱"
-    }
-  ],
+  "categories": {
+    "budget": "가성비 입문화 (≤$100)",
+    "daily": "데일리 / 쿠션화",
+    "stability": "안정화 (과회내 서포트)",
+    "super_trainer": "슈퍼 트레이너",
+    "racing": "레이싱화 (카본 슈퍼슈즈)"
+  },
   "sizes": [
     230,
     235,
@@ -185,867 +104,1943 @@ const EMBEDDED_CONFIG = {
     310
   ],
   "widths": [
-    {
-      "id": "all",
-      "name": "전체 발볼"
-    },
-    {
-      "id": "D",
-      "name": "Standard (D 보통)"
-    },
-    {
-      "id": "2E",
-      "name": "Wide (2E 넓음)"
-    },
-    {
-      "id": "4E",
-      "name": "Extra Wide (4E 매우넓음)"
-    }
+    "D",
+    "2E",
+    "4E"
   ]
 };
 const EMBEDDED_SHOES = [
   {
-    "id": "saucony_endorphin_speed_5",
-    "brand_id": "saucony",
-    "name_kr": "써코니 엔돌핀 스피드 5",
-    "name_en": "Saucony Endorphin Speed 5",
-    "series": "엔돌핀 스피드",
-    "is_current": true,
-    "category": "super_trainer",
-    "category_name": "슈퍼트레이너",
-    "msrp": 199000,
-    "image_url": "https://shop-phinf.pstatic.net/20260801_189/1785587747805XwK54_JPEG/119720556133984666_1763789495.jpg?type=f640",
-    "style_code": "S21007-243",
+    "id": "adidas_galaxy_7",
+    "brand_id": "adidas",
+    "name_kr": "아디다스 갤럭시 7",
+    "name_en": "Adidas Galaxy 7",
+    "series": "갤럭시",
+    "category": "budget",
+    "category_name": "가성비 입문화 (≤$100)",
+    "msrp_usd": 60,
+    "msrp_krw": 69000,
+    "widths": [
+      "D",
+      "2E"
+    ],
+    "specs": {
+      "weight_g": 298,
+      "heel_drop_mm": 10,
+      "midsole": "Cloudfoam (구름 쿠셔닝)",
+      "plate": "없음",
+      "stack_height": "34mm / 24mm",
+      "support_type": "Neutral (중립)"
+    },
+    "runrepeat": {
+      "score": 83,
+      "midsole_foam": "Cloudfoam",
+      "pros": [
+        "매우 저렴한 가격대($60)",
+        "일상 워킹·헬스장 트레드밀 겸용 편안한 패딩",
+        "두터운 고무 아웃솔의 뛰어난 내구성"
+      ],
+      "cons": [
+        "다소 무거운 무게(298g)",
+        "에너지 리턴 및 반발 탄성 부족"
+      ],
+      "verdict": "달리기를 처음 시작하거나 헬스장 런닝머신용으로 부담 없는 가성비 최고의 입문 러닝화.",
+      "url": "https://runrepeat.com/adidas-galaxy-7"
+    }
+  },
+  {
+    "id": "adidas_response_runner",
+    "brand_id": "adidas",
+    "name_kr": "아디다스 리스폰스 2 / 러너",
+    "name_en": "Adidas Response Runner",
+    "series": "리스폰스",
+    "category": "budget",
+    "category_name": "가성비 입문화 (≤$100)",
+    "msrp_usd": 70,
+    "msrp_krw": 79000,
     "widths": [
       "D"
     ],
     "specs": {
-      "weight_g": 233,
-      "heel_drop_mm": 8,
-      "midsole": "PWRRUN PB (PEBA 초임계 폼) + 나일론 윙 플레이트",
-      "cushion_level": "High (반발 탄성 극대화)",
-      "support_type": "Neutral (중립)",
-      "stack_height": "36mm / 28mm"
+      "weight_g": 285,
+      "heel_drop_mm": 9,
+      "midsole": "Response EVA Foam",
+      "plate": "없음",
+      "stack_height": "33mm / 24mm",
+      "support_type": "Neutral (중립)"
     },
     "runrepeat": {
-      "score": 93,
-      "midsole_foam": "PWRRUN PB",
-      "rank_in_category": 2,
-      "total_in_category": 85,
+      "score": 85,
+      "midsole_foam": "Response Foam",
       "pros": [
-        "PWRRUN PB 폼의 폭발적인 반발력과 부드러운 쿠션",
-        "카본화 대비 피로도가 적어 데일리 템포런·인터벌·대회 올라운드",
-        "나일론 윙 플레이트의 안정적인 좌우 뒤틀림 억제"
+        "균형 잡힌 충격 완화력",
+        "우수한 지면 접지력과 내마모성",
+        "발볼이 편안한 엔지니어드 메쉬"
       ],
       "cons": [
-        "우천 시 젖은 노면에서 접지력 주의",
-        "카본 플레이트의 극한의 강성을 선호하는 러너에게는 유연함"
+        "10km 이상 장거리 러닝 시 쿠션 가라앉음 체감"
       ],
-      "verdict": "대회 레이싱과 훈련을 모두 완벽하게 커버하는 현존 최고의 올라운드 스피드 트레이너."
-    },
-    "prices": [
-      {
-        "store_id": "thehyundai",
-        "store_name": "현대백화점",
-        "store_sub": "더현대 스마트스토어 (그랜드스테이지)",
-        "badge": "백화점",
-        "price": 132050,
-        "shipping": 0,
-        "discount_rate": 34,
-        "width": "D",
-        "sizes": [
-          250,
-          255,
-          260,
-          265,
-          270,
-          275,
-          280
-        ],
-        "url": "https://smartstore.naver.com/thehyundai/products/13691193664",
-        "is_lowest": true
-      }
-    ],
-    "official_price": 199000
+      "verdict": "일상 5km 조깅과 가벼운 트레이닝을 위한 실속파 러너의 선택.",
+      "url": "https://runrepeat.com/adidas-response-runner"
+    }
   },
   {
-    "id": "saucony_triumph_22_wide",
-    "brand_id": "saucony",
-    "name_kr": "써코니 트라이엄프 22 와이드 (2E)",
-    "name_en": "Saucony Triumph 22 Wide",
-    "series": "트라이엄프",
-    "is_current": true,
-    "category": "cushion",
-    "category_name": "쿠션화",
-    "msrp": 209000,
-    "image_url": "https://shop-phinf.pstatic.net/20260429_63/1777428800164e8k94_JPEG/53046832621008639_629161759.jpg?type=f640",
-    "style_code": "S20965-218",
+    "id": "adidas_duramo_speed",
+    "brand_id": "adidas",
+    "name_kr": "아디다스 듀라모 스피드",
+    "name_en": "Adidas Duramo Speed",
+    "series": "듀라모",
+    "category": "budget",
+    "category_name": "가성비 입문화 (≤$100)",
+    "msrp_usd": 90,
+    "msrp_krw": 89000,
     "widths": [
-      "2E"
+      "D"
     ],
     "specs": {
-      "weight_g": 286,
+      "weight_g": 264,
+      "heel_drop_mm": 6.5,
+      "midsole": "Lightstrike (고급 경량 폼)",
+      "plate": "없음",
+      "stack_height": "34mm / 27.5mm",
+      "support_type": "Neutral (중립)"
+    },
+    "runrepeat": {
+      "score": 88,
+      "midsole_foam": "Lightstrike",
+      "pros": [
+        "100달러 미만에서 아디제로급 Lightstrike 폼 탑재",
+        "264g의 경쾌한 무게로 템포런 가능",
+        "아디웨어 아웃솔의 끈질긴 수명"
+      ],
+      "cons": [
+        "미드솔 초반 착화감이 다소 단단함(Firm)"
+      ],
+      "verdict": "10만원 미만에서 가장 스피디하고 탄탄한 가성비 템포/데일리 러닝화.",
+      "url": "https://runrepeat.com/adidas-duramo-speed"
+    }
+  },
+  {
+    "id": "adidas_questar_3",
+    "brand_id": "adidas",
+    "name_kr": "아디다스 퀘스타 3",
+    "name_en": "Adidas Questar 3",
+    "series": "퀘스타",
+    "category": "budget",
+    "category_name": "가성비 입문화 (≤$100)",
+    "msrp_usd": 80,
+    "msrp_krw": 85000,
+    "widths": [
+      "D"
+    ],
+    "specs": {
+      "weight_g": 290,
+      "heel_drop_mm": 9,
+      "midsole": "Bounce (고탄성 바운스 폼)",
+      "plate": "없음",
+      "stack_height": "35mm / 26mm",
+      "support_type": "Neutral (중립)"
+    },
+    "runrepeat": {
+      "score": 84,
+      "midsole_foam": "Bounce",
+      "pros": [
+        "바운스 폼의 쫀득한 충격 흡수",
+        "도톰한 힐 패딩과 안정적인 힐락",
+        "착한 정가"
+      ],
+      "cons": [
+        "여름철 통기성이 보통 수준"
+      ],
+      "verdict": "무릎과 발목 충격을 든든히 잡아주는 가성비 도심 로드 러닝화.",
+      "url": "https://runrepeat.com/adidas-questar-3"
+    }
+  },
+  {
+    "id": "adidas_supernova_rise",
+    "brand_id": "adidas",
+    "name_kr": "아디다스 슈퍼노바 라이즈",
+    "name_en": "Adidas Supernova Rise",
+    "series": "슈퍼노바",
+    "category": "daily",
+    "category_name": "데일리 / 쿠션화",
+    "msrp_usd": 140,
+    "msrp_krw": 159000,
+    "widths": [
+      "D"
+    ],
+    "specs": {
+      "weight_g": 278,
       "heel_drop_mm": 10,
-      "midsole": "PWRRUN PB (프리미엄 초임계 폼)",
-      "cushion_level": "Maximum (극상의 충격 흡수)",
-      "support_type": "Neutral (중립)",
-      "stack_height": "37mm / 27mm"
+      "midsole": "Dreamstrike+ (PEBA 기반 고탄성 폼) + 서포트 로드",
+      "plate": "바텀 서포트 로드 (EVA)",
+      "stack_height": "36mm / 26mm",
+      "support_type": "Neutral (중립 안정)"
+    },
+    "runrepeat": {
+      "score": 90,
+      "midsole_foam": "Dreamstrike+",
+      "pros": [
+        "차세대 Dreamstrike+ 폼의 부드럽고 쫄깃한 쿠셔닝",
+        "서포트 로드의 자연스러운 전진 전환",
+        "매일 신기 완벽한 내구성과 밸런스"
+      ],
+      "cons": [
+        "스피드 인터벌보다는 조깅 및 지속주에 최적화"
+      ],
+      "verdict": "아디다스가 작정하고 만든 2024-2025 국민 데일리 트레이너의 정석.",
+      "url": "https://runrepeat.com/adidas-supernova-rise"
+    }
+  },
+  {
+    "id": "adidas_supernova_prima",
+    "brand_id": "adidas",
+    "name_kr": "아디다스 슈퍼노바 프리마",
+    "name_en": "Adidas Supernova Prima",
+    "series": "슈퍼노바",
+    "category": "daily",
+    "category_name": "데일리 / 쿠션화",
+    "msrp_usd": 160,
+    "msrp_krw": 179000,
+    "widths": [
+      "D"
+    ],
+    "specs": {
+      "weight_g": 290,
+      "heel_drop_mm": 8,
+      "midsole": "Dreamstrike+ 맥스 스택 (13% 추가 증량)",
+      "plate": "서포트 로드+",
+      "stack_height": "38mm / 30mm",
+      "support_type": "Neutral (맥스 쿠션)"
     },
     "runrepeat": {
       "score": 91,
-      "midsole_foam": "PWRRUN PB",
-      "rank_in_category": 5,
-      "total_in_category": 120,
+      "midsole_foam": "Dreamstrike+",
       "pros": [
-        "최상급 PWRRUN PB 폼 적용으로 풍부하면서도 꺼지지 않는 탄력 쿠션",
-        "2E 와이드 발볼 설계로 발볼 넓은 한국인 러너에게 최상의 안락함",
-        "장거리 LSD 시 발바닥 및 무릎 관절 완벽 보호"
+        "압도적으로 두터운 맥스 쿠셔닝",
+        "장거리 LSD에서도 죽지 않는 서포트력",
+        "부드러운 프리미엄 어퍼 마감"
       ],
       "cons": [
-        "스피드 훈련용으로는 다소 묵직함"
+        "스피드 러닝에는 다소 묵직함"
       ],
-      "verdict": "발볼 넓은 러너가 믿고 달릴 수 있는 최상급 데일리 맥스 쿠셔닝화."
-    },
-    "prices": [
-      {
-        "store_id": "thehyundai",
-        "store_name": "현대백화점",
-        "store_sub": "더현대 스마트스토어 (그랜드스테이지)",
-        "badge": "백화점",
-        "price": 179550,
-        "shipping": 0,
-        "discount_rate": 14,
-        "width": "2E",
-        "sizes": [
-          255,
-          260,
-          265,
-          270,
-          275,
-          280,
-          285
-        ],
-        "url": "https://smartstore.naver.com/thehyundai/products/13444727307",
-        "is_lowest": true
-      }
-    ],
-    "official_price": 209000
+      "verdict": "주말 20km 이상 장거리와 회복 러닝을 위한 최상급 맥스 쿠션화.",
+      "url": "https://runrepeat.com/adidas-supernova-prima"
+    }
   },
   {
-    "id": "saucony_triumph_23_wide",
-    "brand_id": "saucony",
-    "name_kr": "써코니 트라이엄프 23 와이드 (2E)",
-    "name_en": "Saucony Triumph 23 Wide",
-    "series": "트라이엄프",
-    "is_current": true,
-    "category": "cushion",
-    "category_name": "쿠션화",
-    "msrp": 219000,
-    "image_url": "https://shop-phinf.pstatic.net/20260801_265/1785587747805XwK54_JPEG/119720556133984666_1763789495.jpg?type=f640",
-    "style_code": "S11024-200",
+    "id": "adidas_supernova_solution",
+    "brand_id": "adidas",
+    "name_kr": "아디다스 슈퍼노바 솔루션",
+    "name_en": "Adidas Supernova Solution",
+    "series": "슈퍼노바",
+    "category": "stability",
+    "category_name": "안정화 (과회내 서포트)",
+    "msrp_usd": 140,
+    "msrp_krw": 159000,
     "widths": [
+      "D"
+    ],
+    "specs": {
+      "weight_g": 288,
+      "heel_drop_mm": 10,
+      "midsole": "Dreamstrike+ & 듀얼 덴시티 스테빌리티 로드",
+      "plate": "내측 이중 결합 스테빌리티 로드",
+      "stack_height": "36mm / 26mm",
+      "support_type": "Stability (과회내 방지)"
+    },
+    "runrepeat": {
+      "score": 89,
+      "midsole_foam": "Dreamstrike+",
+      "pros": [
+        "이질감 없는 현대적 과회내 제어(스테빌리티 로드)",
+        "딱딱하지 않고 탄력 있는 안정화",
+        "넓은 밑창 플랫폼으로 착지 안정감 발군"
+      ],
+      "cons": [
+        "경량 레이싱 용도로는 비추천"
+      ],
+      "verdict": "평발이나 발목 무너짐이 있는 러너에게 쿠션과 안정을 동시에 선물하는 신개념 안정화.",
+      "url": "https://runrepeat.com/adidas-supernova-solution"
+    }
+  },
+  {
+    "id": "adidas_adistar_byd",
+    "brand_id": "adidas",
+    "name_kr": "아디다스 아디스타 BYD",
+    "name_en": "Adidas Adistar BYD",
+    "series": "아디스타",
+    "category": "daily",
+    "category_name": "데일리 / 쿠션화",
+    "msrp_usd": 140,
+    "msrp_krw": 159000,
+    "widths": [
+      "D"
+    ],
+    "specs": {
+      "weight_g": 310,
+      "heel_drop_mm": 6,
+      "midsole": "Repetitor 2.0 & 초두터운 락커 지오메트리",
+      "plate": "없음",
+      "stack_height": "40mm / 34mm",
+      "support_type": "Supportive Cushion"
+    },
+    "runrepeat": {
+      "score": 87,
+      "midsole_foam": "Repetitor 2.0",
+      "pros": [
+        "탱크 같은 내구성과 40mm 거대 맥스 쿠션",
+        "앞으로 부드럽게 굴러가는 락커 형상",
+        "헤비 러너 무릎 충격 완벽 흡수"
+      ],
+      "cons": [
+        "300g 이상의 무게감"
+      ],
+      "verdict": "체중이 있는 러너나 끝없는 마일리지를 쌓는 러너를 위한 불침번 장거리 쿠션화.",
+      "url": "https://runrepeat.com/adidas-adistar-byd"
+    }
+  },
+  {
+    "id": "adidas_adizero_sl2",
+    "brand_id": "adidas",
+    "name_kr": "아디다스 아디제로 SL2",
+    "name_en": "Adidas Adizero SL2",
+    "series": "아디제로",
+    "category": "super_trainer",
+    "category_name": "슈퍼 트레이너",
+    "msrp_usd": 130,
+    "msrp_krw": 149000,
+    "widths": [
+      "D"
+    ],
+    "specs": {
+      "weight_g": 235,
+      "heel_drop_mm": 10,
+      "midsole": "Lightstrike 2.0 외피 + Full-length Lightstrike Pro 코어",
+      "plate": "없음 (순수 슈퍼폼 반발)",
+      "stack_height": "36mm / 26mm",
+      "support_type": "Neutral (스피드)"
+    },
+    "runrepeat": {
+      "score": 93,
+      "midsole_foam": "Lightstrike Pro",
+      "pros": [
+        "130달러에 아디오스 프로의 슈퍼폼(Lightstrike Pro)을 그대로 탑재",
+        "235g 깃털 무게로 조깅부터 템포런까지 올킬",
+        "플레이트가 없어 발목 피로도가 극히 적음"
+      ],
+      "cons": [
+        "발볼이 다소 타이트하여 칼발 러너에게 최적"
+      ],
+      "verdict": "2024-2025 전 세계 러닝 매체가 입을 모아 극찬한 가성비 1위 슈퍼 트레이너.",
+      "url": "https://runrepeat.com/adidas-adizero-sl-2"
+    }
+  },
+  {
+    "id": "adidas_adizero_evo_sl",
+    "brand_id": "adidas",
+    "name_kr": "아디다스 아디제로 EVO SL",
+    "name_en": "Adidas Adizero EVO SL",
+    "series": "아디제로",
+    "category": "super_trainer",
+    "category_name": "슈퍼 트레이너",
+    "msrp_usd": 150,
+    "msrp_krw": 179000,
+    "widths": [
+      "D"
+    ],
+    "specs": {
+      "weight_g": 224,
+      "heel_drop_mm": 8.5,
+      "midsole": "Full 100% Lightstrike Pro (프로급 단독 폼)",
+      "plate": "없음",
+      "stack_height": "38mm / 29.5mm",
+      "support_type": "Neutral (레이스 훈련)"
+    },
+    "runrepeat": {
+      "score": 95,
+      "midsole_foam": "Lightstrike Pro",
+      "pros": [
+        "아디제로 프로3의 모든 탄성을 일상 트레이너에 그대로 이식",
+        "카본 플레이트 없이도 폭발적인 에너지 리턴",
+        "감각적인 하이테크 미니멀 디자인"
+      ],
+      "cons": [
+        "인기 폭발로 인한 빠른 품절"
+      ],
+      "verdict": "출시되자마자 전세계 품절 대란을 일으킨 현존 최강의 논플레이트 슈퍼 트레이너.",
+      "url": "https://runrepeat.com/adidas-adizero-evo-sl"
+    }
+  },
+  {
+    "id": "adidas_adizero_boston_12",
+    "brand_id": "adidas",
+    "name_kr": "아디다스 아디제로 보스턴 12",
+    "name_en": "Adidas Adizero Boston 12",
+    "series": "아디제로",
+    "category": "super_trainer",
+    "category_name": "슈퍼 트레이너",
+    "msrp_usd": 160,
+    "msrp_krw": 179000,
+    "widths": [
+      "D"
+    ],
+    "specs": {
+      "weight_g": 260,
+      "heel_drop_mm": 7,
+      "midsole": "Lightstrike Pro (상단) + Lightstrike 2.0 (하단) + 유리섬유 EnergyRods 2.0",
+      "plate": "EnergyRods 2.0 (유리섬유 로드)",
+      "stack_height": "37mm / 30mm",
+      "support_type": "Neutral (템포/마라톤 훈련)"
+    },
+    "runrepeat": {
+      "score": 92,
+      "midsole_foam": "Lightstrike Pro",
+      "pros": [
+        "에너지로드의 강력하고 경쾌한 추진력",
+        "컨티넨탈 러버 아웃솔의 젖은 노면 접지력 종결",
+        "하프·풀마라톤 레이싱까지 커버하는 전천후 만능성"
+      ],
+      "cons": [
+        "어퍼 레이싱 시스템의 발등 피팅 호불호"
+      ],
+      "verdict": "마라톤 서브3, 서브4를 목표로 하는 러너들의 영원한 국민 훈련화.",
+      "url": "https://runrepeat.com/adidas-adizero-boston-12"
+    }
+  },
+  {
+    "id": "adidas_adizero_adios_pro_3",
+    "brand_id": "adidas",
+    "name_kr": "아디다스 아디제로 아디오스 프로 3",
+    "name_en": "Adidas Adizero Adios Pro 3",
+    "series": "아디제로",
+    "category": "racing",
+    "category_name": "레이싱화 (카본 슈퍼슈즈)",
+    "msrp_usd": 250,
+    "msrp_krw": 279000,
+    "widths": [
+      "D"
+    ],
+    "specs": {
+      "weight_g": 218,
+      "heel_drop_mm": 6.5,
+      "midsole": "Dual Lightstrike Pro + 풀 카본 EnergyRods 2.0",
+      "plate": "Carbon EnergyRods 2.0 (5개 발가락 뼈 형상 카본)",
+      "stack_height": "39.5mm / 33mm",
+      "support_type": "Neutral (마라톤 대회 PB 갱신)"
+    },
+    "runrepeat": {
+      "score": 94,
+      "midsole_foam": "Lightstrike Pro",
+      "pros": [
+        "세계 메이저 마라톤 우승 1위 기록의 압도적 성능",
+        "후반부 30km 이후에도 다리가 털리지 않는 에너지 보존력",
+        "컨티넨탈 레이스 아웃솔의 사기적인 코너링 접지"
+      ],
+      "cons": [
+        "발목 힘이 약한 초보 러너에게는 힐컵 불안정"
+      ],
+      "verdict": "풀코스 PB 갱신을 원하는 러너에게 가장 완벽한 피니시를 선사하는 카본 슈퍼슈즈.",
+      "url": "https://runrepeat.com/adidas-adizero-adios-pro-3"
+    }
+  },
+  {
+    "id": "adidas_ultraboost_5x",
+    "brand_id": "adidas",
+    "name_kr": "아디다스 울트라부스트 5X",
+    "name_en": "Adidas Ultraboost 5X",
+    "series": "울트라부스트",
+    "category": "daily",
+    "category_name": "데일리 / 쿠션화",
+    "msrp_usd": 180,
+    "msrp_krw": 219000,
+    "widths": [
+      "D"
+    ],
+    "specs": {
+      "weight_g": 275,
+      "heel_drop_mm": 10,
+      "midsole": "Light BOOST V2 (기존 대비 30% 감량)",
+      "plate": "Torsion 시스템",
+      "stack_height": "39mm / 29mm",
+      "support_type": "Neutral (프리미엄 쿠션)"
+    },
+    "runrepeat": {
+      "score": 88,
+      "midsole_foam": "Light BOOST",
+      "pros": [
+        "기존 울트라부스트의 무거움을 완전히 탈피(275g)",
+        "비교 불가의 쫀득하고 안락한 착화감",
+        "출퇴근 일상부터 주말 10km 조깅까지 전천후"
+      ],
+      "cons": [
+        "스피드 레이싱용으로는 높은 힐드롭"
+      ],
+      "verdict": "러닝화와 라이프스타일 스니커즈의 완벽한 융합, 더욱 가벼워진 전설의 부활.",
+      "url": "https://runrepeat.com/adidas-ultraboost-5x"
+    }
+  },
+  {
+    "id": "nike_revolution_7",
+    "brand_id": "nike",
+    "name_kr": "나이키 레볼루션 7",
+    "name_en": "Nike Revolution 7",
+    "series": "레볼루션",
+    "category": "budget",
+    "category_name": "가성비 입문화 (≤$100)",
+    "msrp_usd": 70,
+    "msrp_krw": 79000,
+    "widths": [
+      "D",
+      "4E"
+    ],
+    "specs": {
+      "weight_g": 288,
+      "heel_drop_mm": 10,
+      "midsole": "Phylon EVA 쿠셔닝",
+      "plate": "없음",
+      "stack_height": "31mm / 21mm",
+      "support_type": "Neutral (중립)"
+    },
+    "runrepeat": {
+      "score": 82,
+      "midsole_foam": "EVA Foam",
+      "pros": [
+        "나이키 전 제품 중 가장 착한 7만원대 가격",
+        "심플하고 깔끔한 디자인으로 워킹·운동 겸용",
+        "부드러운 발목 패딩"
+      ],
+      "cons": [
+        "고속 질주시 반발력 한계",
+        "비 오는 날 접지력 주의"
+      ],
+      "verdict": "운동을 막 시작하는 러너의 첫 번째 파트너로 가장 부담 없는 스테디셀러.",
+      "url": "https://runrepeat.com/nike-revolution-7"
+    }
+  },
+  {
+    "id": "nike_winflo_11",
+    "brand_id": "nike",
+    "name_kr": "나이키 윈플로 11",
+    "name_en": "Nike Winflo 11",
+    "series": "윈플로",
+    "category": "budget",
+    "category_name": "가성비 입문화 (≤$100)",
+    "msrp_usd": 105,
+    "msrp_krw": 119000,
+    "widths": [
+      "D",
       "2E"
+    ],
+    "specs": {
+      "weight_g": 295,
+      "heel_drop_mm": 10,
+      "midsole": "Cushlon 3.0 + 풀렝스 Nike Air 유닛",
+      "plate": "없음",
+      "stack_height": "37mm / 27mm",
+      "support_type": "Neutral (안정 쿠션)"
+    },
+    "runrepeat": {
+      "score": 87,
+      "midsole_foam": "Cushlon 3.0",
+      "pros": [
+        "페가수스 버금가는 풀렝스 에어 쿠셔닝",
+        "넓어진 전족부와 넉넉한 발볼 공간",
+        "10만원 초반 가성비 훈련화"
+      ],
+      "cons": [
+        "다소 묵직한 중량"
+      ],
+      "verdict": "페가수스의 가격이 부담스러운 러너를 위한 최고의 합리적 대안.",
+      "url": "https://runrepeat.com/nike-winflo-11"
+    }
+  },
+  {
+    "id": "nike_pegasus_41",
+    "brand_id": "nike",
+    "name_kr": "나이키 페가수스 41",
+    "name_en": "Nike Pegasus 41",
+    "series": "페가수스",
+    "category": "daily",
+    "category_name": "데일리 / 쿠션화",
+    "msrp_usd": 140,
+    "msrp_krw": 159000,
+    "widths": [
+      "D",
+      "2E",
+      "4E"
     ],
     "specs": {
       "weight_g": 282,
       "heel_drop_mm": 10,
-      "midsole": "PWRRUN PB 업그레이드 폼",
-      "cushion_level": "Maximum",
-      "support_type": "Neutral",
-      "stack_height": "38mm / 28mm"
+      "midsole": "신형 ReactX Foam + 앞/뒤 듀얼 Air Zoom 유닛",
+      "plate": "없음",
+      "stack_height": "37mm / 27mm",
+      "support_type": "Neutral (국민 데일리)"
+    },
+    "runrepeat": {
+      "score": 90,
+      "midsole_foam": "ReactX",
+      "pros": [
+        "ReactX 폼 도입으로 에너지 리턴 13% 대폭 향상",
+        "에어줌 유닛의 통통 튀는 탄력",
+        "1,000km를 달려도 끄떡없는 와플 아웃솔 내구성"
+      ],
+      "cons": [
+        "정통 레이싱화 대비 다소 무거움"
+      ],
+      "verdict": "러닝 역사상 가장 신뢰받는 41년 전통의 국민 데일리 러닝화.",
+      "url": "https://runrepeat.com/nike-pegasus-41"
+    }
+  },
+  {
+    "id": "nike_vomero_17",
+    "brand_id": "nike",
+    "name_kr": "나이키 보메로 17",
+    "name_en": "Nike Vomero 17",
+    "series": "보메로",
+    "category": "daily",
+    "category_name": "데일리 / 쿠션화",
+    "msrp_usd": 160,
+    "msrp_krw": 189000,
+    "widths": [
+      "D",
+      "2E"
+    ],
+    "specs": {
+      "weight_g": 280,
+      "heel_drop_mm": 10,
+      "midsole": "ZoomX (상단) + Cushlon 3.0 (하단) 듀얼 레이어",
+      "plate": "없음 (에어백 제거 후 순수 폼 탄성 극대화)",
+      "stack_height": "39mm / 29mm",
+      "support_type": "Neutral (프리미엄 쿠션)"
     },
     "runrepeat": {
       "score": 92,
-      "midsole_foam": "PWRRUN PB",
-      "rank_in_category": 4,
-      "total_in_category": 120,
+      "midsole_foam": "ZoomX",
       "pros": [
-        "44% 파격 할인으로 12만 원대 진입한 최강 가성비",
-        "부드러운 전방 발구름과 경량화된 엔지니어드 메시 어퍼"
+        "상단 풀 ZoomX의 환상적인 구름 쿠션",
+        "에어백을 빼서 훨씬 부드럽고 자연스러운 발구름",
+        "장거리 LSD에서도 완벽한 관절 보호"
       ],
       "cons": [
-        "인기 와이드 사이즈 품절 임박"
+        "스피드 인터벌에는 다소 푹신함"
       ],
-      "verdict": "맥스 쿠션의 완성형 모델, 높은 할인율로 실구매 매력도 극대화."
-    },
-    "prices": [
-      {
-        "store_id": "thehyundai",
-        "store_name": "현대백화점",
-        "store_sub": "더현대 스마트스토어 (그랜드스테이지)",
-        "badge": "백화점",
-        "price": 122550,
-        "shipping": 0,
-        "discount_rate": 44,
-        "width": "2E",
-        "sizes": [
-          240,
-          245,
-          250,
-          255,
-          260
-        ],
-        "url": "https://smartstore.naver.com/thehyundai/products/13691194246",
-        "is_lowest": true
-      }
-    ],
-    "official_price": 219000
+      "verdict": "나이키 러닝화 라인업 중 가장 편안하고 럭셔리한 쿠셔닝의 극치.",
+      "url": "https://runrepeat.com/nike-vomero-17"
+    }
   },
   {
-    "id": "saucony_ride_16",
-    "brand_id": "saucony",
-    "name_kr": "써코니 라이드 16",
-    "name_en": "Saucony Ride 16",
-    "series": "라이드",
-    "is_current": false,
-    "category": "cushion",
-    "category_name": "쿠션화",
-    "msrp": 179000,
-    "image_url": "https://shop-phinf.pstatic.net/20260523_114/17795155609383Kqg2_JPEG/113648371302824361_152220412.jpg?type=f640",
-    "style_code": "S10830-25",
+    "id": "nike_structure_25",
+    "brand_id": "nike",
+    "name_kr": "나이키 스트럭처 25",
+    "name_en": "Nike Structure 25",
+    "series": "스트럭처",
+    "category": "stability",
+    "category_name": "안정화 (과회내 서포트)",
+    "msrp_usd": 140,
+    "msrp_krw": 159000,
+    "widths": [
+      "D",
+      "2E"
+    ],
+    "specs": {
+      "weight_g": 312,
+      "heel_drop_mm": 10,
+      "midsole": "Cushlon 3.0 폼 + 앞발 Air Zoom + 미디얼 지지 시스템",
+      "plate": "미디얼 서포트 섕크",
+      "stack_height": "37mm / 27mm",
+      "support_type": "Stability (정통 내전 제어)"
+    },
+    "runrepeat": {
+      "score": 88,
+      "midsole_foam": "Cushlon 3.0",
+      "pros": [
+        "발목 내측 무너짐을 든든하게 받쳐주는 지지대",
+        "단단하고 안정적인 힐컵",
+        "넓은 밑창 플랫폼"
+      ],
+      "cons": [
+        "310g대의 묵직한 중량"
+      ],
+      "verdict": "평발 러너와 과회내 러너의 든든한 가디언, 나이키의 정통 안정화.",
+      "url": "https://runrepeat.com/nike-structure-25"
+    }
+  },
+  {
+    "id": "nike_zoom_fly_6",
+    "brand_id": "nike",
+    "name_kr": "나이키 줌 플라이 6",
+    "name_en": "Nike Zoom Fly 6",
+    "series": "줌 플라이",
+    "category": "super_trainer",
+    "category_name": "슈퍼 트레이너",
+    "msrp_usd": 170,
+    "msrp_krw": 199000,
+    "widths": [
+      "D"
+    ],
+    "specs": {
+      "weight_g": 252,
+      "heel_drop_mm": 8,
+      "midsole": "ZoomX + SR-02 외피 + 풀렝스 카본 플라이플레이트",
+      "plate": "Full Carbon Fiber Flyplate",
+      "stack_height": "42mm / 34mm",
+      "support_type": "Neutral (템포/마라톤 훈련)"
+    },
+    "runrepeat": {
+      "score": 93,
+      "midsole_foam": "ZoomX",
+      "pros": [
+        "전작(줌플라이5) 대비 30g 이상 획기적 경량화 성공",
+        "베이퍼플라이 감성의 강력한 카본 추진력",
+        "훈련용으로 설계되어 뛰어난 내구성"
+      ],
+      "cons": [
+        "느린 조깅 페이스에서는 발목 피로도 유발"
+      ],
+      "verdict": "베이퍼플라이의 레이싱 기술을 데일리 훈련에서 마음껏 즐기는 카본 슈퍼트레이너.",
+      "url": "https://runrepeat.com/nike-zoom-fly-6"
+    }
+  },
+  {
+    "id": "nike_vaporfly_3",
+    "brand_id": "nike",
+    "name_kr": "나이키 베이퍼플라이 3",
+    "name_en": "Nike Vaporfly 3",
+    "series": "베이퍼플라이",
+    "category": "racing",
+    "category_name": "레이싱화 (카본 슈퍼슈즈)",
+    "msrp_usd": 260,
+    "msrp_krw": 299000,
+    "widths": [
+      "D"
+    ],
+    "specs": {
+      "weight_g": 182,
+      "heel_drop_mm": 8,
+      "midsole": "100% ZoomX Foam + 풀렝스 Flyplate 카본 플레이트",
+      "plate": "Full Carbon Fiber Flyplate",
+      "stack_height": "40mm / 32mm",
+      "support_type": "Neutral (마라톤 레이스 종결자)"
+    },
+    "runrepeat": {
+      "score": 95,
+      "midsole_foam": "ZoomX",
+      "pros": [
+        "182g이라는 충격적인 초경량화",
+        "신는 순간 앞으로 튕겨나가는 폭발적 에너지 리턴",
+        "더 얇아진 아웃솔로 미드솔 ZoomX 부피 극대화"
+      ],
+      "cons": [
+        "지우개 같은 아웃솔 수명 (대회 전용 추천)"
+      ],
+      "verdict": "마라톤 레이싱화의 판도를 바꾼 카본 슈퍼슈즈의 영원한 황제.",
+      "url": "https://runrepeat.com/nike-vaporfly-3"
+    }
+  },
+  {
+    "id": "nike_alphafly_3",
+    "brand_id": "nike",
+    "name_kr": "나이키 알파플라이 3",
+    "name_en": "Nike Alphafly 3",
+    "series": "알파플라이",
+    "category": "racing",
+    "category_name": "레이싱화 (카본 슈퍼슈즈)",
+    "msrp_usd": 285,
+    "msrp_krw": 329000,
+    "widths": [
+      "D"
+    ],
+    "specs": {
+      "weight_g": 204,
+      "heel_drop_mm": 8,
+      "midsole": "일체형 연결 ZoomX + 듀얼 에어팟 + 풀 카본 플레이트",
+      "plate": "Full Carbon Fiber Flyplate",
+      "stack_height": "40mm / 32mm",
+      "support_type": "Neutral (세계 신기록 레이서)"
+    },
+    "runrepeat": {
+      "score": 96,
+      "midsole_foam": "ZoomX",
+      "pros": [
+        "마라톤 2시간 벽을 깬 인류 최고의 레이싱 병기",
+        "일체형 밑창으로 전환이 전작 대비 훨씬 부드러움",
+        "듀얼 에어팟의 극한 반발력"
+      ],
+      "cons": [
+        "30만원이 넘는 가격과 높은 진입 장벽"
+      ],
+      "verdict": "엘리트 마라토너와 기록 단축을 갈망하는 모든 러너들의 궁극의 꿈.",
+      "url": "https://runrepeat.com/nike-alphafly-3"
+    }
+  },
+  {
+    "id": "asics_jolt_4",
+    "brand_id": "asics",
+    "name_kr": "아식스 졸트 4",
+    "name_en": "Asics Jolt 4",
+    "series": "졸트",
+    "category": "budget",
+    "category_name": "가성비 입문화 (≤$100)",
+    "msrp_usd": 60,
+    "msrp_krw": 69000,
+    "widths": [
+      "D",
+      "2E",
+      "4E"
+    ],
+    "specs": {
+      "weight_g": 270,
+      "heel_drop_mm": 10,
+      "midsole": "AmpliFoam 쿠셔닝",
+      "plate": "없음",
+      "stack_height": "31mm / 21mm",
+      "support_type": "Neutral (입문/워킹)"
+    },
+    "runrepeat": {
+      "score": 84,
+      "midsole_foam": "AmpliFoam",
+      "pros": [
+        "압도적인 가성비와 4E 슈퍼와이드 발볼 지원",
+        "동양인 족형에 가장 잘 맞는 편안한 피팅",
+        "질긴 내구성"
+      ],
+      "cons": [
+        "고속 반발력 부족"
+      ],
+      "verdict": "발볼 넓은 한국인 입문 러너에게 축복과도 같은 최고의 가성비 슈즈.",
+      "url": "https://runrepeat.com/asics-jolt-4"
+    }
+  },
+  {
+    "id": "asics_gt_1000_13",
+    "brand_id": "asics",
+    "name_kr": "아식스 GT-1000 13",
+    "name_en": "Asics GT-1000 13",
+    "series": "GT-1000",
+    "category": "budget",
+    "category_name": "가성비 입문화 (≤$100)",
+    "msrp_usd": 100,
+    "msrp_krw": 119000,
+    "widths": [
+      "D",
+      "2E"
+    ],
+    "specs": {
+      "weight_g": 270,
+      "heel_drop_mm": 8,
+      "midsole": "FLYTEFOAM + PureGEL + 3D 가이던스 시스템",
+      "plate": "없음",
+      "stack_height": "34.5mm / 26.5mm",
+      "support_type": "Stability (입문 안정화 1위)"
+    },
+    "runrepeat": {
+      "score": 88,
+      "midsole_foam": "FLYTEFOAM",
+      "pros": [
+        "100달러 가격에 퓨어젤과 3D 가이던스 시스템 탑재",
+        "과회내 지지와 충격 흡수의 황금 밸런스",
+        "가벼운 무게감"
+      ],
+      "cons": [
+        "최상급 폼(FF BLAST+) 대비 푹신함은 덜함"
+      ],
+      "verdict": "10만원 초반대에서 찾을 수 있는 전 세계 최고의 입문용 안정화.",
+      "url": "https://runrepeat.com/asics-gt-1000-13"
+    }
+  },
+  {
+    "id": "asics_novablast_4",
+    "brand_id": "asics",
+    "name_kr": "아식스 노바블라스트 4",
+    "name_en": "Asics Novablast 4",
+    "series": "노바블라스트",
+    "category": "daily",
+    "category_name": "데일리 / 쿠션화",
+    "msrp_usd": 140,
+    "msrp_krw": 159000,
+    "widths": [
+      "D",
+      "2E"
+    ],
+    "specs": {
+      "weight_g": 260,
+      "heel_drop_mm": 8,
+      "midsole": "FF BLAST+ ECO (트램펄린 지오메트리)",
+      "plate": "없음",
+      "stack_height": "41.5mm / 33.5mm",
+      "support_type": "Neutral (고탄성 트램펄린)"
+    },
+    "runrepeat": {
+      "score": 93,
+      "midsole_foam": "FF BLAST+ ECO",
+      "pros": [
+        "트램펄린 위를 뛰는 듯한 쫀득하고 경쾌한 반발력",
+        "41.5mm 맥스 스택에도 260g의 경량성",
+        "조깅부터 템포런까지 모두 즐거운 마법의 신발"
+      ],
+      "cons": [
+        "과도한 트램펄린 반발로 극심한 과회내 러너는 주의"
+      ],
+      "verdict": "달리는 재미가 무엇인지 온몸으로 알려주는 전 세계 판매 1위 데일리 러닝화.",
+      "url": "https://runrepeat.com/asics-novablast-4"
+    }
+  },
+  {
+    "id": "asics_gel_nimbus_26",
+    "brand_id": "asics",
+    "name_kr": "아식스 젤 님버스 26",
+    "name_en": "Asics Gel Nimbus 26",
+    "series": "젤 님버스",
+    "category": "daily",
+    "category_name": "데일리 / 쿠션화",
+    "msrp_usd": 160,
+    "msrp_krw": 199000,
+    "widths": [
+      "D",
+      "2E",
+      "4E"
+    ],
+    "specs": {
+      "weight_g": 304,
+      "heel_drop_mm": 8,
+      "midsole": "FF BLAST+ ECO + 뒷굽 내부 PureGEL",
+      "plate": "없음",
+      "stack_height": "42mm / 34mm",
+      "support_type": "Neutral (극강의 맥스 쿠션)"
+    },
+    "runrepeat": {
+      "score": 92,
+      "midsole_foam": "FF BLAST+ ECO",
+      "pros": [
+        "지상 최강의 구름 위를 걷는 듯한 퓨어젤 쿠셔닝",
+        "HYBRID ASICSGRIP 아웃솔로 접지력 대폭 개선",
+        "니트 어퍼의 포근한 감싸안음"
+      ],
+      "cons": [
+        "스피드런보다는 조깅 및 회복런 전용"
+      ],
+      "verdict": "무릎과 허리 관절을 완벽하게 지키고 싶은 러너를 위한 구름 쿠션의 정점.",
+      "url": "https://runrepeat.com/asics-gel-nimbus-26"
+    }
+  },
+  {
+    "id": "asics_gel_kayano_31",
+    "brand_id": "asics",
+    "name_kr": "아식스 젤 카야노 31",
+    "name_en": "Asics Gel Kayano 31",
+    "series": "젤 카야노",
+    "category": "stability",
+    "category_name": "안정화 (과회내 서포트)",
+    "msrp_usd": 165,
+    "msrp_krw": 199000,
+    "widths": [
+      "D",
+      "2E",
+      "4E"
+    ],
+    "specs": {
+      "weight_g": 305,
+      "heel_drop_mm": 10,
+      "midsole": "FF BLAST+ ECO + 4D 가이던스 시스템 + PureGEL",
+      "plate": "없음 (지능형 적응 폼 지지)",
+      "stack_height": "40mm / 30mm",
+      "support_type": "Stability (안정화 끝판왕)"
+    },
+    "runrepeat": {
+      "score": 92,
+      "midsole_foam": "FF BLAST+ ECO",
+      "pros": [
+        "피로도가 쌓일수록 내측 아치를 부드럽게 복원하는 4D 가이던스",
+        "안정화임에도 놀라울 정도로 푹신한 쿠션감",
+        "동양인 발볼러를 위한 완벽한 피팅 옵션"
+      ],
+      "cons": [
+        "스피드런에는 다소 무거운 편"
+      ],
+      "verdict": "31년 역사가 증명하는 전 세계 안정화 부문 부동의 1위이자 기준점.",
+      "url": "https://runrepeat.com/asics-gel-kayano-31"
+    }
+  },
+  {
+    "id": "asics_superblast_2",
+    "brand_id": "asics",
+    "name_kr": "아식스 슈퍼블라스트 2",
+    "name_en": "Asics Superblast 2",
+    "series": "슈퍼블라스트",
+    "category": "super_trainer",
+    "category_name": "슈퍼 트레이너",
+    "msrp_usd": 200,
+    "msrp_krw": 249000,
     "widths": [
       "D"
     ],
     "specs": {
       "weight_g": 249,
       "heel_drop_mm": 8,
-      "midsole": "PWRRUN 폼",
-      "cushion_level": "Medium-Firm (경쾌한 밸런스)",
-      "support_type": "Neutral",
-      "stack_height": "35mm / 27mm"
+      "midsole": "FF TURBO+ (최상급 슈퍼폼) + FF BLAST+ ECO 듀얼 레이어",
+      "plate": "없음 (플레이트 없이 폼으로만 탄성 극대화)",
+      "stack_height": "45mm / 37mm",
+      "support_type": "Neutral (치트키 슈퍼트레이너)"
     },
     "runrepeat": {
-      "score": 88,
-      "midsole_foam": "PWRRUN",
-      "rank_in_category": 12,
-      "total_in_category": 100,
+      "score": 96,
+      "midsole_foam": "FF TURBO+",
       "pros": [
-        "가볍고 경쾌한 착지감, 긴 마일리지 내구성",
-        "과하지 않고 정직한 반응성을 선호하는 러너에게 최적"
+        "메타스피드 레이서용 슈퍼폼(FF TURBO+) 전격 탑재",
+        "45mm 합법적 규정 초과 쿠션인데 249g이라는 비현실적 무게",
+        "카본 없이도 대회 풀코스를 뛸 수 있는 최고의 편안함"
       ],
       "cons": [
-        "최신 PB 폼 대비 단단한 클래식 쿠션감"
+        "전세계 품절 대란으로 구매하기 어려움"
       ],
-      "verdict": "오래 신어도 내구성 탄탄한 정통 데일리 트레이너."
-    },
-    "prices": [
-      {
-        "store_id": "thehyundai",
-        "store_name": "현대백화점",
-        "store_sub": "더현대 스마트스토어 (그랜드스테이지)",
-        "badge": "백화점",
-        "price": 151050,
-        "shipping": 0,
-        "discount_rate": 16,
-        "width": "D",
-        "sizes": [
-          235,
-          240,
-          245,
-          250
-        ],
-        "url": "https://smartstore.naver.com/thehyundai/products/13466709938",
-        "is_lowest": true
-      }
-    ],
-    "official_price": 179000
+      "verdict": "러너들이 '치트키'라 부르는 현존 논플레이트 슈퍼 트레이너의 최고봉.",
+      "url": "https://runrepeat.com/asics-superblast-2"
+    }
   },
   {
-    "id": "saucony_lancer_3",
+    "id": "asics_metaspeed_sky_paris",
+    "brand_id": "asics",
+    "name_kr": "아식스 메타스피드 스카이 파리",
+    "name_en": "Asics Metaspeed Sky Paris",
+    "series": "메타스피드",
+    "category": "racing",
+    "category_name": "레이싱화 (카본 슈퍼슈즈)",
+    "msrp_usd": 250,
+    "msrp_krw": 299000,
+    "widths": [
+      "D"
+    ],
+    "specs": {
+      "weight_g": 183,
+      "heel_drop_mm": 5,
+      "midsole": "Full FF TURBO+ 슈퍼폼 + 풀렝스 카본 플레이트",
+      "plate": "Full Carbon Plate (보폭 확장형 상단 배치)",
+      "stack_height": "39.5mm / 34.5mm",
+      "support_type": "Neutral (스트라이드형 마라톤 레이서)"
+    },
+    "runrepeat": {
+      "score": 95,
+      "midsole_foam": "FF TURBO+",
+      "pros": [
+        "183g 깃털 같은 무게와 넓은 밑창 안정감",
+        "보폭(스트라이드)을 늘려주는 환상적인 위로 솟구치는 탄성",
+        "ASICSGRIP 아웃솔의 빗길 최강 접지"
+      ],
+      "cons": [
+        "강한 종아리 근력을 요구함"
+      ],
+      "verdict": "파리 올림픽을 위해 개발된 아식스의 엘리트 마라톤 카본 플래그십.",
+      "url": "https://runrepeat.com/asics-metaspeed-sky-paris"
+    }
+  },
+  {
+    "id": "saucony_cohesion_17",
     "brand_id": "saucony",
-    "name_kr": "써코니 랜서 3",
-    "name_en": "Saucony Lancer 3",
-    "series": "랜서",
-    "is_current": true,
-    "category": "entry",
-    "category_name": "입문화",
-    "msrp": 89000,
-    "image_url": "https://shop-phinf.pstatic.net/20260801_189/1785587747805XwK54_JPEG/119720556133984666_1763789495.jpg?type=f640",
-    "style_code": "S28226-3",
+    "name_kr": "써코니 코히전 17",
+    "name_en": "Saucony Cohesion 17",
+    "series": "코히전",
+    "category": "budget",
+    "category_name": "가성비 입문화 (≤$100)",
+    "msrp_usd": 65,
+    "msrp_krw": 79000,
+    "widths": [
+      "D",
+      "2E"
+    ],
+    "specs": {
+      "weight_g": 260,
+      "heel_drop_mm": 12,
+      "midsole": "VERSARUN 쿠셔닝",
+      "plate": "없음",
+      "stack_height": "29mm / 17mm",
+      "support_type": "Neutral (가성비 입문)"
+    },
+    "runrepeat": {
+      "score": 83,
+      "midsole_foam": "VERSARUN",
+      "pros": [
+        "60달러대 놀라운 가성비",
+        "가볍고 경쾌한 260g 무게",
+        "튼튼한 아웃솔 고무 내구성"
+      ],
+      "cons": [
+        "최신 맥스쿠션 대비 얇은 전족부 쿠션"
+      ],
+      "verdict": "미국 러너들이 입문할 때 가장 많이 집어 드는 실속 만점 가성비 슈즈.",
+      "url": "https://runrepeat.com/saucony-cohesion-17"
+    }
+  },
+  {
+    "id": "saucony_ride_17",
+    "brand_id": "saucony",
+    "name_kr": "써코니 라이드 17",
+    "name_en": "Saucony Ride 17",
+    "series": "라이드",
+    "category": "daily",
+    "category_name": "데일리 / 쿠션화",
+    "msrp_usd": 140,
+    "msrp_krw": 159000,
+    "widths": [
+      "D",
+      "2E"
+    ],
+    "specs": {
+      "weight_g": 282,
+      "heel_drop_mm": 8,
+      "midsole": "PWRRUN+ (TPU 비드 발포 프리미엄 폼)",
+      "plate": "없음",
+      "stack_height": "35mm / 27mm",
+      "support_type": "Neutral (만능 데일리)"
+    },
+    "runrepeat": {
+      "score": 91,
+      "midsole_foam": "PWRRUN+",
+      "pros": [
+        "전작의 일반 EVA에서 고급 PWRRUN+ 폼으로 전면 업그레이드",
+        "겨울철에도 얼지 않고 쫄깃한 쿠션 유지",
+        "조깅부터 장거리까지 완벽한 밸런스"
+      ],
+      "cons": [
+        "엄청나게 푹신한 맥스쿠션을 기대하면 다소 탄탄함"
+      ],
+      "verdict": "어떤 훈련에도 믿고 신는 가장 든든한 데일리 워크호스 러닝화.",
+      "url": "https://runrepeat.com/saucony-ride-17"
+    }
+  },
+  {
+    "id": "saucony_guide_17",
+    "brand_id": "saucony",
+    "name_kr": "써코니 가이드 17",
+    "name_en": "Saucony Guide 17",
+    "series": "가이드",
+    "category": "stability",
+    "category_name": "안정화 (과회내 서포트)",
+    "msrp_usd": 140,
+    "msrp_krw": 159000,
+    "widths": [
+      "D",
+      "2E"
+    ],
+    "specs": {
+      "weight_g": 269,
+      "heel_drop_mm": 6,
+      "midsole": "PWRRUN + Center Path 테크놀로지 (넓은 베이스 & 깊은 사이드월)",
+      "plate": "없음 (자연스러운 지오메트리 서포트)",
+      "stack_height": "35mm / 29mm",
+      "support_type": "Stability (신개념 센터패스)"
+    },
+    "runrepeat": {
+      "score": 90,
+      "midsole_foam": "PWRRUN",
+      "pros": [
+        "딱딱한 미디얼 포스트 없이 넓은 밑창 베이스로 편안한 안정성 제공",
+        "269g의 놀라운 경량 안정화",
+        "낮아진 6mm 드롭으로 부드러운 롤링"
+      ],
+      "cons": [
+        "포근한 푹신함보다는 안정적인 착지감 중심"
+      ],
+      "verdict": "기존의 억지스러운 안정화 틀을 깨버린 가장 현대적이고 편안한 안정화.",
+      "url": "https://runrepeat.com/saucony-guide-17"
+    }
+  },
+  {
+    "id": "saucony_endorphin_speed_4",
+    "brand_id": "saucony",
+    "name_kr": "써코니 엔돌핀 스피드 4",
+    "name_en": "Saucony Endorphin Speed 4",
+    "series": "엔돌핀 스피드",
+    "category": "super_trainer",
+    "category_name": "슈퍼 트레이너",
+    "msrp_usd": 170,
+    "msrp_krw": 199000,
+    "widths": [
+      "D",
+      "2E"
+    ],
+    "specs": {
+      "weight_g": 233,
+      "heel_drop_mm": 8,
+      "midsole": "PWRRUN PB (PEBA 슈퍼폼) + 윙 나일론 플레이트",
+      "plate": "Nylon Winged Plate (유연한 나일론 윙)",
+      "stack_height": "36mm / 28mm",
+      "support_type": "Neutral (올라운드 슈퍼트레이너)"
+    },
+    "runrepeat": {
+      "score": 93,
+      "midsole_foam": "PWRRUN PB",
+      "pros": [
+        "나일론 플레이트와 PEBA 슈퍼폼의 마법 같은 조화",
+        "카본화 대비 종아리 피로도가 극히 적어 매일 신을 수 있음",
+        "조깅부터 템포런, 실제 마라톤 대회까지 완벽 커버"
+      ],
+      "cons": [
+        "빗길 노면 접지력은 보통 수준"
+      ],
+      "verdict": "전 세계 러너들이 단 한 켤레의 신발만 골라야 한다면 선택하는 만능 트레이너.",
+      "url": "https://runrepeat.com/saucony-endorphin-speed-4"
+    }
+  },
+  {
+    "id": "saucony_endorphin_pro_4",
+    "brand_id": "saucony",
+    "name_kr": "써코니 엔돌핀 프로 4",
+    "name_en": "Saucony Endorphin Pro 4",
+    "series": "엔돌핀 프로",
+    "category": "racing",
+    "category_name": "레이싱화 (카본 슈퍼슈즈)",
+    "msrp_usd": 250,
+    "msrp_krw": 279000,
+    "widths": [
+      "D"
+    ],
+    "specs": {
+      "weight_g": 212,
+      "heel_drop_mm": 8,
+      "midsole": "PWRRUN HG (상단) + PWRRUN PB (하단) + 풀 카본 플레이트",
+      "plate": "Full Carbon Fiber Plate",
+      "stack_height": "39.5mm / 31.5mm",
+      "support_type": "Neutral (엘리트 마라톤 카본 레이서)"
+    },
+    "runrepeat": {
+      "score": 94,
+      "midsole_foam": "PWRRUN PB & HG",
+      "pros": [
+        "카본 레이싱화 중 가장 안정적이고 발목 꺾임이 적음",
+        "최상급 HG 폼 탑재로 가속력 폭발",
+        "스피드로 테크놀로지의 자연스러운 롤링"
+      ],
+      "cons": [
+        "엔돌핀 스피드보다 딱딱한 카본 체감"
+      ],
+      "verdict": "안정성과 폭발적 스피드를 동시에 챙긴 가장 믿음직한 마라톤 카본화.",
+      "url": "https://runrepeat.com/saucony-endorphin-pro-4"
+    }
+  },
+  {
+    "id": "hoka_clifton_9",
+    "brand_id": "hoka",
+    "name_kr": "호카 클리프톤 9",
+    "name_en": "Hoka Clifton 9",
+    "series": "클리프톤",
+    "category": "daily",
+    "category_name": "데일리 / 쿠션화",
+    "msrp_usd": 145,
+    "msrp_krw": 179000,
+    "widths": [
+      "D",
+      "2E"
+    ],
+    "specs": {
+      "weight_g": 248,
+      "heel_drop_mm": 5,
+      "midsole": "압축 성형 EVA (CMEVA) + 얼리 스테이지 메타 로커",
+      "plate": "없음",
+      "stack_height": "32mm / 27mm",
+      "support_type": "Neutral (국민 쿠션화)"
+    },
+    "runrepeat": {
+      "score": 91,
+      "midsole_foam": "CMEVA",
+      "pros": [
+        "248g이라는 믿을 수 없는 경량성과 풍부한 쿠션",
+        "자연스럽게 발이 굴러가는 메타 로커 지오메트리",
+        "장거리 조깅 시 관절 피로 제로"
+      ],
+      "cons": [
+        "미드풋 아치가 다소 좁게 느껴질 수 있음(와이드 추천)"
+      ],
+      "verdict": "호카를 전 세계적인 브랜드로 만든 상징이자 매일 달리고 싶게 만드는 데일리 쿠션화.",
+      "url": "https://runrepeat.com/hoka-clifton-9"
+    }
+  },
+  {
+    "id": "hoka_mach_6",
+    "brand_id": "hoka",
+    "name_kr": "호카 마하 6",
+    "name_en": "Hoka Mach 6",
+    "series": "마하",
+    "category": "super_trainer",
+    "category_name": "슈퍼 트레이너",
+    "msrp_usd": 140,
+    "msrp_krw": 169000,
+    "widths": [
+      "D",
+      "2E"
+    ],
+    "specs": {
+      "weight_g": 232,
+      "heel_drop_mm": 5,
+      "midsole": "단일 초임계 EVA (Supercritical Foam) + 고무 아웃솔",
+      "plate": "없음 (순수 경량 스피드)",
+      "stack_height": "37mm / 32mm",
+      "support_type": "Neutral (경량 템포 트레이너)"
+    },
+    "runrepeat": {
+      "score": 92,
+      "midsole_foam": "Supercritical EVA",
+      "pros": [
+        "초임계 폼 전격 도입으로 전작 대비 반발력 대폭 상승",
+        "전작의 치명적 약점이었던 아웃솔 내구성 해결",
+        "232g 초경량 템포런 최적화"
+      ],
+      "cons": [
+        "힐드롭 5mm로 낮은 드롭 적응 필요"
+      ],
+      "verdict": "플레이트 없이 오직 가벼움과 폼 탄성으로 질주하는 가장 신나는 트레이너.",
+      "url": "https://runrepeat.com/hoka-mach-6"
+    }
+  },
+  {
+    "id": "hoka_cielo_x1",
+    "brand_id": "hoka",
+    "name_kr": "호카 시엘로 X1",
+    "name_en": "Hoka Cielo X1",
+    "series": "시엘로",
+    "category": "racing",
+    "category_name": "레이싱화 (카본 슈퍼슈즈)",
+    "msrp_usd": 275,
+    "msrp_krw": 339000,
+    "widths": [
+      "D"
+    ],
+    "specs": {
+      "weight_g": 254,
+      "heel_drop_mm": 7,
+      "midsole": "듀얼 레이어 100% PEBA 폼 + 윙 카본 플레이트 + 익스트림 로커",
+      "plate": "Winged Carbon Fiber Plate",
+      "stack_height": "39mm / 32mm",
+      "support_type": "Neutral (극강의 추진력 카본 레이서)"
+    },
+    "runrepeat": {
+      "score": 93,
+      "midsole_foam": "PEBA Foam",
+      "pros": [
+        "현존 러닝화 중 가장 다이나믹한 로커 지오메트리",
+        "호카 역사상 가장 반발력 높은 100% PEBA 슈퍼폼",
+        "신는 순간 자동으로 앞으로 굴러떨어지는 추진력"
+      ],
+      "cons": [
+        "250g대로 타사 플래그십 레이서 대비 무게가 나감"
+      ],
+      "verdict": "호카가 모든 기술력을 쏟아부어 완성한 가장 과격하고 짜릿한 카본 슈퍼슈즈.",
+      "url": "https://runrepeat.com/hoka-cielo-x1"
+    }
+  },
+  {
+    "id": "nb_fresh_foam_arishi_v4",
+    "brand_id": "newbalance",
+    "name_kr": "뉴발란스 프레쉬폼 아리시 v4",
+    "name_en": "New Balance Fresh Foam Arishi v4",
+    "series": "아리시",
+    "category": "budget",
+    "category_name": "가성비 입문화 (≤$100)",
+    "msrp_usd": 75,
+    "msrp_krw": 89000,
+    "widths": [
+      "D",
+      "2E",
+      "4E"
+    ],
+    "specs": {
+      "weight_g": 255,
+      "heel_drop_mm": 6,
+      "midsole": "Fresh Foam 쿠셔닝",
+      "plate": "없음",
+      "stack_height": "28mm / 22mm",
+      "support_type": "Neutral (입문 워킹/러닝)"
+    },
+    "runrepeat": {
+      "score": 83,
+      "midsole_foam": "Fresh Foam",
+      "pros": [
+        "뉴발란스 고유의 프레쉬폼 쿠션을 8만원대에 경험",
+        "가볍고 통기성 뛰어난 니트 어퍼",
+        "4E 와이드 지원"
+      ],
+      "cons": [
+        "장거리 마일리지용으로는 얇은 스택"
+      ],
+      "verdict": "일상 걷기와 가벼운 조깅을 즐기는 발볼러에게 제격인 가성비 슈즈.",
+      "url": "https://runrepeat.com/new-balance-fresh-foam-arishi-v4"
+    }
+  },
+  {
+    "id": "nb_fresh_foam_x_1080_v13",
+    "brand_id": "newbalance",
+    "name_kr": "뉴발란스 프레쉬폼 X 1080 v13",
+    "name_en": "New Balance Fresh Foam X 1080 v13",
+    "series": "1080",
+    "category": "daily",
+    "category_name": "데일리 / 쿠션화",
+    "msrp_usd": 165,
+    "msrp_krw": 199000,
+    "widths": [
+      "D",
+      "2E",
+      "4E"
+    ],
+    "specs": {
+      "weight_g": 262,
+      "heel_drop_mm": 6,
+      "midsole": "Fresh Foam X (역대 최상급 소프트 튜닝)",
+      "plate": "없음",
+      "stack_height": "38mm / 32mm",
+      "support_type": "Neutral (마시멜로 맥스 쿠션)"
+    },
+    "runrepeat": {
+      "score": 92,
+      "midsole_foam": "Fresh Foam X",
+      "pros": [
+        "마시멜로를 밟는 듯한 지구상에서 가장 소프트한 미드솔 튜닝",
+        "262g의 경량성",
+        "발볼이 넓은 한국인 발에 안성맞춤인 와이드 옵션"
+      ],
+      "cons": [
+        "너무 소프트하여 강한 지지력을 원하는 러너에게는 호불호"
+      ],
+      "verdict": "퇴근 후 지친 다리를 포근하게 감싸주는 궁극의 마시멜로 힐링 러닝화.",
+      "url": "https://runrepeat.com/new-balance-fresh-foam-x-1080-v13"
+    }
+  },
+  {
+    "id": "nb_fuelcell_rebel_v4",
+    "brand_id": "newbalance",
+    "name_kr": "뉴발란스 퓨어셀 레벨 v4",
+    "name_en": "New Balance FuelCell Rebel v4",
+    "series": "퓨어셀 레벨",
+    "category": "super_trainer",
+    "category_name": "슈퍼 트레이너",
+    "msrp_usd": 140,
+    "msrp_krw": 169000,
+    "widths": [
+      "D",
+      "2E"
+    ],
+    "specs": {
+      "weight_g": 208,
+      "heel_drop_mm": 6,
+      "midsole": "FuelCell (PEBA/EVA 블렌드 슈퍼폼)",
+      "plate": "없음",
+      "stack_height": "33mm / 27mm",
+      "support_type": "Neutral (초경량 만능 템포)"
+    },
+    "runrepeat": {
+      "score": 93,
+      "midsole_foam": "FuelCell PEBA Blend",
+      "pros": [
+        "208g이라는 깃털 같은 무게",
+        "PEBA 폼 블렌드로 미친 반응성과 쫀득함",
+        "넓어진 밑창으로 전작의 좌우 흔들림 완벽 개선"
+      ],
+      "cons": [
+        "어퍼가 얇아 겨울철 발 시려움"
+      ],
+      "verdict": "가볍고 빠른 러닝의 정수, 훈련이 즐거워지는 전천후 스피드 트레이너.",
+      "url": "https://runrepeat.com/new-balance-fuelcell-rebel-v4"
+    }
+  },
+  {
+    "id": "nb_fuelcell_sc_elite_v4",
+    "brand_id": "newbalance",
+    "name_kr": "뉴발란스 퓨어셀 SC 엘리트 v4",
+    "name_en": "New Balance FuelCell SuperComp Elite v4",
+    "series": "SC 엘리트",
+    "category": "racing",
+    "category_name": "레이싱화 (카본 슈퍼슈즈)",
+    "msrp_usd": 250,
+    "msrp_krw": 299000,
+    "widths": [
+      "D",
+      "2E"
+    ],
+    "specs": {
+      "weight_g": 232,
+      "heel_drop_mm": 4,
+      "midsole": "100% PEBA FuelCell + Energy Arc 카본 플레이트",
+      "plate": "Full Carbon Energy Arc",
+      "stack_height": "40mm / 36mm",
+      "support_type": "Neutral (편안한 마라톤 카본 레이서)"
+    },
+    "runrepeat": {
+      "score": 92,
+      "midsole_foam": "100% PEBA FuelCell",
+      "pros": [
+        "드디어 100% 순수 PEBA 폼 탑재로 폭발적인 에너지 리턴",
+        "카본 레이싱화 중 유일하게 2E 와이드 발볼 정식 지원",
+        "아치 통증 없는 최고의 편안함"
+      ],
+      "cons": [
+        "180g대 초경량 레이서 대비 무게가 살짝 있음"
+      ],
+      "verdict": "발볼 넓은 마라토너가 풀코스를 뛸 때 신을 수 있는 가장 축복 같은 카본 레이서.",
+      "url": "https://runrepeat.com/new-balance-fuelcell-sc-elite-v4"
+    }
+  },
+  {
+    "id": "puma_scend_pro",
+    "brand_id": "puma",
+    "name_kr": "푸마 센드 프로",
+    "name_en": "Puma Scend Pro",
+    "series": "센드 프로",
+    "category": "budget",
+    "category_name": "가성비 입문화 (≤$100)",
+    "msrp_usd": 75,
+    "msrp_krw": 85000,
+    "widths": [
+      "D"
+    ],
+    "specs": {
+      "weight_g": 280,
+      "heel_drop_mm": 9,
+      "midsole": "PROFOAM LITE 쿠셔닝",
+      "plate": "없음",
+      "stack_height": "32mm / 23mm",
+      "support_type": "Neutral (입문 가성비)"
+    },
+    "runrepeat": {
+      "score": 84,
+      "midsole_foam": "PROFOAM LITE",
+      "pros": [
+        "PROTREAD 고무 아웃솔의 우수한 접지력",
+        "깔끔한 스트리트 러닝 룩",
+        "가성비 뛰어난 내구성"
+      ],
+      "cons": [
+        "고급 니트로 폼 대비 반발력 한계"
+      ],
+      "verdict": "도심 속 가벼운 러닝과 일상을 잇는 푸마의 가성비 데일리.",
+      "url": "https://runrepeat.com/puma-scend-pro"
+    }
+  },
+  {
+    "id": "puma_velocity_nitro_3",
+    "brand_id": "puma",
+    "name_kr": "푸마 벨로시티 니트로 3",
+    "name_en": "Puma Velocity Nitro 3",
+    "series": "벨로시티 니트로",
+    "category": "daily",
+    "category_name": "데일리 / 쿠션화",
+    "msrp_usd": 135,
+    "msrp_krw": 149000,
+    "widths": [
+      "D"
+    ],
+    "specs": {
+      "weight_g": 264,
+      "heel_drop_mm": 10,
+      "midsole": "NITROFOAM (질소 주입 슈퍼폼) + PROFOAM LITE 듀얼 레이어",
+      "plate": "없음",
+      "stack_height": "36mm / 26mm",
+      "support_type": "Neutral (가성비 1위 데일리)"
+    },
+    "runrepeat": {
+      "score": 92,
+      "midsole_foam": "NITROFOAM",
+      "pros": [
+        "PUMAGRIP 아웃솔의 전 세계 1위 젖은 노면 접지력",
+        "질소 주입 니트로 폼의 통통 튀는 경쾌한 탄성",
+        "14만원대 믿기 힘든 퀄리티"
+      ],
+      "cons": [
+        "발볼이 다소 타이트한 편 (반업 추천)"
+      ],
+      "verdict": "비 오는 날에도 거침없이 달리는 러너들을 위한 가성비 접지력 1위 데일리.",
+      "url": "https://runrepeat.com/puma-velocity-nitro-3"
+    }
+  },
+  {
+    "id": "puma_deviate_nitro_3",
+    "brand_id": "puma",
+    "name_kr": "푸마 디비에이트 니트로 3",
+    "name_en": "Puma Deviate Nitro 3",
+    "series": "디비에이트 니트로",
+    "category": "super_trainer",
+    "category_name": "슈퍼 트레이너",
+    "msrp_usd": 160,
+    "msrp_krw": 199000,
     "widths": [
       "D"
     ],
     "specs": {
       "weight_g": 265,
-      "heel_drop_mm": 8,
-      "midsole": "EVA 폼",
-      "cushion_level": "Medium",
-      "support_type": "Neutral",
-      "stack_height": "30mm / 22mm"
-    },
-    "runrepeat": {
-      "score": 83,
-      "midsole_foam": "EVA",
-      "rank_in_category": 35,
-      "total_in_category": 100,
-      "pros": [
-        "5만 원대 압도적 가성비로 헬스장·트레드밀 조깅 입문에 최적"
-      ],
-      "cons": [
-        "장거리 마라톤 대회용으로는 반발력 한계"
-      ],
-      "verdict": "부담 없이 시작하는 가장 실속 있는 입문 러닝화."
-    },
-    "prices": [
-      {
-        "store_id": "thehyundai",
-        "store_name": "현대백화점",
-        "store_sub": "더현대 스마트스토어 (그랜드스테이지)",
-        "badge": "백화점",
-        "price": 56050,
-        "shipping": 0,
-        "discount_rate": 37,
-        "width": "D",
-        "sizes": [
-          250,
-          255,
-          260,
-          265,
-          270,
-          275,
-          280
-        ],
-        "url": "https://smartstore.naver.com/thehyundai/products/13691245006",
-        "is_lowest": true
-      }
-    ],
-    "official_price": 89000
-  },
-  {
-    "id": "adidas_adizero_boston_13_w",
-    "brand_id": "adidas",
-    "name_kr": "아디다스 아디제로 보스턴 13 W",
-    "name_en": "Adidas Adizero Boston 13 Women",
-    "series": "아디제로 보스턴",
-    "is_current": true,
-    "category": "super_trainer",
-    "category_name": "슈퍼트레이너",
-    "msrp": 189000,
-    "image_url": "https://shop-phinf.pstatic.net/20260902_125/17883066989098oKLP_JPEG/41023597044480566_808848726.jpg?type=f640",
-    "style_code": "KH8869",
-    "widths": [
-      "D"
-    ],
-    "specs": {
-      "weight_g": 235,
-      "heel_drop_mm": 7,
-      "midsole": "Lightstrike Pro + Lightstrike 2.0 + 에너지로드 2.0",
-      "cushion_level": "High (강력한 전방 롤링)",
-      "support_type": "Neutral",
-      "stack_height": "37mm / 30mm"
-    },
-    "runrepeat": {
-      "score": 90,
-      "midsole_foam": "Lightstrike Pro",
-      "rank_in_category": 3,
-      "total_in_category": 85,
-      "pros": [
-        "에너지로드 2.0이 선사하는 일관되고 폭발적인 전방 추진력",
-        "컨티넨탈 러버 아웃솔의 우천 노면 완벽 접지력",
-        "보스턴 12 대비 힐컵 핏 개선으로 뒤꿈치 들림 완전 해소"
-      ],
-      "cons": [
-        "페이스 6분 이상 느린 조깅에서는 다소 단단하게 느껴짐"
-      ],
-      "verdict": "서브4 및 마라톤 완주를 목표로 하는 러너를 위한 최적의 훈련화."
-    },
-    "prices": [
-      {
-        "store_id": "thehyundai",
-        "store_name": "현대백화점",
-        "store_sub": "더현대 스마트스토어 (아디다스코리아 공식)",
-        "badge": "공식몰",
-        "price": 189000,
-        "shipping": 0,
-        "discount_rate": 0,
-        "width": "D",
-        "sizes": [
-          230,
-          235,
-          240,
-          245,
-          250,
-          255
-        ],
-        "url": "https://smartstore.naver.com/thehyundai/products/13741254517",
-        "is_lowest": true
-      }
-    ],
-    "official_price": 189000
-  },
-  {
-    "id": "adidas_adizero_evo_sl",
-    "brand_id": "adidas",
-    "name_kr": "아디다스 아디제로 EVO SL EXO",
-    "name_en": "Adidas Adizero EVO SL EXO",
-    "series": "아디제로 EVO SL",
-    "is_current": true,
-    "category": "super_trainer",
-    "category_name": "슈퍼트레이너",
-    "msrp": 209000,
-    "image_url": "https://shop-phinf.pstatic.net/20260909_163/1788939768565l0F9m_JPEG/123072678685121408_136195822.jpg?type=f640",
-    "style_code": "KJ0436",
-    "widths": [
-      "D"
-    ],
-    "specs": {
-      "weight_g": 208,
-      "heel_drop_mm": 6.5,
-      "midsole": "Lightstrike Pro 풀렝스 (플레이트리스)",
-      "cushion_level": "High (초경량 퓨어 폼)",
-      "support_type": "Neutral",
-      "stack_height": "35mm / 28.5mm"
-    },
-    "runrepeat": {
-      "score": 92,
-      "midsole_foam": "Lightstrike Pro",
-      "rank_in_category": 1,
-      "total_in_category": 85,
-      "pros": [
-        "플레이트 없이도 퓨어 라이트스트라이크 프로 폼이 주는 환상적인 쿠션 반발",
-        "208g의 경이로운 경량성으로 인터벌과 레이스 모두 소화"
-      ],
-      "cons": [
-        "극강의 경량화 세팅으로 안정성은 다소 중립적"
-      ],
-      "verdict": "카본 플레이트의 피로감 없이 순수 폼의 쾌감을 느끼고 싶은 러너를 위한 최신작."
-    },
-    "prices": [
-      {
-        "store_id": "thehyundai",
-        "store_name": "현대백화점",
-        "store_sub": "더현대 스마트스토어 (아디다스코리아 공식)",
-        "badge": "공식몰",
-        "price": 209000,
-        "shipping": 0,
-        "discount_rate": 0,
-        "width": "D",
-        "sizes": [
-          250,
-          255,
-          260,
-          265,
-          270,
-          275,
-          280,
-          285
-        ],
-        "url": "https://smartstore.naver.com/thehyundai/products/13753687280",
-        "is_lowest": true
-      }
-    ],
-    "official_price": 209000
-  },
-  {
-    "id": "adidas_hyperboost_run",
-    "brand_id": "adidas",
-    "name_kr": "아디다스 하이퍼부스트 런 러닝화",
-    "name_en": "Adidas Hyperboost Run",
-    "series": "하이퍼부스트",
-    "is_current": true,
-    "category": "cushion",
-    "category_name": "쿠션화",
-    "msrp": 219000,
-    "image_url": "https://shop-phinf.pstatic.net/20260728_57/1785233649666oT40W_JPEG/119366458021124430_1669466504.jpg?type=f640",
-    "style_code": "KK2020",
-    "widths": [
-      "D"
-    ],
-    "specs": {
-      "weight_g": 290,
       "heel_drop_mm": 10,
-      "midsole": "Hyperboost 복합 폼",
-      "cushion_level": "Maximum",
-      "support_type": "Neutral",
-      "stack_height": "36mm / 26mm"
+      "midsole": "NITROFOAM Elite (상단) + NITROFOAM (하단) + 카본 INNOPLATE",
+      "plate": "Carbon Composite INNOPLATE",
+      "stack_height": "39mm / 29mm",
+      "support_type": "Neutral (카본 슈퍼트레이너)"
     },
     "runrepeat": {
-      "score": 86,
-      "midsole_foam": "Hyperboost",
-      "rank_in_category": 18,
-      "total_in_category": 110,
+      "score": 93,
+      "midsole_foam": "NITRO Elite",
       "pros": [
-        "쫀득한 부스트 쿠셔닝으로 일상 조깅 및 장시간 워킹에 탁월"
+        "엘리트 니트로 폼과 카본 플레이트의 공격적인 추진력",
+        "미끄러짐 없는 절대 접지력 PUMAGRIP",
+        "조깅부터 마라톤 대회까지 모두 소화"
       ],
       "cons": [
-        "스피드 훈련용으로는 다소 무게감 있음"
+        "뒤꿈치 힐 패딩이 얇아 힐슬립 체크 필요"
       ],
-      "verdict": "일상 러닝과 워킹을 겸하는 프리미엄 데일리 쿠셔닝화."
-    },
-    "prices": [
-      {
-        "store_id": "thehyundai",
-        "store_name": "현대백화점",
-        "store_sub": "더현대 스마트스토어 (아디다스코리아 공식)",
-        "badge": "공식몰",
-        "price": 219000,
-        "shipping": 0,
-        "discount_rate": 0,
-        "width": "D",
-        "sizes": [
-          250,
-          255,
-          260,
-          265,
-          270,
-          275,
-          280
-        ],
-        "url": "https://smartstore.naver.com/thehyundai/products/13685107204",
-        "is_lowest": true
-      }
-    ],
-    "official_price": 219000
+      "verdict": "카본화의 탄성과 트레이너의 내구성을 동시에 쥐어주는 스피드 머신.",
+      "url": "https://runrepeat.com/puma-deviate-nitro-3"
+    }
   },
   {
-    "id": "hoka_clifton_10_m",
-    "brand_id": "hoka",
-    "name_kr": "호카 클리프톤 10 남성용 (발볼 D)",
-    "name_en": "Hoka Clifton 10 Men Regular",
-    "series": "클리프톤",
-    "is_current": true,
-    "category": "cushion",
-    "category_name": "쿠션화",
-    "msrp": 229000,
-    "image_url": "https://shop-phinf.pstatic.net/20260523_114/17795155609383Kqg2_JPEG/113648371302824361_152220412.jpg?type=f640",
-    "style_code": "1162030-BBLC",
+    "id": "brooks_trace_3",
+    "brand_id": "brooks",
+    "name_kr": "브룩스 트레이스 3",
+    "name_en": "Brooks Trace 3",
+    "series": "트레이스",
+    "category": "budget",
+    "category_name": "가성비 입문화 (≤$100)",
+    "msrp_usd": 100,
+    "msrp_krw": 119000,
     "widths": [
-      "D"
+      "D",
+      "2E"
     ],
     "specs": {
       "weight_g": 252,
-      "heel_drop_mm": 5,
-      "midsole": "New CMEVA 초경량 폼",
-      "cushion_level": "High (호카 시그니처 롤링 쿠션)",
-      "support_type": "Neutral",
-      "stack_height": "39mm / 34mm"
+      "heel_drop_mm": 12,
+      "midsole": "DNA LOFT 쿠셔닝",
+      "plate": "없음",
+      "stack_height": "30mm / 18mm",
+      "support_type": "Neutral (100달러 입문)"
+    },
+    "runrepeat": {
+      "score": 86,
+      "midsole_foam": "DNA LOFT",
+      "pros": [
+        "브룩스 특유의 검증된 내구성과 발 편함",
+        "100달러 정가에 252g 가벼운 무게",
+        "초보 러너 힐 스트라이크에 최적화된 12mm 드롭"
+      ],
+      "cons": [
+        "최신 맥스쿠션 대비 클래식한 쿠션감"
+      ],
+      "verdict": "기본기에 가장 충실한 러닝화 전문 브랜드 브룩스의 합리적 엔트리 모델.",
+      "url": "https://runrepeat.com/brooks-trace-3"
+    }
+  },
+  {
+    "id": "brooks_ghost_16",
+    "brand_id": "brooks",
+    "name_kr": "브룩스 고스트 16",
+    "name_en": "Brooks Ghost 16",
+    "series": "고스트",
+    "category": "daily",
+    "category_name": "데일리 / 쿠션화",
+    "msrp_usd": 140,
+    "msrp_krw": 169000,
+    "widths": [
+      "D",
+      "2E",
+      "4E"
+    ],
+    "specs": {
+      "weight_g": 269,
+      "heel_drop_mm": 12,
+      "midsole": "DNA LOFT v3 (질소 주입 초임계 쿠션폼)",
+      "plate": "없음",
+      "stack_height": "36mm / 24mm",
+      "support_type": "Neutral (미국 판매 1위 국민 데일리)"
+    },
+    "runrepeat": {
+      "score": 91,
+      "midsole_foam": "DNA LOFT v3",
+      "pros": [
+        "드디어 글리세린의 질소 주입 DNA LOFT v3 폼 전격 이식",
+        "더욱 가벼워지고 반응성 향상",
+        "미국 러닝 매장 판매 1위의 절대적 신뢰도"
+      ],
+      "cons": [
+        "포어풋 러너에게는 12mm 힐드롭이 다소 높음"
+      ],
+      "verdict": "신는 순간 왜 미국 러너들이 가장 많이 찾는지 바로 납득되는 만능 데일리 트레이너.",
+      "url": "https://runrepeat.com/brooks-ghost-16"
+    }
+  },
+  {
+    "id": "brooks_adrenaline_gts_23",
+    "brand_id": "brooks",
+    "name_kr": "브룩스 아드레날린 GTS 23 / 24",
+    "name_en": "Brooks Adrenaline GTS 23",
+    "series": "아드레날린",
+    "category": "stability",
+    "category_name": "안정화 (과회내 서포트)",
+    "msrp_usd": 140,
+    "msrp_krw": 169000,
+    "widths": [
+      "D",
+      "2E",
+      "4E"
+    ],
+    "specs": {
+      "weight_g": 286,
+      "heel_drop_mm": 12,
+      "midsole": "DNA LOFT v2 + GuideRails 스마트 서포트 시스템",
+      "plate": "없음 (가이드레일 일체형 범퍼)",
+      "stack_height": "36mm / 24mm",
+      "support_type": "Stability (가이드레일 안정화 1위)"
+    },
+    "runrepeat": {
+      "score": 91,
+      "midsole_foam": "DNA LOFT v2",
+      "pros": [
+        "발뿐만 아니라 무릎 회전까지 보호하는 혁신적 가이드레일 시스템",
+        "과회내 러너들의 족저근막염 예방 1위 추천 슈즈",
+        "안정화 최고의 핏감"
+      ],
+      "cons": [
+        "스피드 인터벌용으로는 비추천"
+      ],
+      "verdict": "무릎과 정강이 통증으로 고생하는 러너를 러닝의 길로 다시 이끄는 구원투수.",
+      "url": "https://runrepeat.com/brooks-adrenaline-gts-23"
+    }
+  },
+  {
+    "id": "mizuno_wave_rider_28",
+    "brand_id": "mizuno",
+    "name_kr": "미즈노 웨이브 라이더 28",
+    "name_en": "Mizuno Wave Rider 28",
+    "series": "웨이브 라이더",
+    "category": "daily",
+    "category_name": "데일리 / 쿠션화",
+    "msrp_usd": 140,
+    "msrp_krw": 169000,
+    "widths": [
+      "D",
+      "2E",
+      "4E"
+    ],
+    "specs": {
+      "weight_g": 272,
+      "heel_drop_mm": 12,
+      "midsole": "MIZUNO ENERZY NXT (초임계 힐폼) + 웨이브 플레이트",
+      "plate": "Mizuno Wave Plate (Pebax 웨이브 플레이트)",
+      "stack_height": "38.5mm / 26.5mm",
+      "support_type": "Neutral (28년 헤리티지 데일리)"
     },
     "runrepeat": {
       "score": 90,
-      "midsole_foam": "CMEVA",
-      "rank_in_category": 4,
-      "total_in_category": 110,
+      "midsole_foam": "MIZUNO ENERZY NXT",
       "pros": [
-        "더 부드럽고 가벼워진 10세대 신형 미드솔",
-        "메타로커 지오메트리로 자연스러운 전방 롤링",
-        "남성 표준 D 발볼로 안정적인 발등 락다운"
+        "힐에 ENERZY NXT 슈퍼폼 탑재로 착지 충격 완벽 분산",
+        "웨이브 플레이트 고유의 탄탄하고 흔들림 없는 안정감",
+        "X10 카본 러버의 1,000km 내구성"
       ],
       "cons": [
-        "초와이드 발볼 러너는 와이드 모델 권장"
+        "소프트한 구름 쿠션을 선호하는 러너에게는 탄탄함"
       ],
-      "verdict": "구름 위를 달리는 듯한 호카 특유의 쿠션감과 부드러운 발구름의 대명사."
-    },
-    "prices": [
-      {
-        "store_id": "thehyundai",
-        "store_name": "현대백화점",
-        "store_sub": "더현대 스마트스토어 (럭스보이 정품)",
-        "badge": "백화점",
-        "price": 229000,
-        "shipping": 0,
-        "discount_rate": 0,
-        "width": "D",
-        "sizes": [
-          255,
-          260,
-          265,
-          270,
-          275,
-          280
-        ],
-        "url": "https://smartstore.naver.com/thehyundai/products/13463156094",
-        "is_lowest": true
-      }
-    ],
-    "official_price": 229000
+      "verdict": "28년간 전 세계 러너들의 발을 지켜온 일본 장인정신의 정석 러닝화.",
+      "url": "https://runrepeat.com/mizuno-wave-rider-28"
+    }
   },
   {
-    "id": "hoka_clifton_10_w",
-    "brand_id": "hoka",
-    "name_kr": "호카 클리프톤 10 여성용 (발볼 B)",
-    "name_en": "Hoka Clifton 10 Women Regular",
-    "series": "클리프톤",
-    "is_current": true,
-    "category": "cushion",
-    "category_name": "쿠션화",
-    "msrp": 251000,
-    "image_url": "https://shop-phinf.pstatic.net/20260523_114/17795155609383Kqg2_JPEG/113648371302824361_152220412.jpg?type=f640",
-    "style_code": "1162031-BWHT",
+    "id": "mizuno_wave_rebellion_pro_2",
+    "brand_id": "mizuno",
+    "name_kr": "미즈노 웨이브 리벨리온 프로 2",
+    "name_en": "Mizuno Wave Rebellion Pro 2",
+    "series": "웨이브 리벨리온",
+    "category": "racing",
+    "category_name": "레이싱화 (카본 슈퍼슈즈)",
+    "msrp_usd": 250,
+    "msrp_krw": 299000,
     "widths": [
-      "B"
+      "D"
     ],
     "specs": {
       "weight_g": 215,
-      "heel_drop_mm": 5,
-      "midsole": "New CMEVA 초경량 폼",
-      "cushion_level": "High",
-      "support_type": "Neutral",
-      "stack_height": "37mm / 32mm"
+      "heel_drop_mm": 4.5,
+      "midsole": "SMOOTH SPEED ASSIST (힐이 없는 독창적 락커) + 카본 인퓨즈드 플레이트",
+      "plate": "Carbon Infused Wave Plate",
+      "stack_height": "38mm / 33.5mm",
+      "support_type": "Neutral (극단적 미드풋/포어풋 레이서)"
     },
     "runrepeat": {
-      "score": 90,
-      "midsole_foam": "CMEVA",
-      "rank_in_category": 4,
-      "total_in_category": 110,
+      "score": 92,
+      "midsole_foam": "ENERZY LITE+",
       "pros": [
-        "여성 발골격에 맞춘 B 발볼과 편안한 힐칼라",
-        "무릎과 발목 관절을 부드럽게 보호하는 충격 흡수"
+        "뒤꿈치가 잘려나간 혁신적인 힐리스 지오메트리",
+        "강제적인 완벽한 미드풋/포어풋 착지 유도",
+        "G3 아웃솔의 지면을 파고드는 접지력"
       ],
       "cons": [
-        "남성 대비 타이트한 핏감"
+        "힐 스트라이커 러너는 착용 불가능"
       ],
-      "verdict": "부상 방지와 편안한 쿠셔닝을 원하는 여성 러너를 위한 최적의 선택."
-    },
-    "prices": [
-      {
-        "store_id": "thehyundai",
-        "store_name": "현대백화점",
-        "store_sub": "더현대 스마트스토어 (럭스보이 정품)",
-        "badge": "백화점",
-        "price": 251000,
-        "shipping": 0,
-        "discount_rate": 0,
-        "width": "B",
-        "sizes": [
-          230,
-          235,
-          240,
-          245,
-          250
-        ],
-        "url": "https://smartstore.naver.com/thehyundai/products/13462912029",
-        "is_lowest": true
-      }
-    ],
-    "official_price": 251000
+      "verdict": "미드풋 착지 러너에게 날개를 달아주는 전 세계에서 가장 급진적인 레이싱화.",
+      "url": "https://runrepeat.com/mizuno-wave-rebellion-pro-2"
+    }
   },
   {
-    "id": "hoka_bondi_9_m",
-    "brand_id": "hoka",
-    "name_kr": "호카 본디 9 남성용 (발볼 D)",
-    "name_en": "Hoka Bondi 9 Men Regular",
-    "series": "본디",
-    "is_current": true,
-    "category": "cushion",
-    "category_name": "쿠션화",
-    "msrp": 280000,
-    "image_url": "https://shop-phinf.pstatic.net/20260523_114/17795155609383Kqg2_JPEG/113648371302824361_152220412.jpg?type=f640",
-    "style_code": "1162011-BBLC",
+    "id": "on_cloudrunner_2",
+    "brand_id": "on",
+    "name_kr": "온 클라우드러너 2",
+    "name_en": "On Cloudrunner 2",
+    "series": "클라우드러너",
+    "category": "budget",
+    "category_name": "가성비 입문화 (≤$100)",
+    "msrp_usd": 140,
+    "msrp_krw": 179000,
     "widths": [
-      "D"
+      "D",
+      "2E"
     ],
     "specs": {
-      "weight_g": 305,
-      "heel_drop_mm": 4,
-      "midsole": "초임계 EVA 맥스폼",
-      "cushion_level": "Maximum (최대 두께의 쿠션 베드)",
-      "support_type": "Neutral",
-      "stack_height": "42mm / 38mm"
-    },
-    "runrepeat": {
-      "score": 89,
-      "midsole_foam": "Supercritical EVA",
-      "rank_in_category": 6,
-      "total_in_category": 120,
-      "pros": [
-        "호카 라인업 중 가장 두껍고 푹신한 맥스 쿠션",
-        "체중이 나가는 과체중 러너나 족저근막염 환자에게 독보적 보호력"
-      ],
-      "cons": [
-        "무게감이 있어 빠른 템포런에는 부적합"
-      ],
-      "verdict": "발바닥 충격을 완벽히 흡수하는 궁극의 리커버리 & 맥스 쿠션화."
-    },
-    "prices": [
-      {
-        "store_id": "thehyundai",
-        "store_name": "현대백화점",
-        "store_sub": "더현대 스마트스토어 (럭스보이 정품)",
-        "badge": "백화점",
-        "price": 280000,
-        "shipping": 0,
-        "discount_rate": 0,
-        "width": "D",
-        "sizes": [
-          260,
-          265,
-          270,
-          275,
-          280,
-          285
-        ],
-        "url": "https://smartstore.naver.com/thehyundai/products/13598493783",
-        "is_lowest": true
-      }
-    ],
-    "official_price": 280000
-  },
-  {
-    "id": "asics_gel_kayano_12_1",
-    "brand_id": "asics",
-    "name_kr": "아식스 젤 카야노 12.1",
-    "name_en": "Asics Gel Kayano 12.1",
-    "series": "젤 카야노",
-    "is_current": true,
-    "category": "stability",
-    "category_name": "안정화",
-    "msrp": 264000,
-    "image_url": "https://shop-phinf.pstatic.net/20260523_114/17795155609383Kqg2_JPEG/113648371302824361_152220412.jpg?type=f640",
-    "style_code": "1203A759-100",
-    "widths": [
-      "D"
-    ],
-    "specs": {
-      "weight_g": 315,
+      "weight_g": 277,
       "heel_drop_mm": 10,
-      "midsole": "GEL 쿠셔닝 + 트러스틱 아치 서포트",
-      "cushion_level": "High (단단한 내측 지지력)",
-      "support_type": "Stability (과내번 방지)",
-      "stack_height": "32mm / 22mm"
-    },
-    "runrepeat": {
-      "score": 90,
-      "midsole_foam": "ASICS GEL",
-      "rank_in_category": 3,
-      "total_in_category": 50,
-      "pros": [
-        "카야노 고유의 트러스틱 구조로 발목 안쪽 무너짐 완벽 방지",
-        "레트로 러닝 무드와 안정성을 겸비"
-      ],
-      "cons": [
-        "경량 레이싱용으로는 무거운 편"
-      ],
-      "verdict": "평발 및 과내번 러너의 발목을 든든하게 지지해주는 아식스의 전설."
-    },
-    "prices": [
-      {
-        "store_id": "thehyundai",
-        "store_name": "현대백화점",
-        "store_sub": "더현대 스마트스토어 (직수입/스니커즈관)",
-        "badge": "백화점",
-        "price": 264000,
-        "shipping": 0,
-        "discount_rate": 0,
-        "width": "D",
-        "sizes": [
-          250,
-          255,
-          260,
-          265,
-          270,
-          275,
-          280
-        ],
-        "url": "https://smartstore.naver.com/thehyundai/products/13463102714",
-        "is_lowest": true
-      }
-    ],
-    "official_price": 264000
-  },
-  {
-    "id": "asics_gt_2160",
-    "brand_id": "asics",
-    "name_kr": "아식스 GT-2160",
-    "name_en": "Asics GT-2160",
-    "series": "GT-2000",
-    "is_current": true,
-    "category": "stability",
-    "category_name": "안정화",
-    "msrp": 167000,
-    "image_url": "https://shop-phinf.pstatic.net/20260523_114/17795155609383Kqg2_JPEG/113648371302824361_152220412.jpg?type=f640",
-    "style_code": "1203A275-111",
-    "widths": [
-      "D"
-    ],
-    "specs": {
-      "weight_g": 310,
-      "heel_drop_mm": 10,
-      "midsole": "GEL 쿠셔닝 시스템",
-      "cushion_level": "Medium-Firm",
-      "support_type": "Stability",
-      "stack_height": "30mm / 20mm"
+      "midsole": "Helion 슈퍼폼 + 업그레이드 CloudTec + 스피드보드",
+      "plate": "Speedboard (TPU)",
+      "stack_height": "33mm / 23mm",
+      "support_type": "Stability (지지형 엔트리)"
     },
     "runrepeat": {
       "score": 88,
-      "midsole_foam": "ASICS GEL",
-      "rank_in_category": 7,
-      "total_in_category": 50,
+      "midsole_foam": "Helion Superfoam",
       "pros": [
-        "2000년대 기술적 유산과 트러스틱 지지 구조",
-        "가벼운 조깅과 일상 착용에 모두 적합"
+        "헬리온 슈퍼폼 도입으로 전작 대비 훨씬 부드러워진 착지감",
+        "돌 끼임 현상 완벽 개선",
+        "온 러닝 특유의 세련된 프리미엄 디자인"
       ],
       "cons": [
-        "최신 초임계 폼 대비 반발력은 보통"
+        "온 브랜드 특성상 100달러 미만 엔트리가 없음"
       ],
-      "verdict": "안정적인 지지력과 레트로 무드를 동시에 잡은 헤리티지 러닝화."
-    },
-    "prices": [
-      {
-        "store_id": "thehyundai",
-        "store_name": "현대백화점",
-        "store_sub": "더현대 스마트스토어 (직수입/스니커즈관)",
-        "badge": "백화점",
-        "price": 167000,
-        "shipping": 0,
-        "discount_rate": 0,
-        "width": "D",
-        "sizes": [
-          250,
-          255,
-          260,
-          265,
-          270,
-          275
-        ],
-        "url": "https://smartstore.naver.com/thehyundai/products/13463080720",
-        "is_lowest": true
-      }
+      "verdict": "스타일과 안정적인 서포트를 모두 잡고 싶은 러너를 위한 온의 대표작.",
+      "url": "https://runrepeat.com/on-cloudrunner-2"
+    }
+  },
+  {
+    "id": "on_cloudmonster_2",
+    "brand_id": "on",
+    "name_kr": "온 클라우드몬스터 2",
+    "name_en": "On Cloudmonster 2",
+    "series": "클라우드몬스터",
+    "category": "daily",
+    "category_name": "데일리 / 쿠션화",
+    "msrp_usd": 180,
+    "msrp_krw": 229000,
+    "widths": [
+      "D"
     ],
-    "official_price": 167000
+    "specs": {
+      "weight_g": 295,
+      "heel_drop_mm": 6,
+      "midsole": "듀얼 덴시티 Helion 슈퍼폼 + 거대 CloudTec 요소",
+      "plate": "Speedboard (나일론 혼합)",
+      "stack_height": "39mm / 33mm",
+      "support_type": "Neutral (거대한 락커 쿠션)"
+    },
+    "runrepeat": {
+      "score": 91,
+      "midsole_foam": "Helion Dual Density",
+      "pros": [
+        "거대한 클라우드 구멍이 주는 독보적인 쿠션과 쿠셔닝 쇼크 분산",
+        "앞으로 쏟아지는 익스트림 락커 롤링",
+        "독보적인 미래지향적 비주얼"
+      ],
+      "cons": [
+        "스피드 레이싱에는 다소 묵직함"
+      ],
+      "verdict": "쿠셔닝과 반발력을 극대화하여 달릴 때마다 튀어오르는 몬스터 러닝화.",
+      "url": "https://runrepeat.com/on-cloudmonster-2"
+    }
+  },
+  {
+    "id": "on_cloudboom_echo_3",
+    "brand_id": "on",
+    "name_kr": "온 클라우드붐 에코 3",
+    "name_en": "On Cloudboom Echo 3",
+    "series": "클라우드붐",
+    "category": "racing",
+    "category_name": "레이싱화 (카본 슈퍼슈즈)",
+    "msrp_usd": 290,
+    "msrp_krw": 349000,
+    "widths": [
+      "D"
+    ],
+    "specs": {
+      "weight_g": 215,
+      "heel_drop_mm": 9.5,
+      "midsole": "Helion HF (100% Pebax 슈퍼폼) + 풀 카본 스피드보드",
+      "plate": "Full Carbon Speedboard",
+      "stack_height": "38mm / 28.5mm",
+      "support_type": "Neutral (올림픽 카본 레이서)"
+    },
+    "runrepeat": {
+      "score": 93,
+      "midsole_foam": "Helion HF (PEBA)",
+      "pros": [
+        "온 최초의 100% Pebax(Helion HF) 슈퍼폼 탑재",
+        "카본 스피드보드의 날카로운 가속과 킥",
+        "초미세 마이크로파이버 깃털 어퍼"
+      ],
+      "cons": [
+        "매우 높은 34만원대 정가"
+      ],
+      "verdict": "온 러닝이 마라톤 챔피언들을 위해 탄생시킨 스위스 엔지니어링 카본 플래그십.",
+      "url": "https://runrepeat.com/on-cloudboom-echo-3"
+    }
   }
 ];
 
-function initShoeFApp() {
+(function initShoeF() {
   let brandsConfig = EMBEDDED_CONFIG;
   let shoesData = EMBEDDED_SHOES;
-  let selectedBrands = new Set(['nike', 'adidas', 'asics', 'saucony', 'hoka', 'puma', 'newbalance', 'brooks', 'mizuno', 'on']);
-  let currentSort = 'price-asc';
+
+  if (typeof window !== 'undefined') {
+    if (window.SHOEF_CONFIG) brandsConfig = window.SHOEF_CONFIG;
+    if (window.SHOEF_MASTER || window.SHOEF_DATA) shoesData = window.SHOEF_MASTER || window.SHOEF_DATA;
+  }
+
+  // Comparison Tray State (Set of shoe IDs, max 4)
+  const compareTray = new Set();
+
+  // Active Selected Brands (All active initially)
+  const selectedBrands = new Set(brandsConfig.brands.map(b => b.id));
+
+  // Current Sort Mode
+  let currentSort = 'score-desc';
 
   // DOM Elements
   const brandGridEl = document.getElementById('brandCheckboxGrid');
   const btnSelectAllBrands = document.getElementById('btnSelectAllBrands');
   const btnDeselectAllBrands = document.getElementById('btnDeselectAllBrands');
   const categoryFilter = document.getElementById('categoryFilter');
-  const sizeFilter = document.getElementById('sizeFilter');
   const widthFilter = document.getElementById('widthFilter');
   const searchKeyword = document.getElementById('searchKeyword');
-  const outletOnlyToggle = document.getElementById('outletOnlyToggle');
   const totalCountEl = document.getElementById('totalCount');
   const shoesListEl = document.getElementById('shoesList');
   const sortBtns = document.querySelectorAll('.sort-btn');
 
-  // Modal Elements
-  const modalEl = document.getElementById('runrepeatModal');
-  const btnCloseModal = document.getElementById('btnCloseModal');
-  const modalBrandBadge = document.getElementById('modalBrandBadge');
-  const modalShoeName = document.getElementById('modalShoeName');
-  const modalScore = document.getElementById('modalScore');
-  const modalWeight = document.getElementById('modalWeight');
-  const modalDrop = document.getElementById('modalDrop');
-  const modalStack = document.getElementById('modalStack');
-  const modalPlate = document.getElementById('modalPlate');
-  const modalFoam = document.getElementById('modalFoam');
-  const modalProsList = document.getElementById('modalProsList');
-  const modalConsList = document.getElementById('modalConsList');
-  const modalSummary = document.getElementById('modalSummary');
+  // Compare Tray & Modal DOM
+  const compareBar = document.getElementById('compareFloatingBar');
+  const compareCountTxt = document.getElementById('compareCountTxt');
+  const compareChipsContainer = document.getElementById('compareChips');
+  const btnOpenCompare = document.getElementById('btnOpenCompare');
+  const btnClearCompare = document.getElementById('btnClearCompare');
+  const compareModal = document.getElementById('compareModal');
+  const btnCloseCompareModal = document.getElementById('btnCloseCompareModal');
+  const compareModalTableBody = document.getElementById('compareModalTableBody');
 
-  // If window data is provided, prefer it
-  if (typeof window !== 'undefined') {
-    if (window.SHOEF_CONFIG) brandsConfig = window.SHOEF_CONFIG;
-    if (window.SHOEF_DATA || window.SHOEF_MASTER) shoesData = window.SHOEF_DATA || window.SHOEF_MASTER;
-  }
+  // Memo Modal DOM
+  const memoModal = document.getElementById('memoModal');
+  const btnCloseMemoModal = document.getElementById('btnCloseMemoModal');
+  const memoShoeTitle = document.getElementById('memoShoeTitle');
+  const memoShoeSubtitle = document.getElementById('memoShoeSubtitle');
+  const commentsList = document.getElementById('commentsList');
+  const memoForm = document.getElementById('memoForm');
+  const commentAuthor = document.getElementById('commentAuthor');
+  const commentText = document.getElementById('commentText');
+  const mathQuizLabel = document.getElementById('mathQuizLabel');
+  const mathAnswer = document.getElementById('mathAnswer');
+  const hpUrlCheck = document.getElementById('hp_url_check');
 
-  // 2-1. Brand SVG Logos Map
+  let currentActiveMemoShoeId = null;
+  let numA = 3, numB = 4, correctSum = 7;
+
+  // Brand SVG Logos Map
   const BRAND_LOGOS = {
     nike: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.707 5.293c-.27-.27-.75-.15-1.28.27-2.14 1.7-6.07 5.09-10.42 9.07-2.06 1.89-3.88 3.63-5.26 5.03-1.61 1.63-2.6 2.37-3.32 2.34-.65-.03-1.12-.6-1.37-1.57-.42-1.66.1-4.04 1.54-6.97 1.48-3.02 3.86-6.42 6.89-9.84.45-.51.15-1.32-.51-1.42-.58-.09-1.2.2-1.63.7-3.08 3.55-5.52 7.1-7.05 10.27-1.62 3.35-2.22 6.16-1.66 8.35.61 2.41 2.15 3.68 4.3 3.68 1.48 0 3.25-.85 5.16-2.5 1.52-1.31 3.42-3.06 5.56-4.99 4.39-3.95 8.31-7.25 10.36-8.86.8-.63 1.34-1.17 1.62-1.61.43-.68.27-1.41-.47-1.92z"/></svg>`,
     adidas: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.02 18.57l-4.52-7.83c-.35-.61-1.13-.82-1.74-.47-.61.35-.82 1.13-.47 1.74l4.52 7.83c.35.61 1.13.82 1.74.47.61-.35.82-1.13.47-1.74zm-6.22 0l-5.74-9.94c-.35-.61-1.13-.82-1.74-.47-.61.35-.82 1.13-.47 1.74l5.74 9.94c.35.61 1.13.82 1.74.47.61-.35.82-1.13.47-1.74zm-6.22 0L2.62 6.51c-.35-.61-1.13-.82-1.74-.47-.61.35-.82 1.13-.47 1.74l6.96 12.06c.35.61 1.13.82 1.74.47.61-.35.82-1.13.47-1.74z"/></svg>`,
@@ -1059,13 +2054,13 @@ function initShoeFApp() {
     on: `<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="7" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M14 8.5v7m0-7a3.5 3.5 0 0 1 7 0v7" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>`
   };
 
-  // 2-2. Init 10 Brands Logo Selection (Color / Grayscale Toggle)
-  function initBrandCheckboxes() {
+  // 2. Initialize Brand Buttons
+  function initBrandButtons() {
     brandGridEl.innerHTML = '';
     brandsConfig.brands.forEach(brand => {
       const isChecked = selectedBrands.has(brand.id);
       const count = shoesData.filter(s => s.brand_id === brand.id).length;
-      const logoSvg = BRAND_LOGOS[brand.id] || brand.svg_logo || `<span style="font-weight:800; font-size:11px;">${brand.name.substring(0, 3)}</span>`;
+      const logoSvg = BRAND_LOGOS[brand.id] || `<span style="font-weight:800; font-size:11px;">${brand.name.substring(0, 3)}</span>`;
 
       const btn = document.createElement('button');
       btn.type = 'button';
@@ -1094,17 +2089,329 @@ function initShoeFApp() {
     });
   }
 
-  // 2-2. Init 230 ~ 310mm Size Options
-  function initSizeSelect() {
-    brandsConfig.sizes.forEach(size => {
-      const opt = document.createElement('option');
-      opt.value = size;
-      opt.textContent = `${size} mm`;
-      sizeFilter.appendChild(opt);
+  // 3. Filter & Sort Logic
+  function getFilteredShoes() {
+    const catVal = categoryFilter.value;
+    const widthVal = widthFilter.value;
+    const query = searchKeyword.value.trim().toLowerCase();
+
+    return shoesData.filter(shoe => {
+      // 1) Brand filter
+      if (!selectedBrands.has(shoe.brand_id)) return false;
+
+      // 2) Category filter
+      if (catVal !== 'all' && shoe.category !== catVal) return false;
+
+      // 3) Width filter
+      if (widthVal !== 'all') {
+        if (!shoe.widths || !shoe.widths.includes(widthVal)) return false;
+      }
+
+      // 4) Keyword search
+      if (query) {
+        const text = `${shoe.name_kr} ${shoe.name_en} ${shoe.series} ${shoe.specs.midsole} ${shoe.specs.plate} ${shoe.category_name}`.toLowerCase();
+        if (!text.includes(query)) return false;
+      }
+
+      return true;
+    }).sort((a, b) => {
+      if (currentSort === 'score-desc') {
+        return b.runrepeat.score - a.runrepeat.score;
+      } else if (currentSort === 'price-asc') {
+        return a.msrp_krw - b.msrp_krw;
+      } else if (currentSort === 'price-desc') {
+        return b.msrp_krw - a.msrp_krw;
+      } else if (currentSort === 'weight-asc') {
+        return a.specs.weight_g - b.specs.weight_g;
+      }
+      return 0;
     });
   }
 
-  // 2-3. Event Handlers
+  // 4. Shoutbox (Memo) LocalStorage Helpers
+  function getShoeMemos(shoeId) {
+    try {
+      const data = localStorage.getItem(`shoef_memo_${shoeId}`);
+      return data ? JSON.parse(data) : [];
+    } catch(e) {
+      return [];
+    }
+  }
+
+  function refreshMathQuiz() {
+    numA = Math.floor(Math.random() * 8) + 2;
+    numB = Math.floor(Math.random() * 8) + 1;
+    correctSum = numA + numB;
+    if (mathQuizLabel) {
+      mathQuizLabel.textContent = `${numA} + ${numB} =`;
+    }
+  }
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  function renderCommentsList(shoeId) {
+    const memos = getShoeMemos(shoeId);
+    if (memos.length === 0) {
+      commentsList.innerHTML = `
+        <div style="text-align:center; padding:2rem 1rem; color:var(--text-dim); font-size:0.9rem;">
+          👟 아직 등록된 러너 실전 팁이 없습니다.<br>
+          <span style="font-size:0.8rem; color:var(--text-muted);">실제 착화감, 발볼 팁, 마일리지 후기를 첫 번째로 공유해보세요!</span>
+        </div>
+      `;
+      return;
+    }
+
+    commentsList.innerHTML = memos.slice().reverse().map(m => `
+      <div class="memo-comment-row">
+        <div class="memo-comment-left">
+          <div class="memo-author-line">
+            <strong class="memo-comment-author">${escapeHtml(m.author)}</strong>
+            <span class="memo-comment-time">${escapeHtml(m.time)}</span>
+          </div>
+          <p class="memo-comment-text">${escapeHtml(m.text)}</p>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function openMemoModal(shoeId) {
+    const shoe = shoesData.find(s => s.id === shoeId);
+    if (!shoe) return;
+
+    currentActiveMemoShoeId = shoeId;
+    memoShoeTitle.textContent = shoe.name_kr;
+    memoShoeSubtitle.textContent = `${shoe.name_en} · 정가 ${shoe.msrp_krw.toLocaleString()}원`;
+
+    commentText.value = '';
+    mathAnswer.value = '';
+    refreshMathQuiz();
+    renderCommentsList(shoeId);
+
+    memoModal.style.display = 'flex';
+  }
+
+  // 5. Compare Tray Management
+  function updateCompareTrayUI() {
+    const count = compareTray.size;
+    compareCountTxt.textContent = `${count}/4`;
+
+    if (count > 0) {
+      compareBar.classList.add('show');
+    } else {
+      compareBar.classList.remove('show');
+    }
+
+    compareChipsContainer.innerHTML = Array.from(compareTray).map(id => {
+      const shoe = shoesData.find(s => s.id === id);
+      if (!shoe) return '';
+      return `
+        <span class="compare-chip">
+          <span class="chip-name">${shoe.name_kr}</span>
+          <button type="button" class="btn-remove-chip" data-id="${shoe.id}" aria-label="삭제">&times;</button>
+        </span>
+      `;
+    }).join('');
+
+    // Attach chip delete events
+    compareChipsContainer.querySelectorAll('.btn-remove-chip').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = btn.dataset.id;
+        compareTray.delete(id);
+        updateCompareTrayUI();
+        renderShoes();
+      });
+    });
+  }
+
+  function toggleCompare(shoeId) {
+    if (compareTray.has(shoeId)) {
+      compareTray.delete(shoeId);
+    } else {
+      if (compareTray.size >= 4) {
+        alert('신발 비교는 한 번에 최대 4개까지만 가능합니다.');
+        return;
+      }
+      compareTray.add(shoeId);
+    }
+    updateCompareTrayUI();
+    renderShoes();
+  }
+
+  // 6. Open Compare Modal & Render Matrix
+  function openCompareMatrix() {
+    if (compareTray.size < 1) {
+      alert('비교할 신발을 최소 1개 이상 선택해주세요.');
+      return;
+    }
+
+    const selectedShoes = Array.from(compareTray).map(id => shoesData.find(s => s.id === id)).filter(Boolean);
+
+    // Build side-by-side table rows
+    const specsItems = [
+      { label: '신발 정보', render: s => `<div class="comp-shoe-head"><strong class="comp-shoe-name">${s.name_kr}</strong><span class="comp-shoe-en">${s.name_en}</span></div>` },
+      { label: '런리핏 평점', render: s => `<div class="comp-score"><span class="score-num">${s.runrepeat.score}</span><span class="score-den">/100점</span></div>` },
+      { label: '카테고리', render: s => `<span class="category-badge cat-${s.category}">${s.category_name}</span>` },
+      { label: '출시 정가 (MSRP)', render: s => `<strong>${s.msrp_krw.toLocaleString()}원</strong><br><span style="color:var(--text-dim); font-size:0.75rem;">$${s.msrp_usd}</span>` },
+      { label: '실측 무게 (270mm)', render: s => `<strong>${s.specs.weight_g}g</strong>` },
+      { label: '힐드롭 (Heel Drop)', render: s => `<strong>${s.specs.heel_drop_mm}mm</strong>` },
+      { label: '스택 높이 (힐/앞발)', render: s => `${s.specs.stack_height}` },
+      { label: '미드솔 폼 소재', render: s => `<strong>${s.specs.midsole}</strong>` },
+      { label: '플레이트 유무', render: s => `${s.specs.plate}` },
+      { label: '발볼 옵션', render: s => `${s.widths.join(', ')}` },
+      { label: '서포트 타입', render: s => `${s.specs.support_type}` },
+      { label: '핵심 장점 (Pros)', render: s => `<ul class="comp-list pros">${s.runrepeat.pros.map(p => `<li>${p}</li>`).join('')}</ul>` },
+      { label: '주의/단점 (Cons)', render: s => `<ul class="comp-list cons">${s.runrepeat.cons.map(c => `<li>${c}</li>`).join('')}</ul>` },
+      { label: '런리핏 총평', render: s => `<p class="comp-verdict">"${s.runrepeat.verdict}"</p>` },
+      { label: '공식 랩 분석', render: s => `<a href="${s.runrepeat.url}" target="_blank" rel="noopener noreferrer" class="btn-rr-link">🔬 런리핏 원문 리포트</a>` }
+    ];
+
+    let html = '';
+    specsItems.forEach(item => {
+      html += `
+        <tr>
+          <th class="spec-label-col">${item.label}</th>
+          ${selectedShoes.map(s => `<td class="spec-val-col">${item.render(s)}</td>`).join('')}
+        </tr>
+      `;
+    });
+
+    compareModalTableBody.innerHTML = html;
+    compareModal.style.display = 'flex';
+  }
+
+  // 7. Render Shoes List Cards (Wiki Style with Pure Lab Specs & Isolated Blocks for 360px)
+  function renderShoes() {
+    const list = getFilteredShoes();
+    totalCountEl.textContent = list.length;
+
+    if (list.length === 0) {
+      shoesListEl.innerHTML = `
+        <div style="text-align: center; padding: 60px 20px; color: var(--text-dim);">
+          <div style="font-size: 36px; margin-bottom: 12px;">👟🔍</div>
+          <div style="font-size: 16px; font-weight: 600; color: var(--text-muted);">조건에 맞는 러닝화를 찾을 수 없습니다.</div>
+          <div style="font-size: 13px; margin-top: 6px;">브랜드나 필터 설정을 넓게 선택해보세요.</div>
+        </div>
+      `;
+      return;
+    }
+
+    shoesListEl.innerHTML = list.map(shoe => {
+      const isCompared = compareTray.has(shoe.id);
+      const memos = getShoeMemos(shoe.id);
+      const memoCount = memos.length;
+
+      return `
+        <article class="shoe-wiki-card" data-id="${shoe.id}">
+          
+          <!-- 카드 상단: 브랜드 & 모델명 & 비교 체크 토글 -->
+          <div class="card-top-row">
+            <div class="card-brand-model">
+              <span class="card-brand-badge">${shoe.brand_id.toUpperCase()}</span>
+              <h2 class="card-title-kr">${shoe.name_kr}</h2>
+              <span class="card-title-en">${shoe.name_en}</span>
+            </div>
+            <button type="button" class="btn-compare-toggle ${isCompared ? 'active' : ''}" data-id="${shoe.id}">
+              ${isCompared ? '✓ 비교함 담김' : '+ 비교함 담기'}
+            </button>
+          </div>
+
+          <!-- 독립 블록 1: 런리핏 평점 & 카테고리 태그 (360px 오버플로우 방지) -->
+          <div class="card-score-row">
+            <div class="rr-score-badge">
+              <span class="rr-score-icon">🟢</span>
+              <span class="rr-score-val">${shoe.runrepeat.score}</span>
+              <span class="rr-score-max">/100</span>
+              <span class="rr-score-label">RunRepeat Score</span>
+            </div>
+            <span class="category-badge cat-${shoe.category}">${shoe.category_name}</span>
+          </div>
+
+          <!-- 독립 블록 2: 공식 정가 및 발볼 정보 -->
+          <div class="card-price-row">
+            <div class="price-box">
+              <span class="price-label">공식 출시가 (MSRP)</span>
+              <span class="price-val">${shoe.msrp_krw.toLocaleString()}원 <span class="usd-val">($${shoe.msrp_usd})</span></span>
+            </div>
+            <div class="widths-box">
+              <span class="widths-label">발볼 옵션:</span>
+              <span class="widths-val">${shoe.widths.join(', ')}</span>
+            </div>
+          </div>
+
+          <!-- 독립 블록 3: 4대 핵심 랩 실측 수치 그리드 -->
+          <div class="card-specs-grid">
+            <div class="spec-cell">
+              <span class="spec-cell-label">실측 무게 (270mm)</span>
+              <strong class="spec-cell-val">${shoe.specs.weight_g}g</strong>
+            </div>
+            <div class="spec-cell">
+              <span class="spec-cell-label">힐드롭</span>
+              <strong class="spec-cell-val">${shoe.specs.heel_drop_mm}mm</strong>
+            </div>
+            <div class="spec-cell">
+              <span class="spec-cell-label">스택 높이</span>
+              <strong class="spec-cell-val">${shoe.specs.stack_height}</strong>
+            </div>
+            <div class="spec-cell">
+              <span class="spec-cell-label">미드솔 폼 / 플레이트</span>
+              <strong class="spec-cell-val">${shoe.specs.midsole} · ${shoe.specs.plate}</strong>
+            </div>
+          </div>
+
+          <!-- 독립 블록 4: 런리핏 랩 핵심 장단점 요약 -->
+          <div class="card-verdict-box">
+            <p class="verdict-txt">"${shoe.runrepeat.verdict}"</p>
+            <div class="pros-cons-list">
+              <div class="pros-group">
+                <span class="pros-title">👍 핵심 장점</span>
+                <ul>${shoe.runrepeat.pros.map(p => `<li>${p}</li>`).join('')}</ul>
+              </div>
+              <div class="cons-group">
+                <span class="cons-title">⚠️ 체크 포인트</span>
+                <ul>${shoe.runrepeat.cons.map(c => `<li>${c}</li>`).join('')}</ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 독립 블록 5: 액션 버튼 바 (런리핏 원문 리포트 & 러너 메모장) -->
+          <div class="card-action-row">
+            <a href="${shoe.runrepeat.url}" target="_blank" rel="noopener noreferrer" class="btn-rr-direct">
+              🔬 런리핏 랩 실측 리포트 보기
+            </a>
+            <button type="button" class="btn-memo-open" data-id="${shoe.id}">
+              💬 러너 실전 팁 (${memoCount})
+            </button>
+          </div>
+
+        </article>
+      `;
+    }).join('');
+
+    // Attach Compare Buttons
+    shoesListEl.querySelectorAll('.btn-compare-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        toggleCompare(btn.dataset.id);
+      });
+    });
+
+    // Attach Memo Buttons
+    shoesListEl.querySelectorAll('.btn-memo-open').forEach(btn => {
+      btn.addEventListener('click', () => {
+        openMemoModal(btn.dataset.id);
+      });
+    });
+  }
+
+  // 8. Attach Global Events
   function attachEvents() {
     btnSelectAllBrands.addEventListener('click', () => {
       brandsConfig.brands.forEach(b => selectedBrands.add(b.id));
@@ -1125,10 +2432,8 @@ function initShoeFApp() {
     });
 
     categoryFilter.addEventListener('change', renderShoes);
-    sizeFilter.addEventListener('change', renderShoes);
     widthFilter.addEventListener('change', renderShoes);
     searchKeyword.addEventListener('input', renderShoes);
-    outletOnlyToggle.addEventListener('change', renderShoes);
 
     sortBtns.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -1139,322 +2444,87 @@ function initShoeFApp() {
       });
     });
 
-    // Modal close
-    btnCloseModal.addEventListener('click', () => {
-      modalEl.style.display = 'none';
+    // Floating Compare Bar Events
+    btnOpenCompare.addEventListener('click', openCompareMatrix);
+    btnClearCompare.addEventListener('click', () => {
+      compareTray.clear();
+      updateCompareTrayUI();
+      renderShoes();
     });
-    modalEl.addEventListener('click', (e) => {
-      if (e.target === modalEl) modalEl.style.display = 'none';
+
+    // Compare Modal Close
+    btnCloseCompareModal.addEventListener('click', () => {
+      compareModal.style.display = 'none';
     });
+    compareModal.addEventListener('click', (e) => {
+      if (e.target === compareModal) compareModal.style.display = 'none';
+    });
+
+    // Memo Modal Close
+    btnCloseMemoModal.addEventListener('click', () => {
+      memoModal.style.display = 'none';
+    });
+    memoModal.addEventListener('click', (e) => {
+      if (e.target === memoModal) memoModal.style.display = 'none';
+    });
+
+    // Memo Submit Logic (with math captcha & 10s cooldown)
+    memoForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      if (!currentActiveMemoShoeId) return;
+
+      // 1. Honeypot check
+      if (hpUrlCheck.value !== '') return;
+
+      // 2. Math Captcha check
+      const userAns = parseInt(mathAnswer.value, 10);
+      if (userAns !== correctSum) {
+        alert('스팸 방지 산수 문제의 정답이 올바르지 않습니다.');
+        return;
+      }
+
+      // 3. Cooldown check (10 seconds)
+      const lastPost = localStorage.getItem('last_shoef_memo_time');
+      const now = Date.now();
+      if (lastPost && now - parseInt(lastPost, 10) < 10000) {
+        alert('도배 방지를 위해 10초 후에 다시 작성하실 수 있습니다.');
+        return;
+      }
+
+      const author = commentAuthor.value.trim() || '익명 러너';
+      const text = commentText.value.trim();
+      if (!text) {
+        alert('러너 실전 팁 내용을 입력해주세요.');
+        return;
+      }
+
+      const d = new Date();
+      const timeStr = `${d.getMonth()+1}/${d.getDate()} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;
+
+      const memos = getShoeMemos(currentActiveMemoShoeId);
+      memos.push({ author, text, time: timeStr });
+      localStorage.setItem(`shoef_memo_${currentActiveMemoShoeId}`, JSON.stringify(memos));
+      localStorage.setItem('last_shoef_memo_time', now.toString());
+
+      commentText.value = '';
+      mathAnswer.value = '';
+      refreshMathQuiz();
+      renderCommentsList(currentActiveMemoShoeId);
+      renderShoes(); // Update memo count badge on card
+    });
+
+    // ESC key close
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && modalEl.style.display !== 'none') {
-        modalEl.style.display = 'none';
+      if (e.key === 'Escape') {
+        compareModal.style.display = 'none';
+        memoModal.style.display = 'none';
       }
     });
   }
 
-  // 3. Filter & Sort Logic
-  function getFilteredShoes() {
-    const catVal = categoryFilter.value;
-    const sizeVal = sizeFilter.value === 'all' ? null : parseInt(sizeFilter.value, 10);
-    const widthVal = widthFilter.value;
-    const query = searchKeyword.value.trim().toLowerCase();
-    const outletOnly = outletOnlyToggle.checked;
-
-    return shoesData.filter(shoe => {
-      // 1) Brand filter
-      if (!selectedBrands.has(shoe.brand_id)) return false;
-
-      // 2) Category filter
-      if (catVal !== 'all' && shoe.category !== catVal) return false;
-
-      // 3) Outlet only toggle
-      if (outletOnly && shoe.is_current !== false) return false;
-
-      // 4) Keyword search
-      if (query) {
-        const text = `${shoe.name_kr} ${shoe.name_en} ${shoe.series} ${shoe.runrepeat.midsole_foam} ${shoe.category_name}`.toLowerCase();
-        if (!text.includes(query)) return false;
-      }
-
-      // 5) Width filter
-      if (widthVal !== 'all') {
-        if (!shoe.widths.includes(widthVal)) return false;
-      }
-
-      // 6) Size filter: 신발 판매처 중 해당 사이즈 재고가 있는 가격이 있는지 확인
-      if (sizeVal !== null) {
-        const hasSize = shoe.prices.some(p => p.sizes.includes(sizeVal));
-        if (!hasSize) return false;
-      }
-
-      return true;
-    }).map(shoe => {
-      // 사이즈나 발볼 필터가 걸려있을 경우 가격 목록 필터링 및 최저가 재계산
-      let validPrices = shoe.prices;
-      if (sizeVal !== null) {
-        validPrices = validPrices.filter(p => p.sizes.includes(sizeVal));
-      }
-      if (widthVal !== 'all') {
-        validPrices = validPrices.filter(p => p.width === widthVal || (widthVal === 'D' && !p.width));
-      }
-
-      if (validPrices.length === 0) validPrices = shoe.prices; // Fallback to all prices
-
-      // Find lowest price
-      const minPrice = Math.min(...validPrices.map(p => p.price));
-      const maxDiscount = Math.max(...validPrices.map(p => p.discount_rate || 0));
-
-      return {
-        ...shoe,
-        displayPrices: validPrices,
-        effectiveLowestPrice: minPrice,
-        effectiveMaxDiscount: maxDiscount
-      };
-    }).sort((a, b) => {
-      if (currentSort === 'price-asc') {
-        return a.effectiveLowestPrice - b.effectiveLowestPrice;
-      } else if (currentSort === 'discount-desc') {
-        return b.effectiveMaxDiscount - a.effectiveMaxDiscount;
-      } else if (currentSort === 'score-desc') {
-        return b.runrepeat.score - a.runrepeat.score;
-      }
-      return 0;
-    });
-  }
-
-  // 4. Render Danawa-Style Shoes List
-  function renderShoes() {
-    const list = getFilteredShoes();
-    totalCountEl.textContent = list.length;
-
-    if (list.length === 0) {
-      shoesListEl.innerHTML = `
-        <div style="text-align: center; padding: 60px 20px; color: var(--text-dim);">
-          <div style="font-size: 32px; margin-bottom: 12px;">👟🔍</div>
-          <div style="font-size: 16px; font-weight: 600; color: var(--text-muted);">조건에 맞는 신발을 찾을 수 없습니다.</div>
-          <div style="font-size: 13px; margin-top: 6px;">브랜드 로고나 필터(사이즈/발볼)를 넓게 설정해보세요.</div>
-        </div>
-      `;
-      return;
-    }
-
-    const currentSize = sizeFilter.value === 'all' ? null : parseInt(sizeFilter.value, 10);
-    const currentWidth = widthFilter.value === 'all' ? null : widthFilter.value;
-
-    shoesListEl.innerHTML = list.map(shoe => {
-      const minPrice = shoe.effectiveLowestPrice;
-
-      // 4-Week Price Trend SVG Sparkline (순수 벡터 - 360px 반응형)
-      const history = shoe.price_history || [];
-      let chartSvgHtml = '';
-      if (history.length >= 2) {
-        const prices = history.map(h => h.price);
-        const minP = Math.min(...prices);
-        const maxP = Math.max(...prices);
-        const diff = maxP - minP;
-        const xs = [24, 90, 156, 220];
-        const ys = prices.map(p => diff === 0 ? 18 : 28 - Math.round(((p - minP) / diff) * 18));
-        const polylinePts = xs.map((x, i) => `${x},${ys[i]}`).join(' ');
-        const polygonPts = `24,34 ` + polylinePts + ` 220,34`;
-        const dotsHtml = xs.map((x, i) => {
-          const isLast = (i === history.length - 1);
-          const fill = isLast ? '#34d399' : '#10b981';
-          const r = isLast ? '3.5' : '2';
-          return `<circle cx="${x}" cy="${ys[i]}" r="${r}" fill="${fill}" stroke="#07130f" stroke-width="1"/><text x="${x}" y="40" font-size="8" fill="#6ee7b7" text-anchor="middle" font-family="Pretendard, sans-serif">${history[i].week}</text>`;
-        }).join('');
-        
-        const isDrop = prices[prices.length - 1] < prices[0];
-        const dropPct = isDrop ? Math.round(((prices[0] - prices[prices.length - 1]) / prices[0]) * 100) : 0;
-        const trendBadge = isDrop ? `<span class="trend-badge drop">📉 4주간 ${dropPct}% 하락</span>` : `<span class="trend-badge stable">⚡ 시세 안정</span>`;
-
-        chartSvgHtml = `
-          <div class="price-trend-box">
-            <div class="trend-header">
-              <span class="trend-title">📈 4주 최저가 추이</span>
-              ${trendBadge}
-            </div>
-            <svg class="trend-svg" viewBox="0 0 244 44" preserveAspectRatio="none">
-              <defs>
-                <linearGradient id="grad-${shoe.id}" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#10b981" stop-opacity="0.35"/>
-                  <stop offset="100%" stop-color="#10b981" stop-opacity="0.0"/>
-                </linearGradient>
-              </defs>
-              <polygon points="${polygonPts}" fill="url(#grad-${shoe.id})"/>
-              <polyline points="${polylinePts}" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              {dotsHtml}
-            </svg>
-          </div>
-        `.replace('{dotsHtml}', dotsHtml);
-      }
-
-      // Danawa Price Table Rows (Desktop 5-Column & Mobile 2-Line Hybrid)
-      const priceRowsHtml = shoe.displayPrices.map(p => {
-        const isLowest = (p.price === minPrice);
-        const mallClass = p.badge === '백화점' ? 'dept' :
-                          p.badge === '공식몰' ? 'official' :
-                          p.badge === '슈즈몰' ? 'multi' : 'select';
-
-        const sizeTxt = currentSize ? `${currentSize}mm 보유` : `${p.sizes[0]}~${p.sizes[p.sizes.length - 1]}mm`;
-        const widthTxt = p.width ? `[${p.width}]` : '';
-        const subName = p.store_sub ? `<span class="mall-sub-name">${p.store_sub}</span>` : '';
-
-        return `
-          <tr class="price-row ${isLowest ? 'is-lowest' : ''}">
-            <!-- 1열: 판매처명 (모바일에서는 구매버튼과 인라인 배치) -->
-            <td class="mall-cell">
-              <div class="price-row-top">
-                <div class="mall-primary-line">
-                  <span class="mall-badge ${mallClass}">${p.badge}</span>
-                  <span class="mall-main-name">${p.store_name}</span>
-                </div>
-                <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="btn-buy-link mobile-only-btn">구매하기</a>
-              </div>
-              ${subName}
-            </td>
-
-            <!-- 2열: 발볼 & 사이즈 (데스크탑) -->
-            <td class="size-cell desktop-only-cell">
-              <span class="size-stock-txt"><strong>${widthTxt}</strong> ${sizeTxt}</span>
-            </td>
-
-            <!-- 3열: 배송 / 혜택 (사이즈와 가격 사이 공백 해소) -->
-            <td class="benefit-cell desktop-only-cell">
-              <span class="benefit-txt">🚚 무료배송</span>
-            </td>
-
-            <!-- 4열: 실시간 판매가 & 할인율 -->
-            <td class="price-cell">
-              <div class="price-row-bottom">
-                <div class="price-primary-line">
-                  ${isLowest ? '<span class="lowest-tag">최저가</span>' : ''}
-                  <span class="current-price">${p.price.toLocaleString()}원</span>
-                  ${p.discount_rate > 0 ? `<span class="discount-badge">${p.discount_rate}%↓</span>` : '<span class="regular-badge">정가</span>'}
-                </div>
-                <span class="mobile-size-txt"><strong>${widthTxt}</strong> ${sizeTxt} · 🚚 무료배송</span>
-              </div>
-            </td>
-
-            <!-- 5열: 바로가기 버튼 (데스크탑) -->
-            <td class="action-cell desktop-only-cell">
-              <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="btn-buy-link">구매하기</a>
-            </td>
-          </tr>
-        `;
-      }).join('');
-
-      return `
-        <article class="shoe-danawa-card" data-id="${shoe.id}">
-          
-          <!-- 1열: 신발 메타 & 독립 점수 & 정가 & 4주 최저가 차트 -->
-          <div class="card-col-info">
-            
-            <!-- 1-1. 브랜드 및 품번 -->
-            <div class="info-meta-row">
-              <span class="brand-line">${shoe.brand_id.toUpperCase()}</span>
-              ${shoe.style_code ? `<span class="style-code-badge">품번: ${shoe.style_code}</span>` : ''}
-              ${!shoe.is_current ? '<span class="outlet-flag">⚡ 이월특가</span>' : ''}
-            </div>
-
-            <!-- 1-2. 신발명 -->
-            <h2 class="shoe-name">${shoe.name_kr}</h2>
-
-            <!-- 1-3. 카테고리 (독립 행) -->
-            <div class="category-row">
-              <span class="category-badge">🏷️ ${shoe.category_name}</span>
-            </div>
-
-            <!-- 1-4. 런리핏 점수 & 랩 분석 (한 칸 띄워서 독립 배치: 360px 오버플로우 원천 방지) -->
-            <div class="score-badge-container">
-              <div class="score-badge-lbl">
-                <span class="rr-title">RunRepeat</span>
-                <span class="score-badge-num">${shoe.runrepeat ? shoe.runrepeat.score : '-'}점</span>
-                <span class="score-grade-tag">${(shoe.runrepeat && shoe.runrepeat.score >= 90) ? 'Great' : 'Good'}</span>
-              </div>
-              <button type="button" class="btn-open-modal" onclick="openRunRepeatModal('${shoe.id}')">
-                📊 랩 분석
-              </button>
-            </div>
-
-            <!-- 1-5. 공식 정가 MSRP (독립 행) -->
-            <div class="msrp-box">
-              <span class="msrp-label">공식 정가 (MSRP)</span>
-              <strong class="msrp-price">${(shoe.msrp || shoe.official_price || 0).toLocaleString()}원</strong>
-            </div>
-
-            <!-- 1-6. 4주 최저가 추이 SVG 차트 (독립 행) -->
-            ${chartSvgHtml}
-
-          </div>
-
-          <!-- 2열: 다나와식 판매처별 가격 리스트 테이블 -->
-          <div class="card-col-prices">
-            <table class="price-table">
-              <thead>
-                <tr>
-                  <th class="th-mall">판매처</th>
-                  <th class="th-size">발볼 & 보유 사이즈</th>
-                  <th class="th-benefit">배송 / 혜택</th>
-                  <th class="th-price">실시간 판매가</th>
-                  <th class="th-action">구매이동</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${priceRowsHtml}
-              </tbody>
-            </table>
-          </div>
-
-        </article>
-      `;
-    }).join('');
-  }
-
-  window.openRunRepeatModal = function(shoeId) {
-    const shoe = shoesData.find(s => s.id === shoeId);
-    if (!shoe) return;
-
-    modalBrandBadge.textContent = (shoe.brand_id || '').toUpperCase();
-    modalShoeName.textContent = shoe.name_kr || shoe.name_en || '';
-    
-    const rr = shoe.runrepeat || {};
-    const sp = shoe.specs || {};
-    
-    modalScore.innerHTML = `${rr.score || '-'}<span class="score-max">/100</span>`;
-    modalWeight.textContent = `${sp.weight_g || rr.weight_g || '-'}g`;
-    modalDrop.textContent = `${sp.heel_drop_mm || rr.heel_drop_mm || '-'}mm`;
-    modalStack.textContent = sp.stack_height || `${rr.heel_stack_mm || '-'} / ${rr.forefoot_stack_mm || '-'} mm`;
-    modalPlate.textContent = sp.midsole || rr.plate || '없음';
-    modalFoam.textContent = rr.midsole_foam || sp.midsole || '-';
-
-    // Pros
-    modalProsList.innerHTML = (rr.pros || []).map(p => `<li>${p}</li>`).join('');
-    // Cons
-    modalConsList.innerHTML = (rr.cons || []).map(c => `<li>${c}</li>`).join('');
-        // Summary
-    modalSummary.textContent = rr.verdict || rr.summary || '상세 리뷰 준비 중입니다.';
-
-    // RunRepeat Original Review Link
-    const modalRrLink = document.getElementById('modalRrLink');
-    if (modalRrLink) {
-      modalRrLink.href = rr.url || `https://runrepeat.com/search?q=${encodeURIComponent(shoe.name_en || shoe.name_kr)}`;
-    }
-
-    modalEl.style.display = 'flex';
-  };
-
-  // 6. Execute Initialization after all definitions are ready
-  initBrandCheckboxes();
-  initSizeSelect();
+  // Start Application
+  initBrandButtons();
   attachEvents();
   renderShoes();
-}
-
-// Ensure execution even if DOMContentLoaded already fired
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initShoeFApp);
-} else {
-  initShoeFApp();
-}
-
+})();

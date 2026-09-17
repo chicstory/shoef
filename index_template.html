@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShoeF 러닝화 연구소 위키 | RunRepeat 실측 스펙 & 1:1 비교 매트릭스</title>
+  <meta name="description" content="나이키, 아디다스, 아식스, 써코니, 호카, 뉴발란스 등 10대 글로벌 브랜드의 5대 카테고리(가성비 입문화, 데일리 쿠션화, 안정화, 슈퍼트레이너, 카본 레이싱화) RunRepeat 실측 스펙, 1:1 비교, 익명 러너 실전 팁.">
+  <meta name="referrer" content="no-referrer">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Google Analytics 4 (규칙 준수) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3PFHN6VW7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K3PFHN6VW7');
+  </script>
+</head>
+<body class="dark-theme">
+
+  <!-- 1. 최상단 초슬림 헤더 -->
+  <header class="slim-header">
+    <div class="header-inner">
+      <div class="brand-title">
+        <span class="logo-badge">ShoeF</span>
+        <span class="sub-txt">러닝화 연구소 위키 & 1:1 스펙 비교</span>
+      </div>
+      <div class="header-meta">
+        <span class="live-indicator"><span class="pulse-dot"></span>RunRepeat 실측 연구소 데이터 기반</span>
+        <span class="last-sync" id="lastSyncTime">10대 브랜드 전수 조사</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. 컨트롤 패널: 브랜드 선택 & 다이나믹 필터 -->
+  <section class="control-panel">
+    <div class="panel-container">
+      
+      <!-- 2-1. 브랜드 선택 (2줄 10개 브랜드 콤팩트 버튼 그리드) -->
+      <div class="filter-group brand-filter-group">
+        <div class="group-header">
+          <span class="group-label">글로벌 10대 브랜드</span>
+          <div class="brand-actions">
+            <button type="button" class="btn-text" id="btnSelectAllBrands">전체선택</button>
+            <span class="divider">|</span>
+            <button type="button" class="btn-text" id="btnDeselectAllBrands">해제</button>
+          </div>
+        </div>
+        <div class="brand-checkbox-grid" id="brandCheckboxGrid">
+          <!-- JS 렌더링: 10개 브랜드 버튼 -->
+        </div>
+      </div>
+
+      <!-- 2-2. 5대 카테고리 / 발볼 / 검색 툴바 -->
+      <div class="filter-row">
+        
+        <!-- 카테고리 셀렉트 (5대 카테고리) -->
+        <div class="filter-field">
+          <label for="categoryFilter" class="field-label">카테고리 분류</label>
+          <select id="categoryFilter" class="custom-select">
+            <option value="all">전체 카테고리 (51종)</option>
+            <option value="budget">🌱 가성비 입문화 (≤$100)</option>
+            <option value="daily">☁️ 데일리 / 쿠션화</option>
+            <option value="stability">🛡️ 안정화 (과회내 서포트)</option>
+            <option value="super_trainer">⚡ 슈퍼 트레이너</option>
+            <option value="racing">🏆 레이싱화 (카본 슈퍼슈즈)</option>
+          </select>
+        </div>
+
+        <!-- 발볼 옵션 (D, 2E, 4E) -->
+        <div class="filter-field">
+          <label for="widthFilter" class="field-label">발볼 지원</label>
+          <select id="widthFilter" class="custom-select">
+            <option value="all">전체 발볼</option>
+            <option value="D">Standard (D 보통)</option>
+            <option value="2E">Wide (2E 넓음)</option>
+            <option value="4E">Extra Wide (4E 매우넓음)</option>
+          </select>
+        </div>
+
+        <!-- 모델 검색창 -->
+        <div class="filter-field search-field">
+          <label for="searchKeyword" class="field-label">모델 & 폼 검색</label>
+          <input type="text" id="searchKeyword" class="custom-input" placeholder="신발명, 시리즈, 폼 (예: 보스턴, 갤럭시, 줌X, 페가수스)...">
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. 메인 콘텐츠: 신발 리스트 (RunRepeat 위키 레이아웃) -->
+  <main class="main-content">
+    <div class="content-container">
+      
+      <div class="results-bar">
+        <span class="count-txt">조회된 러닝화 <strong id="totalCount">0</strong>종</span>
+        <div class="sort-controls">
+          <button type="button" class="sort-btn active" data-sort="score-desc">런리핏 평점순</button>
+          <button type="button" class="sort-btn" data-sort="price-asc">정가 낮은순</button>
+          <button type="button" class="sort-btn" data-sort="price-desc">정가 높은순</button>
+          <button type="button" class="sort-btn" data-sort="weight-asc">가벼운순 (무게)</button>
+        </div>
+      </div>
+
+      <!-- 신발 카드 리스트 컨테이너 -->
+      <div class="shoes-list" id="shoesList">
+        <!-- JS로 위키 카드 동적 렌더링 -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- 4. 하단 플로팅 비교 트레이 바 -->
+  <div id="compareFloatingBar" class="compare-floating-bar">
+    <div class="compare-bar-inner">
+      <div class="compare-info-group">
+        <span class="compare-badge">비교함 <strong id="compareCountTxt">0/4</strong></span>
+        <div class="compare-chips" id="compareChips"></div>
+      </div>
+      <div class="compare-actions">
+        <button type="button" id="btnClearCompare" class="btn-clear-compare">비우기</button>
+        <button type="button" id="btnOpenCompare" class="btn-open-compare">맞춤 스펙 1:1 비교하기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. 맞춤 1:1 및 1:N 스펙 비교 모달 (가로 스크롤 매트릭스) -->
+  <div class="modal-backdrop" id="compareModal" style="display: none;">
+    <div class="modal-card compare-modal-card">
+      <header class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-brand-badge">RUNNING SHOE MATRIX</span>
+          <h2 class="modal-title">맞춤 1:1 러닝화 정밀 스펙 비교표</h2>
+        </div>
+        <button type="button" class="modal-close" id="btnCloseCompareModal" aria-label="닫기">&times;</button>
+      </header>
+      <div class="modal-body compare-modal-body">
+        <div class="compare-table-wrapper">
+          <table class="compare-table">
+            <tbody id="compareModalTableBody">
+              <!-- JS 동적 생성: 좌우 나란히 스펙 비교 -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. 익명 러너 실전 한줄 메모장 모달 (engines ownerMemoSection 이식) -->
+  <div class="modal-backdrop" id="memoModal" style="display: none;">
+    <div class="modal-card memo-modal-card">
+      <header class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-brand-badge">RUNNER SHOUTBOX</span>
+          <h2 class="modal-title" id="memoShoeTitle">신발명</h2>
+          <span class="modal-subtitle" id="memoShoeSubtitle">부제</span>
+        </div>
+        <button type="button" class="modal-close" id="btnCloseMemoModal" aria-label="닫기">&times;</button>
+      </header>
+      <div class="modal-body memo-modal-body">
+        
+        <!-- 실시간 댓글 목록 -->
+        <div class="memo-comments-container" id="commentsList">
+          <!-- JS 렌더링 -->
+        </div>
+
+        <!-- 실전 팁 작성 폼 -->
+        <form id="memoForm" class="memo-write-form">
+          <input type="text" id="hp_url_check" name="hp_url_check" style="display:none;" tabindex="-1" autocomplete="off">
+          
+          <div class="memo-form-top-row">
+            <input type="text" id="commentAuthor" class="memo-input author" placeholder="닉네임 (최대 15자)" maxlength="15">
+            <div class="math-captcha-box">
+              <span id="mathQuizLabel" class="math-label">3 + 4 =</span>
+              <input type="number" id="mathAnswer" class="memo-input captcha" placeholder="답" required>
+            </div>
+          </div>
+
+          <div class="memo-form-bottom-row">
+            <input type="text" id="commentText" class="memo-input text" placeholder="발볼러 반업 필수 등 솔직한 실전 꿀팁을 한줄로 남겨주세요 (최대 120자)" maxlength="120" required>
+            <button type="submit" class="btn-submit-memo">등록</button>
+          </div>
+
+          <span class="memo-notice">※ 도배 방지를 위해 10초 쿨다운이 적용되며, 작성된 메모는 실시간 공유됩니다.</span>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. 푸터 -->
+  <footer class="slim-footer">
+    <div class="footer-inner">
+      <span>ShoeF는 RunRepeat의 공인된 기계적 랩 테스트 및 글로벌 러너들의 실전 데이터를 체계화하여 제공합니다.</span>
+    </div>
+  </footer>
+
+  <!-- App Script Inlined Here -->
+  <script src="app.js"></script>
+</body>
+</html>
