@@ -1,0 +1,2329 @@
+{
+  "audit_timestamp": "2026-09-18T02:23:07.413835",
+  "total_tracked_in_db": 70,
+  "brands_audited": [
+    "adidas",
+    "nike",
+    "asics",
+    "saucony",
+    "hoka",
+    "newbalance",
+    "puma",
+    "mizuno",
+    "brooks",
+    "on"
+  ],
+  "summary": {
+    "version_bumps_count": 44,
+    "new_models_count": 167,
+    "already_tracked_count": 0
+  },
+  "brand_details": {
+    "adidas": {
+      "total_scanned": 30,
+      "version_bumps": [
+        {
+          "name": "adidas Supernova Rise 3",
+          "url": "https://runrepeat.com/adidas-supernova-rise-3",
+          "slug": "adidas-supernova-rise-3",
+          "score": 87,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Adidas Supernova Rise 2 (v2) -> RunRepeat has adidas Supernova Rise 3 (v3)"
+        },
+        {
+          "name": "adidas Supernova Rise 3 Adaptive",
+          "url": "https://runrepeat.com/adidas-supernova-rise-3-adaptive",
+          "slug": "adidas-supernova-rise-3-adaptive",
+          "score": 88,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Adidas Supernova Rise 2 (v2) -> RunRepeat has adidas Supernova Rise 3 Adaptive (v3)"
+        }
+      ],
+      "new_models": [
+        {
+          "name": "adidas Adizero Adios Pro Evo 3",
+          "url": "https://runrepeat.com/adidas-adizero-adios-pro-evo-3",
+          "slug": "adidas-adizero-adios-pro-evo-3",
+          "score": 91,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: adidas Adizero Adios Pro Evo 3"
+        },
+        {
+          "name": "adidas Terrex Agravic Speed Ultra 2",
+          "url": "https://runrepeat.com/adidas-terrex-agravic-speed-ultra-2",
+          "slug": "adidas-terrex-agravic-speed-ultra-2",
+          "score": 87,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: adidas Terrex Agravic Speed Ultra 2"
+        },
+        {
+          "name": "adidas Hyperboost Edge",
+          "url": "https://runrepeat.com/adidas-hyperboost-edge",
+          "slug": "adidas-hyperboost-edge",
+          "score": 83,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: adidas Hyperboost Edge"
+        },
+        {
+          "name": "adidas Adizero Adios Pro 3",
+          "url": "https://runrepeat.com/adidas-adizero-adios-pro-3",
+          "slug": "adidas-adizero-adios-pro-3",
+          "score": 92,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: adidas Adizero Adios Pro 3"
+        },
+        {
+          "name": "adidas Ultraboost 5X",
+          "url": "https://runrepeat.com/adidas-ultraboost-5-x",
+          "slug": "adidas-ultraboost-5-x",
+          "score": 85,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: adidas Ultraboost 5X"
+        },
+        {
+          "name": "adidas Adizero Boston 13",
+          "url": "https://runrepeat.com/adidas-adizero-boston-13",
+          "slug": "adidas-adizero-boston-13",
+          "score": 88,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: adidas Adizero Boston 13"
+        },
+        {
+          "name": "adidas Adizero Prime X 2 Strung",
+          "url": "https://runrepeat.com/adidas-adizero-prime-x-2-strung",
+          "slug": "adidas-adizero-prime-x-2-strung",
+          "score": 82,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: adidas Adizero Prime X 2 Strung"
+        },
+        {
+          "name": "adidas Adizero Adios Pro Evo 2",
+          "url": "https://runrepeat.com/adidas-adizero-adios-pro-evo-2",
+          "slug": "adidas-adizero-adios-pro-evo-2",
+          "score": 84,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: adidas Adizero Adios Pro Evo 2"
+        },
+        {
+          "name": "adidas Hyperboost Run",
+          "url": "https://runrepeat.com/adidas-hyperboost-run",
+          "slug": "adidas-hyperboost-run",
+          "score": 84,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: adidas Hyperboost Run"
+        },
+        {
+          "name": "adidas Adizero Prime X3 STRUNG",
+          "url": "https://runrepeat.com/adidas-adizero-prime-x-3-strung",
+          "slug": "adidas-adizero-prime-x-3-strung",
+          "score": 87,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: adidas Adizero Prime X3 STRUNG"
+        },
+        {
+          "name": "adidas Terrex Agravic Speed Ultra",
+          "url": "https://runrepeat.com/adidas-terrex-agravic-speed-ultra",
+          "slug": "adidas-terrex-agravic-speed-ultra",
+          "score": 87,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: adidas Terrex Agravic Speed Ultra"
+        },
+        {
+          "name": "adidas Adizero SL2",
+          "url": "https://runrepeat.com/adidas-adizero-sl2",
+          "slug": "adidas-adizero-sl2",
+          "score": 85,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: adidas Adizero SL2"
+        },
+        {
+          "name": "adidas Adizero Takumi Sen 11",
+          "url": "https://runrepeat.com/adidas-adizero-takumi-sen-11",
+          "slug": "adidas-adizero-takumi-sen-11",
+          "score": 86,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: adidas Adizero Takumi Sen 11"
+        },
+        {
+          "name": "adidas Ultraboost 5",
+          "url": "https://runrepeat.com/adidas-ultraboost-5",
+          "slug": "adidas-ultraboost-5",
+          "score": 83,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: adidas Ultraboost 5"
+        },
+        {
+          "name": "adidas Adizero Boston 12",
+          "url": "https://runrepeat.com/adidas-adizero-boston-12",
+          "slug": "adidas-adizero-boston-12",
+          "score": 86,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: adidas Adizero Boston 12"
+        },
+        {
+          "name": "adidas Terrex Agravic SL",
+          "url": "https://runrepeat.com/adidas-terrex-agravic-sl",
+          "slug": "adidas-terrex-agravic-sl",
+          "score": 86,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: adidas Terrex Agravic SL"
+        }
+      ],
+      "tracked": [
+        {
+          "name": "adidas Adizero EVO SL",
+          "url": "https://runrepeat.com/adidas-adizero-evo-sl",
+          "slug": "adidas-adizero-evo-sl",
+          "score": 94,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "adidas Adizero Adios Pro 4",
+          "url": "https://runrepeat.com/adidas-adizero-adios-pro-4",
+          "slug": "adidas-adizero-adios-pro-4",
+          "score": 93,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "adidas Supernova Rise",
+          "url": "https://runrepeat.com/adidas-supernova-rise",
+          "slug": "adidas-supernova-rise",
+          "score": 85,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "adidas Supernova Rise 2",
+          "url": "https://runrepeat.com/adidas-supernova-rise-2",
+          "slug": "adidas-supernova-rise-2",
+          "score": 86,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "adidas Supernova Prima 2",
+          "url": "https://runrepeat.com/adidas-supernova-prima-2",
+          "slug": "adidas-supernova-prima-2",
+          "score": 87,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "adidas Adizero EVO SL ATR",
+          "url": "https://runrepeat.com/adidas-adizero-evo-sl-atr",
+          "slug": "adidas-adizero-evo-sl-atr",
+          "score": 87,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "adidas Adizero Adios 9",
+          "url": "https://runrepeat.com/adidas-adizero-adios-9",
+          "slug": "adidas-adizero-adios-9",
+          "score": 85,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "adidas Supernova Prima",
+          "url": "https://runrepeat.com/adidas-supernova-prima",
+          "slug": "adidas-supernova-prima",
+          "score": 84,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "adidas Supernova Prima 3",
+          "url": "https://runrepeat.com/adidas-supernova-prima-3",
+          "slug": "adidas-supernova-prima-3",
+          "score": 89,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "adidas Supernova Solution 3",
+          "url": "https://runrepeat.com/adidas-supernova-solution-3",
+          "slug": "adidas-supernova-solution-3",
+          "score": 80,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "adidas Supernova Solution",
+          "url": "https://runrepeat.com/adidas-supernova-solution",
+          "slug": "adidas-supernova-solution",
+          "score": 83,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "adidas Supernova Solution 2",
+          "url": "https://runrepeat.com/adidas-supernova-solution-2",
+          "slug": "adidas-supernova-solution-2",
+          "score": 84,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        }
+      ]
+    },
+    "nike": {
+      "total_scanned": 30,
+      "version_bumps": [
+        {
+          "name": "Nike Vaporfly 4",
+          "url": "https://runrepeat.com/nike-vaporfly-4",
+          "slug": "nike-vaporfly-4",
+          "score": 93,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Nike Vaporfly 3 (v3) -> RunRepeat has Nike Vaporfly 4 (v4)"
+        },
+        {
+          "name": "Nike Structure 26",
+          "url": "https://runrepeat.com/nike-structure-26",
+          "slug": "nike-structure-26",
+          "score": 85,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Nike Structure 25 (v25) -> RunRepeat has Nike Structure 26 (v26)"
+        },
+        {
+          "name": "Nike Winflo 12",
+          "url": "https://runrepeat.com/nike-winflo-12",
+          "slug": "nike-winflo-12",
+          "score": 85,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Nike Winflo 11 (v11) -> RunRepeat has Nike Winflo 12 (v12)"
+        },
+        {
+          "name": "Nike Pegasus 42",
+          "url": "https://runrepeat.com/nike-pegasus-42",
+          "slug": "nike-pegasus-42",
+          "score": 80,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Nike Pegasus 41 (v41) -> RunRepeat has Nike Pegasus 42 (v42)"
+        },
+        {
+          "name": "Nike Revolution 8",
+          "url": "https://runrepeat.com/nike-revolution-8",
+          "slug": "nike-revolution-8",
+          "score": 79,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Nike Revolution 7 (v7) -> RunRepeat has Nike Revolution 8 (v8)"
+        }
+      ],
+      "new_models": [
+        {
+          "name": "Nike Vomero Plus",
+          "url": "https://runrepeat.com/nike-vomero-plus",
+          "slug": "nike-vomero-plus",
+          "score": 91,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Nike Vomero Plus"
+        },
+        {
+          "name": "Nike Vomero Premium",
+          "url": "https://runrepeat.com/nike-vomero-premium",
+          "slug": "nike-vomero-premium",
+          "score": 86,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Nike Vomero Premium"
+        },
+        {
+          "name": "Nike Pegasus Premium",
+          "url": "https://runrepeat.com/nike-pegasus-premium",
+          "slug": "nike-pegasus-premium",
+          "score": 83,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Nike Pegasus Premium"
+        },
+        {
+          "name": "Nike Structure Plus",
+          "url": "https://runrepeat.com/nike-structure-plus",
+          "slug": "nike-structure-plus",
+          "score": 87,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Nike Structure Plus"
+        },
+        {
+          "name": "Nike Streakfly 2",
+          "url": "https://runrepeat.com/nike-streakfly-2",
+          "slug": "nike-streakfly-2",
+          "score": 88,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Nike Streakfly 2"
+        },
+        {
+          "name": "Nike Zegama 2",
+          "url": "https://runrepeat.com/nike-zegama-2",
+          "slug": "nike-zegama-2",
+          "score": 91,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Nike Zegama 2"
+        },
+        {
+          "name": "Nike ACG Ultrafly Trail",
+          "url": "https://runrepeat.com/nike-acg-ultrafly-trail",
+          "slug": "nike-acg-ultrafly-trail",
+          "score": 88,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Nike ACG Ultrafly Trail"
+        },
+        {
+          "name": "Nike Invincible 3",
+          "url": "https://runrepeat.com/nike-zoom-x-invincible-run-flyknit-3",
+          "slug": "nike-zoom-x-invincible-run-flyknit-3",
+          "score": 83,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Nike Invincible 3"
+        },
+        {
+          "name": "Nike React Infinity Run Flyknit 3",
+          "url": "https://runrepeat.com/nike-react-infinity-run-flyknit-3",
+          "slug": "nike-react-infinity-run-flyknit-3",
+          "score": 81,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Nike React Infinity Run Flyknit 3"
+        },
+        {
+          "name": "Nike Pegasus Trail 5",
+          "url": "https://runrepeat.com/nike-pegasus-trail-5",
+          "slug": "nike-pegasus-trail-5",
+          "score": 81,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Nike Pegasus Trail 5"
+        },
+        {
+          "name": "Nike ZoomX Vaporfly NEXT% 2",
+          "url": "https://runrepeat.com/nike-zoom-x-vaporfly-next-2",
+          "slug": "nike-zoom-x-vaporfly-next-2",
+          "score": 92,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Nike ZoomX Vaporfly NEXT% 2"
+        },
+        {
+          "name": "Nike Pegasus 40",
+          "url": "https://runrepeat.com/nike-pegasus-40",
+          "slug": "nike-pegasus-40",
+          "score": 82,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Nike Pegasus 40"
+        },
+        {
+          "name": "Nike ACG Pegasus Trail",
+          "url": "https://runrepeat.com/nike-acg-pegasus-trail",
+          "slug": "nike-acg-pegasus-trail",
+          "score": 82,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Nike ACG Pegasus Trail"
+        },
+        {
+          "name": "Nike Vomero 17",
+          "url": "https://runrepeat.com/nike-vomero-17",
+          "slug": "nike-vomero-17",
+          "score": 81,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Nike Vomero 17"
+        },
+        {
+          "name": "Nike Pegasus Trail 4",
+          "url": "https://runrepeat.com/nike-react-pegasus-trail-4",
+          "slug": "nike-react-pegasus-trail-4",
+          "score": 84,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Nike Pegasus Trail 4"
+        },
+        {
+          "name": "Nike Wildhorse 10",
+          "url": "https://runrepeat.com/nike-wildhorse-10",
+          "slug": "nike-wildhorse-10",
+          "score": 80,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Nike Wildhorse 10"
+        },
+        {
+          "name": "Nike Alphafly 2",
+          "url": "https://runrepeat.com/nike-air-zoom-alphafly-next-2",
+          "slug": "nike-air-zoom-alphafly-next-2",
+          "score": 84,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Nike Alphafly 2"
+        }
+      ],
+      "tracked": [
+        {
+          "name": "Nike Vomero 18",
+          "url": "https://runrepeat.com/nike-vomero-18",
+          "slug": "nike-vomero-18",
+          "score": 90,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "Nike Alphafly 3",
+          "url": "https://runrepeat.com/nike-alphafly-3",
+          "slug": "nike-alphafly-3",
+          "score": 93,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "Nike Zoom Fly 6",
+          "url": "https://runrepeat.com/nike-zoom-fly-6",
+          "slug": "nike-zoom-fly-6",
+          "score": 88,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "Nike Pegasus 41",
+          "url": "https://runrepeat.com/nike-pegasus-41",
+          "slug": "nike-pegasus-41",
+          "score": 85,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "Nike Vaporfly 3",
+          "url": "https://runrepeat.com/nike-zoom-x-vaporfly-next-3",
+          "slug": "nike-zoom-x-vaporfly-next-3",
+          "score": 91,
+          "status": "TRACKED",
+          "note": "Matches tracked generation (Nike Vaporfly 3)"
+        },
+        {
+          "name": "Nike Pegasus Plus",
+          "url": "https://runrepeat.com/nike-pegasus-plus",
+          "slug": "nike-pegasus-plus",
+          "score": 84,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "Nike Winflo 11",
+          "url": "https://runrepeat.com/nike-winflo-11",
+          "slug": "nike-winflo-11",
+          "score": 80,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "Nike Structure 25",
+          "url": "https://runrepeat.com/nike-structure-25",
+          "slug": "nike-structure-25",
+          "score": 82,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        }
+      ]
+    },
+    "asics": {
+      "total_scanned": 30,
+      "version_bumps": [
+        {
+          "name": "ASICS Superblast 3",
+          "url": "https://runrepeat.com/asics-superblast-3",
+          "slug": "asics-superblast-3",
+          "score": 94,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Asics Superblast 2 (v2) -> RunRepeat has ASICS Superblast 3 (v3)"
+        },
+        {
+          "name": "ASICS Novablast 6",
+          "url": "https://runrepeat.com/asics-novablast-6",
+          "slug": "asics-novablast-6",
+          "score": 93,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Asics Novablast 5 (v5) -> RunRepeat has ASICS Novablast 6 (v6)"
+        },
+        {
+          "name": "ASICS Gel Kayano 32",
+          "url": "https://runrepeat.com/asics-gel-kayano-32",
+          "slug": "asics-gel-kayano-32",
+          "score": 86,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Asics Gel Kayano 31 (v31) -> RunRepeat has ASICS Gel Kayano 32 (v32)"
+        },
+        {
+          "name": "ASICS Gel Nimbus 28",
+          "url": "https://runrepeat.com/asics-gel-nimbus-28",
+          "slug": "asics-gel-nimbus-28",
+          "score": 86,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Asics Gel Nimbus 27 (v27) -> RunRepeat has ASICS Gel Nimbus 28 (v28)"
+        },
+        {
+          "name": "ASICS Gel Kayano 33",
+          "url": "https://runrepeat.com/asics-gel-kayano-33",
+          "slug": "asics-gel-kayano-33",
+          "score": 86,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Asics Gel Kayano 31 (v31) -> RunRepeat has ASICS Gel Kayano 33 (v33)"
+        }
+      ],
+      "new_models": [
+        {
+          "name": "ASICS Megablast",
+          "url": "https://runrepeat.com/asics-megablast",
+          "slug": "asics-megablast",
+          "score": 95,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: ASICS Megablast"
+        },
+        {
+          "name": "ASICS GT 2000 14",
+          "url": "https://runrepeat.com/asics-gt-2000-14",
+          "slug": "asics-gt-2000-14",
+          "score": 87,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: ASICS GT 2000 14"
+        },
+        {
+          "name": "ASICS Metaspeed Sky Tokyo",
+          "url": "https://runrepeat.com/asics-metaspeed-sky-tokyo",
+          "slug": "asics-metaspeed-sky-tokyo",
+          "score": 92,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: ASICS Metaspeed Sky Tokyo"
+        },
+        {
+          "name": "ASICS Gel Cumulus 28",
+          "url": "https://runrepeat.com/asics-gel-cumulus-28",
+          "slug": "asics-gel-cumulus-28",
+          "score": 86,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: ASICS Gel Cumulus 28"
+        },
+        {
+          "name": "ASICS Metaspeed Edge Tokyo",
+          "url": "https://runrepeat.com/asics-metaspeed-edge-tokyo",
+          "slug": "asics-metaspeed-edge-tokyo",
+          "score": 92,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: ASICS Metaspeed Edge Tokyo"
+        },
+        {
+          "name": "ASICS Novablast 4",
+          "url": "https://runrepeat.com/asics-novablast-4",
+          "slug": "asics-novablast-4",
+          "score": 86,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: ASICS Novablast 4"
+        },
+        {
+          "name": "ASICS Gel Cumulus 27",
+          "url": "https://runrepeat.com/asics-gel-cumulus-27",
+          "slug": "asics-gel-cumulus-27",
+          "score": 84,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: ASICS Gel Cumulus 27"
+        },
+        {
+          "name": "ASICS Metaspeed Ray",
+          "url": "https://runrepeat.com/asics-metaspeed-ray",
+          "slug": "asics-metaspeed-ray",
+          "score": 90,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: ASICS Metaspeed Ray"
+        },
+        {
+          "name": "ASICS Magic Speed 5",
+          "url": "https://runrepeat.com/asics-magic-speed-5",
+          "slug": "asics-magic-speed-5",
+          "score": 86,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: ASICS Magic Speed 5"
+        },
+        {
+          "name": "ASICS Gel Nimbus 26",
+          "url": "https://runrepeat.com/asics-gel-nimbus-26",
+          "slug": "asics-gel-nimbus-26",
+          "score": 81,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: ASICS Gel Nimbus 26"
+        },
+        {
+          "name": "ASICS Trabuco 14",
+          "url": "https://runrepeat.com/asics-trabuco-14",
+          "slug": "asics-trabuco-14",
+          "score": 87,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: ASICS Trabuco 14"
+        },
+        {
+          "name": "ASICS Noosa Tri 16",
+          "url": "https://runrepeat.com/asics-noosa-tri-16",
+          "slug": "asics-noosa-tri-16",
+          "score": 85,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: ASICS Noosa Tri 16"
+        },
+        {
+          "name": "ASICS Gel Trabuco 12",
+          "url": "https://runrepeat.com/asics-gel-trabuco-12",
+          "slug": "asics-gel-trabuco-12",
+          "score": 83,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: ASICS Gel Trabuco 12"
+        },
+        {
+          "name": "ASICS Gel Pulse 17",
+          "url": "https://runrepeat.com/asics-gel-pulse-17",
+          "slug": "asics-gel-pulse-17",
+          "score": 85,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: ASICS Gel Pulse 17"
+        },
+        {
+          "name": "ASICS Novablast 3",
+          "url": "https://runrepeat.com/asics-novablast-3",
+          "slug": "asics-novablast-3",
+          "score": 87,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: ASICS Novablast 3"
+        },
+        {
+          "name": "ASICS Metaspeed Sky+",
+          "url": "https://runrepeat.com/asics-metaspeed-sky-plus",
+          "slug": "asics-metaspeed-sky-plus",
+          "score": 85,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: ASICS Metaspeed Sky+"
+        },
+        {
+          "name": "ASICS Gel Trabuco 13",
+          "url": "https://runrepeat.com/asics-gel-trabuco-13",
+          "slug": "asics-gel-trabuco-13",
+          "score": 82,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: ASICS Gel Trabuco 13"
+        },
+        {
+          "name": "ASICS Sonicblast",
+          "url": "https://runrepeat.com/asics-sonicblast",
+          "slug": "asics-sonicblast",
+          "score": 83,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: ASICS Sonicblast"
+        }
+      ],
+      "tracked": [
+        {
+          "name": "ASICS Novablast 5",
+          "url": "https://runrepeat.com/asics-novablast-5",
+          "slug": "asics-novablast-5",
+          "score": 93,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "ASICS Superblast 2",
+          "url": "https://runrepeat.com/asics-superblast-2",
+          "slug": "asics-superblast-2",
+          "score": 91,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "ASICS Gel Nimbus 27",
+          "url": "https://runrepeat.com/asics-gel-nimbus-27",
+          "slug": "asics-gel-nimbus-27",
+          "score": 85,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "ASICS Superblast",
+          "url": "https://runrepeat.com/asics-superblast",
+          "slug": "asics-superblast",
+          "score": 89,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "ASICS Gel Kayano 31",
+          "url": "https://runrepeat.com/asics-gel-kayano-31",
+          "slug": "asics-gel-kayano-31",
+          "score": 86,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "ASICS GT 2000 13",
+          "url": "https://runrepeat.com/asics-gt-2000-13",
+          "slug": "asics-gt-2000-13",
+          "score": 87,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "ASICS Metaspeed Sky Paris",
+          "url": "https://runrepeat.com/asics-metaspeed-sky-paris",
+          "slug": "asics-metaspeed-sky-paris",
+          "score": 88,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        }
+      ]
+    },
+    "saucony": {
+      "total_scanned": 30,
+      "version_bumps": [
+        {
+          "name": "Saucony Endorphin Speed 5",
+          "url": "https://runrepeat.com/saucony-endorphin-speed-5",
+          "slug": "saucony-endorphin-speed-5",
+          "score": 94,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Saucony Endorphin Speed 4 (v4) -> RunRepeat has Saucony Endorphin Speed 5 (v5)"
+        },
+        {
+          "name": "Saucony Endorphin Pro 5",
+          "url": "https://runrepeat.com/saucony-endorphin-pro-5",
+          "slug": "saucony-endorphin-pro-5",
+          "score": 91,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Saucony Endorphin Pro 4 (v4) -> RunRepeat has Saucony Endorphin Pro 5 (v5)"
+        },
+        {
+          "name": "Saucony Triumph 23",
+          "url": "https://runrepeat.com/saucony-triumph-23",
+          "slug": "saucony-triumph-23",
+          "score": 88,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Saucony Triumph 22 (v22) -> RunRepeat has Saucony Triumph 23 (v23)"
+        },
+        {
+          "name": "Saucony Ride 19",
+          "url": "https://runrepeat.com/saucony-ride-19",
+          "slug": "saucony-ride-19",
+          "score": 88,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Saucony Ride 18 (v18) -> RunRepeat has Saucony Ride 19 (v19)"
+        },
+        {
+          "name": "Saucony Guide 19",
+          "url": "https://runrepeat.com/saucony-guide-19",
+          "slug": "saucony-guide-19",
+          "score": 84,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Saucony Guide 18 (v18) -> RunRepeat has Saucony Guide 19 (v19)"
+        }
+      ],
+      "new_models": [
+        {
+          "name": "Saucony Endorphin Azura",
+          "url": "https://runrepeat.com/saucony-endorphin-azura",
+          "slug": "saucony-endorphin-azura",
+          "score": 91,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Saucony Endorphin Azura"
+        },
+        {
+          "name": "Saucony Hurricane 25",
+          "url": "https://runrepeat.com/saucony-hurricane-25",
+          "slug": "saucony-hurricane-25",
+          "score": 90,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Saucony Hurricane 25"
+        },
+        {
+          "name": "Saucony Endorphin Elite 3",
+          "url": "https://runrepeat.com/saucony-endorphin-elite-3",
+          "slug": "saucony-endorphin-elite-3",
+          "score": 92,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Saucony Endorphin Elite 3"
+        },
+        {
+          "name": "Saucony Tempus 2",
+          "url": "https://runrepeat.com/saucony-tempus-2",
+          "slug": "saucony-tempus-2",
+          "score": 93,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Saucony Tempus 2"
+        },
+        {
+          "name": "Saucony Endorphin Elite 2",
+          "url": "https://runrepeat.com/saucony-endorphin-elite-2",
+          "slug": "saucony-endorphin-elite-2",
+          "score": 91,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Saucony Endorphin Elite 2"
+        },
+        {
+          "name": "Saucony Peregrine 16",
+          "url": "https://runrepeat.com/saucony-peregrine-16",
+          "slug": "saucony-peregrine-16",
+          "score": 88,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Saucony Peregrine 16"
+        },
+        {
+          "name": "Saucony Xodus Ultra 4",
+          "url": "https://runrepeat.com/saucony-xodus-ultra-4",
+          "slug": "saucony-xodus-ultra-4",
+          "score": 89,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Saucony Xodus Ultra 4"
+        },
+        {
+          "name": "Saucony Ride 17",
+          "url": "https://runrepeat.com/saucony-ride-17",
+          "slug": "saucony-ride-17",
+          "score": 88,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Saucony Ride 17"
+        },
+        {
+          "name": "Saucony Hurricane 24",
+          "url": "https://runrepeat.com/saucony-hurricane-24",
+          "slug": "saucony-hurricane-24",
+          "score": 88,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Saucony Hurricane 24"
+        },
+        {
+          "name": "Saucony Tempus",
+          "url": "https://runrepeat.com/saucony-tempus",
+          "slug": "saucony-tempus",
+          "score": 89,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Saucony Tempus"
+        },
+        {
+          "name": "Saucony Peregrine 15",
+          "url": "https://runrepeat.com/saucony-peregrine-15",
+          "slug": "saucony-peregrine-15",
+          "score": 87,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Saucony Peregrine 15"
+        },
+        {
+          "name": "Saucony Endorphin Speed 3",
+          "url": "https://runrepeat.com/saucony-endorphin-speed-3",
+          "slug": "saucony-endorphin-speed-3",
+          "score": 86,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Saucony Endorphin Speed 3"
+        },
+        {
+          "name": "Saucony Endorphin Elite",
+          "url": "https://runrepeat.com/saucony-endorphin-elite",
+          "slug": "saucony-endorphin-elite",
+          "score": 85,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Saucony Endorphin Elite"
+        },
+        {
+          "name": "Saucony Guide 17",
+          "url": "https://runrepeat.com/saucony-guide-17",
+          "slug": "saucony-guide-17",
+          "score": 84,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Saucony Guide 17"
+        },
+        {
+          "name": "Saucony Kinvara 16",
+          "url": "https://runrepeat.com/saucony-kinvara-16",
+          "slug": "saucony-kinvara-16",
+          "score": 79,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Saucony Kinvara 16"
+        },
+        {
+          "name": "Saucony Xodus Ultra 3",
+          "url": "https://runrepeat.com/saucony-xodus-ultra-3",
+          "slug": "saucony-xodus-ultra-3",
+          "score": 86,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Saucony Xodus Ultra 3"
+        },
+        {
+          "name": "Saucony Endorphin Speed 2",
+          "url": "https://runrepeat.com/saucony-endorphin-speed-2",
+          "slug": "saucony-endorphin-speed-2",
+          "score": 85,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Saucony Endorphin Speed 2"
+        },
+        {
+          "name": "Saucony Kinvara 15",
+          "url": "https://runrepeat.com/saucony-kinvara-15",
+          "slug": "saucony-kinvara-15",
+          "score": 82,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Saucony Kinvara 15"
+        },
+        {
+          "name": "Saucony Endorphin Shift 3",
+          "url": "https://runrepeat.com/saucony-endorphin-shift-3",
+          "slug": "saucony-endorphin-shift-3",
+          "score": 83,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Saucony Endorphin Shift 3"
+        }
+      ],
+      "tracked": [
+        {
+          "name": "Saucony Endorphin Pro 4",
+          "url": "https://runrepeat.com/saucony-endorphin-pro-4",
+          "slug": "saucony-endorphin-pro-4",
+          "score": 90,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "Saucony Endorphin Speed 4",
+          "url": "https://runrepeat.com/saucony-endorphin-speed-4",
+          "slug": "saucony-endorphin-speed-4",
+          "score": 89,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "Saucony Hurricane 26",
+          "url": "https://runrepeat.com/saucony-hurricane-26",
+          "slug": "saucony-hurricane-26",
+          "score": 91,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "Saucony Ride 18",
+          "url": "https://runrepeat.com/saucony-ride-18",
+          "slug": "saucony-ride-18",
+          "score": 86,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "Saucony Guide 18",
+          "url": "https://runrepeat.com/saucony-guide-18",
+          "slug": "saucony-guide-18",
+          "score": 82,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "Saucony Triumph 22",
+          "url": "https://runrepeat.com/saucony-triumph-22",
+          "slug": "saucony-triumph-22",
+          "score": 84,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        }
+      ]
+    },
+    "hoka": {
+      "total_scanned": 30,
+      "version_bumps": [
+        {
+          "name": "HOKA Bondi 9",
+          "url": "https://runrepeat.com/hoka-bondi-9",
+          "slug": "hoka-bondi-9",
+          "score": 86,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Hoka Bondi 8 (v8) -> RunRepeat has HOKA Bondi 9 (v9)"
+        },
+        {
+          "name": "HOKA Clifton 10",
+          "url": "https://runrepeat.com/hoka-clifton-10",
+          "slug": "hoka-clifton-10",
+          "score": 86,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Hoka Clifton 9 (v9) -> RunRepeat has HOKA Clifton 10 (v10)"
+        },
+        {
+          "name": "HOKA Mach 7",
+          "url": "https://runrepeat.com/hoka-mach-7",
+          "slug": "hoka-mach-7",
+          "score": 90,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Hoka Mach 6 (v6) -> RunRepeat has HOKA Mach 7 (v7)"
+        },
+        {
+          "name": "HOKA Clifton 11",
+          "url": "https://runrepeat.com/hoka-clifton-11",
+          "slug": "hoka-clifton-11",
+          "score": 85,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Hoka Clifton 9 (v9) -> RunRepeat has HOKA Clifton 11 (v11)"
+        },
+        {
+          "name": "HOKA Arahi 8",
+          "url": "https://runrepeat.com/hoka-arahi-8",
+          "slug": "hoka-arahi-8",
+          "score": 83,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Hoka Arahi 7 (v7) -> RunRepeat has HOKA Arahi 8 (v8)"
+        },
+        {
+          "name": "HOKA Mach X 3",
+          "url": "https://runrepeat.com/hoka-mach-x-3",
+          "slug": "hoka-mach-x-3",
+          "score": 83,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Hoka Mach X 2 (v2) -> RunRepeat has HOKA Mach X 3 (v3)"
+        }
+      ],
+      "new_models": [
+        {
+          "name": "HOKA Speedgoat 7",
+          "url": "https://runrepeat.com/hoka-speedgoat-7",
+          "slug": "hoka-speedgoat-7",
+          "score": 85,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: HOKA Speedgoat 7"
+        },
+        {
+          "name": "HOKA Speedgoat 6",
+          "url": "https://runrepeat.com/hoka-speedgoat-6",
+          "slug": "hoka-speedgoat-6",
+          "score": 84,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: HOKA Speedgoat 6"
+        },
+        {
+          "name": "HOKA Challenger 8",
+          "url": "https://runrepeat.com/hoka-challenger-8",
+          "slug": "hoka-challenger-8",
+          "score": 83,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: HOKA Challenger 8"
+        },
+        {
+          "name": "HOKA Rocket X 3",
+          "url": "https://runrepeat.com/hoka-rocket-x-3",
+          "slug": "hoka-rocket-x-3",
+          "score": 88,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: HOKA Rocket X 3"
+        },
+        {
+          "name": "HOKA Skyward X",
+          "url": "https://runrepeat.com/hoka-skyward-x",
+          "slug": "hoka-skyward-x",
+          "score": 86,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: HOKA Skyward X"
+        },
+        {
+          "name": "HOKA Gaviota 6",
+          "url": "https://runrepeat.com/hoka-gaviota-6",
+          "slug": "hoka-gaviota-6",
+          "score": 81,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: HOKA Gaviota 6"
+        },
+        {
+          "name": "HOKA Gaviota 5",
+          "url": "https://runrepeat.com/hoka-gaviota-5",
+          "slug": "hoka-gaviota-5",
+          "score": 82,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: HOKA Gaviota 5"
+        },
+        {
+          "name": "HOKA Skyward X 2",
+          "url": "https://runrepeat.com/hoka-skyward-x-2",
+          "slug": "hoka-skyward-x-2",
+          "score": 87,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: HOKA Skyward X 2"
+        },
+        {
+          "name": "HOKA Tecton X 3",
+          "url": "https://runrepeat.com/hoka-tecton-x-3",
+          "slug": "hoka-tecton-x-3",
+          "score": 90,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: HOKA Tecton X 3"
+        },
+        {
+          "name": "HOKA Speedgoat 5",
+          "url": "https://runrepeat.com/hoka-speedgoat-5",
+          "slug": "hoka-speedgoat-5",
+          "score": 86,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: HOKA Speedgoat 5"
+        },
+        {
+          "name": "HOKA Rincon 4",
+          "url": "https://runrepeat.com/hoka-rincon-4",
+          "slug": "hoka-rincon-4",
+          "score": 83,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: HOKA Rincon 4"
+        },
+        {
+          "name": "HOKA Mafate Speed 4",
+          "url": "https://runrepeat.com/hoka-mafate-speed-4",
+          "slug": "hoka-mafate-speed-4",
+          "score": 84,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: HOKA Mafate Speed 4"
+        },
+        {
+          "name": "HOKA Speedgoat 6 GTX",
+          "url": "https://runrepeat.com/hoka-speedgoat-6-gtx",
+          "slug": "hoka-speedgoat-6-gtx",
+          "score": 84,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: HOKA Speedgoat 6 GTX"
+        },
+        {
+          "name": "HOKA Mafate 5",
+          "url": "https://runrepeat.com/hoka-mafate-5",
+          "slug": "hoka-mafate-5",
+          "score": 84,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: HOKA Mafate 5"
+        },
+        {
+          "name": "HOKA Skyflow",
+          "url": "https://runrepeat.com/hoka-skyflow",
+          "slug": "hoka-skyflow",
+          "score": 83,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: HOKA Skyflow"
+        },
+        {
+          "name": "HOKA Mach 5",
+          "url": "https://runrepeat.com/hoka-mach-5",
+          "slug": "hoka-mach-5",
+          "score": 82,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: HOKA Mach 5"
+        },
+        {
+          "name": "HOKA Rocket X 2",
+          "url": "https://runrepeat.com/hoka-rocket-x-2",
+          "slug": "hoka-rocket-x-2",
+          "score": 87,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: HOKA Rocket X 2"
+        }
+      ],
+      "tracked": [
+        {
+          "name": "HOKA Clifton 9",
+          "url": "https://runrepeat.com/hoka-clifton-9",
+          "slug": "hoka-clifton-9",
+          "score": 87,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "HOKA Mach 6",
+          "url": "https://runrepeat.com/hoka-mach-6",
+          "slug": "hoka-mach-6",
+          "score": 87,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "HOKA Clifton PRO",
+          "url": "https://runrepeat.com/hoka-clifton-pro",
+          "slug": "hoka-clifton-pro",
+          "score": 86,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "HOKA Bondi 8",
+          "url": "https://runrepeat.com/hoka-bondi-8",
+          "slug": "hoka-bondi-8",
+          "score": 82,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "HOKA Clifton 9 GTX",
+          "url": "https://runrepeat.com/hoka-clifton-9-gtx",
+          "slug": "hoka-clifton-9-gtx",
+          "score": 84,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "HOKA Arahi 7",
+          "url": "https://runrepeat.com/hoka-arahi-7",
+          "slug": "hoka-arahi-7",
+          "score": 79,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "HOKA Cielo X1",
+          "url": "https://runrepeat.com/hoka-cielo-x1",
+          "slug": "hoka-cielo-x1",
+          "score": 83,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        }
+      ]
+    },
+    "newbalance": {
+      "total_scanned": 30,
+      "version_bumps": [
+        {
+          "name": "New Balance FuelCell SuperComp Elite v5",
+          "url": "https://runrepeat.com/new-balance-fuel-cell-super-comp-elite-v-5",
+          "slug": "new-balance-fuel-cell-super-comp-elite-v-5",
+          "score": 85,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has New Balance FuelCell SuperComp Elite v4 (v4) -> RunRepeat has New Balance FuelCell SuperComp Elite v5 (v5)"
+        },
+        {
+          "name": "New Balance Fresh Foam X 860 v15",
+          "url": "https://runrepeat.com/new-balance-fresh-foam-x-860-v-15",
+          "slug": "new-balance-fresh-foam-x-860-v-15",
+          "score": 85,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has New Balance Fresh Foam X 880 v14 (v14) -> RunRepeat has New Balance Fresh Foam X 860 v15 (v15)"
+        },
+        {
+          "name": "New Balance FuelCell Rebel v5",
+          "url": "https://runrepeat.com/new-balance-fuel-cell-rebel-v-5",
+          "slug": "new-balance-fuel-cell-rebel-v-5",
+          "score": 86,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has New Balance FuelCell Rebel v4 (v4) -> RunRepeat has New Balance FuelCell Rebel v5 (v5)"
+        },
+        {
+          "name": "New Balance Fresh Foam X 880 v15",
+          "url": "https://runrepeat.com/new-balance-fresh-foam-x-880-v-15",
+          "slug": "new-balance-fresh-foam-x-880-v-15",
+          "score": 82,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has New Balance Fresh Foam X 880 v14 (v14) -> RunRepeat has New Balance Fresh Foam X 880 v15 (v15)"
+        }
+      ],
+      "new_models": [
+        {
+          "name": "New Balance Fresh Foam X More v6",
+          "url": "https://runrepeat.com/new-balance-fresh-foam-x-more-v-6",
+          "slug": "new-balance-fresh-foam-x-more-v-6",
+          "score": 86,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: New Balance Fresh Foam X More v6"
+        },
+        {
+          "name": "New Balance FuelCell SuperComp Trainer v3",
+          "url": "https://runrepeat.com/new-balance-fuel-cell-super-comp-trainer-v-3",
+          "slug": "new-balance-fuel-cell-super-comp-trainer-v-3",
+          "score": 89,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: New Balance FuelCell SuperComp Trainer v3"
+        },
+        {
+          "name": "New Balance 1080 v15",
+          "url": "https://runrepeat.com/new-balance-1080-v-15",
+          "slug": "new-balance-1080-v-15",
+          "score": 91,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: New Balance 1080 v15"
+        },
+        {
+          "name": "New Balance Fresh Foam X More v5",
+          "url": "https://runrepeat.com/new-balance-fresh-foam-x-more-v5",
+          "slug": "new-balance-fresh-foam-x-more-v5",
+          "score": 85,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: New Balance Fresh Foam X More v5"
+        },
+        {
+          "name": "New Balance Fresh Foam X Hierro v9",
+          "url": "https://runrepeat.com/new-balance-fresh-foam-x-hierro-v9",
+          "slug": "new-balance-fresh-foam-x-hierro-v9",
+          "score": 85,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: New Balance Fresh Foam X Hierro v9"
+        },
+        {
+          "name": "New Balance Fresh Foam 680 v9",
+          "url": "https://runrepeat.com/new-balance-fresh-foam-680-v9",
+          "slug": "new-balance-fresh-foam-680-v9",
+          "score": 85,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: New Balance Fresh Foam 680 v9"
+        },
+        {
+          "name": "New Balance Fresh Foam X Kaiha Road",
+          "url": "https://runrepeat.com/new-balance-fresh-foam-x-kaiha-road",
+          "slug": "new-balance-fresh-foam-x-kaiha-road",
+          "score": 82,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: New Balance Fresh Foam X Kaiha Road"
+        },
+        {
+          "name": "New Balance Ellipse",
+          "url": "https://runrepeat.com/new-balance-ellipse",
+          "slug": "new-balance-ellipse",
+          "score": 85,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: New Balance Ellipse"
+        },
+        {
+          "name": "New Balance Fresh Foam X Vongo v6",
+          "url": "https://runrepeat.com/new-balance-fresh-foam-x-vongo-v-6",
+          "slug": "new-balance-fresh-foam-x-vongo-v-6",
+          "score": 84,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: New Balance Fresh Foam X Vongo v6"
+        },
+        {
+          "name": "New Balance Fresh Foam X More v4",
+          "url": "https://runrepeat.com/new-balance-fresh-foam-more-v-4",
+          "slug": "new-balance-fresh-foam-more-v-4",
+          "score": 80,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: New Balance Fresh Foam X More v4"
+        },
+        {
+          "name": "New Balance Fresh Foam X 1080 v13",
+          "url": "https://runrepeat.com/new-balance-fresh-foam-x-1080-v-13",
+          "slug": "new-balance-fresh-foam-x-1080-v-13",
+          "score": 82,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: New Balance Fresh Foam X 1080 v13"
+        },
+        {
+          "name": "New Balance SuperComp Elite v6",
+          "url": "https://runrepeat.com/new-balance-super-comp-elite-v-6",
+          "slug": "new-balance-super-comp-elite-v-6",
+          "score": 87,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: New Balance SuperComp Elite v6"
+        },
+        {
+          "name": "New Balance Fresh Foam 680 v8",
+          "url": "https://runrepeat.com/new-balance-fresh-foam-680-v8",
+          "slug": "new-balance-fresh-foam-680-v8",
+          "score": 79,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: New Balance Fresh Foam 680 v8"
+        },
+        {
+          "name": "New Balance FuelCell SuperComp Pacer v2",
+          "url": "https://runrepeat.com/new-balance-fuel-cell-super-comp-pacer-v-2",
+          "slug": "new-balance-fuel-cell-super-comp-pacer-v-2",
+          "score": 84,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: New Balance FuelCell SuperComp Pacer v2"
+        },
+        {
+          "name": "New Balance Fresh Foam X Hierro v8",
+          "url": "https://runrepeat.com/new-balance-fresh-foam-x-hierro-v-8",
+          "slug": "new-balance-fresh-foam-x-hierro-v-8",
+          "score": 80,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: New Balance Fresh Foam X Hierro v8"
+        },
+        {
+          "name": "New Balance Fresh Foam X More Trail v3",
+          "url": "https://runrepeat.com/new-balance-fresh-foam-x-more-trail-v3",
+          "slug": "new-balance-fresh-foam-x-more-trail-v3",
+          "score": 75,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: New Balance Fresh Foam X More Trail v3"
+        },
+        {
+          "name": "New Balance Fresh Foam X Evoz v4",
+          "url": "https://runrepeat.com/new-balance-fresh-foam-x-evoz-v-4",
+          "slug": "new-balance-fresh-foam-x-evoz-v-4",
+          "score": 75,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: New Balance Fresh Foam X Evoz v4"
+        },
+        {
+          "name": "New Balance Fresh Foam X 1080 v12",
+          "url": "https://runrepeat.com/new-balance-fresh-foam-x-1080-v-12",
+          "slug": "new-balance-fresh-foam-x-1080-v-12",
+          "score": 80,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: New Balance Fresh Foam X 1080 v12"
+        },
+        {
+          "name": "New Balance Fresh Foam X Hierro v7",
+          "url": "https://runrepeat.com/new-balance-fresh-foam-hierro-v-7",
+          "slug": "new-balance-fresh-foam-hierro-v-7",
+          "score": 80,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: New Balance Fresh Foam X Hierro v7"
+        },
+        {
+          "name": "New Balance Fresh Foam X Balos",
+          "url": "https://runrepeat.com/new-balance-fresh-foam-x-balos",
+          "slug": "new-balance-fresh-foam-x-balos",
+          "score": 77,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: New Balance Fresh Foam X Balos"
+        }
+      ],
+      "tracked": [
+        {
+          "name": "New Balance Fresh Foam X 1080 v14",
+          "url": "https://runrepeat.com/new-balance-fresh-foam-x-1080-v14",
+          "slug": "new-balance-fresh-foam-x-1080-v14",
+          "score": 83,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "New Balance Fresh Foam X 860 v14",
+          "url": "https://runrepeat.com/new-balance-fresh-foam-x-860-v14",
+          "slug": "new-balance-fresh-foam-x-860-v14",
+          "score": 85,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "New Balance FuelCell SuperComp Elite v4",
+          "url": "https://runrepeat.com/new-balance-fuel-cell-super-comp-elite-v-4",
+          "slug": "new-balance-fuel-cell-super-comp-elite-v-4",
+          "score": 83,
+          "status": "TRACKED",
+          "note": "Matches tracked generation (New Balance FuelCell SuperComp Elite v4)"
+        },
+        {
+          "name": "New Balance Fresh Foam Arishi v4",
+          "url": "https://runrepeat.com/new-balance-fresh-foam-arishi-v4",
+          "slug": "new-balance-fresh-foam-arishi-v4",
+          "score": 74,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "New Balance FuelCell Rebel v4",
+          "url": "https://runrepeat.com/new-balance-fuelcell-rebel-v4",
+          "slug": "new-balance-fuelcell-rebel-v4",
+          "score": 84,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "New Balance Fresh Foam X 880 v14",
+          "url": "https://runrepeat.com/new-balance-fresh-foam-x-880-v-14",
+          "slug": "new-balance-fresh-foam-x-880-v-14",
+          "score": 81,
+          "status": "TRACKED",
+          "note": "Matches tracked generation (New Balance Fresh Foam X 880 v14)"
+        }
+      ]
+    },
+    "puma": {
+      "total_scanned": 18,
+      "version_bumps": [
+        {
+          "name": "PUMA Velocity Nitro 4",
+          "url": "https://runrepeat.com/puma-velocity-nitro-4",
+          "slug": "puma-velocity-nitro-4",
+          "score": 93,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Puma Velocity Nitro 3 (v3) -> RunRepeat has PUMA Velocity Nitro 4 (v4)"
+        },
+        {
+          "name": "PUMA Deviate Nitro Elite 4",
+          "url": "https://runrepeat.com/puma-deviate-nitro-elite-4",
+          "slug": "puma-deviate-nitro-elite-4",
+          "score": 89,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Puma Deviate Nitro 3 (v3) -> RunRepeat has PUMA Deviate Nitro Elite 4 (v4)"
+        },
+        {
+          "name": "PUMA Deviate Nitro 4",
+          "url": "https://runrepeat.com/puma-deviate-nitro-4",
+          "slug": "puma-deviate-nitro-4",
+          "score": 85,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Puma Deviate Nitro 3 (v3) -> RunRepeat has PUMA Deviate Nitro 4 (v4)"
+        }
+      ],
+      "new_models": [
+        {
+          "name": "PUMA Fast-R Nitro Elite 3",
+          "url": "https://runrepeat.com/puma-fast-r-nitro-elite-3",
+          "slug": "puma-fast-r-nitro-elite-3",
+          "score": 92,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: PUMA Fast-R Nitro Elite 3"
+        },
+        {
+          "name": "PUMA Magnify Nitro 3",
+          "url": "https://runrepeat.com/puma-magnify-nitro-3",
+          "slug": "puma-magnify-nitro-3",
+          "score": 91,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: PUMA Magnify Nitro 3"
+        },
+        {
+          "name": "PUMA MagMax Nitro 2",
+          "url": "https://runrepeat.com/puma-mag-max-nitro-2",
+          "slug": "puma-mag-max-nitro-2",
+          "score": 83,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: PUMA MagMax Nitro 2"
+        },
+        {
+          "name": "PUMA Deviate Nitro 2",
+          "url": "https://runrepeat.com/puma-deviate-nitro-2",
+          "slug": "puma-deviate-nitro-2",
+          "score": 84,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: PUMA Deviate Nitro 2"
+        },
+        {
+          "name": "PUMA MagMax Nitro",
+          "url": "https://runrepeat.com/puma-magmax-nitro",
+          "slug": "puma-magmax-nitro",
+          "score": 81,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: PUMA MagMax Nitro"
+        },
+        {
+          "name": "PUMA ForeverRun Nitro",
+          "url": "https://runrepeat.com/puma-forever-run-nitro",
+          "slug": "puma-forever-run-nitro",
+          "score": 84,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: PUMA ForeverRun Nitro"
+        },
+        {
+          "name": "PUMA Magnify Nitro 2",
+          "url": "https://runrepeat.com/puma-magnify-nitro-2",
+          "slug": "puma-magnify-nitro-2",
+          "score": 82,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: PUMA Magnify Nitro 2"
+        },
+        {
+          "name": "PUMA Velocity Nitro 2",
+          "url": "https://runrepeat.com/puma-velocity-nitro-2",
+          "slug": "puma-velocity-nitro-2",
+          "score": 81,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: PUMA Velocity Nitro 2"
+        },
+        {
+          "name": "PUMA Fast-R Nitro Elite 2",
+          "url": "https://runrepeat.com/puma-fast-r-nitro-elite-2",
+          "slug": "puma-fast-r-nitro-elite-2",
+          "score": 78,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: PUMA Fast-R Nitro Elite 2"
+        }
+      ],
+      "tracked": [
+        {
+          "name": "PUMA Deviate Nitro 3",
+          "url": "https://runrepeat.com/puma-deviate-nitro-3",
+          "slug": "puma-deviate-nitro-3",
+          "score": 85,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "PUMA Velocity Nitro 3",
+          "url": "https://runrepeat.com/puma-velocity-nitro-3",
+          "slug": "puma-velocity-nitro-3",
+          "score": 85,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "PUMA Deviate Nitro Elite 3",
+          "url": "https://runrepeat.com/puma-deviate-nitro-elite-3",
+          "slug": "puma-deviate-nitro-elite-3",
+          "score": 84,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "PUMA ForeverRun Nitro 2",
+          "url": "https://runrepeat.com/puma-foreverrun-nitro-2",
+          "slug": "puma-foreverrun-nitro-2",
+          "score": 85,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "PUMA Deviate Nitro",
+          "url": "https://runrepeat.com/puma-deviate-nitro",
+          "slug": "puma-deviate-nitro",
+          "score": 77,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "PUMA Deviate Nitro Elite",
+          "url": "https://runrepeat.com/puma-deviate-nitro-elite",
+          "slug": "puma-deviate-nitro-elite",
+          "score": 79,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        }
+      ]
+    },
+    "mizuno": {
+      "total_scanned": 19,
+      "version_bumps": [
+        {
+          "name": "Mizuno Wave Rider 29",
+          "url": "https://runrepeat.com/mizuno-wave-rider-29",
+          "slug": "mizuno-wave-rider-29",
+          "score": 85,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Mizuno Wave Rider 28 (v28) -> RunRepeat has Mizuno Wave Rider 29 (v29)"
+        },
+        {
+          "name": "Mizuno Wave Inspire 22",
+          "url": "https://runrepeat.com/mizuno-wave-inspire-22",
+          "slug": "mizuno-wave-inspire-22",
+          "score": 83,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Mizuno Wave Inspire 20 (v20) -> RunRepeat has Mizuno Wave Inspire 22 (v22)"
+        },
+        {
+          "name": "Mizuno Wave Rebellion Pro 3",
+          "url": "https://runrepeat.com/mizuno-wave-rebellion-pro-3",
+          "slug": "mizuno-wave-rebellion-pro-3",
+          "score": 84,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Mizuno Wave Rebellion Pro 2 (v2) -> RunRepeat has Mizuno Wave Rebellion Pro 3 (v3)"
+        },
+        {
+          "name": "Mizuno Wave Inspire 21",
+          "url": "https://runrepeat.com/mizuno-wave-inspire-21",
+          "slug": "mizuno-wave-inspire-21",
+          "score": 82,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Mizuno Wave Inspire 20 (v20) -> RunRepeat has Mizuno Wave Inspire 21 (v21)"
+        }
+      ],
+      "new_models": [
+        {
+          "name": "Mizuno Neo Zen",
+          "url": "https://runrepeat.com/mizuno-neo-zen",
+          "slug": "mizuno-neo-zen",
+          "score": 92,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Mizuno Neo Zen"
+        },
+        {
+          "name": "Mizuno Neo Vista 2",
+          "url": "https://runrepeat.com/mizuno-neo-vista-2",
+          "slug": "mizuno-neo-vista-2",
+          "score": 82,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Mizuno Neo Vista 2"
+        },
+        {
+          "name": "Mizuno Neo Vista 3",
+          "url": "https://runrepeat.com/mizuno-neo-vista-3",
+          "slug": "mizuno-neo-vista-3",
+          "score": 83,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Mizuno Neo Vista 3"
+        },
+        {
+          "name": "Mizuno Wave Sky 9",
+          "url": "https://runrepeat.com/mizuno-wave-sky-9",
+          "slug": "mizuno-wave-sky-9",
+          "score": 86,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Mizuno Wave Sky 9"
+        },
+        {
+          "name": "Mizuno Neo Vista",
+          "url": "https://runrepeat.com/mizuno-neo-vista",
+          "slug": "mizuno-neo-vista",
+          "score": 82,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Mizuno Neo Vista"
+        },
+        {
+          "name": "Mizuno Wave Sky 8",
+          "url": "https://runrepeat.com/mizuno-wave-sky-8",
+          "slug": "mizuno-wave-sky-8",
+          "score": 84,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Mizuno Wave Sky 8"
+        },
+        {
+          "name": "Mizuno Neo Zen 2",
+          "url": "https://runrepeat.com/mizuno-neo-zen-2",
+          "slug": "mizuno-neo-zen-2",
+          "score": 79,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Mizuno Neo Zen 2"
+        },
+        {
+          "name": "Mizuno Wave Rebellion Flash 3",
+          "url": "https://runrepeat.com/mizuno-wave-rebellion-flash-3",
+          "slug": "mizuno-wave-rebellion-flash-3",
+          "score": 86,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Mizuno Wave Rebellion Flash 3"
+        },
+        {
+          "name": "Mizuno Wave Rebellion Flash 2",
+          "url": "https://runrepeat.com/mizuno-wave-rebellion-flash-2",
+          "slug": "mizuno-wave-rebellion-flash-2",
+          "score": 82,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Mizuno Wave Rebellion Flash 2"
+        },
+        {
+          "name": "Mizuno Wave Rider 27",
+          "url": "https://runrepeat.com/mizuno-wave-rider-27",
+          "slug": "mizuno-wave-rider-27",
+          "score": 81,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Mizuno Wave Rider 27"
+        },
+        {
+          "name": "Mizuno Wave Horizon 7",
+          "url": "https://runrepeat.com/mizuno-wave-horizon-7",
+          "slug": "mizuno-wave-horizon-7",
+          "score": 72,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Mizuno Wave Horizon 7"
+        }
+      ],
+      "tracked": [
+        {
+          "name": "Mizuno Wave Rider 28",
+          "url": "https://runrepeat.com/mizuno-wave-rider-28",
+          "slug": "mizuno-wave-rider-28",
+          "score": 83,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "Mizuno Wave Rebellion Pro 2",
+          "url": "https://runrepeat.com/mizuno-wave-rebellion-pro-2",
+          "slug": "mizuno-wave-rebellion-pro-2",
+          "score": 84,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "Mizuno Wave Inspire 20",
+          "url": "https://runrepeat.com/mizuno-wave-inspire-20",
+          "slug": "mizuno-wave-inspire-20",
+          "score": 80,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "Mizuno Wave Rebellion",
+          "url": "https://runrepeat.com/mizuno-wave-rebellion",
+          "slug": "mizuno-wave-rebellion",
+          "score": 81,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        }
+      ]
+    },
+    "brooks": {
+      "total_scanned": 30,
+      "version_bumps": [
+        {
+          "name": "Brooks Adrenaline GTS 25",
+          "url": "https://runrepeat.com/brooks-adrenaline-gts-25",
+          "slug": "brooks-adrenaline-gts-25",
+          "score": 86,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Brooks Adrenaline GTS 24 (v24) -> RunRepeat has Brooks Adrenaline GTS 25 (v25)"
+        },
+        {
+          "name": "Brooks Ghost 18",
+          "url": "https://runrepeat.com/brooks-ghost-18",
+          "slug": "brooks-ghost-18",
+          "score": 86,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Brooks Ghost 17 (v17) -> RunRepeat has Brooks Ghost 18 (v18)"
+        },
+        {
+          "name": "Brooks Glycerin 23",
+          "url": "https://runrepeat.com/brooks-glycerin-23",
+          "slug": "brooks-glycerin-23",
+          "score": 85,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Brooks Glycerin 21 (v21) -> RunRepeat has Brooks Glycerin 23 (v23)"
+        },
+        {
+          "name": "Brooks Glycerin 22",
+          "url": "https://runrepeat.com/brooks-glycerin-22",
+          "slug": "brooks-glycerin-22",
+          "score": 84,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Brooks Glycerin 21 (v21) -> RunRepeat has Brooks Glycerin 22 (v22)"
+        },
+        {
+          "name": "Brooks Hyperion Max 3",
+          "url": "https://runrepeat.com/brooks-hyperion-max-3",
+          "slug": "brooks-hyperion-max-3",
+          "score": 85,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Brooks Hyperion Max 2 (v2) -> RunRepeat has Brooks Hyperion Max 3 (v3)"
+        },
+        {
+          "name": "Brooks Hyperion Max 4",
+          "url": "https://runrepeat.com/brooks-hyperion-max-4",
+          "slug": "brooks-hyperion-max-4",
+          "score": 86,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Brooks Hyperion Max 2 (v2) -> RunRepeat has Brooks Hyperion Max 4 (v4)"
+        },
+        {
+          "name": "Brooks Glycerin GTS 22",
+          "url": "https://runrepeat.com/brooks-glycerin-gts-22",
+          "slug": "brooks-glycerin-gts-22",
+          "score": 82,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has Brooks Glycerin 21 (v21) -> RunRepeat has Brooks Glycerin GTS 22 (v22)"
+        }
+      ],
+      "new_models": [
+        {
+          "name": "Brooks Ghost Max 3",
+          "url": "https://runrepeat.com/brooks-ghost-max-3",
+          "slug": "brooks-ghost-max-3",
+          "score": 83,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Brooks Ghost Max 3"
+        },
+        {
+          "name": "Brooks Glycerin Max",
+          "url": "https://runrepeat.com/brooks-glycerin-max",
+          "slug": "brooks-glycerin-max",
+          "score": 84,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Brooks Glycerin Max"
+        },
+        {
+          "name": "Brooks Ghost 16",
+          "url": "https://runrepeat.com/brooks-ghost-16",
+          "slug": "brooks-ghost-16",
+          "score": 85,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Brooks Ghost 16"
+        },
+        {
+          "name": "Brooks Ghost Max 2",
+          "url": "https://runrepeat.com/brooks-ghost-max-2",
+          "slug": "brooks-ghost-max-2",
+          "score": 83,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Brooks Ghost Max 2"
+        },
+        {
+          "name": "Brooks Glycerin Max 2",
+          "url": "https://runrepeat.com/brooks-glycerin-max-2",
+          "slug": "brooks-glycerin-max-2",
+          "score": 85,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Brooks Glycerin Max 2"
+        },
+        {
+          "name": "Brooks Ghost Amp",
+          "url": "https://runrepeat.com/brooks-ghost-amp",
+          "slug": "brooks-ghost-amp",
+          "score": 86,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Brooks Ghost Amp"
+        },
+        {
+          "name": "Brooks Cascadia 19",
+          "url": "https://runrepeat.com/brooks-cascadia-19",
+          "slug": "brooks-cascadia-19",
+          "score": 85,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Brooks Cascadia 19"
+        },
+        {
+          "name": "Brooks Ghost Max 4",
+          "url": "https://runrepeat.com/brooks-ghost-max-4",
+          "slug": "brooks-ghost-max-4",
+          "score": 83,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Brooks Ghost Max 4"
+        },
+        {
+          "name": "Brooks Ghost Max",
+          "url": "https://runrepeat.com/brooks-ghost-max",
+          "slug": "brooks-ghost-max",
+          "score": 78,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Brooks Ghost Max"
+        },
+        {
+          "name": "Brooks Hyperion Elite 5",
+          "url": "https://runrepeat.com/brooks-hyperion-elite-5",
+          "slug": "brooks-hyperion-elite-5",
+          "score": 87,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Brooks Hyperion Elite 5"
+        },
+        {
+          "name": "Brooks Cascadia 20",
+          "url": "https://runrepeat.com/brooks-cascadia-20",
+          "slug": "brooks-cascadia-20",
+          "score": 87,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Brooks Cascadia 20"
+        },
+        {
+          "name": "Brooks Launch 12",
+          "url": "https://runrepeat.com/brooks-launch-12",
+          "slug": "brooks-launch-12",
+          "score": 87,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Brooks Launch 12"
+        },
+        {
+          "name": "Brooks Adrenaline GTS 23",
+          "url": "https://runrepeat.com/brooks-adrenaline-gts-23",
+          "slug": "brooks-adrenaline-gts-23",
+          "score": 81,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Brooks Adrenaline GTS 23"
+        },
+        {
+          "name": "Brooks Ghost Trail",
+          "url": "https://runrepeat.com/brooks-ghost-trail",
+          "slug": "brooks-ghost-trail",
+          "score": 83,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Brooks Ghost Trail"
+        },
+        {
+          "name": "Brooks Launch 11",
+          "url": "https://runrepeat.com/brooks-launch-11",
+          "slug": "brooks-launch-11",
+          "score": 84,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Brooks Launch 11"
+        },
+        {
+          "name": "Brooks Cascadia Elite",
+          "url": "https://runrepeat.com/brooks-cascadia-elite",
+          "slug": "brooks-cascadia-elite",
+          "score": 86,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Brooks Cascadia Elite"
+        },
+        {
+          "name": "Brooks Revel 8",
+          "url": "https://runrepeat.com/brooks-revel-8",
+          "slug": "brooks-revel-8",
+          "score": 80,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Brooks Revel 8"
+        },
+        {
+          "name": "Brooks Glycerin 20",
+          "url": "https://runrepeat.com/brooks-glycerin-20",
+          "slug": "brooks-glycerin-20",
+          "score": 84,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Brooks Glycerin 20"
+        },
+        {
+          "name": "Brooks Ghost 15",
+          "url": "https://runrepeat.com/brooks-ghost-15",
+          "slug": "brooks-ghost-15",
+          "score": 81,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: Brooks Ghost 15"
+        }
+      ],
+      "tracked": [
+        {
+          "name": "Brooks Adrenaline GTS 24",
+          "url": "https://runrepeat.com/brooks-adrenaline-gts-24",
+          "slug": "brooks-adrenaline-gts-24",
+          "score": 85,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "Brooks Ghost 17",
+          "url": "https://runrepeat.com/brooks-ghost-17",
+          "slug": "brooks-ghost-17",
+          "score": 83,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "Brooks Glycerin 21",
+          "url": "https://runrepeat.com/brooks-glycerin-21",
+          "slug": "brooks-glycerin-21",
+          "score": 83,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "Brooks Hyperion Max",
+          "url": "https://runrepeat.com/brooks-hyperion-max",
+          "slug": "brooks-hyperion-max",
+          "score": 81,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        }
+      ]
+    },
+    "on": {
+      "total_scanned": 30,
+      "version_bumps": [
+        {
+          "name": "On Cloudmonster 3 Hyper",
+          "url": "https://runrepeat.com/on-cloudmonster-3-hyper",
+          "slug": "on-cloudmonster-3-hyper",
+          "score": 90,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has On Cloudmonster 2 (v2) -> RunRepeat has On Cloudmonster 3 Hyper (v3)"
+        },
+        {
+          "name": "On Cloudmonster 3",
+          "url": "https://runrepeat.com/on-cloudmonster-3",
+          "slug": "on-cloudmonster-3",
+          "score": 82,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has On Cloudmonster 2 (v2) -> RunRepeat has On Cloudmonster 3 (v3)"
+        },
+        {
+          "name": "On Cloudrunner 3",
+          "url": "https://runrepeat.com/on-cloudrunner-3",
+          "slug": "on-cloudrunner-3",
+          "score": 76,
+          "status": "VERSION_BUMP",
+          "note": "Bump detected: DB has On Cloudrunner 2 (v2) -> RunRepeat has On Cloudrunner 3 (v3)"
+        }
+      ],
+      "new_models": [
+        {
+          "name": "On Cloudsurfer 2",
+          "url": "https://runrepeat.com/on-cloudsurfer-2",
+          "slug": "on-cloudsurfer-2",
+          "score": 80,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: On Cloudsurfer 2"
+        },
+        {
+          "name": "On Cloudultra Pro",
+          "url": "https://runrepeat.com/on-cloudultra-pro",
+          "slug": "on-cloudultra-pro",
+          "score": 87,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: On Cloudultra Pro"
+        },
+        {
+          "name": "On Cloudsurfer Next",
+          "url": "https://runrepeat.com/on-cloudsurfer-next",
+          "slug": "on-cloudsurfer-next",
+          "score": 82,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: On Cloudsurfer Next"
+        },
+        {
+          "name": "On Cloudstratus 3",
+          "url": "https://runrepeat.com/on-cloudstratus-3",
+          "slug": "on-cloudstratus-3",
+          "score": 86,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: On Cloudstratus 3"
+        },
+        {
+          "name": "On Cloudboom Max",
+          "url": "https://runrepeat.com/on-cloudboom-max",
+          "slug": "on-cloudboom-max",
+          "score": 86,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: On Cloudboom Max"
+        },
+        {
+          "name": "On Cloudsurfer Max",
+          "url": "https://runrepeat.com/on-cloudsurfer-max",
+          "slug": "on-cloudsurfer-max",
+          "score": 76,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: On Cloudsurfer Max"
+        },
+        {
+          "name": "On Cloud X",
+          "url": "https://runrepeat.com/on-cloud-x",
+          "slug": "on-cloud-x",
+          "score": 75,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: On Cloud X"
+        },
+        {
+          "name": "On Cloudflyer 5",
+          "url": "https://runrepeat.com/on-cloudflyer-5",
+          "slug": "on-cloudflyer-5",
+          "score": 78,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: On Cloudflyer 5"
+        },
+        {
+          "name": "On Cloudswift 4",
+          "url": "https://runrepeat.com/on-cloudswift-4",
+          "slug": "on-cloudswift-4",
+          "score": 76,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: On Cloudswift 4"
+        },
+        {
+          "name": "On Cloudmonster Hyper",
+          "url": "https://runrepeat.com/on-cloudmonster-hyper",
+          "slug": "on-cloudmonster-hyper",
+          "score": 79,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: On Cloudmonster Hyper"
+        },
+        {
+          "name": "On Cloudeclipse",
+          "url": "https://runrepeat.com/on-cloudeclipse",
+          "slug": "on-cloudeclipse",
+          "score": 84,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: On Cloudeclipse"
+        },
+        {
+          "name": "On Cloudswift 3",
+          "url": "https://runrepeat.com/on-cloudswift-3",
+          "slug": "on-cloudswift-3",
+          "score": 82,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: On Cloudswift 3"
+        },
+        {
+          "name": "On Cloudultra 3",
+          "url": "https://runrepeat.com/on-cloudultra-3",
+          "slug": "on-cloudultra-3",
+          "score": 81,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: On Cloudultra 3"
+        },
+        {
+          "name": "On Cloudflow 4",
+          "url": "https://runrepeat.com/on-cloudflow-4-0",
+          "slug": "on-cloudflow-4-0",
+          "score": 83,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: On Cloudflow 4"
+        },
+        {
+          "name": "On Cloudstratus",
+          "url": "https://runrepeat.com/on-cloudstratus",
+          "slug": "on-cloudstratus",
+          "score": 79,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: On Cloudstratus"
+        },
+        {
+          "name": "On Cloudsurfer Trail 2",
+          "url": "https://runrepeat.com/on-cloudsurfer-trail-2",
+          "slug": "on-cloudsurfer-trail-2",
+          "score": 78,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: On Cloudsurfer Trail 2"
+        },
+        {
+          "name": "On Cloudgo",
+          "url": "https://runrepeat.com/on-cloudgo",
+          "slug": "on-cloudgo",
+          "score": 79,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: On Cloudgo"
+        },
+        {
+          "name": "On Cloudsurfer Trail",
+          "url": "https://runrepeat.com/on-cloudsurfer-trail",
+          "slug": "on-cloudsurfer-trail",
+          "score": 76,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: On Cloudsurfer Trail"
+        },
+        {
+          "name": "On Cloudultra 2",
+          "url": "https://runrepeat.com/on-cloudultra-2",
+          "slug": "on-cloudultra-2",
+          "score": 80,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: On Cloudultra 2"
+        },
+        {
+          "name": "On Cloudflyer 4",
+          "url": "https://runrepeat.com/on-cloudflyer-4",
+          "slug": "on-cloudflyer-4",
+          "score": 77,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: On Cloudflyer 4"
+        },
+        {
+          "name": "On Cloudmonster Void",
+          "url": "https://runrepeat.com/on-cloudmonster-void",
+          "slug": "on-cloudmonster-void",
+          "score": 68,
+          "status": "NEW_MODEL",
+          "note": "New model line or unindexed variant: On Cloudmonster Void"
+        }
+      ],
+      "tracked": [
+        {
+          "name": "On Cloudmonster",
+          "url": "https://runrepeat.com/on-cloudmonster",
+          "slug": "on-cloudmonster",
+          "score": 84,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "On Cloudmonster 2",
+          "url": "https://runrepeat.com/on-cloudmonster-2",
+          "slug": "on-cloudmonster-2",
+          "score": 85,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "On Cloudboom Strike",
+          "url": "https://runrepeat.com/on-cloudboom-strike",
+          "slug": "on-cloudboom-strike",
+          "score": 90,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "On Cloudrunner 2",
+          "url": "https://runrepeat.com/on-cloudrunner-2",
+          "slug": "on-cloudrunner-2",
+          "score": 82,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "On Cloudrunner",
+          "url": "https://runrepeat.com/on-cloudrunner",
+          "slug": "on-cloudrunner",
+          "score": 78,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        },
+        {
+          "name": "On Cloudboom Echo 3",
+          "url": "https://runrepeat.com/on-cloudboom-echo-3",
+          "slug": "on-cloudboom-echo-3",
+          "score": 84,
+          "status": "TRACKED",
+          "note": "Already tracked in database"
+        }
+      ]
+    }
+  }
+}

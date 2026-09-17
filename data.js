@@ -1430,6 +1430,43 @@ window.SHOEF_MASTER = [
     }
   },
   {
+    "id": "saucony_hurricane_26",
+    "brand_id": "saucony",
+    "name_kr": "써코니 허리케인 26",
+    "name_en": "Saucony Hurricane 26",
+    "series": "허리케인",
+    "category": "stability",
+    "category_name": "안정화 (과회내 서포트)",
+    "msrp_usd": 160,
+    "msrp_krw": 199000,
+    "widths": [
+      "D",
+      "2E"
+    ],
+    "specs": {
+      "weight_g": 262,
+      "heel_drop_mm": 6,
+      "midsole": "신형 incrediLUX 초임계 슈퍼폼 + 울트라 와이드 Center Path",
+      "plate": "없음 (센터패스 기하학 서포트)",
+      "stack_height": "41mm / 35mm",
+      "support_type": "Stability (최상급 슈퍼 맥스 안정화)"
+    },
+    "runrepeat": {
+      "score": 91,
+      "midsole_foam": "incrediLUX Supercritical",
+      "pros": [
+        "차세대 incrediLUX 초임계 폼으로 전작(24) 대비 무려 50g 이상 경량화(262g)",
+        "초광폭 베이스 플랫폼이 선사하는 흔들림 없는 완벽한 과회내 지지력",
+        "여유로운 토박스 공간과 41mm 극상의 구름 쿠션"
+      ],
+      "cons": [
+        "플랫폼 베이스가 거대하여 좁은 발볼 러너에게는 부피감 체감"
+      ],
+      "verdict": "무겁던 전통 안정화의 한계를 incrediLUX 폼으로 완벽히 뛰어넘은 2026 최신 플래그십 안정화.",
+      "url": "https://runrepeat.com/saucony-hurricane-26"
+    }
+  },
+  {
     "id": "saucony_endorphin_speed_4",
     "brand_id": "saucony",
     "name_kr": "써코니 엔돌핀 스피드 4",
@@ -1537,6 +1574,44 @@ window.SHOEF_MASTER = [
       ],
       "verdict": "호카를 전 세계적인 브랜드로 만든 상징이자 매일 달리고 싶게 만드는 데일리 쿠션화.",
       "url": "https://runrepeat.com/hoka-clifton-9"
+    }
+  },
+  {
+    "id": "hoka_clifton_pro",
+    "brand_id": "hoka",
+    "name_kr": "호카 클리프톤 프로",
+    "name_en": "Hoka Clifton PRO",
+    "series": "클리프톤 프로",
+    "category": "daily",
+    "category_name": "데일리 / 쿠션화",
+    "msrp_usd": 165,
+    "msrp_krw": 199000,
+    "widths": [
+      "D",
+      "2E"
+    ],
+    "specs": {
+      "weight_g": 264,
+      "heel_drop_mm": 5,
+      "midsole": "신형 PROGLIDE+ 초임계 EVA 폼 + 어그레시브 메타로커",
+      "plate": "없음",
+      "stack_height": "39mm / 34mm",
+      "support_type": "Neutral (반응성 강화 프로 에디션)"
+    },
+    "runrepeat": {
+      "score": 86,
+      "midsole_foam": "PROGLIDE+ Supercritical EVA",
+      "pros": [
+        "PROGLIDE+ 초임계 폼 전격 채택으로 기존 클리프톤 대비 향상된 에너지 리턴",
+        "더욱 공격적인 메타로커로 경쾌해진 템포 전환",
+        "한여름 장거리 러닝에도 쾌적한 통기성 프리미엄 어퍼"
+      ],
+      "cons": [
+        "기본 클리프톤 대비 높은 가격",
+        "젖은 노면 접지력은 보통 수준"
+      ],
+      "verdict": "지나치게 푹신하기만 하던 쿠션화에 초임계 폼의 쫄깃한 탄성과 스피드를 더한 클리프톤 프로.",
+      "url": "https://runrepeat.com/hoka-clifton-pro"
     }
   },
   {
@@ -2167,6 +2242,44 @@ window.SHOEF_MASTER = [
     }
   },
   {
+    "id": "brooks_revel_max",
+    "brand_id": "brooks",
+    "name_kr": "브룩스 레벨 맥스",
+    "name_en": "Brooks Revel Max",
+    "series": "레벨 맥스",
+    "category": "budget",
+    "category_name": "가성비 입문화 (≤$100)",
+    "msrp_usd": 100,
+    "msrp_krw": 119000,
+    "widths": [
+      "D",
+      "2E"
+    ],
+    "specs": {
+      "weight_g": 278,
+      "heel_drop_mm": 6,
+      "midsole": "DNA LOFT v2 맥스 쿠셔닝 + GlideRoll 로커",
+      "plate": "없음",
+      "stack_height": "35mm / 29mm",
+      "support_type": "Neutral (100달러 맥스쿠션 입문)"
+    },
+    "runrepeat": {
+      "score": 81,
+      "midsole_foam": "DNA LOFT v2",
+      "pros": [
+        "100달러 입문 가격에 레벨과 고스트맥스를 결합한 최초의 맥스스택",
+        "GlideRoll 로커 지오메트리로 부드럽고 안정적인 전진 롤링",
+        "질긴 아웃솔 내마모성과 편안한 니트 어퍼"
+      ],
+      "cons": [
+        "일반 레벨 대비 약간 무거운 중량",
+        "발볼이 살짝 타이트한 편"
+      ],
+      "verdict": "100달러 예산으로 고스택 맥스 쿠션의 충격 보호를 누릴 수 있는 2026 최신 국민 가성비화.",
+      "url": "https://runrepeat.com/brooks-revel-max"
+    }
+  },
+  {
     "id": "brooks_ghost_17",
     "brand_id": "brooks",
     "name_kr": "브룩스 고스트 17",
@@ -2533,6 +2646,43 @@ window.SHOEF_MASTER = [
       ],
       "verdict": "온 러닝이 마라톤 챔피언들을 위해 탄생시킨 스위스 엔지니어링 카본 플래그십.",
       "url": "https://runrepeat.com/on-cloudboom-echo-3"
+    }
+  },
+  {
+    "id": "on_cloudboom_strike",
+    "brand_id": "on",
+    "name_kr": "온 클라우드붐 스트라이크",
+    "name_en": "On Cloudboom Strike",
+    "series": "클라우드붐",
+    "category": "racing",
+    "category_name": "레이싱화 (카본 슈퍼슈즈)",
+    "msrp_usd": 280,
+    "msrp_krw": 339000,
+    "widths": [
+      "D"
+    ],
+    "specs": {
+      "weight_g": 201,
+      "heel_drop_mm": 4,
+      "midsole": "Helion HF (100% Pebax 초임계 폼) + 풀렝스 카본 스피드보드",
+      "plate": "Full Carbon Speedboard",
+      "stack_height": "39.5mm / 35.5mm",
+      "support_type": "Neutral (엘리트 마라톤 카본 레이서)"
+    },
+    "runrepeat": {
+      "score": 90,
+      "midsole_foam": "Helion HF (Pebax)",
+      "pros": [
+        "201g 극경량 설계에 폭발적인 100% Pebax Helion HF 슈퍼폼 장착",
+        "앞발 착지(포어풋/미드풋) 러너에게 최적화된 날카로운 탄성 킥",
+        "뛰어난 젖은 노면 접지력과 밀착 일체형 레이싱 핏"
+      ],
+      "cons": [
+        "후족부 착지(힐 스트라이커) 러너에게는 다소 불안정한 서포트",
+        "고가의 가격대"
+      ],
+      "verdict": "온러닝의 혁신 기술이 총망라된 100% Pebax 기반의 세계 최정상급 마라톤 레이싱 플래그십.",
+      "url": "https://runrepeat.com/on-cloudboom-strike"
     }
   }
 ];
