@@ -1470,6 +1470,37 @@ body.dark-theme {
   border: 1px solid rgba(244, 63, 94, 0.4);
 }
 
+/* 카드 뱃지 그룹 및 세대/출시년도 뱃지 */
+.card-tags-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.gen-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: -0.2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.gen-badge.gen-current {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.4);
+}
+
+.gen-badge.gen-carryover {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
 /* 독립 블록 2: 정가 & 발볼 */
 .card-price-row {
   display: flex;
@@ -2175,6 +2206,10 @@ body.dark-theme {
     padding: 7px 4px;
     font-size: 11px;
     justify-content: center;
+  }
+
+  .sort-btn:last-child {
+    grid-column: 1 / -1;
   }
 
   .shoe-wiki-card {

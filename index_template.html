@@ -74,6 +74,16 @@
           </select>
         </div>
 
+        <!-- 세대 구분 셀렉트 (최신형 vs 이월 할인) -->
+        <div class="filter-field">
+          <label for="genFilter" class="field-label">출시 세대 / 이월</label>
+          <select id="genFilter" class="custom-select">
+            <option value="all">전체 세대 (신작+이월)</option>
+            <option value="current">✨ 최신형 (2025-2026)</option>
+            <option value="carryover">🏷️ 이월할인 명작 (2023-2024)</option>
+          </select>
+        </div>
+
         <!-- 발볼 옵션 (D, 2E, 4E) -->
         <div class="filter-field">
           <label for="widthFilter" class="field-label">발볼 지원</label>
@@ -104,6 +114,7 @@
         <span class="count-txt">조회된 러닝화 <strong id="totalCount">0</strong>종</span>
         <div class="sort-controls">
           <button type="button" class="sort-btn active" data-sort="score-desc">런리핏 평점순</button>
+          <button type="button" class="sort-btn" data-sort="year-desc">최신 출시순</button>
           <button type="button" class="sort-btn" data-sort="price-asc">정가 낮은순</button>
           <button type="button" class="sort-btn" data-sort="price-desc">정가 높은순</button>
           <button type="button" class="sort-btn" data-sort="weight-asc">가벼운순 (무게)</button>

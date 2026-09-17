@@ -1030,6 +1030,24 @@ SHOES = [
 ]
 
 def main():
+    try:
+        from expand_database_with_carryovers import CARRYOVER_SHOES
+        for s in SHOES:
+            if "gen_type" not in s:
+                s["gen_type"] = "current"
+            if "release_year" not in s:
+                name = s.get("name_en", "").lower()
+                if any(k in name for k in ["revel max", "hurricane 26", "clifton pro", "nimbus 27", "novablast 5", "rise 2", "superblast 2", "cloudboom strike"]):
+                    s["release_year"] = 2026
+                else:
+                    s["release_year"] = 2025
+        existing_ids = set(s["id"] for s in SHOES)
+        for cs in CARRYOVER_SHOES:
+            if cs["id"] not in existing_ids:
+                SHOES.append(cs)
+    except Exception as e:
+        print(f"Notice: {e}")
+
     print(f"Total shoes generated: {len(SHOES)}")
     
     out_dir = os.path.dirname(os.path.abspath(__file__))
@@ -1045,6 +1063,11 @@ def main():
     config_data = {
         "brands": BRANDS,
         "categories": CATEGORIES,
+        "generations": {
+            "all": "전체 세대 (최신+이월)",
+            "current": "✨ 2025-2026 최신형",
+            "carryover": "🏷️ 2023-2024 이월할인 명작"
+        },
         "sizes": [230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 290, 295, 300, 305, 310],
         "widths": ["D", "2E", "4E"]
     }
@@ -1054,7 +1077,7 @@ def main():
     
     data_js_path = os.path.join(out_dir, "data.js")
     with open(data_js_path, "w", encoding="utf-8") as f:
-        f.write("/** ShoeF Master Database (2025/2026 Latest Generations) **/\n")
+        f.write("/** ShoeF Master Database (2023-2026 Master Dataset) **/\n")
         f.write("window.SHOEF_CONFIG = " + json.dumps(config_data, ensure_ascii=False, indent=2) + ";\n\n")
         f.write("window.SHOEF_MASTER = " + json.dumps(SHOES, ensure_ascii=False, indent=2) + ";\n")
     print(f"Saved data.js to {data_js_path}")

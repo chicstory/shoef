@@ -57,6 +57,7 @@ const EMBEDDED_SHOES = {shoes_json};
   const btnSelectAllBrands = document.getElementById('btnSelectAllBrands');
   const btnDeselectAllBrands = document.getElementById('btnDeselectAllBrands');
   const categoryFilter = document.getElementById('categoryFilter');
+  const genFilter = document.getElementById('genFilter');
   const widthFilter = document.getElementById('widthFilter');
   const searchKeyword = document.getElementById('searchKeyword');
   const totalCountEl = document.getElementById('totalCount');
@@ -138,38 +139,48 @@ const EMBEDDED_SHOES = {shoes_json};
     }});
   }}
 
-  // Dynamic Category Option Counts Sync (Never hardcode counts)
+  // Dynamic Category & Generation Option Counts Sync (Never hardcode counts)
   function updateCategoryOptionCounts() {{
-    if (!categoryFilter) return;
-    const counts = {{
-      all: shoesData.length,
-      budget: shoesData.filter(s => s.category === 'budget').length,
-      daily: shoesData.filter(s => s.category === 'daily').length,
-      stability: shoesData.filter(s => s.category === 'stability').length,
-      super_trainer: shoesData.filter(s => s.category === 'super_trainer').length,
-      racing: shoesData.filter(s => s.category === 'racing').length,
-    }};
+    if (categoryFilter) {{
+      const counts = {{
+        all: shoesData.length,
+        budget: shoesData.filter(s => s.category === 'budget').length,
+        daily: shoesData.filter(s => s.category === 'daily').length,
+        stability: shoesData.filter(s => s.category === 'stability').length,
+        super_trainer: shoesData.filter(s => s.category === 'super_trainer').length,
+        racing: shoesData.filter(s => s.category === 'racing').length,
+      }};
 
-    const labels = {{
-      all: `전체 카테고리 (${{counts.all}}종)`,
-      budget: `🌱 가성비 입문화 (${{counts.budget}}종)`,
-      daily: `☁️ 데일리 / 쿠션화 (${{counts.daily}}종)`,
-      stability: `🛡️ 안정화 (${{counts.stability}}종)`,
-      super_trainer: `⚡ 슈퍼 트레이너 (${{counts.super_trainer}}종)`,
-      racing: `🏆 레이싱화 (${{counts.racing}}종)`,
-    }};
+      const labels = {{
+        all: `전체 카테고리 (${{counts.all}}종)`,
+        budget: `🌱 가성비 입문화 (${{counts.budget}}종)`,
+        daily: `☁️ 데일리 / 쿠션화 (${{counts.daily}}종)`,
+        stability: `🛡️ 안정화 (${{counts.stability}}종)`,
+        super_trainer: `⚡ 슈퍼 트레이너 (${{counts.super_trainer}}종)`,
+        racing: `🏆 레이싱화 (${{counts.racing}}종)`,
+      }};
 
-    Array.from(categoryFilter.options).forEach(opt => {{
-      if (labels[opt.value]) {{
-        opt.textContent = labels[opt.value];
-      }}
-    }});
+      Array.from(categoryFilter.options).forEach(opt => {{
+        if (labels[opt.value]) {{
+          opt.textContent = labels[opt.value];
+        }}
+      }});
+    }}
+
+    if (genFilter) {{
+      const curCount = shoesData.filter(s => s.gen_type === 'current').length;
+      const carryCount = shoesData.filter(s => s.gen_type === 'carryover').length;
+      if (genFilter.options[0]) genFilter.options[0].textContent = `전체 세대 (${{shoesData.length}}종)`;
+      if (genFilter.options[1]) genFilter.options[1].textContent = `✨ 최신형 (${{curCount}}종)`;
+      if (genFilter.options[2]) genFilter.options[2].textContent = `🏷️ 이월할인 명작 (${{carryCount}}종)`;
+    }}
   }}
 
   // 3. Filter & Sort Logic
   function getFilteredShoes() {{
-    const catVal = categoryFilter.value;
-    const widthVal = widthFilter.value;
+    const catVal = categoryFilter ? categoryFilter.value : 'all';
+    const genVal = genFilter ? genFilter.value : 'all';
+    const widthVal = widthFilter ? widthFilter.value : 'all';
     const query = searchKeyword.value.trim().toLowerCase();
 
     return shoesData.filter(shoe => {{
@@ -179,14 +190,17 @@ const EMBEDDED_SHOES = {shoes_json};
       // 2) Category filter
       if (catVal !== 'all' && shoe.category !== catVal) return false;
 
-      // 3) Width filter
+      // 3) Generation filter
+      if (genVal !== 'all' && shoe.gen_type !== genVal) return false;
+
+      // 4) Width filter
       if (widthVal !== 'all') {{
         if (!shoe.widths || !shoe.widths.includes(widthVal)) return false;
       }}
 
-      // 4) Keyword search
+      // 5) Keyword search
       if (query) {{
-        const text = `${{shoe.name_kr}} ${{shoe.name_en}} ${{shoe.series}} ${{shoe.specs.midsole}} ${{shoe.specs.plate}} ${{shoe.category_name}}`.toLowerCase();
+        const text = `${{shoe.name_kr}} ${{shoe.name_en}} ${{shoe.series}} ${{shoe.release_year}} ${{shoe.specs.midsole}} ${{shoe.specs.plate}} ${{shoe.category_name}}`.toLowerCase();
         if (!text.includes(query)) return false;
       }}
 
@@ -194,6 +208,8 @@ const EMBEDDED_SHOES = {shoes_json};
     }}).sort((a, b) => {{
       if (currentSort === 'score-desc') {{
         return b.runrepeat.score - a.runrepeat.score;
+      }} else if (currentSort === 'year-desc') {{
+        return (b.release_year || 2024) - (a.release_year || 2024);
       }} else if (currentSort === 'price-asc') {{
         return a.msrp_krw - b.msrp_krw;
       }} else if (currentSort === 'price-desc') {{
@@ -335,6 +351,7 @@ const EMBEDDED_SHOES = {shoes_json};
     // Build side-by-side table rows
     const specsItems = [
       {{ label: '신발 정보', render: s => `<div class="comp-shoe-head"><strong class="comp-shoe-name">${{s.name_kr}}</strong><span class="comp-shoe-en">${{s.name_en}}</span></div>` }},
+      {{ label: '출시년도 / 세대', render: s => s.gen_type === 'carryover' ? `<span class="gen-badge gen-carryover">${{s.release_year}}년 이월명작</span>` : `<span class="gen-badge gen-current">${{s.release_year}}년 최신형</span>` }},
       {{ label: '런리핏 평점', render: s => `<div class="comp-score"><span class="score-num">${{s.runrepeat.score}}</span><span class="score-den">/100점</span></div>` }},
       {{ label: '카테고리', render: s => `<span class="category-badge cat-${{s.category}}">${{s.category_name}}</span>` }},
       {{ label: '출시 정가 (MSRP)', render: s => `<strong>${{s.msrp_krw.toLocaleString()}}원</strong><br><span style="color:var(--text-dim); font-size:0.75rem;">$${{s.msrp_usd}}</span>` }},
@@ -409,7 +426,12 @@ const EMBEDDED_SHOES = {shoes_json};
               <span class="rr-score-max">/100</span>
               <span class="rr-score-label">RunRepeat Score</span>
             </div>
-            <span class="category-badge cat-${{shoe.category}}">${{shoe.category_name}}</span>
+            <div class="card-tags-group">
+              ${{shoe.gen_type === 'carryover'
+                ? `<span class="gen-badge gen-carryover" title="${{shoe.release_year}}년 출시 이월/할인 인기작">${{shoe.release_year}} 이월명작</span>`
+                : `<span class="gen-badge gen-current" title="${{shoe.release_year}}년 최신 정규 라인업">${{shoe.release_year}} 최신</span>`}}
+              <span class="category-badge cat-${{shoe.category}}">${{shoe.category_name}}</span>
+            </div>
           </div>
 
           <!-- 독립 블록 2: 공식 정가 및 발볼 정보 -->
@@ -509,6 +531,7 @@ const EMBEDDED_SHOES = {shoes_json};
     }});
 
     categoryFilter.addEventListener('change', renderShoes);
+    if (genFilter) genFilter.addEventListener('change', renderShoes);
     widthFilter.addEventListener('change', renderShoes);
     searchKeyword.addEventListener('input', renderShoes);
 
