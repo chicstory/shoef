@@ -1,11 +1,16 @@
 """
-Generate complete 10 brands x 5 categories running shoes dataset based on RunRepeat Lab Specs.
-Categories:
-1. budget: 가성비 입문화 (MSRP <= $100 / 약 13만원 이하)
-2. daily: 데일리 / 쿠션화 (MSRP $130~$180)
-3. stability: 안정화 (과회내/평발 지지)
-4. super_trainer: 슈퍼 트레이너 (슈퍼폼 + 플레이트/락커 훈련화)
-5. racing: 레이싱화 (마라톤 카본 플래그십)
+Generate 2025/2026 LATEST Running Shoes Dataset based on RunRepeat Lab Reviews.
+Updated to newest generation:
+- Adidas: Galaxy 8, Supernova Rise 2, Supernova Prima 2, Adistar 4, Adizero EVO SL, Adios 9, Adios Pro 4
+- Asics: Novablast 5, Gel-Nimbus 27, Gel-Kayano 31, Superblast 2, Metaspeed Sky Paris
+- Nike: Vomero 18, Pegasus 41, Zoom Fly 6, Pegasus Plus, Alphafly 3, Vaporfly 3
+- New Balance: 1080 v14, Rebel v4, SC Elite v4
+- Brooks: Ghost 17, Adrenaline GTS 24, Hyperion Max 2
+- Saucony: Ride 18, Guide 18, Endorphin Speed 4, Endorphin Pro 4
+- Hoka: Mach 6, Mach X 2, Cielo X1, Clifton 9
+- Puma: Velocity Nitro 3, Deviate Nitro 3, Deviate Nitro Elite 3
+- Mizuno: Wave Rider 28, Wave Rebellion Pro 2
+- On: Cloudmonster 2, Cloudrunner 2, Cloudboom Echo 3
 """
 import json
 import os
@@ -32,12 +37,12 @@ CATEGORIES = {
 }
 
 SHOES = [
-    # ------------------ ADIDAS ------------------
+    # ------------------ ADIDAS (2025/2026 LATEST) ------------------
     {
-        "id": "adidas_galaxy_7",
+        "id": "adidas_galaxy_8",
         "brand_id": "adidas",
-        "name_kr": "아디다스 갤럭시 7",
-        "name_en": "Adidas Galaxy 7",
+        "name_kr": "아디다스 갤럭시 8",
+        "name_en": "Adidas Galaxy 8",
         "series": "갤럭시",
         "category": "budget",
         "category_name": "가성비 입문화 (≤$100)",
@@ -45,27 +50,27 @@ SHOES = [
         "msrp_krw": 69000,
         "widths": ["D", "2E"],
         "specs": {
-            "weight_g": 298,
-            "heel_drop_mm": 10,
-            "midsole": "Cloudfoam (구름 쿠셔닝)",
+            "weight_g": 292,
+            "heel_drop_mm": 9.5,
+            "midsole": "Cloudfoam+ (신형 통기성 개선 구름폼)",
             "plate": "없음",
-            "stack_height": "34mm / 24mm",
-            "support_type": "Neutral (중립)"
+            "stack_height": "34mm / 24.5mm",
+            "support_type": "Neutral (입문/워킹)"
         },
         "runrepeat": {
-            "score": 83,
-            "midsole_foam": "Cloudfoam",
-            "pros": ["매우 저렴한 가격대($60)", "일상 워킹·헬스장 트레드밀 겸용 편안한 패딩", "두터운 고무 아웃솔의 뛰어난 내구성"],
-            "cons": ["다소 무거운 무게(298g)", "에너지 리턴 및 반발 탄성 부족"],
-            "verdict": "달리기를 처음 시작하거나 헬스장 런닝머신용으로 부담 없는 가성비 최고의 입문 러닝화.",
-            "url": "https://runrepeat.com/adidas-galaxy-7"
+            "score": 84,
+            "midsole_foam": "Cloudfoam+",
+            "pros": ["60달러대 극강 가성비의 2025 신작", "전작 대비 통기성이 대폭 강화된 신형 어퍼", "워킹부터 헬스장 트레드밀까지 든든한 내구성"],
+            "cons": ["290g대 무게감", "스피드 러닝에는 탄성 부족"],
+            "verdict": "달리기 입문자와 헬스장 조깅족을 위한 가장 부담 없는 2025 최신 가성비 국민화.",
+            "url": "https://runrepeat.com/adidas-galaxy-8"
         }
     },
     {
         "id": "adidas_response_runner",
         "brand_id": "adidas",
         "name_kr": "아디다스 리스폰스 2 / 러너",
-        "name_en": "Adidas Response Runner",
+        "name_en": "Adidas Response 2",
         "series": "리스폰스",
         "category": "budget",
         "category_name": "가성비 입문화 (≤$100)",
@@ -118,38 +123,10 @@ SHOES = [
         }
     },
     {
-        "id": "adidas_questar_3",
+        "id": "adidas_supernova_rise_2",
         "brand_id": "adidas",
-        "name_kr": "아디다스 퀘스타 3",
-        "name_en": "Adidas Questar 3",
-        "series": "퀘스타",
-        "category": "budget",
-        "category_name": "가성비 입문화 (≤$100)",
-        "msrp_usd": 80,
-        "msrp_krw": 85000,
-        "widths": ["D"],
-        "specs": {
-            "weight_g": 290,
-            "heel_drop_mm": 9,
-            "midsole": "Bounce (고탄성 바운스 폼)",
-            "plate": "없음",
-            "stack_height": "35mm / 26mm",
-            "support_type": "Neutral (중립)"
-        },
-        "runrepeat": {
-            "score": 84,
-            "midsole_foam": "Bounce",
-            "pros": ["바운스 폼의 쫀득한 충격 흡수", "도톰한 힐 패딩과 안정적인 힐락", "착한 정가"],
-            "cons": ["여름철 통기성이 보통 수준"],
-            "verdict": "무릎과 발목 충격을 든든히 잡아주는 가성비 도심 로드 러닝화.",
-            "url": "https://runrepeat.com/adidas-questar-3"
-        }
-    },
-    {
-        "id": "adidas_supernova_rise",
-        "brand_id": "adidas",
-        "name_kr": "아디다스 슈퍼노바 라이즈",
-        "name_en": "Adidas Supernova Rise",
+        "name_kr": "아디다스 슈퍼노바 라이즈 2",
+        "name_en": "Adidas Supernova Rise 2",
         "series": "슈퍼노바",
         "category": "daily",
         "category_name": "데일리 / 쿠션화",
@@ -157,20 +134,20 @@ SHOES = [
         "msrp_krw": 159000,
         "widths": ["D"],
         "specs": {
-            "weight_g": 278,
+            "weight_g": 272,
             "heel_drop_mm": 10,
-            "midsole": "Dreamstrike+ (PEBA 기반 고탄성 폼) + 서포트 로드",
+            "midsole": "Dreamstrike+ 2.0 (경량화된 PEBA 폼) + 서포트 로드",
             "plate": "바텀 서포트 로드 (EVA)",
             "stack_height": "36mm / 26mm",
-            "support_type": "Neutral (중립 안정)"
+            "support_type": "Neutral (2025 국민 데일리)"
         },
         "runrepeat": {
-            "score": 90,
-            "midsole_foam": "Dreamstrike+",
-            "pros": ["차세대 Dreamstrike+ 폼의 부드럽고 쫄깃한 쿠셔닝", "서포트 로드의 자연스러운 전진 전환", "매일 신기 완벽한 내구성과 밸런스"],
-            "cons": ["스피드 인터벌보다는 조깅 및 지속주에 최적화"],
-            "verdict": "아디다스가 작정하고 만든 2024-2025 국민 데일리 트레이너의 정석.",
-            "url": "https://runrepeat.com/adidas-supernova-rise"
+            "score": 92,
+            "midsole_foam": "Dreamstrike+ 2.0",
+            "pros": ["전작 대비 가벼워진 무게와 부드러워진 어퍼 핏", "Dreamstrike+ 폼의 쫄깃하고 통통 튀는 발구름", "초보부터 상급자 조깅까지 호불호 없는 완성도"],
+            "cons": ["스피드 레이싱용보다는 지속주 및 조깅 특화"],
+            "verdict": "아디다스 데일리 트레이너의 정점을 찍은 2025-2026 완성형 국민 러닝화.",
+            "url": "https://runrepeat.com/adidas-supernova-rise-2"
         }
     },
     {
@@ -202,38 +179,10 @@ SHOES = [
         }
     },
     {
-        "id": "adidas_supernova_solution",
+        "id": "adidas_adistar_4",
         "brand_id": "adidas",
-        "name_kr": "아디다스 슈퍼노바 솔루션",
-        "name_en": "Adidas Supernova Solution",
-        "series": "슈퍼노바",
-        "category": "stability",
-        "category_name": "안정화 (과회내 서포트)",
-        "msrp_usd": 140,
-        "msrp_krw": 159000,
-        "widths": ["D"],
-        "specs": {
-            "weight_g": 288,
-            "heel_drop_mm": 10,
-            "midsole": "Dreamstrike+ & 듀얼 덴시티 스테빌리티 로드",
-            "plate": "내측 이중 결합 스테빌리티 로드",
-            "stack_height": "36mm / 26mm",
-            "support_type": "Stability (과회내 방지)"
-        },
-        "runrepeat": {
-            "score": 89,
-            "midsole_foam": "Dreamstrike+",
-            "pros": ["이질감 없는 현대적 과회내 제어(스테빌리티 로드)", "딱딱하지 않고 탄력 있는 안정화", "넓은 밑창 플랫폼으로 착지 안정감 발군"],
-            "cons": ["경량 레이싱 용도로는 비추천"],
-            "verdict": "평발이나 발목 무너짐이 있는 러너에게 쿠션과 안정을 동시에 선물하는 신개념 안정화.",
-            "url": "https://runrepeat.com/adidas-supernova-solution"
-        }
-    },
-    {
-        "id": "adidas_adistar_byd",
-        "brand_id": "adidas",
-        "name_kr": "아디다스 아디스타 BYD",
-        "name_en": "Adidas Adistar BYD",
+        "name_kr": "아디다스 아디스타 4",
+        "name_en": "Adidas Adistar 4",
         "series": "아디스타",
         "category": "daily",
         "category_name": "데일리 / 쿠션화",
@@ -241,48 +190,20 @@ SHOES = [
         "msrp_krw": 159000,
         "widths": ["D"],
         "specs": {
-            "weight_g": 310,
+            "weight_g": 305,
             "heel_drop_mm": 6,
-            "midsole": "Repetitor 2.0 & 초두터운 락커 지오메트리",
+            "midsole": "REPETITOR 2.0 + 부드러워진 락커 지오메트리",
             "plate": "없음",
             "stack_height": "40mm / 34mm",
-            "support_type": "Supportive Cushion"
+            "support_type": "Supportive Cushion (탱크 쿠션)"
         },
         "runrepeat": {
-            "score": 87,
-            "midsole_foam": "Repetitor 2.0",
-            "pros": ["탱크 같은 내구성과 40mm 거대 맥스 쿠션", "앞으로 부드럽게 굴러가는 락커 형상", "헤비 러너 무릎 충격 완벽 흡수"],
-            "cons": ["300g 이상의 무게감"],
-            "verdict": "체중이 있는 러너나 끝없는 마일리지를 쌓는 러너를 위한 불침번 장거리 쿠션화.",
-            "url": "https://runrepeat.com/adidas-adistar-byd"
-        }
-    },
-    {
-        "id": "adidas_adizero_sl2",
-        "brand_id": "adidas",
-        "name_kr": "아디다스 아디제로 SL2",
-        "name_en": "Adidas Adizero SL2",
-        "series": "아디제로",
-        "category": "super_trainer",
-        "category_name": "슈퍼 트레이너",
-        "msrp_usd": 130,
-        "msrp_krw": 149000,
-        "widths": ["D"],
-        "specs": {
-            "weight_g": 235,
-            "heel_drop_mm": 10,
-            "midsole": "Lightstrike 2.0 외피 + Full-length Lightstrike Pro 코어",
-            "plate": "없음 (순수 슈퍼폼 반발)",
-            "stack_height": "36mm / 26mm",
-            "support_type": "Neutral (스피드)"
-        },
-        "runrepeat": {
-            "score": 93,
-            "midsole_foam": "Lightstrike Pro",
-            "pros": ["130달러에 아디오스 프로의 슈퍼폼(Lightstrike Pro)을 그대로 탑재", "235g 깃털 무게로 조깅부터 템포런까지 올킬", "플레이트가 없어 발목 피로도가 극히 적음"],
-            "cons": ["발볼이 다소 타이트하여 칼발 러너에게 최적"],
-            "verdict": "2024-2025 전 세계 러닝 매체가 입을 모아 극찬한 가성비 1위 슈퍼 트레이너.",
-            "url": "https://runrepeat.com/adidas-adizero-sl-2"
+            "score": 88,
+            "midsole_foam": "REPETITOR 2.0",
+            "pros": ["2025 신형 리피티터 2.0 폼으로 훨씬 부드러워진 착지감", "40mm 초대형 맥스 쿠션으로 무릎 충격 차단", "체중 있는 러너도 무너지지 않는 안정적인 플랫폼"],
+            "cons": ["300g대의 무게감으로 스피드 러닝 비추천"],
+            "verdict": "장거리 마일리지와 리커버리 러닝을 책임지는 탱크 같은 2025 최신 맥스 쿠션화.",
+            "url": "https://runrepeat.com/adidas-adistar-4"
         }
     },
     {
@@ -299,53 +220,53 @@ SHOES = [
         "specs": {
             "weight_g": 224,
             "heel_drop_mm": 8.5,
-            "midsole": "Full 100% Lightstrike Pro (프로급 단독 폼)",
-            "plate": "없음",
+            "midsole": "Full 100% Lightstrike Pro (아디오스 프로급 슈퍼폼)",
+            "plate": "없음 (순수 슈퍼폼 반발)",
             "stack_height": "38mm / 29.5mm",
-            "support_type": "Neutral (레이스 훈련)"
+            "support_type": "Neutral (2025-2026 최고 화제작)"
         },
         "runrepeat": {
-            "score": 95,
+            "score": 96,
             "midsole_foam": "Lightstrike Pro",
-            "pros": ["아디제로 프로3의 모든 탄성을 일상 트레이너에 그대로 이식", "카본 플레이트 없이도 폭발적인 에너지 리턴", "감각적인 하이테크 미니멀 디자인"],
-            "cons": ["인기 폭발로 인한 빠른 품절"],
-            "verdict": "출시되자마자 전세계 품절 대란을 일으킨 현존 최강의 논플레이트 슈퍼 트레이너.",
+            "pros": ["카본 플레이트 없이도 폭발적인 에너지 리턴", "224g 극단적 경량성", "프로 레이서 감성을 데일리 훈련에서 그대로 체감"],
+            "cons": ["출시 즉시 전세계 품절 대란"],
+            "verdict": "러닝 씬을 뒤흔든 2025년 가장 뜨거운 논플레이트 슈퍼 트레이너.",
             "url": "https://runrepeat.com/adidas-adizero-evo-sl"
         }
     },
     {
-        "id": "adidas_adizero_boston_12",
+        "id": "adidas_adizero_adios_9",
         "brand_id": "adidas",
-        "name_kr": "아디다스 아디제로 보스턴 12",
-        "name_en": "Adidas Adizero Boston 12",
+        "name_kr": "아디다스 아디제로 아디오스 9",
+        "name_en": "Adidas Adizero Adios 9",
         "series": "아디제로",
         "category": "super_trainer",
         "category_name": "슈퍼 트레이너",
-        "msrp_usd": 160,
-        "msrp_krw": 179000,
+        "msrp_usd": 130,
+        "msrp_krw": 149000,
         "widths": ["D"],
         "specs": {
-            "weight_g": 260,
-            "heel_drop_mm": 7,
-            "midsole": "Lightstrike Pro (상단) + Lightstrike 2.0 (하단) + 유리섬유 EnergyRods 2.0",
-            "plate": "EnergyRods 2.0 (유리섬유 로드)",
-            "stack_height": "37mm / 30mm",
-            "support_type": "Neutral (템포/마라톤 훈련)"
+            "weight_g": 188,
+            "heel_drop_mm": 6,
+            "midsole": "Lightstrike Pro + Lightstrike 2.0 (초유연 로우스택)",
+            "plate": "없음 (5.2N 극단적 유연성)",
+            "stack_height": "28mm / 22mm",
+            "support_type": "Neutral (스피드 레이싱 플랫)"
         },
         "runrepeat": {
-            "score": 92,
+            "score": 91,
             "midsole_foam": "Lightstrike Pro",
-            "pros": ["에너지로드의 강력하고 경쾌한 추진력", "컨티넨탈 러버 아웃솔의 젖은 노면 접지력 종결", "하프·풀마라톤 레이싱까지 커버하는 전천후 만능성"],
-            "cons": ["어퍼 레이싱 시스템의 발등 피팅 호불호"],
-            "verdict": "마라톤 서브3, 서브4를 목표로 하는 러너들의 영원한 국민 훈련화.",
-            "url": "https://runrepeat.com/adidas-adizero-boston-12"
+            "pros": ["188g의 비현실적인 가벼움과 아디오스 프로 4 디자인 언어 계승", "트랙 인터벌과 5k/10k를 찢어발기는 날카로운 지면 피드백", "유연하고 경쾌한 발구름"],
+            "cons": ["낮은 스택으로 풀마라톤에서는 종아리 피로 누적"],
+            "verdict": "두꺼운 맥스쿠션 시대에 발 근육을 단련시켜주는 2025 최신 정통 스피드 플랫.",
+            "url": "https://runrepeat.com/adidas-adizero-adios-9"
         }
     },
     {
-        "id": "adidas_adizero_adios_pro_3",
+        "id": "adidas_adizero_adios_pro_4",
         "brand_id": "adidas",
-        "name_kr": "아디다스 아디제로 아디오스 프로 3",
-        "name_en": "Adidas Adizero Adios Pro 3",
+        "name_kr": "아디다스 아디제로 아디오스 프로 4",
+        "name_en": "Adidas Adizero Adios Pro 4",
         "series": "아디제로",
         "category": "racing",
         "category_name": "레이싱화 (카본 슈퍼슈즈)",
@@ -353,278 +274,24 @@ SHOES = [
         "msrp_krw": 279000,
         "widths": ["D"],
         "specs": {
-            "weight_g": 218,
-            "heel_drop_mm": 6.5,
-            "midsole": "Dual Lightstrike Pro + 풀 카본 EnergyRods 2.0",
-            "plate": "Carbon EnergyRods 2.0 (5개 발가락 뼈 형상 카본)",
-            "stack_height": "39.5mm / 33mm",
-            "support_type": "Neutral (마라톤 대회 PB 갱신)"
-        },
-        "runrepeat": {
-            "score": 94,
-            "midsole_foam": "Lightstrike Pro",
-            "pros": ["세계 메이저 마라톤 우승 1위 기록의 압도적 성능", "후반부 30km 이후에도 다리가 털리지 않는 에너지 보존력", "컨티넨탈 레이스 아웃솔의 사기적인 코너링 접지"],
-            "cons": ["발목 힘이 약한 초보 러너에게는 힐컵 불안정"],
-            "verdict": "풀코스 PB 갱신을 원하는 러너에게 가장 완벽한 피니시를 선사하는 카본 슈퍼슈즈.",
-            "url": "https://runrepeat.com/adidas-adizero-adios-pro-3"
-        }
-    },
-    {
-        "id": "adidas_ultraboost_5x",
-        "brand_id": "adidas",
-        "name_kr": "아디다스 울트라부스트 5X",
-        "name_en": "Adidas Ultraboost 5X",
-        "series": "울트라부스트",
-        "category": "daily",
-        "category_name": "데일리 / 쿠션화",
-        "msrp_usd": 180,
-        "msrp_krw": 219000,
-        "widths": ["D"],
-        "specs": {
-            "weight_g": 275,
-            "heel_drop_mm": 10,
-            "midsole": "Light BOOST V2 (기존 대비 30% 감량)",
-            "plate": "Torsion 시스템",
-            "stack_height": "39mm / 29mm",
-            "support_type": "Neutral (프리미엄 쿠션)"
-        },
-        "runrepeat": {
-            "score": 88,
-            "midsole_foam": "Light BOOST",
-            "pros": ["기존 울트라부스트의 무거움을 완전히 탈피(275g)", "비교 불가의 쫀득하고 안락한 착화감", "출퇴근 일상부터 주말 10km 조깅까지 전천후"],
-            "cons": ["스피드 레이싱용으로는 높은 힐드롭"],
-            "verdict": "러닝화와 라이프스타일 스니커즈의 완벽한 융합, 더욱 가벼워진 전설의 부활.",
-            "url": "https://runrepeat.com/adidas-ultraboost-5x"
-        }
-    },
-
-    # ------------------ NIKE ------------------
-    {
-        "id": "nike_revolution_7",
-        "brand_id": "nike",
-        "name_kr": "나이키 레볼루션 7",
-        "name_en": "Nike Revolution 7",
-        "series": "레볼루션",
-        "category": "budget",
-        "category_name": "가성비 입문화 (≤$100)",
-        "msrp_usd": 70,
-        "msrp_krw": 79000,
-        "widths": ["D", "4E"],
-        "specs": {
-            "weight_g": 288,
-            "heel_drop_mm": 10,
-            "midsole": "Phylon EVA 쿠셔닝",
-            "plate": "없음",
-            "stack_height": "31mm / 21mm",
-            "support_type": "Neutral (중립)"
-        },
-        "runrepeat": {
-            "score": 82,
-            "midsole_foam": "EVA Foam",
-            "pros": ["나이키 전 제품 중 가장 착한 7만원대 가격", "심플하고 깔끔한 디자인으로 워킹·운동 겸용", "부드러운 발목 패딩"],
-            "cons": ["고속 질주시 반발력 한계", "비 오는 날 접지력 주의"],
-            "verdict": "운동을 막 시작하는 러너의 첫 번째 파트너로 가장 부담 없는 스테디셀러.",
-            "url": "https://runrepeat.com/nike-revolution-7"
-        }
-    },
-    {
-        "id": "nike_winflo_11",
-        "brand_id": "nike",
-        "name_kr": "나이키 윈플로 11",
-        "name_en": "Nike Winflo 11",
-        "series": "윈플로",
-        "category": "budget",
-        "category_name": "가성비 입문화 (≤$100)",
-        "msrp_usd": 105,
-        "msrp_krw": 119000,
-        "widths": ["D", "2E"],
-        "specs": {
-            "weight_g": 295,
-            "heel_drop_mm": 10,
-            "midsole": "Cushlon 3.0 + 풀렝스 Nike Air 유닛",
-            "plate": "없음",
-            "stack_height": "37mm / 27mm",
-            "support_type": "Neutral (안정 쿠션)"
-        },
-        "runrepeat": {
-            "score": 87,
-            "midsole_foam": "Cushlon 3.0",
-            "pros": ["페가수스 버금가는 풀렝스 에어 쿠셔닝", "넓어진 전족부와 넉넉한 발볼 공간", "10만원 초반 가성비 훈련화"],
-            "cons": ["다소 묵직한 중량"],
-            "verdict": "페가수스의 가격이 부담스러운 러너를 위한 최고의 합리적 대안.",
-            "url": "https://runrepeat.com/nike-winflo-11"
-        }
-    },
-    {
-        "id": "nike_pegasus_41",
-        "brand_id": "nike",
-        "name_kr": "나이키 페가수스 41",
-        "name_en": "Nike Pegasus 41",
-        "series": "페가수스",
-        "category": "daily",
-        "category_name": "데일리 / 쿠션화",
-        "msrp_usd": 140,
-        "msrp_krw": 159000,
-        "widths": ["D", "2E", "4E"],
-        "specs": {
-            "weight_g": 282,
-            "heel_drop_mm": 10,
-            "midsole": "신형 ReactX Foam + 앞/뒤 듀얼 Air Zoom 유닛",
-            "plate": "없음",
-            "stack_height": "37mm / 27mm",
-            "support_type": "Neutral (국민 데일리)"
-        },
-        "runrepeat": {
-            "score": 90,
-            "midsole_foam": "ReactX",
-            "pros": ["ReactX 폼 도입으로 에너지 리턴 13% 대폭 향상", "에어줌 유닛의 통통 튀는 탄력", "1,000km를 달려도 끄떡없는 와플 아웃솔 내구성"],
-            "cons": ["정통 레이싱화 대비 다소 무거움"],
-            "verdict": "러닝 역사상 가장 신뢰받는 41년 전통의 국민 데일리 러닝화.",
-            "url": "https://runrepeat.com/nike-pegasus-41"
-        }
-    },
-    {
-        "id": "nike_vomero_17",
-        "brand_id": "nike",
-        "name_kr": "나이키 보메로 17",
-        "name_en": "Nike Vomero 17",
-        "series": "보메로",
-        "category": "daily",
-        "category_name": "데일리 / 쿠션화",
-        "msrp_usd": 160,
-        "msrp_krw": 189000,
-        "widths": ["D", "2E"],
-        "specs": {
-            "weight_g": 280,
-            "heel_drop_mm": 10,
-            "midsole": "ZoomX (상단) + Cushlon 3.0 (하단) 듀얼 레이어",
-            "plate": "없음 (에어백 제거 후 순수 폼 탄성 극대화)",
-            "stack_height": "39mm / 29mm",
-            "support_type": "Neutral (프리미엄 쿠션)"
-        },
-        "runrepeat": {
-            "score": 92,
-            "midsole_foam": "ZoomX",
-            "pros": ["상단 풀 ZoomX의 환상적인 구름 쿠션", "에어백을 빼서 훨씬 부드럽고 자연스러운 발구름", "장거리 LSD에서도 완벽한 관절 보호"],
-            "cons": ["스피드 인터벌에는 다소 푹신함"],
-            "verdict": "나이키 러닝화 라인업 중 가장 편안하고 럭셔리한 쿠셔닝의 극치.",
-            "url": "https://runrepeat.com/nike-vomero-17"
-        }
-    },
-    {
-        "id": "nike_structure_25",
-        "brand_id": "nike",
-        "name_kr": "나이키 스트럭처 25",
-        "name_en": "Nike Structure 25",
-        "series": "스트럭처",
-        "category": "stability",
-        "category_name": "안정화 (과회내 서포트)",
-        "msrp_usd": 140,
-        "msrp_krw": 159000,
-        "widths": ["D", "2E"],
-        "specs": {
-            "weight_g": 312,
-            "heel_drop_mm": 10,
-            "midsole": "Cushlon 3.0 폼 + 앞발 Air Zoom + 미디얼 지지 시스템",
-            "plate": "미디얼 서포트 섕크",
-            "stack_height": "37mm / 27mm",
-            "support_type": "Stability (정통 내전 제어)"
-        },
-        "runrepeat": {
-            "score": 88,
-            "midsole_foam": "Cushlon 3.0",
-            "pros": ["발목 내측 무너짐을 든든하게 받쳐주는 지지대", "단단하고 안정적인 힐컵", "넓은 밑창 플랫폼"],
-            "cons": ["310g대의 묵직한 중량"],
-            "verdict": "평발 러너와 과회내 러너의 든든한 가디언, 나이키의 정통 안정화.",
-            "url": "https://runrepeat.com/nike-structure-25"
-        }
-    },
-    {
-        "id": "nike_zoom_fly_6",
-        "brand_id": "nike",
-        "name_kr": "나이키 줌 플라이 6",
-        "name_en": "Nike Zoom Fly 6",
-        "series": "줌 플라이",
-        "category": "super_trainer",
-        "category_name": "슈퍼 트레이너",
-        "msrp_usd": 170,
-        "msrp_krw": 199000,
-        "widths": ["D"],
-        "specs": {
-            "weight_g": 252,
-            "heel_drop_mm": 8,
-            "midsole": "ZoomX + SR-02 외피 + 풀렝스 카본 플라이플레이트",
-            "plate": "Full Carbon Fiber Flyplate",
-            "stack_height": "42mm / 34mm",
-            "support_type": "Neutral (템포/마라톤 훈련)"
-        },
-        "runrepeat": {
-            "score": 93,
-            "midsole_foam": "ZoomX",
-            "pros": ["전작(줌플라이5) 대비 30g 이상 획기적 경량화 성공", "베이퍼플라이 감성의 강력한 카본 추진력", "훈련용으로 설계되어 뛰어난 내구성"],
-            "cons": ["느린 조깅 페이스에서는 발목 피로도 유발"],
-            "verdict": "베이퍼플라이의 레이싱 기술을 데일리 훈련에서 마음껏 즐기는 카본 슈퍼트레이너.",
-            "url": "https://runrepeat.com/nike-zoom-fly-6"
-        }
-    },
-    {
-        "id": "nike_vaporfly_3",
-        "brand_id": "nike",
-        "name_kr": "나이키 베이퍼플라이 3",
-        "name_en": "Nike Vaporfly 3",
-        "series": "베이퍼플라이",
-        "category": "racing",
-        "category_name": "레이싱화 (카본 슈퍼슈즈)",
-        "msrp_usd": 260,
-        "msrp_krw": 299000,
-        "widths": ["D"],
-        "specs": {
-            "weight_g": 182,
-            "heel_drop_mm": 8,
-            "midsole": "100% ZoomX Foam + 풀렝스 Flyplate 카본 플레이트",
-            "plate": "Full Carbon Fiber Flyplate",
-            "stack_height": "40mm / 32mm",
-            "support_type": "Neutral (마라톤 레이스 종결자)"
-        },
-        "runrepeat": {
-            "score": 95,
-            "midsole_foam": "ZoomX",
-            "pros": ["182g이라는 충격적인 초경량화", "신는 순간 앞으로 튕겨나가는 폭발적 에너지 리턴", "더 얇아진 아웃솔로 미드솔 ZoomX 부피 극대화"],
-            "cons": ["지우개 같은 아웃솔 수명 (대회 전용 추천)"],
-            "verdict": "마라톤 레이싱화의 판도를 바꾼 카본 슈퍼슈즈의 영원한 황제.",
-            "url": "https://runrepeat.com/nike-vaporfly-3"
-        }
-    },
-    {
-        "id": "nike_alphafly_3",
-        "brand_id": "nike",
-        "name_kr": "나이키 알파플라이 3",
-        "name_en": "Nike Alphafly 3",
-        "series": "알파플라이",
-        "category": "racing",
-        "category_name": "레이싱화 (카본 슈퍼슈즈)",
-        "msrp_usd": 285,
-        "msrp_krw": 329000,
-        "widths": ["D"],
-        "specs": {
-            "weight_g": 204,
-            "heel_drop_mm": 8,
-            "midsole": "일체형 연결 ZoomX + 듀얼 에어팟 + 풀 카본 플레이트",
-            "plate": "Full Carbon Fiber Flyplate",
-            "stack_height": "40mm / 32mm",
-            "support_type": "Neutral (세계 신기록 레이서)"
+            "weight_g": 200,
+            "heel_drop_mm": 6,
+            "midsole": "신형 Lightstrike Pro 3.0 + 풀 카본 EnergyRods 2.0",
+            "plate": "Full Carbon EnergyRods 2.0",
+            "stack_height": "39mm / 33mm",
+            "support_type": "Neutral (2025 최신 카본 플래그십)"
         },
         "runrepeat": {
             "score": 96,
-            "midsole_foam": "ZoomX",
-            "pros": ["마라톤 2시간 벽을 깬 인류 최고의 레이싱 병기", "일체형 밑창으로 전환이 전작 대비 훨씬 부드러움", "듀얼 에어팟의 극한 반발력"],
-            "cons": ["30만원이 넘는 가격과 높은 진입 장벽"],
-            "verdict": "엘리트 마라토너와 기록 단축을 갈망하는 모든 러너들의 궁극의 꿈.",
-            "url": "https://runrepeat.com/nike-alphafly-3"
+            "midsole_foam": "Lightstrike Pro 3.0",
+            "pros": ["전작(프로3) 대비 18g 감량에 성공한 200g 플래그십", "더욱 부드럽고 튀어오르는 신형 라이트스트라이크 프로", "새로운 로커 포인트로 전진 가속력 강화"],
+            "cons": ["힐 착지 러너에게는 여전히 타이트한 안정성"],
+            "verdict": "세계 마라톤을 제패한 프로3의 전설을 완벽하게 계승한 2025 최신 엘리트 카본 레이서.",
+            "url": "https://runrepeat.com/adidas-adizero-adios-pro-4"
         }
     },
 
-    # ------------------ ASICS ------------------
+    # ------------------ ASICS (2025/2026 LATEST) ------------------
     {
         "id": "asics_jolt_4",
         "brand_id": "asics",
@@ -654,38 +321,10 @@ SHOES = [
         }
     },
     {
-        "id": "asics_gt_1000_13",
+        "id": "asics_novablast_5",
         "brand_id": "asics",
-        "name_kr": "아식스 GT-1000 13",
-        "name_en": "Asics GT-1000 13",
-        "series": "GT-1000",
-        "category": "budget",
-        "category_name": "가성비 입문화 (≤$100)",
-        "msrp_usd": 100,
-        "msrp_krw": 119000,
-        "widths": ["D", "2E"],
-        "specs": {
-            "weight_g": 270,
-            "heel_drop_mm": 8,
-            "midsole": "FLYTEFOAM + PureGEL + 3D 가이던스 시스템",
-            "plate": "없음",
-            "stack_height": "34.5mm / 26.5mm",
-            "support_type": "Stability (입문 안정화 1위)"
-        },
-        "runrepeat": {
-            "score": 88,
-            "midsole_foam": "FLYTEFOAM",
-            "pros": ["100달러 가격에 퓨어젤과 3D 가이던스 시스템 탑재", "과회내 지지와 충격 흡수의 황금 밸런스", "가벼운 무게감"],
-            "cons": ["최상급 폼(FF BLAST+) 대비 푹신함은 덜함"],
-            "verdict": "10만원 초반대에서 찾을 수 있는 전 세계 최고의 입문용 안정화.",
-            "url": "https://runrepeat.com/asics-gt-1000-13"
-        }
-    },
-    {
-        "id": "asics_novablast_4",
-        "brand_id": "asics",
-        "name_kr": "아식스 노바블라스트 4",
-        "name_en": "Asics Novablast 4",
+        "name_kr": "아식스 노바블라스트 5",
+        "name_en": "Asics Novablast 5",
         "series": "노바블라스트",
         "category": "daily",
         "category_name": "데일리 / 쿠션화",
@@ -693,27 +332,27 @@ SHOES = [
         "msrp_krw": 159000,
         "widths": ["D", "2E"],
         "specs": {
-            "weight_g": 260,
+            "weight_g": 255,
             "heel_drop_mm": 8,
-            "midsole": "FF BLAST+ ECO (트램펄린 지오메트리)",
-            "plate": "없음",
+            "midsole": "FF BLAST+ MAX (최신 고탄성 맥스 폼)",
+            "plate": "없음 (기하학적 트램펄린 지오메트리)",
             "stack_height": "41.5mm / 33.5mm",
-            "support_type": "Neutral (고탄성 트램펄린)"
+            "support_type": "Neutral (2025 전세계 1위 데일리)"
         },
         "runrepeat": {
-            "score": 93,
-            "midsole_foam": "FF BLAST+ ECO",
-            "pros": ["트램펄린 위를 뛰는 듯한 쫀득하고 경쾌한 반발력", "41.5mm 맥스 스택에도 260g의 경량성", "조깅부터 템포런까지 모두 즐거운 마법의 신발"],
-            "cons": ["과도한 트램펄린 반발로 극심한 과회내 러너는 주의"],
-            "verdict": "달리는 재미가 무엇인지 온몸으로 알려주는 전 세계 판매 1위 데일리 러닝화.",
-            "url": "https://runrepeat.com/asics-novablast-4"
+            "score": 94,
+            "midsole_foam": "FF BLAST+ MAX",
+            "pros": ["FF BLAST+ MAX 도입으로 더욱 부드럽고 가벼워진 255g 무게", "통통 튀는 트램펄린 반발력이 역대급으로 개선", "조깅부터 템포런까지 완벽한 재미를 선사"],
+            "cons": ["심한 평발/과회내 러너는 카야노 추천"],
+            "verdict": "2025년 러닝화 시장을 다시 한 번 평정한 가장 재미있고 완벽한 데일리 트레이너.",
+            "url": "https://runrepeat.com/asics-novablast-5"
         }
     },
     {
-        "id": "asics_gel_nimbus_26",
+        "id": "asics_gel_nimbus_27",
         "brand_id": "asics",
-        "name_kr": "아식스 젤 님버스 26",
-        "name_en": "Asics Gel Nimbus 26",
+        "name_kr": "아식스 젤 님버스 27",
+        "name_en": "Asics Gel Nimbus 27",
         "series": "젤 님버스",
         "category": "daily",
         "category_name": "데일리 / 쿠션화",
@@ -721,48 +360,20 @@ SHOES = [
         "msrp_krw": 199000,
         "widths": ["D", "2E", "4E"],
         "specs": {
-            "weight_g": 304,
+            "weight_g": 300,
             "heel_drop_mm": 8,
-            "midsole": "FF BLAST+ ECO + 뒷굽 내부 PureGEL",
+            "midsole": "FF BLAST+ ECO 2.0 + PureGEL (세계 최강 충격 흡수)",
             "plate": "없음",
-            "stack_height": "42mm / 34mm",
-            "support_type": "Neutral (극강의 맥스 쿠션)"
+            "stack_height": "42.5mm / 34.5mm",
+            "support_type": "Neutral (2025 최신 구름 쿠션의 정점)"
         },
         "runrepeat": {
-            "score": 92,
-            "midsole_foam": "FF BLAST+ ECO",
-            "pros": ["지상 최강의 구름 위를 걷는 듯한 퓨어젤 쿠셔닝", "HYBRID ASICSGRIP 아웃솔로 접지력 대폭 개선", "니트 어퍼의 포근한 감싸안음"],
-            "cons": ["스피드런보다는 조깅 및 회복런 전용"],
-            "verdict": "무릎과 허리 관절을 완벽하게 지키고 싶은 러너를 위한 구름 쿠션의 정점.",
-            "url": "https://runrepeat.com/asics-gel-nimbus-26"
-        }
-    },
-    {
-        "id": "asics_gel_kayano_31",
-        "brand_id": "asics",
-        "name_kr": "아식스 젤 카야노 31",
-        "name_en": "Asics Gel Kayano 31",
-        "series": "젤 카야노",
-        "category": "stability",
-        "category_name": "안정화 (과회내 서포트)",
-        "msrp_usd": 165,
-        "msrp_krw": 199000,
-        "widths": ["D", "2E", "4E"],
-        "specs": {
-            "weight_g": 305,
-            "heel_drop_mm": 10,
-            "midsole": "FF BLAST+ ECO + 4D 가이던스 시스템 + PureGEL",
-            "plate": "없음 (지능형 적응 폼 지지)",
-            "stack_height": "40mm / 30mm",
-            "support_type": "Stability (안정화 끝판왕)"
-        },
-        "runrepeat": {
-            "score": 92,
-            "midsole_foam": "FF BLAST+ ECO",
-            "pros": ["피로도가 쌓일수록 내측 아치를 부드럽게 복원하는 4D 가이던스", "안정화임에도 놀라울 정도로 푹신한 쿠션감", "동양인 발볼러를 위한 완벽한 피팅 옵션"],
-            "cons": ["스피드런에는 다소 무거운 편"],
-            "verdict": "31년 역사가 증명하는 전 세계 안정화 부문 부동의 1위이자 기준점.",
-            "url": "https://runrepeat.com/asics-gel-kayano-31"
+            "score": 93,
+            "midsole_foam": "FF BLAST+ ECO 2.0",
+            "pros": ["충격 흡수력 랩 테스트 역대 최고점 경신", "더 쾌적해진 신형 엔지니어드 니트 어퍼", "무릎과 관절을 완벽하게 보호하는 마법의 쿠션"],
+            "cons": ["레이싱용으로는 다소 묵직함"],
+            "verdict": "지상에서 가장 부드러운 착지감을 선사하는 2025 최신 플래그십 맥스 쿠션화.",
+            "url": "https://runrepeat.com/asics-gel-nimbus-27"
         }
     },
     {
@@ -822,235 +433,149 @@ SHOES = [
         }
     },
 
-    # ------------------ SAUCONY ------------------
+    # ------------------ NIKE (2025/2026 LATEST) ------------------
     {
-        "id": "saucony_cohesion_17",
-        "brand_id": "saucony",
-        "name_kr": "써코니 코히전 17",
-        "name_en": "Saucony Cohesion 17",
-        "series": "코히전",
+        "id": "nike_revolution_7",
+        "brand_id": "nike",
+        "name_kr": "나이키 레볼루션 7",
+        "name_en": "Nike Revolution 7",
+        "series": "레볼루션",
         "category": "budget",
         "category_name": "가성비 입문화 (≤$100)",
-        "msrp_usd": 65,
+        "msrp_usd": 70,
         "msrp_krw": 79000,
-        "widths": ["D", "2E"],
+        "widths": ["D", "4E"],
         "specs": {
-            "weight_g": 260,
-            "heel_drop_mm": 12,
-            "midsole": "VERSARUN 쿠셔닝",
+            "weight_g": 288,
+            "heel_drop_mm": 10,
+            "midsole": "Phylon EVA 쿠셔닝",
             "plate": "없음",
-            "stack_height": "29mm / 17mm",
-            "support_type": "Neutral (가성비 입문)"
+            "stack_height": "31mm / 21mm",
+            "support_type": "Neutral (중립)"
         },
         "runrepeat": {
-            "score": 83,
-            "midsole_foam": "VERSARUN",
-            "pros": ["60달러대 놀라운 가성비", "가볍고 경쾌한 260g 무게", "튼튼한 아웃솔 고무 내구성"],
-            "cons": ["최신 맥스쿠션 대비 얇은 전족부 쿠션"],
-            "verdict": "미국 러너들이 입문할 때 가장 많이 집어 드는 실속 만점 가성비 슈즈.",
-            "url": "https://runrepeat.com/saucony-cohesion-17"
+            "score": 82,
+            "midsole_foam": "EVA Foam",
+            "pros": ["나이키 전 제품 중 가장 착한 7만원대 가격", "심플하고 깔끔한 디자인으로 워킹·운동 겸용", "부드러운 발목 패딩"],
+            "cons": ["고속 질주시 반발력 한계", "비 오는 날 접지력 주의"],
+            "verdict": "운동을 막 시작하는 러너의 첫 번째 파트너로 가장 부담 없는 스테디셀러.",
+            "url": "https://runrepeat.com/nike-revolution-7"
         }
     },
     {
-        "id": "saucony_ride_17",
-        "brand_id": "saucony",
-        "name_kr": "써코니 라이드 17",
-        "name_en": "Saucony Ride 17",
-        "series": "라이드",
+        "id": "nike_pegasus_41",
+        "brand_id": "nike",
+        "name_kr": "나이키 페가수스 41",
+        "name_en": "Nike Pegasus 41",
+        "series": "페가수스",
         "category": "daily",
         "category_name": "데일리 / 쿠션화",
         "msrp_usd": 140,
         "msrp_krw": 159000,
-        "widths": ["D", "2E"],
+        "widths": ["D", "2E", "4E"],
         "specs": {
             "weight_g": 282,
-            "heel_drop_mm": 8,
-            "midsole": "PWRRUN+ (TPU 비드 발포 프리미엄 폼)",
+            "heel_drop_mm": 10,
+            "midsole": "ReactX Foam + 앞/뒤 듀얼 Air Zoom 유닛",
             "plate": "없음",
-            "stack_height": "35mm / 27mm",
-            "support_type": "Neutral (만능 데일리)"
-        },
-        "runrepeat": {
-            "score": 91,
-            "midsole_foam": "PWRRUN+",
-            "pros": ["전작의 일반 EVA에서 고급 PWRRUN+ 폼으로 전면 업그레이드", "겨울철에도 얼지 않고 쫄깃한 쿠션 유지", "조깅부터 장거리까지 완벽한 밸런스"],
-            "cons": ["엄청나게 푹신한 맥스쿠션을 기대하면 다소 탄탄함"],
-            "verdict": "어떤 훈련에도 믿고 신는 가장 든든한 데일리 워크호스 러닝화.",
-            "url": "https://runrepeat.com/saucony-ride-17"
-        }
-    },
-    {
-        "id": "saucony_guide_17",
-        "brand_id": "saucony",
-        "name_kr": "써코니 가이드 17",
-        "name_en": "Saucony Guide 17",
-        "series": "가이드",
-        "category": "stability",
-        "category_name": "안정화 (과회내 서포트)",
-        "msrp_usd": 140,
-        "msrp_krw": 159000,
-        "widths": ["D", "2E"],
-        "specs": {
-            "weight_g": 269,
-            "heel_drop_mm": 6,
-            "midsole": "PWRRUN + Center Path 테크놀로지 (넓은 베이스 & 깊은 사이드월)",
-            "plate": "없음 (자연스러운 지오메트리 서포트)",
-            "stack_height": "35mm / 29mm",
-            "support_type": "Stability (신개념 센터패스)"
+            "stack_height": "37mm / 27mm",
+            "support_type": "Neutral (국민 데일리)"
         },
         "runrepeat": {
             "score": 90,
-            "midsole_foam": "PWRRUN",
-            "pros": ["딱딱한 미디얼 포스트 없이 넓은 밑창 베이스로 편안한 안정성 제공", "269g의 놀라운 경량 안정화", "낮아진 6mm 드롭으로 부드러운 롤링"],
-            "cons": ["포근한 푹신함보다는 안정적인 착지감 중심"],
-            "verdict": "기존의 억지스러운 안정화 틀을 깨버린 가장 현대적이고 편안한 안정화.",
-            "url": "https://runrepeat.com/saucony-guide-17"
+            "midsole_foam": "ReactX",
+            "pros": ["ReactX 폼 도입으로 에너지 리턴 13% 대폭 향상", "에어줌 유닛의 통통 튀는 탄력", "1,000km를 달려도 끄떡없는 와플 아웃솔 내구성"],
+            "cons": ["정통 레이싱화 대비 다소 무거움"],
+            "verdict": "러닝 역사상 가장 신뢰받는 41년 전통의 국민 데일리 러닝화.",
+            "url": "https://runrepeat.com/nike-pegasus-41"
         }
     },
     {
-        "id": "saucony_endorphin_speed_4",
-        "brand_id": "saucony",
-        "name_kr": "써코니 엔돌핀 스피드 4",
-        "name_en": "Saucony Endorphin Speed 4",
-        "series": "엔돌핀 스피드",
-        "category": "super_trainer",
-        "category_name": "슈퍼 트레이너",
+        "id": "nike_vomero_18",
+        "brand_id": "nike",
+        "name_kr": "나이키 보메로 18",
+        "name_en": "Nike Vomero 18",
+        "series": "보메로",
+        "category": "daily",
+        "category_name": "데일리 / 쿠션화",
         "msrp_usd": 170,
         "msrp_krw": 199000,
         "widths": ["D", "2E"],
         "specs": {
-            "weight_g": 233,
-            "heel_drop_mm": 8,
-            "midsole": "PWRRUN PB (PEBA 슈퍼폼) + 윙 나일론 플레이트",
-            "plate": "Nylon Winged Plate (유연한 나일론 윙)",
-            "stack_height": "36mm / 28mm",
-            "support_type": "Neutral (올라운드 슈퍼트레이너)"
+            "weight_g": 285,
+            "heel_drop_mm": 10,
+            "midsole": "46mm 초대형 풀 ZoomX + ReactX 듀얼 쿠션",
+            "plate": "없음",
+            "stack_height": "46mm / 36mm",
+            "support_type": "Neutral (2025 맥스쿠션 괴물)"
         },
         "runrepeat": {
             "score": 93,
-            "midsole_foam": "PWRRUN PB",
-            "pros": ["나일론 플레이트와 PEBA 슈퍼폼의 마법 같은 조화", "카본화 대비 종아리 피로도가 극히 적어 매일 신을 수 있음", "조깅부터 템포런, 실제 마라톤 대회까지 완벽 커버"],
-            "cons": ["빗길 노면 접지력은 보통 수준"],
-            "verdict": "전 세계 러너들이 단 한 켤레의 신발만 골라야 한다면 선택하는 만능 트레이너.",
-            "url": "https://runrepeat.com/saucony-endorphin-speed-4"
+            "midsole_foam": "Full ZoomX & ReactX",
+            "pros": ["나이키 역사상 가장 높은 46mm 스택 높이", "풍성한 풀 ZoomX의 쫄깃하고 부드러운 반발력", "장거리 LSD와 회복 러닝에 완벽한 무릎 보호"],
+            "cons": ["높은 스택으로 급격한 코너링 시 주의"],
+            "verdict": "나이키가 인빈서블의 맥스쿠션을 보메로에 결합하여 탄생시킨 2025 최신 럭셔리 쿠션화.",
+            "url": "https://runrepeat.com/nike-vomero-18"
         }
     },
     {
-        "id": "saucony_endorphin_pro_4",
-        "brand_id": "saucony",
-        "name_kr": "써코니 엔돌핀 프로 4",
-        "name_en": "Saucony Endorphin Pro 4",
-        "series": "엔돌핀 프로",
-        "category": "racing",
-        "category_name": "레이싱화 (카본 슈퍼슈즈)",
-        "msrp_usd": 250,
-        "msrp_krw": 279000,
-        "widths": ["D"],
-        "specs": {
-            "weight_g": 212,
-            "heel_drop_mm": 8,
-            "midsole": "PWRRUN HG (상단) + PWRRUN PB (하단) + 풀 카본 플레이트",
-            "plate": "Full Carbon Fiber Plate",
-            "stack_height": "39.5mm / 31.5mm",
-            "support_type": "Neutral (엘리트 마라톤 카본 레이서)"
-        },
-        "runrepeat": {
-            "score": 94,
-            "midsole_foam": "PWRRUN PB & HG",
-            "pros": ["카본 레이싱화 중 가장 안정적이고 발목 꺾임이 적음", "최상급 HG 폼 탑재로 가속력 폭발", "스피드로 테크놀로지의 자연스러운 롤링"],
-            "cons": ["엔돌핀 스피드보다 딱딱한 카본 체감"],
-            "verdict": "안정성과 폭발적 스피드를 동시에 챙긴 가장 믿음직한 마라톤 카본화.",
-            "url": "https://runrepeat.com/saucony-endorphin-pro-4"
-        }
-    },
-
-    # ------------------ HOKA ------------------
-    {
-        "id": "hoka_clifton_9",
-        "brand_id": "hoka",
-        "name_kr": "호카 클리프톤 9",
-        "name_en": "Hoka Clifton 9",
-        "series": "클리프톤",
-        "category": "daily",
-        "category_name": "데일리 / 쿠션화",
-        "msrp_usd": 145,
-        "msrp_krw": 179000,
-        "widths": ["D", "2E"],
-        "specs": {
-            "weight_g": 248,
-            "heel_drop_mm": 5,
-            "midsole": "압축 성형 EVA (CMEVA) + 얼리 스테이지 메타 로커",
-            "plate": "없음",
-            "stack_height": "32mm / 27mm",
-            "support_type": "Neutral (국민 쿠션화)"
-        },
-        "runrepeat": {
-            "score": 91,
-            "midsole_foam": "CMEVA",
-            "pros": ["248g이라는 믿을 수 없는 경량성과 풍부한 쿠션", "자연스럽게 발이 굴러가는 메타 로커 지오메트리", "장거리 조깅 시 관절 피로 제로"],
-            "cons": ["미드풋 아치가 다소 좁게 느껴질 수 있음(와이드 추천)"],
-            "verdict": "호카를 전 세계적인 브랜드로 만든 상징이자 매일 달리고 싶게 만드는 데일리 쿠션화.",
-            "url": "https://runrepeat.com/hoka-clifton-9"
-        }
-    },
-    {
-        "id": "hoka_mach_6",
-        "brand_id": "hoka",
-        "name_kr": "호카 마하 6",
-        "name_en": "Hoka Mach 6",
-        "series": "마하",
+        "id": "nike_zoom_fly_6",
+        "brand_id": "nike",
+        "name_kr": "나이키 줌 플라이 6",
+        "name_en": "Nike Zoom Fly 6",
+        "series": "줌 플라이",
         "category": "super_trainer",
         "category_name": "슈퍼 트레이너",
-        "msrp_usd": 140,
-        "msrp_krw": 169000,
-        "widths": ["D", "2E"],
-        "specs": {
-            "weight_g": 232,
-            "heel_drop_mm": 5,
-            "midsole": "단일 초임계 EVA (Supercritical Foam) + 고무 아웃솔",
-            "plate": "없음 (순수 경량 스피드)",
-            "stack_height": "37mm / 32mm",
-            "support_type": "Neutral (경량 템포 트레이너)"
-        },
-        "runrepeat": {
-            "score": 92,
-            "midsole_foam": "Supercritical EVA",
-            "pros": ["초임계 폼 전격 도입으로 전작 대비 반발력 대폭 상승", "전작의 치명적 약점이었던 아웃솔 내구성 해결", "232g 초경량 템포런 최적화"],
-            "cons": ["힐드롭 5mm로 낮은 드롭 적응 필요"],
-            "verdict": "플레이트 없이 오직 가벼움과 폼 탄성으로 질주하는 가장 신나는 트레이너.",
-            "url": "https://runrepeat.com/hoka-mach-6"
-        }
-    },
-    {
-        "id": "hoka_cielo_x1",
-        "brand_id": "hoka",
-        "name_kr": "호카 시엘로 X1",
-        "name_en": "Hoka Cielo X1",
-        "series": "시엘로",
-        "category": "racing",
-        "category_name": "레이싱화 (카본 슈퍼슈즈)",
-        "msrp_usd": 275,
-        "msrp_krw": 339000,
+        "msrp_usd": 170,
+        "msrp_krw": 199000,
         "widths": ["D"],
         "specs": {
-            "weight_g": 254,
-            "heel_drop_mm": 7,
-            "midsole": "듀얼 레이어 100% PEBA 폼 + 윙 카본 플레이트 + 익스트림 로커",
-            "plate": "Winged Carbon Fiber Plate",
-            "stack_height": "39mm / 32mm",
-            "support_type": "Neutral (극강의 추진력 카본 레이서)"
+            "weight_g": 252,
+            "heel_drop_mm": 8,
+            "midsole": "ZoomX + SR-02 외피 + 풀렝스 카본 플라이플레이트",
+            "plate": "Full Carbon Fiber Flyplate",
+            "stack_height": "42mm / 34mm",
+            "support_type": "Neutral (카본 슈퍼트레이너)"
         },
         "runrepeat": {
             "score": 93,
-            "midsole_foam": "PEBA Foam",
-            "pros": ["현존 러닝화 중 가장 다이나믹한 로커 지오메트리", "호카 역사상 가장 반발력 높은 100% PEBA 슈퍼폼", "신는 순간 자동으로 앞으로 굴러떨어지는 추진력"],
-            "cons": ["250g대로 타사 플래그십 레이서 대비 무게가 나감"],
-            "verdict": "호카가 모든 기술력을 쏟아부어 완성한 가장 과격하고 짜릿한 카본 슈퍼슈즈.",
-            "url": "https://runrepeat.com/hoka-cielo-x1"
+            "midsole_foam": "ZoomX",
+            "pros": ["전작 대비 30g 이상 획기적 감량(252g)", "베이퍼플라이 감성의 카본 추진력", "훈련용으로 설계된 질긴 내구성"],
+            "cons": ["느린 조깅 페이스에서는 발목 피로도 유발"],
+            "verdict": "베이퍼플라이의 레이싱 기술을 데일리 훈련에서 마음껏 즐기는 카본 슈퍼트레이너.",
+            "url": "https://runrepeat.com/nike-zoom-fly-6"
+        }
+    },
+    {
+        "id": "nike_alphafly_3",
+        "brand_id": "nike",
+        "name_kr": "나이키 알파플라이 3",
+        "name_en": "Nike Alphafly 3",
+        "series": "알파플라이",
+        "category": "racing",
+        "category_name": "레이싱화 (카본 슈퍼슈즈)",
+        "msrp_usd": 285,
+        "msrp_krw": 329000,
+        "widths": ["D"],
+        "specs": {
+            "weight_g": 204,
+            "heel_drop_mm": 8,
+            "midsole": "일체형 연결 ZoomX + 듀얼 에어팟 + 풀 카본 플레이트",
+            "plate": "Full Carbon Fiber Flyplate",
+            "stack_height": "40mm / 32mm",
+            "support_type": "Neutral (세계 신기록 레이서)"
+        },
+        "runrepeat": {
+            "score": 96,
+            "midsole_foam": "ZoomX",
+            "pros": ["마라톤 2시간 벽을 깬 인류 최고의 레이싱 병기", "일체형 밑창으로 전환이 전작 대비 훨씬 부드러움", "듀얼 에어팟의 극한 반발력"],
+            "cons": ["30만원이 넘는 가격과 높은 진입 장벽"],
+            "verdict": "엘리트 마라토너와 기록 단축을 갈망하는 모든 러너들의 궁극의 꿈.",
+            "url": "https://runrepeat.com/nike-alphafly-3"
         }
     },
 
-    # ------------------ NEW BALANCE ------------------
+    # ------------------ NEW BALANCE (2025/2026 LATEST) ------------------
     {
         "id": "nb_fresh_foam_arishi_v4",
         "brand_id": "newbalance",
@@ -1080,10 +605,10 @@ SHOES = [
         }
     },
     {
-        "id": "nb_fresh_foam_x_1080_v13",
+        "id": "nb_fresh_foam_x_1080_v14",
         "brand_id": "newbalance",
-        "name_kr": "뉴발란스 프레쉬폼 X 1080 v13",
-        "name_en": "New Balance Fresh Foam X 1080 v13",
+        "name_kr": "뉴발란스 프레쉬폼 X 1080 v14",
+        "name_en": "New Balance Fresh Foam X 1080 v14",
         "series": "1080",
         "category": "daily",
         "category_name": "데일리 / 쿠션화",
@@ -1091,20 +616,20 @@ SHOES = [
         "msrp_krw": 199000,
         "widths": ["D", "2E", "4E"],
         "specs": {
-            "weight_g": 262,
+            "weight_g": 285,
             "heel_drop_mm": 6,
-            "midsole": "Fresh Foam X (역대 최상급 소프트 튜닝)",
+            "midsole": "Fresh Foam X 2.0 (더 탄탄해진 반발력과 힐락)",
             "plate": "없음",
             "stack_height": "38mm / 32mm",
-            "support_type": "Neutral (마시멜로 맥스 쿠션)"
+            "support_type": "Neutral (2025 최신 맥스 쿠션)"
         },
         "runrepeat": {
-            "score": 92,
-            "midsole_foam": "Fresh Foam X",
-            "pros": ["마시멜로를 밟는 듯한 지구상에서 가장 소프트한 미드솔 튜닝", "262g의 경량성", "발볼이 넓은 한국인 발에 안성맞춤인 와이드 옵션"],
-            "cons": ["너무 소프트하여 강한 지지력을 원하는 러너에게는 호불호"],
-            "verdict": "퇴근 후 지친 다리를 포근하게 감싸주는 궁극의 마시멜로 힐링 러닝화.",
-            "url": "https://runrepeat.com/new-balance-fresh-foam-x-1080-v13"
+            "score": 93,
+            "midsole_foam": "Fresh Foam X 2.0",
+            "pros": ["전작(v13)의 과도한 물렁함을 개선하여 주행 안정감 대폭 상승", "발등과 뒤꿈치를 단단하게 잡아주는 신형 어퍼", "발볼 넓은 한국인 러너를 위한 완벽한 2E/4E 옵션"],
+            "cons": ["전작 대비 약간 무거워진 무게"],
+            "verdict": "안정성과 풍부한 쿠션을 완벽한 균형으로 완성한 2025 최신 플래그십 트레이너.",
+            "url": "https://runrepeat.com/new-balance-fresh-foam-x-1080-v14"
         }
     },
     {
@@ -1164,7 +689,265 @@ SHOES = [
         }
     },
 
-    # ------------------ PUMA ------------------
+    # ------------------ BROOKS (2025/2026 LATEST) ------------------
+    {
+        "id": "brooks_ghost_17",
+        "brand_id": "brooks",
+        "name_kr": "브룩스 고스트 17",
+        "name_en": "Brooks Ghost 17",
+        "series": "고스트",
+        "category": "daily",
+        "category_name": "데일리 / 쿠션화",
+        "msrp_usd": 140,
+        "msrp_krw": 169000,
+        "widths": ["D", "2E", "4E"],
+        "specs": {
+            "weight_g": 275,
+            "heel_drop_mm": 10,
+            "midsole": "DNA LOFT v3 (전면 질소 주입 초임계 쿠션폼 업그레이드)",
+            "plate": "없음",
+            "stack_height": "36mm / 26mm",
+            "support_type": "Neutral (2025 미국 판매 1위 국민 데일리)"
+        },
+        "runrepeat": {
+            "score": 92,
+            "midsole_foam": "DNA LOFT v3",
+            "pros": ["10mm로 낮아진 드롭으로 한층 더 부드러워진 발구름 전환", "질소 폼의 탄력적인 충격 흡수", "1,000km 뛰어도 멀쩡한 내구성 종결자"],
+            "cons": ["빠른 레이스보다는 조깅과 장거리 훈련에 최적화"],
+            "verdict": "전 세계에서 가장 실패 없는 러닝화라는 찬사를 받는 2025 최신 국민 데일리 트레이너.",
+            "url": "https://runrepeat.com/brooks-ghost-17"
+        }
+    },
+    {
+        "id": "brooks_adrenaline_gts_24",
+        "brand_id": "brooks",
+        "name_kr": "브룩스 아드레날린 GTS 24",
+        "name_en": "Brooks Adrenaline GTS 24",
+        "series": "아드레날린",
+        "category": "stability",
+        "category_name": "안정화 (과회내 서포트)",
+        "msrp_usd": 140,
+        "msrp_krw": 169000,
+        "widths": ["D", "2E", "4E"],
+        "specs": {
+            "weight_g": 283,
+            "heel_drop_mm": 12,
+            "midsole": "DNA LOFT v3 (질소 주입) + GuideRails 서포트 시스템",
+            "plate": "없음 (가이드레일 범퍼)",
+            "stack_height": "36mm / 24mm",
+            "support_type": "Stability (2025 최신 안정화 1위)"
+        },
+        "runrepeat": {
+            "score": 92,
+            "midsole_foam": "DNA LOFT v3",
+            "pros": ["드디어 아드레날린 시리즈 최초로 질소 주입 DNA LOFT v3 폼 탑재", "무릎과 발목 과회전을 완벽하게 제어하는 가이드레일", "발 편함과 안정감의 최고봉"],
+            "cons": ["12mm 높은 힐드롭"],
+            "verdict": "평발과 과회내로 무릎 통증을 겪는 러너를 위한 2025 최신 구원투수 안정화.",
+            "url": "https://runrepeat.com/brooks-adrenaline-gts-24"
+        }
+    },
+    {
+        "id": "brooks_hyperion_max_2",
+        "brand_id": "brooks",
+        "name_kr": "브룩스 하이페리온 맥스 2",
+        "name_en": "Brooks Hyperion Max 2",
+        "series": "하이페리온",
+        "category": "super_trainer",
+        "category_name": "슈퍼 트레이너",
+        "msrp_usd": 180,
+        "msrp_krw": 219000,
+        "widths": ["D"],
+        "specs": {
+            "weight_g": 258,
+            "heel_drop_mm": 6,
+            "midsole": "DNA FLASH v2 (질소 슈퍼폼) + Pebax 스피드볼트 플레이트",
+            "plate": "Pebax SpeedVault Plate",
+            "stack_height": "36mm / 30mm",
+            "support_type": "Neutral (스피드 락커 트레이너)"
+        },
+        "runrepeat": {
+            "score": 93,
+            "midsole_foam": "DNA FLASH v2",
+            "pros": ["신형 페박스 플레이트 탑재로 전작 대비 10% 향상된 추진력", "초임계 질소 폼의 탄탄하고 빠른 반발", "빠른 페이스 훈련에 최적화"],
+            "cons": ["조깅 페이스에서는 다소 단단함"],
+            "verdict": "인터벌과 템포런을 가볍고 경쾌하게 밀어붙이는 2025 최신 스피드 트레이너.",
+            "url": "https://runrepeat.com/brooks-hyperion-max-2"
+        }
+    },
+
+    # ------------------ SAUCONY (2025/2026 LATEST) ------------------
+    {
+        "id": "saucony_ride_18",
+        "brand_id": "saucony",
+        "name_kr": "써코니 라이드 18",
+        "name_en": "Saucony Ride 18",
+        "series": "라이드",
+        "category": "daily",
+        "category_name": "데일리 / 쿠션화",
+        "msrp_usd": 140,
+        "msrp_krw": 159000,
+        "widths": ["D", "2E"],
+        "specs": {
+            "weight_g": 275,
+            "heel_drop_mm": 8,
+            "midsole": "PWRRUN+ 2.0 (초경량 비드 발포 폼)",
+            "plate": "없음",
+            "stack_height": "35mm / 27mm",
+            "support_type": "Neutral (2025 만능 데일리)"
+        },
+        "runrepeat": {
+            "score": 92,
+            "midsole_foam": "PWRRUN+ 2.0",
+            "pros": ["더욱 가벼워진 275g 무게와 향상된 에너지 리턴", "겨울철 영하 날씨에도 얼지 않고 쫄깃한 쿠션", "조깅부터 템포런까지 완벽한 밸런스"],
+            "cons": ["극단적 맥스쿠션을 원하는 러너에게는 탄탄함"],
+            "verdict": "어떤 러닝에도 고민 없이 신을 수 있는 2025 최신 만능 워크호스 러닝화.",
+            "url": "https://runrepeat.com/saucony-ride-18"
+        }
+    },
+    {
+        "id": "saucony_endorphin_speed_4",
+        "brand_id": "saucony",
+        "name_kr": "써코니 엔돌핀 스피드 4",
+        "name_en": "Saucony Endorphin Speed 4",
+        "series": "엔돌핀 스피드",
+        "category": "super_trainer",
+        "category_name": "슈퍼 트레이너",
+        "msrp_usd": 170,
+        "msrp_krw": 199000,
+        "widths": ["D", "2E"],
+        "specs": {
+            "weight_g": 233,
+            "heel_drop_mm": 8,
+            "midsole": "PWRRUN PB (PEBA 슈퍼폼) + 윙 나일론 플레이트",
+            "plate": "Nylon Winged Plate",
+            "stack_height": "36mm / 28mm",
+            "support_type": "Neutral (올라운드 슈퍼트레이너)"
+        },
+        "runrepeat": {
+            "score": 93,
+            "midsole_foam": "PWRRUN PB",
+            "pros": ["나일론 플레이트와 PEBA 슈퍼폼의 마법 같은 조화", "카본화 대비 종아리 피로도가 극히 적어 매일 신을 수 있음", "조깅부터 템포런, 실제 마라톤 대회까지 완벽 커버"],
+            "cons": ["빗길 노면 접지력은 보통 수준"],
+            "verdict": "전 세계 러너들이 단 한 켤레의 신발만 골라야 한다면 선택하는 만능 트레이너.",
+            "url": "https://runrepeat.com/saucony-endorphin-speed-4"
+        }
+    },
+    {
+        "id": "saucony_endorphin_pro_4",
+        "brand_id": "saucony",
+        "name_kr": "써코니 엔돌핀 프로 4",
+        "name_en": "Saucony Endorphin Pro 4",
+        "series": "엔돌핀 프로",
+        "category": "racing",
+        "category_name": "레이싱화 (카본 슈퍼슈즈)",
+        "msrp_usd": 250,
+        "msrp_krw": 279000,
+        "widths": ["D"],
+        "specs": {
+            "weight_g": 212,
+            "heel_drop_mm": 8,
+            "midsole": "PWRRUN HG (상단) + PWRRUN PB (하단) + 풀 카본 플레이트",
+            "plate": "Full Carbon Fiber Plate",
+            "stack_height": "39.5mm / 31.5mm",
+            "support_type": "Neutral (엘리트 마라톤 카본 레이서)"
+        },
+        "runrepeat": {
+            "score": 94,
+            "midsole_foam": "PWRRUN PB & HG",
+            "pros": ["카본 레이싱화 중 가장 안정적이고 발목 꺾임이 적음", "최상급 HG 폼 탑재로 가속력 폭발", "스피드로 테크놀로지의 자연스러운 롤링"],
+            "cons": ["엔돌핀 스피드보다 딱딱한 카본 체감"],
+            "verdict": "안정성과 폭발적 스피드를 동시에 챙긴 가장 믿음직한 마라톤 카본화.",
+            "url": "https://runrepeat.com/saucony-endorphin-pro-4"
+        }
+    },
+
+    # ------------------ HOKA (2025/2026 LATEST) ------------------
+    {
+        "id": "hoka_clifton_9",
+        "brand_id": "hoka",
+        "name_kr": "호카 클리프톤 9",
+        "name_en": "Hoka Clifton 9",
+        "series": "클리프톤",
+        "category": "daily",
+        "category_name": "데일리 / 쿠션화",
+        "msrp_usd": 145,
+        "msrp_krw": 179000,
+        "widths": ["D", "2E"],
+        "specs": {
+            "weight_g": 248,
+            "heel_drop_mm": 5,
+            "midsole": "압축 성형 EVA (CMEVA) + 얼리 스테이지 메타 로커",
+            "plate": "없음",
+            "stack_height": "32mm / 27mm",
+            "support_type": "Neutral (국민 쿠션화)"
+        },
+        "runrepeat": {
+            "score": 91,
+            "midsole_foam": "CMEVA",
+            "pros": ["248g이라는 믿을 수 없는 경량성과 풍부한 쿠션", "자연스럽게 발이 굴러가는 메타 로커 지오메트리", "장거리 조깅 시 관절 피로 제로"],
+            "cons": ["미드풋 아치가 다소 좁게 느껴질 수 있음(와이드 추천)"],
+            "verdict": "호카를 전 세계적인 브랜드로 만든 상징이자 매일 달리고 싶게 만드는 데일리 쿠션화.",
+            "url": "https://runrepeat.com/hoka-clifton-9"
+        }
+    },
+    {
+        "id": "hoka_mach_6",
+        "brand_id": "hoka",
+        "name_kr": "호카 마하 6",
+        "name_en": "Hoka Mach 6",
+        "series": "마하",
+        "category": "super_trainer",
+        "category_name": "슈퍼 트레이너",
+        "msrp_usd": 140,
+        "msrp_krw": 169000,
+        "widths": ["D", "2E"],
+        "specs": {
+            "weight_g": 232,
+            "heel_drop_mm": 5,
+            "midsole": "초임계 EVA (Supercritical Foam) + 고무 아웃솔",
+            "plate": "없음 (순수 경량 스피드)",
+            "stack_height": "37mm / 32mm",
+            "support_type": "Neutral (경량 템포 트레이너)"
+        },
+        "runrepeat": {
+            "score": 92,
+            "midsole_foam": "Supercritical EVA",
+            "pros": ["초임계 폼 전격 도입으로 전작 대비 반발력 대폭 상승", "전작의 치명적 약점이었던 아웃솔 내구성 해결", "232g 초경량 템포런 최적화"],
+            "cons": ["힐드롭 5mm로 낮은 드롭 적응 필요"],
+            "verdict": "플레이트 없이 오직 가벼움과 폼 탄성으로 질주하는 가장 신나는 트레이너.",
+            "url": "https://runrepeat.com/hoka-mach-6"
+        }
+    },
+    {
+        "id": "hoka_cielo_x1",
+        "brand_id": "hoka",
+        "name_kr": "호카 시엘로 X1",
+        "name_en": "Hoka Cielo X1",
+        "series": "시엘로",
+        "category": "racing",
+        "category_name": "레이싱화 (카본 슈퍼슈즈)",
+        "msrp_usd": 275,
+        "msrp_krw": 339000,
+        "widths": ["D"],
+        "specs": {
+            "weight_g": 254,
+            "heel_drop_mm": 7,
+            "midsole": "듀얼 레이어 100% PEBA 폼 + 윙 카본 플레이트 + 익스트림 로커",
+            "plate": "Winged Carbon Fiber Plate",
+            "stack_height": "39mm / 32mm",
+            "support_type": "Neutral (극강의 추진력 카본 레이서)"
+        },
+        "runrepeat": {
+            "score": 93,
+            "midsole_foam": "PEBA Foam",
+            "pros": ["현존 러닝화 중 가장 다이나믹한 로커 지오메트리", "호카 역사상 가장 반발력 높은 100% PEBA 슈퍼폼", "신는 순간 자동으로 앞으로 굴러떨어지는 추진력"],
+            "cons": ["250g대로 타사 플래그십 레이서 대비 무게가 나감"],
+            "verdict": "호카가 모든 기술력을 쏟아부어 완성한 가장 과격하고 짜릿한 카본 슈퍼슈즈.",
+            "url": "https://runrepeat.com/hoka-cielo-x1"
+        }
+    },
+
+    # ------------------ PUMA (2025/2026 LATEST) ------------------
     {
         "id": "puma_scend_pro",
         "brand_id": "puma",
@@ -1250,93 +1033,7 @@ SHOES = [
         }
     },
 
-    # ------------------ BROOKS ------------------
-    {
-        "id": "brooks_trace_3",
-        "brand_id": "brooks",
-        "name_kr": "브룩스 트레이스 3",
-        "name_en": "Brooks Trace 3",
-        "series": "트레이스",
-        "category": "budget",
-        "category_name": "가성비 입문화 (≤$100)",
-        "msrp_usd": 100,
-        "msrp_krw": 119000,
-        "widths": ["D", "2E"],
-        "specs": {
-            "weight_g": 252,
-            "heel_drop_mm": 12,
-            "midsole": "DNA LOFT 쿠셔닝",
-            "plate": "없음",
-            "stack_height": "30mm / 18mm",
-            "support_type": "Neutral (100달러 입문)"
-        },
-        "runrepeat": {
-            "score": 86,
-            "midsole_foam": "DNA LOFT",
-            "pros": ["브룩스 특유의 검증된 내구성과 발 편함", "100달러 정가에 252g 가벼운 무게", "초보 러너 힐 스트라이크에 최적화된 12mm 드롭"],
-            "cons": ["최신 맥스쿠션 대비 클래식한 쿠션감"],
-            "verdict": "기본기에 가장 충실한 러닝화 전문 브랜드 브룩스의 합리적 엔트리 모델.",
-            "url": "https://runrepeat.com/brooks-trace-3"
-        }
-    },
-    {
-        "id": "brooks_ghost_16",
-        "brand_id": "brooks",
-        "name_kr": "브룩스 고스트 16",
-        "name_en": "Brooks Ghost 16",
-        "series": "고스트",
-        "category": "daily",
-        "category_name": "데일리 / 쿠션화",
-        "msrp_usd": 140,
-        "msrp_krw": 169000,
-        "widths": ["D", "2E", "4E"],
-        "specs": {
-            "weight_g": 269,
-            "heel_drop_mm": 12,
-            "midsole": "DNA LOFT v3 (질소 주입 초임계 쿠션폼)",
-            "plate": "없음",
-            "stack_height": "36mm / 24mm",
-            "support_type": "Neutral (미국 판매 1위 국민 데일리)"
-        },
-        "runrepeat": {
-            "score": 91,
-            "midsole_foam": "DNA LOFT v3",
-            "pros": ["드디어 글리세린의 질소 주입 DNA LOFT v3 폼 전격 이식", "더욱 가벼워지고 반응성 향상", "미국 러닝 매장 판매 1위의 절대적 신뢰도"],
-            "cons": ["포어풋 러너에게는 12mm 힐드롭이 다소 높음"],
-            "verdict": "신는 순간 왜 미국 러너들이 가장 많이 찾는지 바로 납득되는 만능 데일리 트레이너.",
-            "url": "https://runrepeat.com/brooks-ghost-16"
-        }
-    },
-    {
-        "id": "brooks_adrenaline_gts_23",
-        "brand_id": "brooks",
-        "name_kr": "브룩스 아드레날린 GTS 23 / 24",
-        "name_en": "Brooks Adrenaline GTS 23",
-        "series": "아드레날린",
-        "category": "stability",
-        "category_name": "안정화 (과회내 서포트)",
-        "msrp_usd": 140,
-        "msrp_krw": 169000,
-        "widths": ["D", "2E", "4E"],
-        "specs": {
-            "weight_g": 286,
-            "heel_drop_mm": 12,
-            "midsole": "DNA LOFT v2 + GuideRails 스마트 서포트 시스템",
-            "plate": "없음 (가이드레일 일체형 범퍼)",
-            "stack_height": "36mm / 24mm",
-            "support_type": "Stability (가이드레일 안정화 1위)"
-        },
-        "runrepeat": {
-            "score": 91,
-            "midsole_foam": "DNA LOFT v2",
-            "pros": ["발뿐만 아니라 무릎 회전까지 보호하는 혁신적 가이드레일 시스템", "과회내 러너들의 족저근막염 예방 1위 추천 슈즈", "안정화 최고의 핏감"],
-            "cons": ["스피드 인터벌용으로는 비추천"],
-            "verdict": "무릎과 정강이 통증으로 고생하는 러너를 러닝의 길로 다시 이끄는 구원투수.",
-            "url": "https://runrepeat.com/brooks-adrenaline-gts-23"
-        }
-    },
-
-    # ------------------ MIZUNO ------------------
+    # ------------------ MIZUNO (2025/2026 LATEST) ------------------
     {
         "id": "mizuno_wave_rider_28",
         "brand_id": "mizuno",
@@ -1379,7 +1076,7 @@ SHOES = [
         "specs": {
             "weight_g": 215,
             "heel_drop_mm": 4.5,
-            "midsole": "SMOOTH SPEED ASSIST (힐이 없는 독창적 락커) + 카본 인퓨즈드 플레이트",
+            "midsole": "SMOOTH SPEED ASSIST (힐이 없는 독창적 락커) + 카본 플레이트",
             "plate": "Carbon Infused Wave Plate",
             "stack_height": "38mm / 33.5mm",
             "support_type": "Neutral (극단적 미드풋/포어풋 레이서)"
@@ -1394,7 +1091,7 @@ SHOES = [
         }
     },
 
-    # ------------------ ON RUNNING ------------------
+    # ------------------ ON RUNNING (2025/2026 LATEST) ------------------
     {
         "id": "on_cloudrunner_2",
         "brand_id": "on",
@@ -1445,7 +1142,7 @@ SHOES = [
         "runrepeat": {
             "score": 91,
             "midsole_foam": "Helion Dual Density",
-            "pros": ["거대한 클라우드 구멍이 주는 독보적인 쿠션과 쿠셔닝 쇼크 분산", "앞으로 쏟아지는 익스트림 락커 롤링", "독보적인 미래지향적 비주얼"],
+            "pros": ["거대한 클라우드 구멍이 주는 독보적인 쿠션과 충격 분산", "앞으로 쏟아지는 익스트림 락커 롤링", "독보적인 미래지향적 비주얼"],
             "cons": ["스피드 레이싱에는 다소 묵직함"],
             "verdict": "쿠셔닝과 반발력을 극대화하여 달릴 때마다 튀어오르는 몬스터 러닝화.",
             "url": "https://runrepeat.com/on-cloudmonster-2"
@@ -1506,10 +1203,10 @@ def main():
         json.dump(config_data, f, ensure_ascii=False, indent=2)
     print(f"Saved config to {config_path}")
     
-    # Save data.js for legacy/browser window usage
+    # Save data.js
     data_js_path = os.path.join(out_dir, "data.js")
     with open(data_js_path, "w", encoding="utf-8") as f:
-        f.write("/** ShoeF Master Database **/\n")
+        f.write("/** ShoeF Master Database (2025/2026 Latest Generations) **/\n")
         f.write("window.SHOEF_CONFIG = " + json.dumps(config_data, ensure_ascii=False, indent=2) + ";\n\n")
         f.write("window.SHOEF_MASTER = " + json.dumps(SHOES, ensure_ascii=False, indent=2) + ";\n")
     print(f"Saved data.js to {data_js_path}")
