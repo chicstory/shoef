@@ -605,7 +605,12 @@ window.SHOEF_MASTER = [
       "url": "https://runrepeat.com/adidas-adizero-adios-pro-4"
     },
     "gen_type": "current",
-    "release_year": 2025
+    "release_year": 2025,
+    "affiliate": {
+      "provider": "coupang",
+      "url": "https://link.coupang.com/a/hcC1dgB4F2",
+      "label": "쿠팡 실시간 최저가 & 재고 확인"
+    }
   },
   {
     "id": "nike_revolution_7",

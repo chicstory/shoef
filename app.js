@@ -609,7 +609,12 @@ const EMBEDDED_SHOES = [
       "url": "https://runrepeat.com/adidas-adizero-adios-pro-4"
     },
     "gen_type": "current",
-    "release_year": 2025
+    "release_year": 2025,
+    "affiliate": {
+      "provider": "coupang",
+      "url": "https://link.coupang.com/a/hcC1dgB4F2",
+      "label": "쿠팡 실시간 최저가 & 재고 확인"
+    }
   },
   {
     "id": "nike_revolution_7",
@@ -4171,6 +4176,18 @@ const EMBEDDED_SHOES = [
               <span class="widths-val">${shoe.widths.join(', ')}</span>
             </div>
           </div>
+
+          ${shoe.affiliate ? `
+          <!-- 쿠팡 파트너스 다이렉트 링크 바 (MSRP 하단 가운데 정렬) -->
+          <div class="card-affiliate-box">
+            <a href="${shoe.affiliate.url}" target="_blank" rel="nofollow noopener noreferrer" referrerpolicy="unsafe-url" class="btn-affiliate-coupang">
+              <span class="aff-badge-rocket">🚀 로켓배송</span>
+              <span class="aff-title">${shoe.affiliate.label || '쿠팡 실시간 최저가 &amp; 재고 확인'}</span>
+              <i class="bi bi-arrow-up-right aff-arrow"></i>
+            </a>
+            <div class="aff-disclosure">* 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</div>
+          </div>
+          ` : ''}
 
           <!-- 독립 블록 3: 4대 핵심 랩 실측 수치 그리드 -->
           <div class="card-specs-grid">

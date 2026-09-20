@@ -1684,6 +1684,92 @@ body.dark-theme {
   color: var(--accent-forest-bright);
 }
 
+/* 독립 블록 2-1: 쿠팡 파트너스 다이렉트 최저가 확인 (MSRP 하단 가운데 정렬) */
+.card-affiliate-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 6px;
+  margin-bottom: 2px;
+  width: 100%;
+}
+
+.btn-affiliate-coupang {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 360px;
+  padding: 9px 16px;
+  background: linear-gradient(135deg, rgba(255, 87, 34, 0.12) 0%, rgba(255, 112, 67, 0.18) 100%);
+  border: 1px solid rgba(255, 87, 34, 0.45);
+  border-radius: var(--radius-sm, 6px);
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(255, 87, 34, 0.15);
+  cursor: pointer;
+}
+
+.btn-affiliate-coupang:hover {
+  background: linear-gradient(135deg, #ff5722 0%, #ff7043 100%);
+  border-color: #ff5722;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(255, 87, 34, 0.35);
+}
+
+.aff-badge-rocket {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 6px;
+  background: rgba(255, 87, 34, 0.25);
+  border: 1px solid rgba(255, 87, 34, 0.5);
+  border-radius: 4px;
+  color: #ff7043;
+  line-height: 1.2;
+}
+
+.btn-affiliate-coupang:hover .aff-badge-rocket {
+  background: #fff;
+  color: #ff5722;
+  border-color: #fff;
+}
+
+.aff-title {
+  color: #fff;
+  font-weight: 700;
+}
+
+.aff-arrow {
+  font-size: 11px;
+  opacity: 0.8;
+  transition: transform 0.2s;
+}
+
+.btn-affiliate-coupang:hover .aff-arrow {
+  transform: translate(2px, -2px);
+  opacity: 1;
+}
+
+.aff-disclosure {
+  font-size: 10.5px;
+  color: var(--text-dim, #64748b);
+  margin-top: 5px;
+  text-align: center;
+  letter-spacing: -0.3px;
+  line-height: 1.35;
+}
+
 /* 독립 블록 3: 4대 핵심 랩 실측 수치 그리드 */
 .card-specs-grid {
   display: grid;
