@@ -1082,7 +1082,14 @@ window.SHOEF_MASTER = [
       "url": "https://runrepeat.com/asics-gel-venture-9"
     },
     "gen_type": "current",
-    "release_year": 2025
+    "release_year": 2025,
+    "affiliate": {
+      "provider": "coupang",
+      "button_text": "쿠팡 최저가 & 빠른배송 확인",
+      "badge": "🚀 로켓배송",
+      "url": "https://link.coupang.com/a/hcEXvMzU6e",
+      "disclosure": "* 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."
+    }
   },
   {
     "id": "asics_gt_1000_13",
@@ -2873,6 +2880,13 @@ window.SHOEF_MASTER = [
       ],
       "verdict": "프로 4 출시 후 역대급 이월 할인가로 풀려 러너들이 가장 열광하는 불멸의 명작 카본화.",
       "url": "https://runrepeat.com/adidas-adizero-adios-pro-3"
+    },
+    "affiliate": {
+      "provider": "coupang",
+      "button_text": "쿠팡 최저가 & 빠른배송 확인",
+      "badge": "🚀 로켓배송",
+      "url": "https://link.coupang.com/a/hcEDiBTeM0",
+      "disclosure": "* 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."
     }
   },
   {

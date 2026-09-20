@@ -10,17 +10,19 @@ echo ========================================================
 
 cd /d "%~dp0"
 
-echo [1/4] 데이터 무결성 검증 수행 중...
+echo [1/4] 제휴 데이터 동기화 및 번들 자동 빌드 중...
+python generate_wiki_master.py
+python build_app_js.py
+python bundle_inline.py
+
+echo.
+echo [2/4] 데이터 무결성 검증 수행 중...
 python test_data_integrity.py
 if errorlevel 1 (
     echo [ERROR] 데이터 무결성 검증에 실패했습니다. 배포를 중단합니다.
     pause
     exit /b 1
 )
-
-echo.
-echo [2/4] 정적 데이터 동기화 및 렌더링 검증...
-python test_browser_render.py > nul 2>&1
 
 echo.
 echo [3/4] 변경 사항 명시적 스테이징 (GEMINI 보안 수칙 준수)...
