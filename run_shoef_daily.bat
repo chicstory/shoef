@@ -24,7 +24,7 @@ python test_browser_render.py > nul 2>&1
 
 echo.
 echo [3/4] 변경 사항 명시적 스테이징 (GEMINI 보안 수칙 준수)...
-git add index.html style.css app.js data.js CNAME README.md .gitignore run_shoef_daily.bat test_data_integrity.py test_browser_render.py build_verified_data.py build_app_js.py bundle_inline.py generate_wiki_master.py data/shoes_master.json data/brands_stores_config.json data/affiliates.json
+git add index.html style.css app.js data.js CNAME README.md COUPANG_AFFILIATE_GUIDE.md .gitignore run_shoef_daily.bat test_data_integrity.py test_browser_render.py build_verified_data.py build_app_js.py bundle_inline.py generate_wiki_master.py data/shoes_master.json data/brands_stores_config.json data/affiliates.json
 
 for /f "tokens=1-3 delims=- " %%a in ('date /t') do (
     set TODAY=%%a-%%b-%%c
