@@ -209,7 +209,14 @@ SHOES = [
         "msrp_krw": 279000,
         "widths": ["D"],
         "specs": {"weight_g": 200, "heel_drop_mm": 6, "midsole": "신형 Lightstrike Pro 3.0 + 풀 카본 EnergyRods 2.0", "plate": "Full Carbon EnergyRods 2.0", "stack_height": "39mm / 33mm", "support_type": "Neutral (2025 최신 카본 플래그십)"},
-        "runrepeat": {"score": 92, "midsole_foam": "Lightstrike Pro 3.0", "pros": ["전작(프로3) 대비 18g 감량에 성공한 200g 플래그십", "더욱 부드럽고 튀어오르는 신형 라이트스트라이크 프로", "새로운 로커 포인트로 전진 가속력 강화"], "cons": ["힐 착지 러너에게는 여전히 타이트한 안정성"], "verdict": "세계 마라톤을 제패한 프로3의 전설을 완벽하게 계승한 2025 최신 엘리트 카본 레이서.", "url": "https://runrepeat.com/adidas-adizero-adios-pro-4"}
+        "runrepeat": {"score": 92, "midsole_foam": "Lightstrike Pro 3.0", "pros": ["전작(프로3) 대비 18g 감량에 성공한 200g 플래그십", "더욱 부드럽고 튀어오르는 신형 라이트스트라이크 프로", "새로운 로커 포인트로 전진 가속력 강화"], "cons": ["힐 착지 러너에게는 여전히 타이트한 안정성"], "verdict": "세계 마라톤을 제패한 프로3의 전설을 완벽하게 계승한 2025 최신 엘리트 카본 레이서.", "url": "https://runrepeat.com/adidas-adizero-adios-pro-4"},
+        "affiliate": {
+            "provider": "coupang",
+            "button_text": "쿠팡 최저가 & 빠른배송 확인",
+            "badge": "🚀 로켓배송",
+            "url": "https://link.coupang.com/a/hcC1dgB4F2",
+            "disclosure": "* 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."
+        }
     },
 
     # ------------------ NIKE (2025/2026 LATEST, 9 models) ------------------
@@ -1054,6 +1061,22 @@ def main():
     data_dir = os.path.join(out_dir, "data")
     os.makedirs(data_dir, exist_ok=True)
     
+    # 3-Tier Protection: Merge external affiliate mappings so affiliate links are NEVER lost
+    affiliates_path = os.path.join(data_dir, "affiliates.json")
+    if os.path.exists(affiliates_path):
+        try:
+            with open(affiliates_path, "r", encoding="utf-8") as f:
+                affiliates_map = json.load(f)
+            merged_count = 0
+            for shoe in SHOES:
+                shoe_id = shoe.get("id")
+                if shoe_id in affiliates_map:
+                    shoe["affiliate"] = affiliates_map[shoe_id]
+                    merged_count += 1
+            print(f"[SHIELD] Successfully merged {merged_count} affiliate links from {affiliates_path}")
+        except Exception as e:
+            print(f"[WARN] Failed to merge affiliates: {e}")
+
     master_path = os.path.join(data_dir, "shoes_master.json")
     with open(master_path, "w", encoding="utf-8") as f:
         json.dump(SHOES, f, ensure_ascii=False, indent=2)

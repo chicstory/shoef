@@ -18,6 +18,15 @@ def build():
     
     with open(os.path.join(data_dir, "shoes_master.json"), "r", encoding="utf-8") as f:
         shoes = json.load(f)
+
+    # 3-Tier Protection: Ensure affiliate mapping is merged
+    affiliates_path = os.path.join(data_dir, "affiliates.json")
+    if os.path.exists(affiliates_path):
+        with open(affiliates_path, "r", encoding="utf-8") as f:
+            aff_map = json.load(f)
+        for s in shoes:
+            if s.get("id") in aff_map:
+                s["affiliate"] = aff_map[s["id"]]
         
     with open(os.path.join(data_dir, "brands_stores_config.json"), "r", encoding="utf-8") as f:
         config = json.load(f)
@@ -445,6 +454,18 @@ const EMBEDDED_SHOES = {shoes_json};
               <span class="widths-val">${{shoe.widths.join(', ')}}</span>
             </div>
           </div>
+
+          ${{shoe.affiliate ? `
+          <!-- 쿠팡 파트너스 다이렉트 링크 바 (MSRP 하단 가운데 정렬) -->
+          <div class="card-affiliate-box">
+            <a href="${{shoe.affiliate.url}}" target="_blank" rel="nofollow noopener noreferrer" referrerpolicy="unsafe-url" class="btn-affiliate-coupang">
+              <span class="aff-badge-rocket">${{shoe.affiliate.badge || '🚀 로켓배송'}}</span>
+              <span class="aff-title">${{shoe.affiliate.button_text || shoe.affiliate.label || '쿠팡 실시간 최저가 &amp; 재고 확인'}}</span>
+              <i class="bi bi-arrow-up-right aff-arrow"></i>
+            </a>
+            <div class="aff-disclosure">${{shoe.affiliate.disclosure || '* 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.'}}</div>
+          </div>
+          ` : ''}}
 
           <!-- 독립 블록 3: 4대 핵심 랩 실측 수치 그리드 -->
           <div class="card-specs-grid">

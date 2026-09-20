@@ -410,88 +410,7 @@ body.dark-theme {
   border-color: var(--border-color);
 }
 
-/* 2-2. 5대 카테고리 2*3 모바일 원클릭 버튼 그리드 */
-.wiki-cat-grid-2x3 {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 8px;
-  margin-top: 10px;
-  margin-bottom: 12px;
-}
-
-.btn-wiki-cat {
-  background: var(--bg-tertiary);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-sm);
-  padding: 8px 10px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3px;
-  transition: all 0.2s ease;
-  text-align: center;
-}
-
-.btn-wiki-cat:hover {
-  border-color: var(--accent-forest-bright);
-  background: rgba(16, 185, 129, 0.08);
-}
-
-.btn-wiki-cat.active {
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.22), rgba(5, 150, 105, 0.15));
-  border-color: var(--accent-forest-bright);
-  box-shadow: 0 0 12px rgba(16, 185, 129, 0.25);
-}
-
-.wcat-name {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--text-main);
-  letter-spacing: -0.2px;
-}
-
-.btn-wiki-cat.active .wcat-name {
-  color: var(--accent-forest-bright);
-}
-
-.wcat-desc {
-  font-size: 10px;
-  color: var(--text-muted);
-  white-space: nowrap;
-}
-
-.btn-wiki-cat.active .wcat-desc {
-  color: var(--accent-sage);
-}
-
-@media (max-width: 900px) {
-  .wiki-cat-grid-2x3 {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
-  }
-}
-
-@media (max-width: 600px) {
-  .wiki-cat-grid-2x3 {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 6px;
-    margin-top: 8px;
-    margin-bottom: 10px;
-  }
-  .btn-wiki-cat {
-    padding: 7px 8px;
-  }
-  .wcat-name {
-    font-size: 11px;
-  }
-  .wcat-desc {
-    font-size: 9px;
-  }
-}
-
-/* 2-3. 카테고리 / 사이즈 / 발볼 / 검색 콤팩트 툴바 */
+/* 2-2. 카테고리 / 사이즈 / 발볼 / 검색 콤팩트 툴바 */
 .filter-row {
   display: flex;
   flex-wrap: wrap;
@@ -2774,35 +2693,7 @@ body.dark-theme {
         </div>
       </div>
 
-      <!-- 2-2. 5대 카테고리 2*3 모바일 원클릭 버튼 그리드 -->
-      <div class="wiki-cat-grid-2x3" id="wikiCatGrid2x3">
-        <button type="button" class="btn-wiki-cat active" data-cat="all">
-          <span class="wcat-name">전체 94종</span>
-          <span class="wcat-desc">모든 라인업</span>
-        </button>
-        <button type="button" class="btn-wiki-cat" data-cat="daily">
-          <span class="wcat-name">데일리·쿠션</span>
-          <span class="wcat-desc">부상 방지 조깅</span>
-        </button>
-        <button type="button" class="btn-wiki-cat" data-cat="super_trainer">
-          <span class="wcat-name">슈퍼트레이너</span>
-          <span class="wcat-desc">템포·카본 훈련</span>
-        </button>
-        <button type="button" class="btn-wiki-cat" data-cat="racing">
-          <span class="wcat-name">카본 레이싱</span>
-          <span class="wcat-desc">대회용 엘리트</span>
-        </button>
-        <button type="button" class="btn-wiki-cat" data-cat="stability">
-          <span class="wcat-name">안정화</span>
-          <span class="wcat-desc">과회내 서포트</span>
-        </button>
-        <button type="button" class="btn-wiki-cat" data-cat="budget">
-          <span class="wcat-name">가성비 입문</span>
-          <span class="wcat-desc">10만원 이하</span>
-        </button>
-      </div>
-
-      <!-- 2-3. 발볼 / 세대 / 검색 툴바 -->
+      <!-- 2-2. 5대 카테고리 / 발볼 / 검색 툴바 -->
       <div class="filter-row">
         
         <!-- 카테고리 셀렉트 (5대 카테고리) -->
@@ -3579,13 +3470,15 @@ const EMBEDDED_SHOES = [
       "verdict": "세계 마라톤을 제패한 프로3의 전설을 완벽하게 계승한 2025 최신 엘리트 카본 레이서.",
       "url": "https://runrepeat.com/adidas-adizero-adios-pro-4"
     },
-    "gen_type": "current",
-    "release_year": 2025,
     "affiliate": {
       "provider": "coupang",
+      "button_text": "쿠팡 최저가 & 빠른배송 확인",
+      "badge": "🚀 로켓배송",
       "url": "https://link.coupang.com/a/hcC1dgB4F2",
-      "label": "쿠팡 실시간 최저가 & 재고 확인"
-    }
+      "disclosure": "* 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."
+    },
+    "gen_type": "current",
+    "release_year": 2025
   },
   {
     "id": "nike_revolution_7",
@@ -7152,11 +7045,11 @@ const EMBEDDED_SHOES = [
           <!-- 쿠팡 파트너스 다이렉트 링크 바 (MSRP 하단 가운데 정렬) -->
           <div class="card-affiliate-box">
             <a href="${shoe.affiliate.url}" target="_blank" rel="nofollow noopener noreferrer" referrerpolicy="unsafe-url" class="btn-affiliate-coupang">
-              <span class="aff-badge-rocket">🚀 로켓배송</span>
-              <span class="aff-title">${shoe.affiliate.label || '쿠팡 실시간 최저가 &amp; 재고 확인'}</span>
+              <span class="aff-badge-rocket">${shoe.affiliate.badge || '🚀 로켓배송'}</span>
+              <span class="aff-title">${shoe.affiliate.button_text || shoe.affiliate.label || '쿠팡 실시간 최저가 &amp; 재고 확인'}</span>
               <i class="bi bi-arrow-up-right aff-arrow"></i>
             </a>
-            <div class="aff-disclosure">* 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</div>
+            <div class="aff-disclosure">${shoe.affiliate.disclosure || '* 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.'}</div>
           </div>
           ` : ''}
 
@@ -7244,32 +7137,7 @@ const EMBEDDED_SHOES = [
       renderShoes();
     });
 
-    // 2x3 Category Grid Button Events & Sync
-    const catGridBtns = document.querySelectorAll('.btn-wiki-cat');
-    function syncCategoryActive(cat) {
-      catGridBtns.forEach(b => {
-        if (b.dataset.cat === cat) {
-          b.classList.add('active');
-        } else {
-          b.classList.remove('active');
-        }
-      });
-      if (categoryFilter && categoryFilter.value !== cat) {
-        categoryFilter.value = cat;
-      }
-    }
-
-    catGridBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        syncCategoryActive(btn.dataset.cat);
-        renderShoes();
-      });
-    });
-
-    categoryFilter.addEventListener('change', () => {
-      syncCategoryActive(categoryFilter.value);
-      renderShoes();
-    });
+    categoryFilter.addEventListener('change', renderShoes);
     if (genFilter) genFilter.addEventListener('change', renderShoes);
     widthFilter.addEventListener('change', renderShoes);
     searchKeyword.addEventListener('input', renderShoes);
@@ -7366,17 +7234,6 @@ const EMBEDDED_SHOES = [
   initBrandButtons();
   updateCategoryOptionCounts();
   attachEvents();
-
-  // Handle URL Parameter (?cat=...)
-  const urlParams = new URLSearchParams(window.location.search);
-  const initialCat = urlParams.get('cat');
-  if (initialCat && ['all', 'daily', 'super_trainer', 'racing', 'stability', 'budget'].includes(initialCat)) {
-    if (categoryFilter) categoryFilter.value = initialCat;
-    document.querySelectorAll('.btn-wiki-cat').forEach(b => {
-      b.classList.toggle('active', b.dataset.cat === initialCat);
-    });
-  }
-
   renderShoes();
 })();
 

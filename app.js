@@ -608,13 +608,15 @@ const EMBEDDED_SHOES = [
       "verdict": "세계 마라톤을 제패한 프로3의 전설을 완벽하게 계승한 2025 최신 엘리트 카본 레이서.",
       "url": "https://runrepeat.com/adidas-adizero-adios-pro-4"
     },
-    "gen_type": "current",
-    "release_year": 2025,
     "affiliate": {
       "provider": "coupang",
+      "button_text": "쿠팡 최저가 & 빠른배송 확인",
+      "badge": "🚀 로켓배송",
       "url": "https://link.coupang.com/a/hcC1dgB4F2",
-      "label": "쿠팡 실시간 최저가 & 재고 확인"
-    }
+      "disclosure": "* 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."
+    },
+    "gen_type": "current",
+    "release_year": 2025
   },
   {
     "id": "nike_revolution_7",
@@ -4181,11 +4183,11 @@ const EMBEDDED_SHOES = [
           <!-- 쿠팡 파트너스 다이렉트 링크 바 (MSRP 하단 가운데 정렬) -->
           <div class="card-affiliate-box">
             <a href="${shoe.affiliate.url}" target="_blank" rel="nofollow noopener noreferrer" referrerpolicy="unsafe-url" class="btn-affiliate-coupang">
-              <span class="aff-badge-rocket">🚀 로켓배송</span>
-              <span class="aff-title">${shoe.affiliate.label || '쿠팡 실시간 최저가 &amp; 재고 확인'}</span>
+              <span class="aff-badge-rocket">${shoe.affiliate.badge || '🚀 로켓배송'}</span>
+              <span class="aff-title">${shoe.affiliate.button_text || shoe.affiliate.label || '쿠팡 실시간 최저가 &amp; 재고 확인'}</span>
               <i class="bi bi-arrow-up-right aff-arrow"></i>
             </a>
-            <div class="aff-disclosure">* 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</div>
+            <div class="aff-disclosure">${shoe.affiliate.disclosure || '* 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.'}</div>
           </div>
           ` : ''}
 
